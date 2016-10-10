@@ -1,0 +1,26 @@
+; Def File for lib <dhcpcsvc6.dll> created with fTools
+; Created on Mon Oct 10 13:07:15 2016
+
+LIBRARY dhcpcsvc6.dll
+EXPORTS
+; Log File for lib <dhcpcsvc6.dll> created with fTools
+
+"_Dhcpv6AcquireParameters@4"
+"_Dhcpv6CancelOperation@0"
+"_Dhcpv6EnableTracing@4"
+"_Dhcpv6FreeLeaseInfo@4"
+"_Dhcpv6GetTraceArray@4"
+"_Dhcpv6GetUserClasses@16"
+"_Dhcpv6IsEnabled@8"
+"_Dhcpv6QueryLeaseInfo@8"
+"_Dhcpv6ReleaseParameters@4"
+"_Dhcpv6ReleasePrefix@12"
+"_Dhcpv6ReleasePrefixEx@16"
+"_Dhcpv6RenewPrefix@20"
+"_Dhcpv6RenewPrefixEx@24"
+"_Dhcpv6RequestParams@32"
+"_Dhcpv6RequestPrefix@16"
+"_Dhcpv6RequestPrefixEx@20"
+"_Dhcpv6SetUserClass@12"
+
+; Def built in 0.002419 seconds
