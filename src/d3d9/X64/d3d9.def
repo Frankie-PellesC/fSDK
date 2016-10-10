@@ -1,0 +1,23 @@
+; Def File for lib <d3d9.dll> created with fTools
+; Created on Mon Oct 10 11:54:56 2016
+
+LIBRARY d3d9.dll
+EXPORTS
+; Log File for lib <d3d9.dll> created with fTools
+
+"?Direct3DShaderValidatorCreate9@@YAPEAUIDirect3DShaderValidator9@@XZ"
+"?PSGPError@@YAXPEAVD3DFE_PROCESSVERTICES@@W4PSGPERRORID@@I@Z"
+"?PSGPSampleTexture@@YAXPEAVD3DFE_PROCESSVERTICES@@IQEAY03MI1@Z"
+"D3DPERF_BeginEvent"
+"D3DPERF_EndEvent"
+"D3DPERF_GetStatus"
+"D3DPERF_QueryRepeatFrame"
+"D3DPERF_SetMarker"
+"D3DPERF_SetOptions"
+"D3DPERF_SetRegion"
+"DebugSetLevel"
+"DebugSetMute"
+"Direct3DCreate9"
+"Direct3DCreate9Ex"
+
+; Def built in 0.001324 seconds

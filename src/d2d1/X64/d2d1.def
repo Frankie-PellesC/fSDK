@@ -1,0 +1,14 @@
+; Def File for lib <d2d1.dll> created with fTools
+; Created on Mon Oct 10 11:54:55 2016
+
+LIBRARY d2d1.dll
+EXPORTS
+; Log File for lib <d2d1.dll> created with fTools
+
+"D2D1CreateFactory" @1
+"D2D1InvertMatrix" @5
+"D2D1IsMatrixInvertible" @4
+"D2D1MakeRotateMatrix" @2
+"D2D1MakeSkewMatrix" @3
+
+; Def built in 0.001156 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <corrEngine.dll> created with fTools
+; Created on Mon Oct 10 11:54:53 2016
+
+LIBRARY corrEngine.dll
+EXPORTS
+; Log File for lib <corrEngine.dll> created with fTools
+
+
+; Def built in 0.000949 seconds

@@ -1,0 +1,51 @@
+; Def File for lib <d3d11.dll> created with fTools
+; Created on Mon Oct 10 11:54:56 2016
+
+LIBRARY d3d11.dll
+EXPORTS
+; Log File for lib <d3d11.dll> created with fTools
+
+"?D3DKMTCloseAdapter@@YAJPEAU_D3DKMT_CLOSEADAPTER@@@Z"
+"?D3DKMTDestroyAllocation@@YAJPEAU_D3DKMT_DESTROYALLOCATION@@@Z"
+"?D3DKMTDestroyContext@@YAJPEAU_D3DKMT_DESTROYCONTEXT@@@Z"
+"?D3DKMTDestroyDevice@@YAJPEAU_D3DKMT_DESTROYDEVICE@@@Z"
+"?D3DKMTDestroySynchronizationObject@@YAJPEAU_D3DKMT_DESTROYSYNCHRONIZATIONOBJECT@@@Z"
+"?D3DKMTQueryAdapterInfo@@YAJPEAU_D3DKMT_QUERYADAPTERINFO@@@Z"
+"?D3DKMTSetDisplayPrivateDriverFormat@@YAJPEAU_D3DKMT_SETDISPLAYPRIVATEDRIVERFORMAT@@@Z"
+"?D3DKMTSignalSynchronizationObject@@YAJPEAU_D3DKMT_SIGNALSYNCHRONIZATIONOBJECT@@@Z"
+"?D3DKMTUnlock@@YAJPEAU_D3DKMT_UNLOCK@@@Z"
+"?D3DKMTWaitForSynchronizationObject@@YAJPEAU_D3DKMT_WAITFORSYNCHRONIZATIONOBJECT@@@Z"
+"?OpenAdapter10@@YAJPEAUD3D10DDIARG_OPENADAPTER@@@Z"
+"?OpenAdapter10_2@@YAJPEAUD3D10DDIARG_OPENADAPTER@@@Z"
+"D3D11CoreCreateDevice"
+"D3D11CoreCreateLayeredDevice"
+"D3D11CoreGetLayeredDeviceSize"
+"D3D11CoreRegisterLayers"
+"D3D11CreateDevice"
+"D3D11CreateDeviceAndSwapChain"
+"D3DKMTCreateAllocation"
+"D3DKMTCreateContext"
+"D3DKMTCreateDevice"
+"D3DKMTCreateSynchronizationObject"
+"D3DKMTEscape"
+"D3DKMTGetContextSchedulingPriority"
+"D3DKMTGetDeviceState"
+"D3DKMTGetDisplayModeList"
+"D3DKMTGetMultisampleMethodList"
+"D3DKMTGetRuntimeData"
+"D3DKMTGetSharedPrimaryHandle"
+"D3DKMTLock"
+"D3DKMTOpenAdapterFromHdc"
+"D3DKMTOpenResource"
+"D3DKMTPresent"
+"D3DKMTQueryAllocationResidency"
+"D3DKMTQueryResourceInfo"
+"D3DKMTRender"
+"D3DKMTSetAllocationPriority"
+"D3DKMTSetContextSchedulingPriority"
+"D3DKMTSetDisplayMode"
+"D3DKMTSetGammaRamp"
+"D3DKMTSetVidPnSourceOwner"
+"D3DKMTWaitForVerticalBlankEvent"
+
+; Def built in 0.002140 seconds
