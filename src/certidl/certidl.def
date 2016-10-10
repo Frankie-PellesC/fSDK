@@ -1,0 +1,9 @@
+; Def File for lib <certidl.dll> created with fTools
+; Created on Mon Oct 10 13:06:11 2016
+
+LIBRARY certidl.dll
+EXPORTS
+; Log File for lib <certidl.dll> created with fTools
+
+
+; Def built in 0.323232 seconds

@@ -1,0 +1,13 @@
+; Def File for lib <Cap.dll> created with fTools
+; Created on Mon Oct 10 13:06:10 2016
+
+LIBRARY Cap.dll
+EXPORTS
+; Log File for lib <Cap.dll> created with fTools
+
+"_DumpCAP@0" @5
+"_StartCAP@0" @3
+"_StopCAP@0" @4
+"__penter" @2
+
+; Def built in 0.001419 seconds
