@@ -142,11 +142,14 @@
 #define SECURITY_EFFECTIVE_ONLY    0x00080000
 #define SECURITY_SQOS_PRESENT      0x00100000
 #define SECURITY_VALID_SQOS_FLAGS  0x001F0000
-typedef struct _OVERLAPPED {
+typedef struct _OVERLAPPED
+{
     ULONG_PTR Internal;
     ULONG_PTR InternalHigh;
-    union {
-        struct {
+    union
+	{
+        struct
+		{
             DWORD Offset;
             DWORD OffsetHigh;
         } DUMMYSTRUCTNAME;
@@ -154,18 +157,21 @@ typedef struct _OVERLAPPED {
     } DUMMYUNIONNAME;
     HANDLE  hEvent;
 } OVERLAPPED, *LPOVERLAPPED;
-typedef struct _OVERLAPPED_ENTRY {
+typedef struct _OVERLAPPED_ENTRY
+{
     ULONG_PTR lpCompletionKey;
     LPOVERLAPPED lpOverlapped;
     ULONG_PTR Internal;
     DWORD dwNumberOfBytesTransferred;
 } OVERLAPPED_ENTRY, *LPOVERLAPPED_ENTRY;
-typedef struct _SECURITY_ATTRIBUTES {
+typedef struct _SECURITY_ATTRIBUTES
+{
     DWORD nLength;
     LPVOID lpSecurityDescriptor;
     BOOL bInheritHandle;
 } SECURITY_ATTRIBUTES, *PSECURITY_ATTRIBUTES, *LPSECURITY_ATTRIBUTES;
-typedef struct _PROCESS_INFORMATION {
+typedef struct _PROCESS_INFORMATION
+{
     HANDLE hProcess;
     HANDLE hThread;
     DWORD dwProcessId;
@@ -173,12 +179,14 @@ typedef struct _PROCESS_INFORMATION {
 } PROCESS_INFORMATION, *PPROCESS_INFORMATION, *LPPROCESS_INFORMATION;
 #ifndef _FILETIME_
 #define _FILETIME_
-typedef struct _FILETIME {
+typedef struct _FILETIME
+{
     DWORD dwLowDateTime;
     DWORD dwHighDateTime;
 } FILETIME, *PFILETIME, *LPFILETIME;
 #endif
-typedef struct _SYSTEMTIME {
+typedef struct _SYSTEMTIME
+{
     WORD wYear;
     WORD wMonth;
     WORD wDayOfWeek;
@@ -310,7 +318,8 @@ typedef LPVOID LPLDT_ENTRY;
 #define PARITY_EVEN       ((WORD)0x0400)
 #define PARITY_MARK       ((WORD)0x0800)
 #define PARITY_SPACE      ((WORD)0x1000)
-typedef struct _COMMPROP {
+typedef struct _COMMPROP
+{
     WORD wPacketLength;
     WORD wPacketVersion;
     DWORD dwServiceMask;
@@ -331,7 +340,8 @@ typedef struct _COMMPROP {
     WCHAR wcProvChar[1];
 } COMMPROP,*LPCOMMPROP;
 #define COMMPROP_INITIALIZED ((DWORD)0xE73CF52E)
-typedef struct _COMSTAT {
+typedef struct _COMSTAT
+{
     DWORD fCtsHold : 1;
     DWORD fDsrHold : 1;
     DWORD fRlsdHold : 1;
@@ -350,7 +360,8 @@ typedef struct _COMSTAT {
 #define RTS_CONTROL_ENABLE     0x01
 #define RTS_CONTROL_HANDSHAKE  0x02
 #define RTS_CONTROL_TOGGLE     0x03
-typedef struct _DCB {
+typedef struct _DCB
+{
     DWORD DCBlength;
     DWORD BaudRate;
     DWORD fBinary: 1;
@@ -380,14 +391,16 @@ typedef struct _DCB {
     char EvtChar;
     WORD wReserved1;
 } DCB, *LPDCB;
-typedef struct _COMMTIMEOUTS {
+typedef struct _COMMTIMEOUTS
+{
     DWORD ReadIntervalTimeout;
     DWORD ReadTotalTimeoutMultiplier;
     DWORD ReadTotalTimeoutConstant;
     DWORD WriteTotalTimeoutMultiplier;
     DWORD WriteTotalTimeoutConstant;
 } COMMTIMEOUTS,*LPCOMMTIMEOUTS;
-typedef struct _COMMCONFIG {
+typedef struct _COMMCONFIG
+{
     DWORD dwSize;
     WORD wVersion;
     WORD wReserved;
@@ -397,10 +410,13 @@ typedef struct _COMMCONFIG {
     DWORD dwProviderSize;
     WCHAR wcProviderData[1];
 } COMMCONFIG,*LPCOMMCONFIG;
-typedef struct _SYSTEM_INFO {
-    union {
+typedef struct _SYSTEM_INFO
+{
+    union
+	{
         DWORD dwOemId;
-        struct {
+        struct
+		{
             WORD wProcessorArchitecture;
             WORD wReserved;
         } DUMMYSTRUCTNAME;
@@ -439,7 +455,8 @@ typedef struct _SYSTEM_INFO {
 #define GlobalDiscard( h )      GlobalReAlloc( (h), 0, GMEM_MOVEABLE )
 #define GMEM_DISCARDED      0x4000
 #define GMEM_LOCKCOUNT      0x00FF
-typedef struct _MEMORYSTATUS {
+typedef struct _MEMORYSTATUS
+{
     DWORD dwLength;
     DWORD dwMemoryLoad;
     SIZE_T dwTotalPhys;
@@ -527,12 +544,14 @@ typedef struct _EXCEPTION_DEBUG_INFO
 	EXCEPTION_RECORD ExceptionRecord;
 	DWORD dwFirstChance;
 } EXCEPTION_DEBUG_INFO, *LPEXCEPTION_DEBUG_INFO;
-typedef struct _CREATE_THREAD_DEBUG_INFO {
+typedef struct _CREATE_THREAD_DEBUG_INFO
+{
     HANDLE hThread;
     LPVOID lpThreadLocalBase;
     LPTHREAD_START_ROUTINE lpStartAddress;
 } CREATE_THREAD_DEBUG_INFO, *LPCREATE_THREAD_DEBUG_INFO;
-typedef struct _CREATE_PROCESS_DEBUG_INFO {
+typedef struct _CREATE_PROCESS_DEBUG_INFO
+{
     HANDLE hFile;
     HANDLE hProcess;
     HANDLE hThread;
@@ -544,13 +563,16 @@ typedef struct _CREATE_PROCESS_DEBUG_INFO {
     LPVOID lpImageName;
     WORD fUnicode;
 } CREATE_PROCESS_DEBUG_INFO, *LPCREATE_PROCESS_DEBUG_INFO;
-typedef struct _EXIT_THREAD_DEBUG_INFO {
+typedef struct _EXIT_THREAD_DEBUG_INFO
+{
     DWORD dwExitCode;
 } EXIT_THREAD_DEBUG_INFO, *LPEXIT_THREAD_DEBUG_INFO;
-typedef struct _EXIT_PROCESS_DEBUG_INFO {
+typedef struct _EXIT_PROCESS_DEBUG_INFO
+{
     DWORD dwExitCode;
 } EXIT_PROCESS_DEBUG_INFO, *LPEXIT_PROCESS_DEBUG_INFO;
-typedef struct _LOAD_DLL_DEBUG_INFO {
+typedef struct _LOAD_DLL_DEBUG_INFO
+{
     HANDLE hFile;
     LPVOID lpBaseOfDll;
     DWORD dwDebugInfoFileOffset;
@@ -558,23 +580,28 @@ typedef struct _LOAD_DLL_DEBUG_INFO {
     LPVOID lpImageName;
     WORD fUnicode;
 } LOAD_DLL_DEBUG_INFO, *LPLOAD_DLL_DEBUG_INFO;
-typedef struct _UNLOAD_DLL_DEBUG_INFO {
+typedef struct _UNLOAD_DLL_DEBUG_INFO
+{
     LPVOID lpBaseOfDll;
 } UNLOAD_DLL_DEBUG_INFO, *LPUNLOAD_DLL_DEBUG_INFO;
-typedef struct _OUTPUT_DEBUG_STRING_INFO {
+typedef struct _OUTPUT_DEBUG_STRING_INFO
+{
     LPSTR lpDebugStringData;
     WORD fUnicode;
     WORD nDebugStringLength;
 } OUTPUT_DEBUG_STRING_INFO, *LPOUTPUT_DEBUG_STRING_INFO;
-typedef struct _RIP_INFO {
+typedef struct _RIP_INFO
+{
     DWORD dwError;
     DWORD dwType;
 } RIP_INFO, *LPRIP_INFO;
-typedef struct _DEBUG_EVENT {
+typedef struct _DEBUG_EVENT
+{
     DWORD dwDebugEventCode;
     DWORD dwProcessId;
     DWORD dwThreadId;
-    union {
+    union
+	{
         EXCEPTION_DEBUG_INFO Exception;
         CREATE_THREAD_DEBUG_INFO CreateThread;
         CREATE_PROCESS_DEBUG_INFO CreateProcessInfo;
@@ -586,7 +613,8 @@ typedef struct _DEBUG_EVENT {
         RIP_INFO RipInfo;
     } u;
 } DEBUG_EVENT, *LPDEBUG_EVENT;
-typedef struct _JIT_DEBUG_INFO {
+typedef struct _JIT_DEBUG_INFO
+{
     DWORD dwSize;
     DWORD dwProcessorArchitecture;
     DWORD dwThreadID;
@@ -764,6 +792,8 @@ typedef struct _OFSTRUCT
     WORD Reserved2;
     CHAR szPathName[OFS_MAXPATHNAME];
 } OFSTRUCT, *LPOFSTRUCT, *POFSTRUCT;
+/*************** Frankie - Begin of MS intrinsics declaration ********************/
+#if 1
 #ifndef NOWINBASEINTERLOCK
 #ifndef _NTOS_
 #if defined(_M_IA64) && !defined(RC_INVOKED)
@@ -891,7 +921,6 @@ PVOID __cdecl InterlockedExchangePointer(PVOID volatile *Target, PVOID Value);
 PVOID __cdecl InterlockedCompareExchangePointer(PVOID volatile *Destination, PVOID ExChange, PVOID Comperand);
 PVOID __cdecl InterlockedCompareExchangePointerAcquire(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
 PVOID __cdecl InterlockedCompareExchangePointerRelease(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
-#if !defined(MIDL_PASS)
 #if !defined (InterlockedAnd)
 #define InterlockedAnd InterlockedAnd_Inline
 FORCEINLINE LONG InterlockedAnd_Inline(LONG volatile *Target, LONG Set)
@@ -999,7 +1028,6 @@ FORCEINLINE BOOLEAN InterlockedBitTestAndComplement_Inline(LONG volatile *Base, 
 	tBit = 1 << (Bit & (sizeof(*Base) * 8 - 1));
 	return (BOOLEAN) ((InterlockedXor(&Base[Bit / (sizeof(*Base) * 8)], tBit) & tBit) != 0);
 }
-#endif
 #endif
 #pragma intrinsic(_InterlockedIncrement)
 #pragma intrinsic(_InterlockedIncrement_acq)
@@ -1155,7 +1183,6 @@ WINBASEAPI LONG WINAPI InterlockedCompareExchange(LONG volatile *Destination, LO
 #if (_WIN32_WINNT >= 0x0502)
 WINBASEAPI LONGLONG WINAPI InterlockedCompareExchange64(LONGLONG volatile *Destination, LONGLONG Exchange, LONGLONG Comperand);
 #endif
-#if !defined(MIDL_PASS)
 #if (_WIN32_WINNT >= 0x0502)
 FORCEINLINE LONGLONG InterlockedAnd64(LONGLONG volatile *Destination, LONGLONG Value)
 {
@@ -1221,11 +1248,8 @@ FORCEINLINE LONGLONG InterlockedExchangeAdd64(LONGLONG volatile *Addend, LONGLON
 	return Old;
 }
 #endif
-#endif
-
 #define InterlockedCompareExchangePointer(Destination, ExChange, Comperand) \
     (PVOID)(LONG_PTR)InterlockedCompareExchange((LONG volatile *)(Destination), (LONG)(LONG_PTR)(ExChange), (LONG)(LONG_PTR)(Comperand))
-
 #define InterlockedIncrementAcquire InterlockedIncrement
 #define InterlockedIncrementRelease InterlockedIncrement
 #define InterlockedDecrementAcquire InterlockedDecrement
@@ -1248,6 +1272,8 @@ WINBASEAPI USHORT WINAPI QueryDepthSList(PSLIST_HEADER ListHead);
 #endif
 #endif
 #endif
+#endif
+/*************** Frankie - End of MS intrinsics declaration ********************/
 WINBASEAPI BOOL WINAPI FreeResource(HGLOBAL hResData);
 WINBASEAPI LPVOID WINAPI LockResource(HGLOBAL hResData);
 #define UnlockResource(hResData) ((hResData), 0)
@@ -1287,7 +1313,8 @@ WINBASEAPI VOID WINAPI GlobalUnfix(HGLOBAL hMem);
 WINBASEAPI LPVOID WINAPI GlobalWire(HGLOBAL hMem);
 WINBASEAPI BOOL WINAPI GlobalUnWire(HGLOBAL hMem);
 WINBASEAPI VOID WINAPI GlobalMemoryStatus(LPMEMORYSTATUS lpBuffer);
-typedef struct _MEMORYSTATUSEX {
+typedef struct _MEMORYSTATUSEX
+{
     DWORD dwLength;
     DWORD dwMemoryLoad;
     DWORDLONG ullTotalPhys;
