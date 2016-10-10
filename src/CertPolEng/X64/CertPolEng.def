@@ -1,0 +1,15 @@
+; Def File for lib <CertPolEng.dll> created with fTools
+; Created on Mon Oct 10 11:54:27 2016
+
+LIBRARY CertPolEng.dll
+EXPORTS
+; Log File for lib <CertPolEng.dll> created with fTools
+
+"PstAcquirePrivateKey"
+"PstGetCertificates"
+"PstGetTrustAnchors"
+"PstGetUserNameForCertificate"
+"PstMapCertificate"
+"PstValidate"
+
+; Def built in 0.001320 seconds
