@@ -1,0 +1,26 @@
+; Def File for lib <ComSvcs.dll> created with fTools
+; Created on Mon Oct 10 13:07:03 2016
+
+LIBRARY ComSvcs.dll
+EXPORTS
+; Log File for lib <ComSvcs.dll> created with fTools
+
+"_CoCreateActivity@12"
+"_CoEnterServiceDomain@4"
+"_CoLeaveServiceDomain@4"
+"_CoLoadServices@16"
+"_ComSvcsExceptionFilter@12"
+"_ComSvcsLogError@16"
+"_CreateActivityInMTA@8" @7
+"_DispManGetContext@8"
+"_DllUnregisterServerWeReallyMeanIt@0" @6
+"_GetMTAThreadPoolMetrics@4"
+"_GetManagedExtensions@4"
+"_GetObjectContext"
+"_GetTrkSvrObject@8"
+"_MTSCreateActivity@8"
+"_MiniDumpW@16"
+"_RecycleSurrogate"
+"_SafeRef"
+
+; Def built in 0.002307 seconds
