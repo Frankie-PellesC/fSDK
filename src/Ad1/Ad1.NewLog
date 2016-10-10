@@ -1,0 +1,675 @@
+
+Dump of Lib\Win\Ad1.lib
+
+File type: LIB
+
+Member at offset 8: /               
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+       0 mode
+     AC1 size
+Correct end of header
+
+      86 global symbols
+
+    166A _CLSID_CDebugDocumentHelper
+    166A _CLSID_DebugHelper
+    166A _CLSID_DefaultDebugSessionProvider
+    166A _CLSID_MachineDebugManager
+    166A _CLSID_ProcessDebugManager
+    2454 _IID_IActiveScript
+    166A _IID_IActiveScriptDebug
+    2454 _IID_IActiveScriptError
+    166A _IID_IActiveScriptErrorDebug
+    2454 _IID_IActiveScriptParse
+    2454 _IID_IActiveScriptParseProcedure
+    2454 _IID_IActiveScriptParseProcedureOld
+    2454 _IID_IActiveScriptSite
+    166A _IID_IActiveScriptSiteDebug
+    2454 _IID_IActiveScriptSiteInterruptPoll
+    2454 _IID_IActiveScriptSiteWindow
+    2454 _IID_IActiveScriptStats
+    166A _IID_IApplicationDebugger
+    166A _IID_IApplicationDebuggerUI
+    2454 _IID_IBindEventHandler
+    166A _IID_IDebugApplication
+    2758 _IID_IDebugApplicationEx
+    166A _IID_IDebugApplicationNode
+    166A _IID_IDebugApplicationNodeEvents
+    166A _IID_IDebugApplicationThread
+    166A _IID_IDebugAsyncOperation
+    166A _IID_IDebugAsyncOperationCallBack
+    166A _IID_IDebugCodeContext
+    166A _IID_IDebugCookie
+    166A _IID_IDebugDocument
+    166A _IID_IDebugDocumentContext
+    166A _IID_IDebugDocumentHelper
+    2758 _IID_IDebugDocumentHelperEx
+    166A _IID_IDebugDocumentHost
+    166A _IID_IDebugDocumentInfo
+    166A _IID_IDebugDocumentProvider
+    166A _IID_IDebugDocumentText
+    166A _IID_IDebugDocumentTextAuthor
+    166A _IID_IDebugDocumentTextEvents
+    166A _IID_IDebugDocumentTextExternalAuthor
+    166A _IID_IDebugExpression
+    166A _IID_IDebugExpressionCallBack
+    166A _IID_IDebugExpressionContext
+    29E6 _IID_IDebugExtendedProperty
+    166A _IID_IDebugFormatter
+    166A _IID_IDebugHelper
+    2758 _IID_IDebugHelperEx
+    29E6 _IID_IDebugProperty
+    29E6 _IID_IDebugPropertyEnumType_All
+    29E6 _IID_IDebugPropertyEnumType_Arguments
+    29E6 _IID_IDebugPropertyEnumType_Locals
+    29E6 _IID_IDebugPropertyEnumType_LocalsPlusArgs
+    29E6 _IID_IDebugPropertyEnumType_Registers
+    166A _IID_IDebugSessionProvider
+    2758 _IID_IDebugSessionProviderEx
+    2758 _IID_IDebugSetValueCallback
+    166A _IID_IDebugStackFrame
+    166A _IID_IDebugStackFrameSniffer
+    166A _IID_IDebugStackFrameSnifferEx
+    166A _IID_IDebugSyncOperation
+    166A _IID_IDebugThreadCall
+    2D20 _IID_IDispError
+    2D20 _IID_IDispatchEx
+    166A _IID_IEnumDebugApplicationNodes
+    166A _IID_IEnumDebugCodeContexts
+    166A _IID_IEnumDebugExpressionContexts
+    29E6 _IID_IEnumDebugExtendedPropertyInfo
+    29E6 _IID_IEnumDebugPropertyInfo
+    166A _IID_IEnumDebugStackFrames
+    166A _IID_IEnumRemoteDebugApplicationThreads
+    166A _IID_IEnumRemoteDebugApplications
+    166A _IID_IMachineDebugManager
+    166A _IID_IMachineDebugManagerCookie
+    166A _IID_IMachineDebugManagerEvents
+    29E6 _IID_IPerPropertyBrowsing2
+    166A _IID_IProcessDebugManager
+    166A _IID_IProvideExpressionContexts
+    166A _IID_IRemoteDebugApplication
+    166A _IID_IRemoteDebugApplicationEvents
+    2758 _IID_IRemoteDebugApplicationEx
+    166A _IID_IRemoteDebugApplicationThread
+    2758 _IID_IRemoteDebugApplicationThreadEx
+    2758 _IID_ISetNextStatement
+    166A _IID_ISimpleConnectionPoint
+    2D20 _IID_IVariantChangeType
+    166A _LIBID_ProcessDebugManagerLib
+
+Member at offset B06: /               
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+       0 mode
+     A2D size
+Correct end of header
+
+       5 member pointers
+
+       1      166A
+       2      2454
+       3      2758
+       4      29E6
+       5      2D20
+
+      86 global symbols
+
+       1 _CLSID_CDebugDocumentHelper
+       1 _CLSID_DebugHelper
+       1 _CLSID_DefaultDebugSessionProvider
+       1 _CLSID_MachineDebugManager
+       1 _CLSID_ProcessDebugManager
+       2 _IID_IActiveScript
+       1 _IID_IActiveScriptDebug
+       2 _IID_IActiveScriptError
+       1 _IID_IActiveScriptErrorDebug
+       2 _IID_IActiveScriptParse
+       2 _IID_IActiveScriptParseProcedure
+       2 _IID_IActiveScriptParseProcedureOld
+       2 _IID_IActiveScriptSite
+       1 _IID_IActiveScriptSiteDebug
+       2 _IID_IActiveScriptSiteInterruptPoll
+       2 _IID_IActiveScriptSiteWindow
+       2 _IID_IActiveScriptStats
+       1 _IID_IApplicationDebugger
+       1 _IID_IApplicationDebuggerUI
+       2 _IID_IBindEventHandler
+       1 _IID_IDebugApplication
+       3 _IID_IDebugApplicationEx
+       1 _IID_IDebugApplicationNode
+       1 _IID_IDebugApplicationNodeEvents
+       1 _IID_IDebugApplicationThread
+       1 _IID_IDebugAsyncOperation
+       1 _IID_IDebugAsyncOperationCallBack
+       1 _IID_IDebugCodeContext
+       1 _IID_IDebugCookie
+       1 _IID_IDebugDocument
+       1 _IID_IDebugDocumentContext
+       1 _IID_IDebugDocumentHelper
+       3 _IID_IDebugDocumentHelperEx
+       1 _IID_IDebugDocumentHost
+       1 _IID_IDebugDocumentInfo
+       1 _IID_IDebugDocumentProvider
+       1 _IID_IDebugDocumentText
+       1 _IID_IDebugDocumentTextAuthor
+       1 _IID_IDebugDocumentTextEvents
+       1 _IID_IDebugDocumentTextExternalAuthor
+       1 _IID_IDebugExpression
+       1 _IID_IDebugExpressionCallBack
+       1 _IID_IDebugExpressionContext
+       4 _IID_IDebugExtendedProperty
+       1 _IID_IDebugFormatter
+       1 _IID_IDebugHelper
+       3 _IID_IDebugHelperEx
+       4 _IID_IDebugProperty
+       4 _IID_IDebugPropertyEnumType_All
+       4 _IID_IDebugPropertyEnumType_Arguments
+       4 _IID_IDebugPropertyEnumType_Locals
+       4 _IID_IDebugPropertyEnumType_LocalsPlusArgs
+       4 _IID_IDebugPropertyEnumType_Registers
+       1 _IID_IDebugSessionProvider
+       3 _IID_IDebugSessionProviderEx
+       3 _IID_IDebugSetValueCallback
+       1 _IID_IDebugStackFrame
+       1 _IID_IDebugStackFrameSniffer
+       1 _IID_IDebugStackFrameSnifferEx
+       1 _IID_IDebugSyncOperation
+       1 _IID_IDebugThreadCall
+       5 _IID_IDispError
+       5 _IID_IDispatchEx
+       1 _IID_IEnumDebugApplicationNodes
+       1 _IID_IEnumDebugCodeContexts
+       1 _IID_IEnumDebugExpressionContexts
+       4 _IID_IEnumDebugExtendedPropertyInfo
+       4 _IID_IEnumDebugPropertyInfo
+       1 _IID_IEnumDebugStackFrames
+       1 _IID_IEnumRemoteDebugApplicationThreads
+       1 _IID_IEnumRemoteDebugApplications
+       1 _IID_IMachineDebugManager
+       1 _IID_IMachineDebugManagerCookie
+       1 _IID_IMachineDebugManagerEvents
+       4 _IID_IPerPropertyBrowsing2
+       1 _IID_IProcessDebugManager
+       1 _IID_IProvideExpressionContexts
+       1 _IID_IRemoteDebugApplication
+       1 _IID_IRemoteDebugApplicationEvents
+       3 _IID_IRemoteDebugApplicationEx
+       1 _IID_IRemoteDebugApplicationThread
+       3 _IID_IRemoteDebugApplicationThreadEx
+       3 _IID_ISetNextStatement
+       1 _IID_ISimpleConnectionPoint
+       5 _IID_IVariantChangeType
+       1 _LIBID_ProcessDebugManagerLib
+
+Member at offset 1570: //              
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+       0 mode
+      BD size
+Correct end of header
+
+Member at offset 166A: /0              
+Long name: Lib\src\Ad1\out\activdbgid00000002.obj
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+  100666 mode
+     DAD size
+Correct end of header
+
+FILE HEADER
+     14C machine (i386)
+       1 number of sections
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+     3AC offset to symbol table
+      39 number of symbols
+       0 size of optional header
+     100 characteristics:
+           32 bit word machine
+
+SECTION #1
+  .rdata name
+       0 virtual size
+       0 virtual address
+     370 size of raw data
+      3C offset to raw data
+       0 offset to relocation table
+       0 offset to line numbers
+       0 number of relocations
+       0 number of line numbers
+40300040 characteristics:
+           Initialized data
+           Memory read
+         4 byte alignment
+
+RAW DATA #1
+_CLSID_DefaultDebugSessionProvider:
+[00000000] A2 28 41 83 F4 51 D0 11 8F 20 00 80 5F 2C D0 64 .(A..Q... .._,.d
+_CLSID_MachineDebugManager:
+[00000010] 66 36 0A 0C C9 30 D0 11 8F 20 00 80 5F 2C D0 64 f6...0... .._,.d
+_CLSID_CDebugDocumentHelper:
+[00000020] A6 BC B8 83 7C 68 D0 11 A4 05 00 AA 00 60 27 5C ....|h.......`'\
+_CLSID_DebugHelper:
+[00000030] 60 C0 FC 0B 1D 8C D0 11 AC CD 00 AA 00 60 27 5C `............`'\
+_CLSID_ProcessDebugManager:
+[00000040] 22 18 A5 78 F4 51 D0 11 8F 20 00 80 5F 2C D0 64 "..x.Q... .._,.d
+_LIBID_ProcessDebugManagerLib:
+[00000050] 21 18 A5 78 F4 51 D0 11 8F 20 00 80 5F 2C D0 64 !..x.Q... .._,.d
+_IID_IProvideExpressionContexts:
+[00000060] 41 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A A<.Q........$J.z
+_IID_IEnumDebugExpressionContexts:
+[00000070] 40 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A @<.Q........$J.z
+_IID_IDebugHelper:
+[00000080] 3F 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A ?<.Q........$J.z
+_IID_ISimpleConnectionPoint:
+[00000090] 3E 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A ><.Q........$J.z
+_IID_IDebugFormatter:
+[000000A0] 05 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IEnumRemoteDebugApplicationThreads:
+[000000B0] 3C 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A <<.Q........$J.z
+_IID_IEnumRemoteDebugApplications:
+[000000C0] 3B 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A ;<.Q........$J.z
+_IID_IEnumDebugApplicationNodes:
+[000000D0] 3A 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A :<.Q........$J.z
+_IID_IDebugCookie:
+[000000E0] 39 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 9<.Q........$J.z
+_IID_IDebugApplicationThread:
+[000000F0] 38 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 8<.Q........$J.z
+_IID_IRemoteDebugApplicationThread:
+[00000100] 37 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 7<.Q........$J.z
+_IID_IDebugThreadCall:
+[00000110] 36 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 6<.Q........$J.z
+_IID_IDebugApplicationNodeEvents:
+[00000120] 35 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 5<.Q........$J.z
+_IID_IDebugApplicationNode:
+[00000130] 34 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 4<.Q........$J.z
+_IID_IRemoteDebugApplicationEvents:
+[00000140] 33 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 3<.Q........$J.z
+_IID_IDebugApplication:
+[00000150] 32 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 2<.Q........$J.z
+_IID_IRemoteDebugApplication:
+[00000160] 30 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A 0<.Q........$J.z
+_IID_IProcessDebugManager:
+[00000170] 2F 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A /<.Q........$J.z
+_IID_IMachineDebugManagerEvents:
+[00000180] 2E 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IMachineDebugManagerCookie:
+[00000190] 2D 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A -<.Q........$J.z
+_IID_IMachineDebugManager:
+[000001A0] 2C 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A ,<.Q........$J.z
+_IID_IApplicationDebuggerUI:
+[000001B0] 2B 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A +<.Q........$J.z
+_IID_IApplicationDebugger:
+[000001C0] 2A 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A *<.Q........$J.z
+_IID_IDebugSessionProvider:
+[000001D0] 29 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A )<.Q........$J.z
+_IID_IDebugDocumentContext:
+[000001E0] 28 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A (<.Q........$J.z
+_IID_IDebugDocumentHost:
+[000001F0] 27 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A '<.Q........$J.z
+_IID_IDebugDocumentHelper:
+[00000200] 26 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A &<.Q........$J.z
+_IID_IDebugDocumentTextExternalAuthor:
+[00000210] 25 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A %<.Q........$J.z
+_IID_IDebugDocumentTextAuthor:
+[00000220] 24 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A $<.Q........$J.z
+_IID_IDebugDocumentTextEvents:
+[00000230] 23 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A #<.Q........$J.z
+_IID_IDebugDocumentText:
+[00000240] 22 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A "<.Q........$J.z
+_IID_IDebugDocument:
+[00000250] 21 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A !<.Q........$J.z
+_IID_IDebugDocumentProvider:
+[00000260] 20 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A  <.Q........$J.z
+_IID_IDebugDocumentInfo:
+[00000270] 1F 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IEnumDebugStackFrames:
+[00000280] 1E 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IEnumDebugCodeContexts:
+[00000290] 1D 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugAsyncOperationCallBack:
+[000002A0] 1C 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugAsyncOperation:
+[000002B0] 1B 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugSyncOperation:
+[000002C0] 1A 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugStackFrameSnifferEx:
+[000002D0] 19 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugStackFrameSniffer:
+[000002E0] 18 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugStackFrame:
+[000002F0] 17 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugExpressionCallBack:
+[00000300] 16 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugExpressionContext:
+[00000310] 15 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugExpression:
+[00000320] 14 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugCodeContext:
+[00000330] 13 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IActiveScriptErrorDebug:
+[00000340] 12 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IActiveScriptSiteDebug:
+[00000350] 11 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IActiveScriptDebug:
+[00000360] 10 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+
+SYMBOL TABLE
+0000 00000000 SECT1  notype      static       | .rdata
+     length of section  370, #relocations    0, #linenumbers    0
+0002 00000000 SECT1  notype      external     | _CLSID_DefaultDebugSessionProvider
+0003 00000010 SECT1  notype      external     | _CLSID_MachineDebugManager
+0004 00000020 SECT1  notype      external     | _CLSID_CDebugDocumentHelper
+0005 00000030 SECT1  notype      external     | _CLSID_DebugHelper
+0006 00000040 SECT1  notype      external     | _CLSID_ProcessDebugManager
+0007 00000050 SECT1  notype      external     | _LIBID_ProcessDebugManagerLib
+0008 00000060 SECT1  notype      external     | _IID_IProvideExpressionContexts
+0009 00000070 SECT1  notype      external     | _IID_IEnumDebugExpressionContexts
+000A 00000080 SECT1  notype      external     | _IID_IDebugHelper
+000B 00000090 SECT1  notype      external     | _IID_ISimpleConnectionPoint
+000C 000000A0 SECT1  notype      external     | _IID_IDebugFormatter
+000D 000000B0 SECT1  notype      external     | _IID_IEnumRemoteDebugApplicationThreads
+000E 000000C0 SECT1  notype      external     | _IID_IEnumRemoteDebugApplications
+000F 000000D0 SECT1  notype      external     | _IID_IEnumDebugApplicationNodes
+0010 000000E0 SECT1  notype      external     | _IID_IDebugCookie
+0011 000000F0 SECT1  notype      external     | _IID_IDebugApplicationThread
+0012 00000100 SECT1  notype      external     | _IID_IRemoteDebugApplicationThread
+0013 00000110 SECT1  notype      external     | _IID_IDebugThreadCall
+0014 00000120 SECT1  notype      external     | _IID_IDebugApplicationNodeEvents
+0015 00000130 SECT1  notype      external     | _IID_IDebugApplicationNode
+0016 00000140 SECT1  notype      external     | _IID_IRemoteDebugApplicationEvents
+0017 00000150 SECT1  notype      external     | _IID_IDebugApplication
+0018 00000160 SECT1  notype      external     | _IID_IRemoteDebugApplication
+0019 00000170 SECT1  notype      external     | _IID_IProcessDebugManager
+001A 00000180 SECT1  notype      external     | _IID_IMachineDebugManagerEvents
+001B 00000190 SECT1  notype      external     | _IID_IMachineDebugManagerCookie
+001C 000001A0 SECT1  notype      external     | _IID_IMachineDebugManager
+001D 000001B0 SECT1  notype      external     | _IID_IApplicationDebuggerUI
+001E 000001C0 SECT1  notype      external     | _IID_IApplicationDebugger
+001F 000001D0 SECT1  notype      external     | _IID_IDebugSessionProvider
+0020 000001E0 SECT1  notype      external     | _IID_IDebugDocumentContext
+0021 000001F0 SECT1  notype      external     | _IID_IDebugDocumentHost
+0022 00000200 SECT1  notype      external     | _IID_IDebugDocumentHelper
+0023 00000210 SECT1  notype      external     | _IID_IDebugDocumentTextExternalAuthor
+0024 00000220 SECT1  notype      external     | _IID_IDebugDocumentTextAuthor
+0025 00000230 SECT1  notype      external     | _IID_IDebugDocumentTextEvents
+0026 00000240 SECT1  notype      external     | _IID_IDebugDocumentText
+0027 00000250 SECT1  notype      external     | _IID_IDebugDocument
+0028 00000260 SECT1  notype      external     | _IID_IDebugDocumentProvider
+0029 00000270 SECT1  notype      external     | _IID_IDebugDocumentInfo
+002A 00000280 SECT1  notype      external     | _IID_IEnumDebugStackFrames
+002B 00000290 SECT1  notype      external     | _IID_IEnumDebugCodeContexts
+002C 000002A0 SECT1  notype      external     | _IID_IDebugAsyncOperationCallBack
+002D 000002B0 SECT1  notype      external     | _IID_IDebugAsyncOperation
+002E 000002C0 SECT1  notype      external     | _IID_IDebugSyncOperation
+002F 000002D0 SECT1  notype      external     | _IID_IDebugStackFrameSnifferEx
+0030 000002E0 SECT1  notype      external     | _IID_IDebugStackFrameSniffer
+0031 000002F0 SECT1  notype      external     | _IID_IDebugStackFrame
+0032 00000300 SECT1  notype      external     | _IID_IDebugExpressionCallBack
+0033 00000310 SECT1  notype      external     | _IID_IDebugExpressionContext
+0034 00000320 SECT1  notype      external     | _IID_IDebugExpression
+0035 00000330 SECT1  notype      external     | _IID_IDebugCodeContext
+0036 00000340 SECT1  notype      external     | _IID_IActiveScriptErrorDebug
+0037 00000350 SECT1  notype      external     | _IID_IActiveScriptSiteDebug
+0038 00000360 SECT1  notype      external     | _IID_IActiveScriptDebug
+
+Member at offset 2454: /39             
+Long name: Lib\src\Ad1\out\activscpid00000002.obj
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+  100666 mode
+     2C7 size
+Correct end of header
+
+FILE HEADER
+     14C machine (i386)
+       1 number of sections
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+      DC offset to symbol table
+       C number of symbols
+       0 size of optional header
+     100 characteristics:
+           32 bit word machine
+
+SECTION #1
+  .rdata name
+       0 virtual size
+       0 virtual address
+      A0 size of raw data
+      3C offset to raw data
+       0 offset to relocation table
+       0 offset to line numbers
+       0 number of relocations
+       0 number of line numbers
+40300040 characteristics:
+           Initialized data
+           Memory read
+         4 byte alignment
+
+RAW DATA #1
+_IID_IActiveScriptStats:
+[00000000] 10 63 DA B8 9B E1 D0 11 93 3C 00 A0 C9 0D CA A9 .c.......<......
+_IID_IBindEventHandler:
+[00000010] B0 BC CD 63 B1 C1 D0 11 93 36 00 A0 C9 0D CA A9 ...c.....6......
+_IID_IActiveScriptParseProcedure:
+[00000020] 80 6A 5B AA 34 B8 D0 11 93 2F 00 A0 C9 0D CA A9 .j[.4..../......
+_IID_IActiveScriptParseProcedureOld:
+[00000030] 50 00 FF 1C DD 6F D0 11 93 28 00 A0 C9 0D CA A9 P....o...(......
+_IID_IActiveScriptParse:
+[00000040] E2 2A 1A BB F9 A4 CF 11 8F 20 00 80 5F 2C D0 64 .*....... .._,.d
+_IID_IActiveScript:
+[00000050] E1 2A 1A BB F9 A4 CF 11 8F 20 00 80 5F 2C D0 64 .*....... .._,.d
+_IID_IActiveScriptSiteInterruptPoll:
+[00000060] A0 98 96 53 CA CD CF 11 A5 EB 00 AA 00 47 A0 63 ...S.........G.c
+_IID_IActiveScriptSiteWindow:
+[00000070] 61 67 0F D1 E9 83 CF 11 8F 20 00 80 5F 2C D0 64 ag....... .._,.d
+_IID_IActiveScriptError:
+[00000080] 61 BA E1 EA ED A4 CF 11 8F 20 00 80 5F 2C D0 64 a........ .._,.d
+_IID_IActiveScriptSite:
+[00000090] E3 A1 01 DB 2B A4 CF 11 8F 20 00 80 5F 2C D0 64 ....+.... .._,.d
+
+SYMBOL TABLE
+0000 00000000 SECT1  notype      static       | .rdata
+     length of section   A0, #relocations    0, #linenumbers    0
+0002 00000000 SECT1  notype      external     | _IID_IActiveScriptStats
+0003 00000010 SECT1  notype      external     | _IID_IBindEventHandler
+0004 00000020 SECT1  notype      external     | _IID_IActiveScriptParseProcedure
+0005 00000030 SECT1  notype      external     | _IID_IActiveScriptParseProcedureOld
+0006 00000040 SECT1  notype      external     | _IID_IActiveScriptParse
+0007 00000050 SECT1  notype      external     | _IID_IActiveScript
+0008 00000060 SECT1  notype      external     | _IID_IActiveScriptSiteInterruptPoll
+0009 00000070 SECT1  notype      external     | _IID_IActiveScriptSiteWindow
+000A 00000080 SECT1  notype      external     | _IID_IActiveScriptError
+000B 00000090 SECT1  notype      external     | _IID_IActiveScriptSite
+
+Member at offset 2758: /78             
+Long name: Lib\src\Ad1\out\ad1exid00000002.obj
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+  100666 mode
+     251 size
+Correct end of header
+
+FILE HEADER
+     14C machine (i386)
+       1 number of sections
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+      BC offset to symbol table
+       A number of symbols
+       0 size of optional header
+     100 characteristics:
+           32 bit word machine
+
+SECTION #1
+  .rdata name
+       0 virtual size
+       0 virtual address
+      80 size of raw data
+      3C offset to raw data
+       0 offset to relocation table
+       0 offset to line numbers
+       0 number of relocations
+       0 number of line numbers
+40300040 characteristics:
+           Initialized data
+           Memory read
+         4 byte alignment
+
+RAW DATA #1
+_IID_IDebugSessionProviderEx:
+[00000000] 09 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_ISetNextStatement:
+[00000010] 03 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugSetValueCallback:
+[00000020] 06 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugHelperEx:
+[00000030] 08 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugDocumentHelperEx:
+[00000040] 02 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IRemoteDebugApplicationThreadEx:
+[00000050] 0C 2B B3 B9 47 91 D1 11 94 EA 00 C0 4F A3 02 A1 .+..G.......O...
+_IID_IRemoteDebugApplicationEx:
+[00000060] 01 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+_IID_IDebugApplicationEx:
+[00000070] 00 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A .<.Q........$J.z
+
+SYMBOL TABLE
+0000 00000000 SECT1  notype      static       | .rdata
+     length of section   80, #relocations    0, #linenumbers    0
+0002 00000000 SECT1  notype      external     | _IID_IDebugSessionProviderEx
+0003 00000010 SECT1  notype      external     | _IID_ISetNextStatement
+0004 00000020 SECT1  notype      external     | _IID_IDebugSetValueCallback
+0005 00000030 SECT1  notype      external     | _IID_IDebugHelperEx
+0006 00000040 SECT1  notype      external     | _IID_IDebugDocumentHelperEx
+0007 00000050 SECT1  notype      external     | _IID_IRemoteDebugApplicationThreadEx
+0008 00000060 SECT1  notype      external     | _IID_IRemoteDebugApplicationEx
+0009 00000070 SECT1  notype      external     | _IID_IDebugApplicationEx
+
+Member at offset 29E6: /114            
+Long name: Lib\src\Ad1\out\dbgpropid00000002.obj
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+  100666 mode
+     2FD size
+Correct end of header
+
+FILE HEADER
+     14C machine (i386)
+       1 number of sections
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+      DC offset to symbol table
+       C number of symbols
+       0 size of optional header
+     100 characteristics:
+           32 bit word machine
+
+SECTION #1
+  .rdata name
+       0 virtual size
+       0 virtual address
+      A0 size of raw data
+      3C offset to raw data
+       0 offset to relocation table
+       0 offset to line numbers
+       0 number of relocations
+       0 number of line numbers
+40300040 characteristics:
+           Initialized data
+           Memory read
+         4 byte alignment
+
+RAW DATA #1
+_IID_IDebugPropertyEnumType_Registers:
+[00000000] 59 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A Y<.Q........$J.z
+_IID_IDebugPropertyEnumType_LocalsPlusArgs:
+[00000010] 58 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A X<.Q........$J.z
+_IID_IDebugPropertyEnumType_Arguments:
+[00000020] 57 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A W<.Q........$J.z
+_IID_IDebugPropertyEnumType_Locals:
+[00000030] 56 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A V<.Q........$J.z
+_IID_IDebugPropertyEnumType_All:
+[00000040] 55 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A U<.Q........$J.z
+_IID_IPerPropertyBrowsing2:
+[00000050] 54 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A T<.Q........$J.z
+_IID_IEnumDebugExtendedPropertyInfo:
+[00000060] 53 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A S<.Q........$J.z
+_IID_IDebugExtendedProperty:
+[00000070] 52 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A R<.Q........$J.z
+_IID_IEnumDebugPropertyInfo:
+[00000080] 51 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A Q<.Q........$J.z
+_IID_IDebugProperty:
+[00000090] 50 3C 97 51 0C CB D0 11 B5 C9 00 A0 24 4A 0E 7A P<.Q........$J.z
+
+SYMBOL TABLE
+0000 00000000 SECT1  notype      static       | .rdata
+     length of section   A0, #relocations    0, #linenumbers    0
+0002 00000000 SECT1  notype      external     | _IID_IDebugPropertyEnumType_Registers
+0003 00000010 SECT1  notype      external     | _IID_IDebugPropertyEnumType_LocalsPlusArgs
+0004 00000020 SECT1  notype      external     | _IID_IDebugPropertyEnumType_Arguments
+0005 00000030 SECT1  notype      external     | _IID_IDebugPropertyEnumType_Locals
+0006 00000040 SECT1  notype      external     | _IID_IDebugPropertyEnumType_All
+0007 00000050 SECT1  notype      external     | _IID_IPerPropertyBrowsing2
+0008 00000060 SECT1  notype      external     | _IID_IEnumDebugExtendedPropertyInfo
+0009 00000070 SECT1  notype      external     | _IID_IDebugExtendedProperty
+000A 00000080 SECT1  notype      external     | _IID_IEnumDebugPropertyInfo
+000B 00000090 SECT1  notype      external     | _IID_IDebugProperty
+
+Member at offset 2D20: /152            
+Long name: Lib\src\Ad1\out\dispexid00000002.obj
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+         user id
+         group id
+  100666 mode
+     103 size
+Correct end of header
+
+FILE HEADER
+     14C machine (i386)
+       1 number of sections
+57FB75E1 time date stamp (Mon Oct 10 13:05:05 2016)
+      6C offset to symbol table
+       5 number of symbols
+       0 size of optional header
+     100 characteristics:
+           32 bit word machine
+
+SECTION #1
+  .rdata name
+       0 virtual size
+       0 virtual address
+      30 size of raw data
+      3C offset to raw data
+       0 offset to relocation table
+       0 offset to line numbers
+       0 number of relocations
+       0 number of line numbers
+40300040 characteristics:
+           Initialized data
+           Memory read
+         4 byte alignment
+
+RAW DATA #1
+_IID_IVariantChangeType:
+[00000000] 62 98 EF A6 20 C7 D0 11 93 37 00 A0 C9 0D CA A9 b... ....7......
+_IID_IDispError:
+[00000010] 61 98 EF A6 20 C7 D0 11 93 37 00 A0 C9 0D CA A9 a... ....7......
+_IID_IDispatchEx:
+[00000020] 60 98 EF A6 20 C7 D0 11 93 37 00 A0 C9 0D CA A9 `... ....7......
+
+SYMBOL TABLE
+0000 00000000 SECT1  notype      static       | .rdata
+     length of section   30, #relocations    0, #linenumbers    0
+0002 00000000 SECT1  notype      external     | _IID_IVariantChangeType
+0003 00000010 SECT1  notype      external     | _IID_IDispError
+0004 00000020 SECT1  notype      external     | _IID_IDispatchEx
+
+SUMMARY
+     560 .rdata
