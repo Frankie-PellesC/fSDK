@@ -1,0 +1,10 @@
+; Def File for lib <bhsupp.dll> created with fTools
+; Created on Mon Oct 10 13:06:06 2016
+
+LIBRARY bhsupp.dll
+EXPORTS
+; Log File for lib <bhsupp.dll> created with fTools
+
+"_dprintf"
+
+; Def built in 0.001719 seconds
