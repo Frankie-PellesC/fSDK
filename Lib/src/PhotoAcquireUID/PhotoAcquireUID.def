@@ -1,0 +1,9 @@
+; Def File for lib <PhotoAcquireUID.dll> created with fTools
+; Created on Mon Oct 10 13:11:40 2016
+
+LIBRARY PhotoAcquireUID.dll
+EXPORTS
+; Log File for lib <PhotoAcquireUID.dll> created with fTools
+
+
+; Def built in 0.327727 seconds

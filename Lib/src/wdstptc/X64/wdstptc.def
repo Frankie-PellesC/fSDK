@@ -1,0 +1,24 @@
+; Def File for lib <wdstptc.dll> created with fTools
+; Created on Mon Oct 10 12:09:56 2016
+
+LIBRARY wdstptc.dll
+EXPORTS
+; Log File for lib <wdstptc.dll> created with fTools
+
+"?WdsTptcDownload@@YAKKKPEBG000KKK@Z"
+"?WdsTransportClientRegisterTrace@@YAKP6AXPEBGPEAD@Z@Z"
+"WdsTransportClientAddRefBuffer"
+"WdsTransportClientCancelSession"
+"WdsTransportClientCancelSessionEx"
+"WdsTransportClientCloseSession"
+"WdsTransportClientCompleteReceive"
+"WdsTransportClientInitialize"
+"WdsTransportClientInitializeSession"
+"WdsTransportClientQueryStatus"
+"WdsTransportClientRegisterCallback"
+"WdsTransportClientReleaseBuffer"
+"WdsTransportClientShutdown"
+"WdsTransportClientStartSession"
+"WdsTransportClientWaitForCompletion"
+
+; Def built in 0.001375 seconds

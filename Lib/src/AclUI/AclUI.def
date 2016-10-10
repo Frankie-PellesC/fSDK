@@ -1,0 +1,13 @@
+; Def File for lib <AclUI.dll> created with fTools
+; Created on Mon Oct 10 13:05:04 2016
+
+LIBRARY AclUI.dll
+EXPORTS
+; Log File for lib <AclUI.dll> created with fTools
+
+"_CreateSecurityPage@4" @1
+"_EditSecurity@8" @2
+"_EditSecurityAdvanced@12" @3
+"_IID_ISecurityInformation" @16
+
+; Def built in 0.001528 seconds

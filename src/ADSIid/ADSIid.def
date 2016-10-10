@@ -1,9 +1,0 @@
-; Def File for lib <ADSIid.dll> created with fTools
-; Created on Mon Oct 10 13:05:07 2016
-
-LIBRARY ADSIid.dll
-EXPORTS
-; Log File for lib <ADSIid.dll> created with fTools
-
-
-; Def built in 0.645338 seconds

@@ -1,0 +1,32 @@
+; Def File for lib <wdspxe.dll> created with fTools
+; Created on Mon Oct 10 12:09:56 2016
+
+LIBRARY wdspxe.dll
+EXPORTS
+; Log File for lib <wdspxe.dll> created with fTools
+
+"?WdsProviderInitialize@@YAKPEAX@Z"
+"PxeAsyncRecvDone"
+"PxeDhcpAppendOption"
+"PxeDhcpAppendOptionRaw"
+"PxeDhcpGetOptionValue"
+"PxeDhcpGetVendorOptionValue"
+"PxeDhcpInitialize"
+"PxeDhcpIsValid"
+"PxeGetServerInfo"
+"PxePacketAllocate"
+"PxePacketFree"
+"PxeProviderEnumClose"
+"PxeProviderEnumFirst"
+"PxeProviderEnumNext"
+"PxeProviderFreeInfo"
+"PxeProviderQueryIndex"
+"PxeProviderRegister"
+"PxeProviderSetAttribute"
+"PxeProviderUnRegister"
+"PxeRegisterCallback"
+"PxeSendReply"
+"PxeTrace"
+"PxeTraceV"
+
+; Def built in 0.001787 seconds

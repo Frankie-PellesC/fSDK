@@ -1,0 +1,20 @@
+; Def File for lib <MSTask.dll> created with fTools
+; Created on Mon Oct 10 11:58:48 2016
+
+LIBRARY MSTask.dll
+EXPORTS
+; Log File for lib <MSTask.dll> created with fTools
+
+"ConvertAtJobsToTasks"
+"GetNetScheduleAccountInformation"
+"NetrJobAdd"
+"NetrJobDel"
+"NetrJobEnum"
+"NetrJobGetInfo"
+"SAGetAccountInformation"
+"SAGetNSAccountInformation"
+"SASetAccountInformation"
+"SASetNSAccountInformation"
+"SetNetScheduleAccountInformation"
+
+; Def built in 0.024401 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <locationapi.dll> created with fTools
+; Created on Mon Oct 10 11:57:03 2016
+
+LIBRARY locationapi.dll
+EXPORTS
+; Log File for lib <locationapi.dll> created with fTools
+
+
+; Def built in 0.175263 seconds

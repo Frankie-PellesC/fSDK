@@ -1,0 +1,9 @@
+; Def File for lib <iepmapi.dll> created with fTools
+; Created on Mon Oct 10 13:08:59 2016
+
+LIBRARY iepmapi.dll
+EXPORTS
+; Log File for lib <iepmapi.dll> created with fTools
+
+
+; Def built in 0.012156 seconds

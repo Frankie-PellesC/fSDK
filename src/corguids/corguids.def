@@ -1,9 +1,0 @@
-; Def File for lib <corguids.dll> created with fTools
-; Created on Mon Oct 10 13:07:04 2016
-
-LIBRARY corguids.dll
-EXPORTS
-; Log File for lib <corguids.dll> created with fTools
-
-
-; Def built in 0.125111 seconds

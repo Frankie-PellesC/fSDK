@@ -1,0 +1,52 @@
+; Def File for lib <WinBio.dll> created with fTools
+; Created on Mon Oct 10 12:10:17 2016
+
+LIBRARY WinBio.dll
+EXPORTS
+; Log File for lib <WinBio.dll> created with fTools
+
+"WinBioAcquireFocus"
+"WinBioCancel"
+"WinBioCaptureSample"
+"WinBioCaptureSampleWithCallback"
+"WinBioCloseSession"
+"WinBioControlUnit"
+"WinBioControlUnitPrivileged"
+"WinBioDeleteTemplate"
+"WinBioEnrollBegin"
+"WinBioEnrollCapture"
+"WinBioEnrollCaptureWithCallback"
+"WinBioEnrollCommit"
+"WinBioEnrollDiscard"
+"WinBioEnumBiometricUnits"
+"WinBioEnumDatabases"
+"WinBioEnumEnrollments"
+"WinBioEnumServiceProviders"
+"WinBioFree"
+"WinBioGetCredentialState"
+"WinBioGetDomainLogonSetting"
+"WinBioGetEnabledSetting"
+"WinBioGetLogonSetting"
+"WinBioGetProperty"
+"WinBioIdentify"
+"WinBioIdentifyWithCallback"
+"WinBioLocateSensor"
+"WinBioLocateSensorWithCallback"
+"WinBioLockUnit"
+"WinBioLogonIdentifiedUser"
+"WinBioOpenSession"
+"WinBioRegisterEventMonitor"
+"WinBioRegisterServiceMonitor"
+"WinBioReleaseFocus"
+"WinBioRemoveAllCredentials"
+"WinBioRemoveAllDomainCredentials"
+"WinBioRemoveCredential"
+"WinBioSetCredential"
+"WinBioUnlockUnit"
+"WinBioUnregisterEventMonitor"
+"WinBioUnregisterServiceMonitor"
+"WinBioVerify"
+"WinBioVerifyWithCallback"
+"WinBioWait"
+
+; Def built in 0.001853 seconds

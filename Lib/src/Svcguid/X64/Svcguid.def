@@ -1,0 +1,9 @@
+; Def File for lib <Svcguid.dll> created with fTools
+; Created on Mon Oct 10 12:01:20 2016
+
+LIBRARY Svcguid.dll
+EXPORTS
+; Log File for lib <Svcguid.dll> created with fTools
+
+
+; Def built in 0.806099 seconds

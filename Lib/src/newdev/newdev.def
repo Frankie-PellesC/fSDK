@@ -1,0 +1,27 @@
+; Def File for lib <newdev.dll> created with fTools
+; Created on Mon Oct 10 13:11:32 2016
+
+LIBRARY newdev.dll
+EXPORTS
+; Log File for lib <newdev.dll> created with fTools
+
+"_DeviceInternetSettingUiW@16"
+"_DiInstallDevice@24"
+"_DiInstallDriverA@16"
+"_DiInstallDriverW@16"
+"_DiRollbackDriver@20"
+"_DiShowUpdateDevice@20"
+"_DiUninstallDevice@20"
+"_InstallNewDevice@12"
+"_InstallSelectedDriver@20"
+"_InstallWindowsUpdateDriver@28"
+"_SetInternetPolicies@8"
+"_UpdateDriverForPlugAndPlayDevicesA@20"
+"_UpdateDriverForPlugAndPlayDevicesW@20"
+"_pDiDeviceInstallActionW@16"
+"_pDiDeviceInstallNotificationW@16"
+"_pDiDoDeviceInstallAsAdmin@16"
+"_pDiDoFinishInstallAsAdmin@12"
+"_pDiDoNullDriverInstall@8"
+
+; Def built in 0.001502 seconds

@@ -1,0 +1,35 @@
+; Def File for lib <mscorsn.dll> created with fTools
+; Created on Mon Oct 10 11:58:45 2016
+
+LIBRARY mscorsn.dll
+EXPORTS
+; Log File for lib <mscorsn.dll> created with fTools
+
+"GetHashFromAssemblyFile"
+"GetHashFromAssemblyFileW"
+"GetHashFromBlob"
+"GetHashFromFile"
+"GetHashFromFileW"
+"GetHashFromHandle"
+"StrongNameCompareAssemblies"
+"StrongNameErrorInfo"
+"StrongNameFreeBuffer"
+"StrongNameGetBlob"
+"StrongNameGetBlobFromImage"
+"StrongNameGetPublicKey"
+"StrongNameHashSize"
+"StrongNameKeyDelete"
+"StrongNameKeyGen"
+"StrongNameKeyGenEx"
+"StrongNameKeyInstall"
+"StrongNameSignatureGeneration"
+"StrongNameSignatureGenerationEx"
+"StrongNameSignatureSize"
+"StrongNameSignatureVerification"
+"StrongNameSignatureVerificationEx"
+"StrongNameSignatureVerificationFromImage"
+"StrongNameTokenFromAssembly"
+"StrongNameTokenFromAssemblyEx"
+"StrongNameTokenFromPublicKey"
+
+; Def built in 0.002083 seconds

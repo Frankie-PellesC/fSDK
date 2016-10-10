@@ -1,0 +1,24 @@
+; Def File for lib <vstorinterface.dll> created with fTools
+; Created on Mon Oct 10 12:09:51 2016
+
+LIBRARY vstorinterface.dll
+EXPORTS
+; Log File for lib <vstorinterface.dll> created with fTools
+
+"??0VirtualBus@VstorInterface@@QEAA@XZ"
+"??1VirtualBus@VstorInterface@@QEAA@XZ"
+"??4VirtualBus@VstorInterface@@QEAAAEAV01@AEBV01@@Z"
+"?Close@VirtualBus@VstorInterface@@AEAAXXZ"
+"?CreateDriveEx@VirtualBus@VstorInterface@@QEAAJPEAUtagNewVirtualDriveDescription@@AEAUtagVirtualDriveInformation@@@Z"
+"?IsValid@VirtualBus@VstorInterface@@QEAA_NXZ"
+"?Open@VirtualBus@VstorInterface@@AEAAJXZ"
+"?QueryDriveInterface@VirtualBus@VstorInterface@@QEAAJAEBU_GUID@@PEAGK@Z"
+"?QueryMountedImage@VirtualBus@VstorInterface@@QEAAJAEBU_GUID@@PEAGK@Z"
+"?QueryStorageInformation@VirtualBus@VstorInterface@@QEAAJAEBU_GUID@@AEAUSTORAGE_INFORMATION@12@@Z"
+"?QueryStorageInformation@VirtualBus@VstorInterface@@QEAAJPEAXAEAUSTORAGE_INFORMATION@12@@Z"
+"?QueryStorageInformation@VirtualBus@VstorInterface@@QEAAJPEBGAEAUSTORAGE_INFORMATION@12@@Z"
+"?QueryVersion@VirtualBus@VstorInterface@@QEAAJAEAUtagVirtualStorageVersion@@@Z"
+"?ReSync@VirtualBus@VstorInterface@@QEAAJAEBU_GUID@@PEBG@Z"
+"?RemoveDrive@VirtualBus@VstorInterface@@QEAAJAEBU_GUID@@_N@Z"
+
+; Def built in 0.001504 seconds

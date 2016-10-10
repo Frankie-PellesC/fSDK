@@ -1,0 +1,9 @@
+; Def File for lib <mfuuid.dll> created with fTools
+; Created on Mon Oct 10 13:09:34 2016
+
+LIBRARY mfuuid.dll
+EXPORTS
+; Log File for lib <mfuuid.dll> created with fTools
+
+
+; Def built in 2.413116 seconds

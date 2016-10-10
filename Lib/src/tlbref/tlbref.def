@@ -1,0 +1,11 @@
+; Def File for lib <tlbref.dll> created with fTools
+; Created on Mon Oct 10 13:14:04 2016
+
+LIBRARY tlbref.dll
+EXPORTS
+; Log File for lib <tlbref.dll> created with fTools
+
+"_GetTypeLibInfo@24"
+"_LoadTypeLibWithResolver@16"
+
+; Def built in 0.002417 seconds

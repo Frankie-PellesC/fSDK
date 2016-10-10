@@ -1,0 +1,13 @@
+; Def File for lib <patchwiz.dll> created with fTools
+; Created on Mon Oct 10 13:11:39 2016
+
+LIBRARY patchwiz.dll
+EXPORTS
+; Log File for lib <patchwiz.dll> created with fTools
+
+"?UiCreatePatchPackageA@@YGIPBD00PAUHWND__@@0H@Z"
+"?UiCreatePatchPackageExA@@YGIPBD00PAUHWND__@@0HKK@Z"
+"?UiCreatePatchPackageExW@@YGIPBG00PAUHWND__@@0HKK@Z"
+"?UiCreatePatchPackageW@@YGIPBG00PAUHWND__@@0H@Z"
+
+; Def built in 0.001043 seconds

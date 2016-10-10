@@ -1,0 +1,16 @@
+; Def File for lib <OlePro32.dll> created with fTools
+; Created on Mon Oct 10 13:11:38 2016
+
+LIBRARY OlePro32.dll
+EXPORTS
+; Log File for lib <OlePro32.dll> created with fTools
+
+"_OleCreateFontIndirect@12" @253
+"_OleCreatePictureIndirect@16" @252
+"_OleCreatePropertyFrame@44" @250
+"_OleCreatePropertyFrameIndirect@4" @249
+"_OleIconToCursor@8" @248
+"_OleLoadPicture@20" @251
+"_OleTranslateColor@12" @254
+
+; Def built in 0.001333 seconds

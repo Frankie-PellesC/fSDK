@@ -1,0 +1,17 @@
+; Def File for lib <xoleHlp.dll> created with fTools
+; Created on Mon Oct 10 12:11:19 2016
+
+LIBRARY xoleHlp.dll
+EXPORTS
+; Log File for lib <xoleHlp.dll> created with fTools
+
+"?DtcGetTransactionManager@@YAJPEAD0AEBU_GUID@@KGPEAXPEAPEAX@Z" @5
+"?FreezeLocalTransactionManagers@@YAJKK@Z" @8
+"?GetDtcLocaleResourceHandle@@YAPEAUHINSTANCE__@@XZ" @4
+"?ThawLocalTransactionManagers@@YAJXZ" @9
+"DtcGetTransactionManagerC" @7
+"DtcGetTransactionManagerEx"
+"DtcGetTransactionManagerExA"
+"DtcGetTransactionManagerExW"
+
+; Def built in 0.001044 seconds

@@ -1,0 +1,37 @@
+; Def File for lib <HLink.dll> created with fTools
+; Created on Mon Oct 10 13:08:58 2016
+
+LIBRARY HLink.dll
+EXPORTS
+; Log File for lib <HLink.dll> created with fTools
+
+"_HlinkClone@20" @7
+"_HlinkCreateBrowseContext@12" @6
+"_HlinkCreateExtensionServices@28" @32
+"_HlinkCreateFromData@24" @5
+"_HlinkCreateFromMoniker@32" @3
+"_HlinkCreateFromString@32" @4
+"_HlinkCreateShortcut@24" @23
+"_HlinkCreateShortcutFromMoniker@28" @29
+"_HlinkCreateShortcutFromString@28" @27
+"_HlinkGetSpecialReference@8" @22
+"_HlinkGetValueFromParams@12" @28
+"_HlinkIsShortcut@4" @25
+"_HlinkNavigate@24" @10
+"_HlinkNavigateToStringReference@36" @8
+"_HlinkOnNavigate@28" @9
+"_HlinkOnRenameDocument@16" @12
+"_HlinkParseDisplayName@20" @18
+"_HlinkPreprocessMoniker@12" @33
+"_HlinkQueryCreateFromData@4" @20
+"_HlinkResolveMonikerForData@28" @14
+"_HlinkResolveShortcut@24" @24
+"_HlinkResolveShortcutToMoniker@12" @30
+"_HlinkResolveShortcutToString@12" @26
+"_HlinkResolveStringForData@28" @15
+"_HlinkSetSpecialReference@8" @21
+"_HlinkTranslateURL@12" @31
+"_HlinkUpdateStackItem@24" @11
+"_OleSaveToStreamEx@12" @16
+
+; Def built in 0.002331 seconds

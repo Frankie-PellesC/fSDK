@@ -1,0 +1,52 @@
+; Def File for lib <WinBio.dll> created with fTools
+; Created on Mon Oct 10 13:24:13 2016
+
+LIBRARY WinBio.dll
+EXPORTS
+; Log File for lib <WinBio.dll> created with fTools
+
+"_WinBioAcquireFocus@0"
+"_WinBioCancel@4"
+"_WinBioCaptureSample@28"
+"_WinBioCaptureSampleWithCallback@20"
+"_WinBioCloseSession@4"
+"_WinBioControlUnit@40"
+"_WinBioControlUnitPrivileged@40"
+"_WinBioDeleteTemplate@16"
+"_WinBioEnrollBegin@12"
+"_WinBioEnrollCapture@8"
+"_WinBioEnrollCaptureWithCallback@12"
+"_WinBioEnrollCommit@12"
+"_WinBioEnrollDiscard@4"
+"_WinBioEnumBiometricUnits@12"
+"_WinBioEnumDatabases@12"
+"_WinBioEnumEnrollments@20"
+"_WinBioEnumServiceProviders@12"
+"_WinBioFree@4"
+"_WinBioGetCredentialState@84"
+"_WinBioGetDomainLogonSetting@8"
+"_WinBioGetEnabledSetting@8"
+"_WinBioGetLogonSetting@8"
+"_WinBioGetProperty@32"
+"_WinBioIdentify@20"
+"_WinBioIdentifyWithCallback@12"
+"_WinBioLocateSensor@8"
+"_WinBioLocateSensorWithCallback@12"
+"_WinBioLockUnit@8"
+"_WinBioLogonIdentifiedUser@4"
+"_WinBioOpenSession@28"
+"_WinBioRegisterEventMonitor@16"
+"_WinBioRegisterServiceMonitor@16"
+"_WinBioReleaseFocus@0"
+"_WinBioRemoveAllCredentials@0"
+"_WinBioRemoveAllDomainCredentials@0"
+"_WinBioRemoveCredential@80"
+"_WinBioSetCredential@16"
+"_WinBioUnlockUnit@8"
+"_WinBioUnregisterEventMonitor@4"
+"_WinBioUnregisterServiceMonitor@4"
+"_WinBioVerify@24"
+"_WinBioVerifyWithCallback@20"
+"_WinBioWait@4"
+
+; Def built in 0.002261 seconds

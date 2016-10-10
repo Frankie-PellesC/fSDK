@@ -1,0 +1,9 @@
+; Def File for lib <msxml6.dll> created with fTools
+; Created on Mon Oct 10 11:58:59 2016
+
+LIBRARY msxml6.dll
+EXPORTS
+; Log File for lib <msxml6.dll> created with fTools
+
+
+; Def built in 0.187312 seconds

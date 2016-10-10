@@ -1,0 +1,93 @@
+; Def File for lib <mscoree.dll> created with fTools
+; Created on Mon Oct 10 13:11:07 2016
+
+LIBRARY mscoree.dll
+EXPORTS
+; Log File for lib <mscoree.dll> created with fTools
+
+"?CloseCtrs@@YGKXZ"
+"?CollectCtrs@@YGKPAGPAPAXPAK2@Z"
+"?EEDllGetClassObjectFromClass@@YGJPBG0ABU_GUID@@PAPAX@Z"
+"?GetProcessExecutableHeap@@YGPAXXZ"
+"?GetVersionExWrapper@@YGHPAU_OSVERSIONINFOW@@@Z" @142
+"?InitErrors@@YGXPAK@Z" @17
+"?InitSSAutoEnterThread@@YGPAJXZ" @19
+"?OpenCtrs@@YGKPAG@Z"
+"?PostError@@YAJJZZ" @18
+"?UpdateError@@YGXXZ" @20
+"_CLRCreateInstance@12"
+"_CallFunctionShim@24"
+"_ClrCreateManagedInstance@12"
+"_CoEEShutDownCOM@0"
+"_CoInitializeCor@4"
+"_CoInitializeEE@4"
+"_CoUninitializeCor@0"
+"_CoUninitializeEE@4"
+"_CorBindToCurrentRuntime@16"
+"_CorBindToRuntime@20"
+"_CorBindToRuntimeByCfg@24"
+"_CorBindToRuntimeEx@24"
+"_CorBindToRuntimeHost@32"
+"_CorExitProcess@4"
+"_CorGetSvc@4"
+"_CorMarkThreadInThreadPool@0"
+"_CreateConfigStream@8"
+"_CreateDebuggingInterfaceFromVersion@12"
+"_GetCLRUEFManager@8" @24
+"_GetCORRequiredVersion@12"
+"_GetCORSystemDirectory@12"
+"_GetCORVersion@12"
+"_GetCompileInfo@0"
+"_GetFileVersion@16"
+"_GetHashFromAssemblyFile@20"
+"_GetHashFromAssemblyFileW@20"
+"_GetHashFromBlob@24"
+"_GetHashFromFile@20"
+"_GetHashFromFileW@20"
+"_GetHashFromHandle@20"
+"_GetMetaDataInternalInterface@20"
+"_GetMetaDataInternalInterfaceFromPublic@12"
+"_GetMetaDataPublicInterfaceFromInternal@12"
+"_GetPermissionRequests@28"
+"_GetRealProcAddress@8"
+"_GetRequestedRuntimeInfo@44"
+"_GetRequestedRuntimeVersion@16"
+"_GetRequestedRuntimeVersionForCLSID@20"
+"_GetVersionFromProcess@16"
+"_GetXMLObject@4"
+"_LoadLibraryShim@16"
+"_LoadLibraryWithPolicyShim@16"
+"_LoadStringRC@16" @22
+"_LoadStringRCEx@24"
+"_LockClrVersion@12"
+"_MetaDataGetDispenser@12"
+"_ReOpenMetaDataWithMemory@12" @23
+"_RunDll32ShimW@16"
+"_StrongNameCompareAssemblies@12"
+"_StrongNameErrorInfo@0"
+"_StrongNameFreeBuffer@4"
+"_StrongNameGetBlob@12"
+"_StrongNameGetBlobFromImage@16"
+"_StrongNameGetPublicKey@20"
+"_StrongNameHashSize@8"
+"_StrongNameKeyDelete@4"
+"_StrongNameKeyGen@16"
+"_StrongNameKeyGenEx@20"
+"_StrongNameKeyInstall@12"
+"_StrongNameSignatureGeneration@24"
+"_StrongNameSignatureGenerationEx@28"
+"_StrongNameSignatureSize@12"
+"_StrongNameSignatureVerification@12"
+"_StrongNameSignatureVerificationEx@12"
+"_StrongNameSignatureVerificationFromImage@16"
+"_StrongNameTokenFromAssembly@12"
+"_StrongNameTokenFromAssemblyEx@20"
+"_StrongNameTokenFromPublicKey@16"
+"_TranslateSecurityAttributes@24"
+"__CorDllMain@12"
+"__CorExeMain2@20"
+"__CorExeMain@0"
+"__CorImageUnloading@4"
+"__CorValidateImage@8"
+
+; Def built in 0.003621 seconds

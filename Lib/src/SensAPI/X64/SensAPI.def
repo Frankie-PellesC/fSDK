@@ -1,0 +1,12 @@
+; Def File for lib <SensAPI.dll> created with fTools
+; Created on Mon Oct 10 11:59:59 2016
+
+LIBRARY SensAPI.dll
+EXPORTS
+; Log File for lib <SensAPI.dll> created with fTools
+
+"IsDestinationReachableA"
+"IsDestinationReachableW"
+"IsNetworkAlive"
+
+; Def built in 0.001015 seconds

@@ -1,0 +1,10 @@
+; Def File for lib <slwga.dll> created with fTools
+; Created on Mon Oct 10 12:00:33 2016
+
+LIBRARY slwga.dll
+EXPORTS
+; Log File for lib <slwga.dll> created with fTools
+
+"SLIsGenuineLocal"
+
+; Def built in 0.001065 seconds

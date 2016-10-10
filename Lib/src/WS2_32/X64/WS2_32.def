@@ -1,0 +1,191 @@
+; Def File for lib <WS2_32.dll> created with fTools
+; Created on Mon Oct 10 12:11:10 2016
+
+LIBRARY WS2_32.dll
+EXPORTS
+; Log File for lib <WS2_32.dll> created with fTools
+
+"?WSApSetPostRoutine@@YAHPEAX@Z"
+"FreeAddrInfoEx"
+"FreeAddrInfoExW"
+"FreeAddrInfoW"
+"GetAddrInfoExA"
+"GetAddrInfoExW"
+"GetAddrInfoW"
+"GetNameInfoW"
+"InetNtopW"
+"InetPtonW"
+"SetAddrInfoExA"
+"SetAddrInfoExW"
+"WEP" @500
+"WPUCompleteOverlappedRequest"
+"WSAAccept"
+"WSAAddressToStringA"
+"WSAAddressToStringW"
+"WSAAdvertiseProvider"
+"WSAAsyncGetHostByAddr" @102
+"WSAAsyncGetHostByName" @103
+"WSAAsyncGetProtoByName" @105
+"WSAAsyncGetProtoByNumber" @104
+"WSAAsyncGetServByName" @107
+"WSAAsyncGetServByPort" @106
+"WSAAsyncSelect" @101
+"WSACancelAsyncRequest" @108
+"WSACancelBlockingCall" @113
+"WSACleanup" @116
+"WSACloseEvent"
+"WSAConnect"
+"WSAConnectByList"
+"WSAConnectByNameA"
+"WSAConnectByNameW"
+"WSACreateEvent"
+"WSADuplicateSocketA"
+"WSADuplicateSocketW"
+"WSAEnumNameSpaceProvidersA"
+"WSAEnumNameSpaceProvidersExA"
+"WSAEnumNameSpaceProvidersExW"
+"WSAEnumNameSpaceProvidersW"
+"WSAEnumNetworkEvents"
+"WSAEnumProtocolsA"
+"WSAEnumProtocolsW"
+"WSAEventSelect"
+"WSAGetLastError" @111
+"WSAGetOverlappedResult"
+"WSAGetQOSByName"
+"WSAGetServiceClassInfoA"
+"WSAGetServiceClassInfoW"
+"WSAGetServiceClassNameByClassIdA"
+"WSAGetServiceClassNameByClassIdW"
+"WSAHtonl"
+"WSAHtons"
+"WSAInstallServiceClassA"
+"WSAInstallServiceClassW"
+"WSAIoctl"
+"WSAIsBlocking" @114
+"WSAJoinLeaf"
+"WSALookupServiceBeginA"
+"WSALookupServiceBeginW"
+"WSALookupServiceEnd"
+"WSALookupServiceNextA"
+"WSALookupServiceNextW"
+"WSANSPIoctl"
+"WSANtohl"
+"WSANtohs"
+"WSAPoll"
+"WSAProviderCompleteAsyncCall"
+"WSAProviderConfigChange"
+"WSARecv"
+"WSARecvDisconnect"
+"WSARecvFrom"
+"WSARemoveServiceClass"
+"WSAResetEvent"
+"WSASend"
+"WSASendDisconnect"
+"WSASendMsg"
+"WSASendTo"
+"WSASetBlockingHook" @109
+"WSASetEvent"
+"WSASetLastError" @112
+"WSASetServiceA"
+"WSASetServiceW"
+"WSASocketA"
+"WSASocketW"
+"WSAStartup" @115
+"WSAStringToAddressA"
+"WSAStringToAddressW"
+"WSAUnadvertiseProvider"
+"WSAUnhookBlockingHook" @110
+"WSAWaitForMultipleEvents"
+"WSCDeinstallProvider"
+"WSCDeinstallProvider32"
+"WSCEnableNSProvider"
+"WSCEnableNSProvider32"
+"WSCEnumNameSpaceProviders32"
+"WSCEnumNameSpaceProvidersEx32"
+"WSCEnumProtocols"
+"WSCEnumProtocols32"
+"WSCGetApplicationCategory"
+"WSCGetProviderInfo"
+"WSCGetProviderInfo32"
+"WSCGetProviderPath"
+"WSCGetProviderPath32"
+"WSCInstallNameSpace"
+"WSCInstallNameSpace32"
+"WSCInstallNameSpaceEx"
+"WSCInstallNameSpaceEx32"
+"WSCInstallProvider"
+"WSCInstallProvider64_32"
+"WSCInstallProviderAndChains64_32"
+"WSCSetApplicationCategory"
+"WSCSetProviderInfo"
+"WSCSetProviderInfo32"
+"WSCUnInstallNameSpace"
+"WSCUnInstallNameSpace32"
+"WSCUpdateProvider"
+"WSCUpdateProvider32"
+"WSCWriteNameSpaceOrder"
+"WSCWriteNameSpaceOrder32"
+"WSCWriteProviderOrder"
+"WSCWriteProviderOrder32"
+"WahCloseApcHelper"
+"WahCloseHandleHelper"
+"WahCloseNotificationHandleHelper"
+"WahCloseSocketHandle"
+"WahCloseThread"
+"WahCompleteRequest"
+"WahCreateHandleContextTable"
+"WahCreateNotificationHandle"
+"WahCreateSocketHandle"
+"WahDestroyHandleContextTable"
+"WahDisableNonIFSHandleSupport"
+"WahEnableNonIFSHandleSupport"
+"WahEnumerateHandleContexts"
+"WahInsertHandleContext"
+"WahNotifyAllProcesses"
+"WahOpenApcHelper"
+"WahOpenCurrentThread"
+"WahOpenHandleHelper"
+"WahOpenNotificationHandleHelper"
+"WahQueueUserApc"
+"WahReferenceContextByHandle"
+"WahRemoveHandleContext"
+"WahWaitForNotification"
+"WahWriteLSPEvent"
+"__WSAFDIsSet" @151
+"accept" @1
+"bind" @2
+"closesocket" @3
+"connect" @4
+"freeaddrinfo"
+"getaddrinfo"
+"gethostbyaddr" @51
+"gethostbyname" @52
+"gethostname" @57
+"getnameinfo"
+"getpeername" @5
+"getprotobyname" @53
+"getprotobynumber" @54
+"getservbyname" @55
+"getservbyport" @56
+"getsockname" @6
+"getsockopt" @7
+"htonl" @8
+"htons" @9
+"inet_addr" @11
+"inet_ntoa" @12
+"inet_ntop"
+"inet_pton"
+"ioctlsocket" @10
+"listen" @13
+"ntohl" @14
+"ntohs" @15
+"recv" @16
+"recvfrom" @17
+"select" @18
+"send" @19
+"sendto" @20
+"setsockopt" @21
+"shutdown" @22
+"socket" @23
+
+; Def built in 0.073626 seconds

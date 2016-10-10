@@ -1,9 +1,0 @@
-; Def File for lib <DtcHelp.dll> created with fTools
-; Created on Mon Oct 10 13:07:27 2016
-
-LIBRARY DtcHelp.dll
-EXPORTS
-; Log File for lib <DtcHelp.dll> created with fTools
-
-
-; Def built in 0.010809 seconds

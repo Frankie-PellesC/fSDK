@@ -1,0 +1,9 @@
+; Def File for lib <odbccp32.dll> created with fTools
+; Created on Mon Oct 10 11:59:10 2016
+
+LIBRARY odbccp32.dll
+EXPORTS
+; Log File for lib <odbccp32.dll> created with fTools
+
+
+; Def built in 0.015184 seconds

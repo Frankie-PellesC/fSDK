@@ -1,0 +1,9 @@
+; Def File for lib <winsatapi.dll> created with fTools
+; Created on Mon Oct 10 12:10:47 2016
+
+LIBRARY winsatapi.dll
+EXPORTS
+; Log File for lib <winsatapi.dll> created with fTools
+
+
+; Def built in 0.000920 seconds

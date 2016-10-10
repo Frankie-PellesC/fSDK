@@ -1,0 +1,9 @@
+; Def File for lib <format.dll> created with fTools
+; Created on Mon Oct 10 13:08:47 2016
+
+LIBRARY format.dll
+EXPORTS
+; Log File for lib <format.dll> created with fTools
+
+
+; Def built in 0.104276 seconds

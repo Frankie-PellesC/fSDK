@@ -1,0 +1,44 @@
+; Def File for lib <FCachDll.dll> created with fTools
+; Created on Mon Oct 10 13:08:35 2016
+
+LIBRARY FCachDll.dll
+EXPORTS
+; Log File for lib <FCachDll.dll> created with fTools
+
+"_AddRefContext@4"
+"_AssociateContextWithName@36"
+"_AssociateFile@4"
+"_AssociateFileEx@12"
+"_CacheCreateFile@16"
+"_CacheRemoveFiles@8"
+"_CacheRichCreateFile@16"
+"_CloseNonCachedFile@4"
+"_CompleteDotStuffingOnWrites@8"
+"_FIOInitialize@4"
+"_FIOReadFile@16"
+"_FIOReadFileEx@28"
+"_FIOTerminate@0"
+"_FIOWriteFile@16"
+"_FIOWriteFileEx@28"
+"_FindContextFromName@32"
+"_FindOrCreateNameCache@20"
+"_FindSyncContextFromName@32"
+"_GetDotStuffState@16"
+"_GetFileSizeFromContext@8"
+"_GetIsFileDotTerminated@4"
+"_InitializeCache@0"
+"_InsertFile@12"
+"_InvalidateName@12"
+"_ProduceDotStuffedContext@12"
+"_ProduceDotStuffedContextInContext@16"
+"_ReleaseContext@4"
+"_ReleaseNameCache@4"
+"_SetDotScanningOnReads@8"
+"_SetDotScanningOnWrites@8"
+"_SetDotStuffState@12"
+"_SetDotStuffingOnWrites@12"
+"_SetIsFileDotTerminated@8"
+"_SetNameCacheSecurityFunction@8"
+"_TerminateCache@0"
+
+; Def built in 0.002768 seconds

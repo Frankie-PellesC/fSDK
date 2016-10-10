@@ -1,0 +1,12 @@
+; Def File for lib <xpsprint.dll> created with fTools
+; Created on Mon Oct 10 12:11:20 2016
+
+LIBRARY xpsprint.dll
+EXPORTS
+; Log File for lib <xpsprint.dll> created with fTools
+
+"?StartXpsPrintJobInternal@@YAJPEB_W00PEAX1PEAEIPEAPEAUIXpsPrintJob@@PEAPEAUIXpsPrintJobStream@@4P6AXPEAUIStream@@W4EPrintTicketScope@@HH@Z@Z" @3
+"DllMain"
+"StartXpsPrintJob"
+
+; Def built in 0.000836 seconds

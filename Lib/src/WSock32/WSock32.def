@@ -1,0 +1,84 @@
+; Def File for lib <WSock32.dll> created with fTools
+; Created on Mon Oct 10 13:25:13 2016
+
+LIBRARY WSock32.dll
+EXPORTS
+; Log File for lib <WSock32.dll> created with fTools
+
+"?WSApSetPostRoutine@@YGHPAX@Z" @1000
+"_AcceptEx@32" @1141
+"_EnumProtocolsA@12" @1111
+"_EnumProtocolsW@12" @1112
+"_GetAcceptExSockaddrs@32" @1142
+"_GetAddressByNameA@40" @1109
+"_GetAddressByNameW@40" @1110
+"_GetNameByTypeA@12" @1115
+"_GetNameByTypeW@12" @1116
+"_GetServiceA@28" @1119
+"_GetServiceW@28" @1120
+"_GetTypeByNameA@8" @1113
+"_GetTypeByNameW@8" @1114
+"_MigrateWinsockConfiguration@12"
+"_NPLoadNameSpaces@12" @1130
+"_SetServiceA@24" @1117
+"_SetServiceW@24" @1118
+"_TransmitFile@28" @1140
+"_WEP@0" @500
+"_WSAAsyncGetHostByAddr@28" @102
+"_WSAAsyncGetHostByName@20" @103
+"_WSAAsyncGetProtoByName@20" @105
+"_WSAAsyncGetProtoByNumber@20" @104
+"_WSAAsyncGetServByName@24" @107
+"_WSAAsyncGetServByPort@24" @106
+"_WSAAsyncSelect@16" @101
+"_WSACancelAsyncRequest@4" @108
+"_WSACancelBlockingCall@0" @113
+"_WSACleanup@0" @116
+"_WSAGetLastError@0" @111
+"_WSAIsBlocking@0" @114
+"_WSARecvEx@16" @1107
+"_WSASetBlockingHook@4" @109
+"_WSASetLastError@4" @112
+"_WSAStartup@8" @115
+"_WSAUnhookBlockingHook@0" @110
+"___WSAFDIsSet@8" @151
+"_accept@12" @1
+"_bind@12" @2
+"_closesocket@4" @3
+"_connect@12" @4
+"_dn_expand@20" @1106
+"_gethostbyaddr@12" @51
+"_gethostbyname@4" @52
+"_gethostname@8" @57
+"_getnetbyname@4" @1101
+"_getpeername@12" @5
+"_getprotobyname@4" @53
+"_getprotobynumber@4" @54
+"_getservbyname@8" @55
+"_getservbyport@8" @56
+"_getsockname@12" @6
+"_getsockopt@20" @7
+"_htonl@4" @8
+"_htons@4" @9
+"_inet_addr@4" @10
+"_inet_network@4" @1100
+"_inet_ntoa@4" @11
+"_ioctlsocket@12" @12
+"_listen@8" @13
+"_ntohl@4" @14
+"_ntohs@4" @15
+"_rcmd@24" @1102
+"_recv@16" @16
+"_recvfrom@24" @17
+"_rexec@24" @1103
+"_rresvport@4" @1104
+"_s_perror@8" @1108
+"_select@20" @18
+"_send@16" @19
+"_sendto@24" @20
+"_sethostname@8" @1105
+"_setsockopt@20" @21
+"_shutdown@8" @22
+"_socket@12" @23
+
+; Def built in 0.004256 seconds

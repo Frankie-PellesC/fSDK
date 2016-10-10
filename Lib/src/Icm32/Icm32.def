@@ -1,0 +1,30 @@
+; Def File for lib <Icm32.dll> created with fTools
+; Created on Mon Oct 10 13:08:58 2016
+
+LIBRARY Icm32.dll
+EXPORTS
+; Log File for lib <Icm32.dll> created with fTools
+
+"_CMCheckColors@20" @1
+"_CMCheckColorsInGamut@16" @2
+"_CMCheckRGBs@36" @3
+"_CMConvertColorNameToIndex@16" @19
+"_CMConvertIndexToColorName@16" @20
+"_CMCreateDeviceLinkProfile@24" @4
+"_CMCreateMultiProfileTransform@20" @5
+"_CMCreateProfile@8" @6
+"_CMCreateProfileW@8" @7
+"_CMCreateTransform@12" @8
+"_CMCreateTransformExt@16" @9
+"_CMCreateTransformExtW@16" @10
+"_CMCreateTransformW@12" @11
+"_CMDeleteTransform@4" @12
+"_CMGetInfo@4" @13
+"_CMGetNamedProfileInfo@8" @21
+"_CMIsProfileValid@8" @14
+"_CMTranslateColors@24" @15
+"_CMTranslateRGB@16" @16
+"_CMTranslateRGBs@36" @17
+"_CMTranslateRGBsExt@44" @18
+
+; Def built in 0.002308 seconds

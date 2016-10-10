@@ -1,0 +1,20 @@
+; Def File for lib <tdh.dll> created with fTools
+; Created on Mon Oct 10 12:01:35 2016
+
+LIBRARY tdh.dll
+EXPORTS
+; Log File for lib <tdh.dll> created with fTools
+
+"TdhEnumerateProviderFieldInformation"
+"TdhEnumerateProviderFilters"
+"TdhEnumerateProviders"
+"TdhFormatProperty"
+"TdhGetEventInformation"
+"TdhGetEventMapInformation"
+"TdhGetProperty"
+"TdhGetPropertySize"
+"TdhLoadManifest"
+"TdhQueryProviderFieldInformation"
+"TdhUnloadManifest"
+
+; Def built in 0.001112 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <WbemUuid.dll> created with fTools
+; Created on Mon Oct 10 13:23:46 2016
+
+LIBRARY WbemUuid.dll
+EXPORTS
+; Log File for lib <WbemUuid.dll> created with fTools
+
+
+; Def built in 0.060366 seconds

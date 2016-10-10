@@ -1,0 +1,37 @@
+; Def File for lib <VdmDbg.dll> created with fTools
+; Created on Mon Oct 10 13:23:39 2016
+
+LIBRARY VdmDbg.dll
+EXPORTS
+; Log File for lib <VdmDbg.dll> created with fTools
+
+"_VDMBreakThread@8"
+"_VDMDetectWOW@0"
+"_VDMEnumProcessWOW@8"
+"_VDMEnumTaskWOW@12"
+"_VDMEnumTaskWOWEx@12"
+"_VDMGetAddrExpression@20"
+"_VDMGetContext@12"
+"_VDMGetDbgFlags@4"
+"_VDMGetModuleSelector@20"
+"_VDMGetPointer@20"
+"_VDMGetSegmentInfo@16"
+"_VDMGetSegtablePointer@0"
+"_VDMGetSelectorModule@32"
+"_VDMGetSymbol@28"
+"_VDMGetThreadContext@8"
+"_VDMGetThreadSelectorEntry@16"
+"_VDMGlobalFirst@24"
+"_VDMGlobalNext@24"
+"_VDMIsModuleLoaded@4"
+"_VDMKillWOW@0"
+"_VDMModuleFirst@20"
+"_VDMModuleNext@20"
+"_VDMProcessException@4"
+"_VDMSetContext@12"
+"_VDMSetDbgFlags@8"
+"_VDMSetThreadContext@8"
+"_VDMStartTaskInWOW@12"
+"_VDMTerminateTaskWOW@8"
+
+; Def built in 0.001512 seconds

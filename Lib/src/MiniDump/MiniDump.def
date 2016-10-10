@@ -1,0 +1,9 @@
+; Def File for lib <MiniDump.dll> created with fTools
+; Created on Mon Oct 10 13:10:44 2016
+
+LIBRARY MiniDump.dll
+EXPORTS
+; Log File for lib <MiniDump.dll> created with fTools
+
+
+; Def built in 0.025984 seconds

@@ -1,0 +1,28 @@
+; Def File for lib <shdocvw.dll> created with fTools
+; Created on Mon Oct 10 13:12:39 2016
+
+LIBRARY shdocvw.dll
+EXPORTS
+; Log File for lib <shdocvw.dll> created with fTools
+
+"_AddUrlToFavorites@16"
+"_DllRegisterWindowClasses@4"
+"_DoAddToFavDlg@24"
+"_DoAddToFavDlgW@24"
+"_DoFileDownload@4"
+"_DoFileDownloadEx@8"
+"_DoOrganizeFavDlg@8"
+"_DoOrganizeFavDlgW@8"
+"_DoPrivacyDlg@16"
+"_HlinkFindFrame@8"
+"_HlinkFrameNavigate@20"
+"_HlinkFrameNavigateNHL@24"
+"_ImportPrivacySettings@12"
+"_OpenURL@16"
+"_SHGetIDispatchForFolder@8"
+"_SetQueryNetSessionCount@4"
+"_SoftwareUpdateMessageBox@16"
+"_URLQualifyA@12"
+"_URLQualifyW@12"
+
+; Def built in 0.001659 seconds

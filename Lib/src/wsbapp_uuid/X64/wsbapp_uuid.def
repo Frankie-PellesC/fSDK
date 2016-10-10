@@ -1,0 +1,9 @@
+; Def File for lib <wsbapp_uuid.dll> created with fTools
+; Created on Mon Oct 10 12:11:16 2016
+
+LIBRARY wsbapp_uuid.dll
+EXPORTS
+; Log File for lib <wsbapp_uuid.dll> created with fTools
+
+
+; Def built in 0.003268 seconds

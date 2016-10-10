@@ -1,0 +1,9 @@
+; Def File for lib <sensorsapi.dll> created with fTools
+; Created on Mon Oct 10 11:59:59 2016
+
+LIBRARY sensorsapi.dll
+EXPORTS
+; Log File for lib <sensorsapi.dll> created with fTools
+
+
+; Def built in 0.565848 seconds

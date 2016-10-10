@@ -1,0 +1,10 @@
+; Def File for lib <mfplay.dll> created with fTools
+; Created on Mon Oct 10 13:09:33 2016
+
+LIBRARY mfplay.dll
+EXPORTS
+; Log File for lib <mfplay.dll> created with fTools
+
+"_MFPCreateMediaPlayer@24"
+
+; Def built in 0.001708 seconds

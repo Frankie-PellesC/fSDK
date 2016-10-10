@@ -1,0 +1,9 @@
+; Def File for lib <Fdi.dll> created with fTools
+; Created on Mon Oct 10 11:56:19 2016
+
+LIBRARY Fdi.dll
+EXPORTS
+; Log File for lib <Fdi.dll> created with fTools
+
+
+; Def built in 0.033864 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <fileextd.dll> created with fTools
+; Created on Mon Oct 10 13:08:43 2016
+
+LIBRARY fileextd.dll
+EXPORTS
+; Log File for lib <fileextd.dll> created with fTools
+
+
+; Def built in 0.050752 seconds

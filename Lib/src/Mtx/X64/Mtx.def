@@ -1,0 +1,12 @@
+; Def File for lib <Mtx.dll> created with fTools
+; Created on Mon Oct 10 11:59:06 2016
+
+LIBRARY Mtx.dll
+EXPORTS
+; Log File for lib <Mtx.dll> created with fTools
+
+"?GetObjectContext@@YAJPEAPEAUIObjectContext@@@Z"
+"?SafeRef@CViperASObject@@UEAAJUtagVARIANT@@PEAU2@@Z"
+"MTSCreateActivity"
+
+; Def built in 0.000857 seconds

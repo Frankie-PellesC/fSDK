@@ -1,0 +1,234 @@
+; Def File for lib <WinSpool.dll> created with fTools
+; Created on Mon Oct 10 13:24:42 2016
+
+LIBRARY WinSpool.dll
+EXPORTS
+; Log File for lib <WinSpool.dll> created with fTools
+
+"?ADVANCEDSETUPDIALOG@@YGJPAUHWND__@@PAXPAU_devicemodeA@@2@Z"
+"?AdvancedSetupDialog@@YGJPAUHWND__@@PAXPAU_devicemodeA@@2@Z"
+"?CallCommonPropertySheetUI@@YGJPAUHWND__@@P6GJPAU_PROPSHEETUI_INFO@@J@ZJPAK@Z" @218
+"?ConvertAnsiDevModeToUnicodeDevmode@@YGHPAU_devicemodeA@@PAU_devicemodeW@@KPAK@Z"
+"?ConvertUnicodeDevModeToAnsiDevmode@@YGHPAU_devicemodeW@@PAU_devicemodeA@@KPAK@Z"
+"?DEVICEMODE@@YGXPAUHWND__@@PAXPAD2@Z"
+"?DeviceMode@@YGXPAUHWND__@@PAXPAD2@Z"
+"?DocumentEvent@@YGHPAXPAUHDC__@@HK0K0@Z"
+"?FindCompatibleDriver@@YGJPBG0PAGKPAK1K22@Z" @252
+"?FlushBuffer2@@YGHPAX@Z" @255
+"?InternalGetPrinterDriverA@@YGHPAXPADKPAEKPAK@Z" @233
+"?InternalGetPrinterDriverW@@YGHPAXPAGKPAEKPAK@Z" @234
+"?PrintUIDocumentDefaults@@YGXPAUHWND__@@PBGHJ@Z" @221
+"?PrintUIDocumentPropertiesWrap@@YGJPAUHWND__@@PAXPAGPAU_devicemodeW@@3KK@Z" @229
+"?PrintUIPrinterPropPages@@YGXPAUHWND__@@PBGHJ@Z" @220
+"?PrintUIPrinterSetup@@YGHPAUHWND__@@IIPAGPAIPBG@Z" @230
+"?PrintUIQueueCreate@@YGXPAUHWND__@@PBGHJ@Z" @219
+"?PrintUIServerPropPages@@YGXPAUHWND__@@PBGHJ@Z" @231
+"?QueryColorProfile@@YGHPAXPAU_devicemodeW@@K0PAK2@Z"
+"?QueryRemoteFonts@@YGHPAXPAU_UNIVERSAL_FONT_ID@@K@Z"
+"?QuerySpoolMode@@YGHPAXPAJPAK@Z"
+"?SetPrintExecutionData@@YGXW4PRINT_EXECUTION_CONTEXT@@KK@Z" @254
+"?SetWinspoolOptions@@YGXHH@Z" @253
+"?SpoolerDevQueryPrintW@@YGHPAXPAU_devicemodeW@@PAKPAGK@Z"
+"?StartDocDlgW@@YGPAGPAXPAU_DOCINFOW@@@Z"
+"_AbortPrinter@4"
+"_AddFormA@12"
+"_AddFormW@12"
+"_AddJobA@20"
+"_AddJobW@20"
+"_AddMonitorA@12"
+"_AddMonitorW@12"
+"_AddPerMachineConnectionA@16" @206
+"_AddPerMachineConnectionW@16" @207
+"_AddPortA@12"
+"_AddPortExA@16"
+"_AddPortExW@16"
+"_AddPortW@12"
+"_AddPrintProcessorA@16"
+"_AddPrintProcessorW@16"
+"_AddPrintProvidorA@12"
+"_AddPrintProvidorW@12"
+"_AddPrinterA@12"
+"_AddPrinterConnection2A@16"
+"_AddPrinterConnection2W@16"
+"_AddPrinterConnectionA@4"
+"_AddPrinterConnectionW@4"
+"_AddPrinterDriverA@12"
+"_AddPrinterDriverExA@16"
+"_AddPrinterDriverExW@16"
+"_AddPrinterDriverW@12"
+"_AddPrinterW@12"
+"_AdvancedDocumentPropertiesA@20"
+"_AdvancedDocumentPropertiesW@20"
+"_ClosePrinter@4"
+"_CloseSpoolFileHandle@8"
+"_ClusterSplClose@4" @102
+"_ClusterSplIsAlive@4" @103
+"_ClusterSplOpen@20" @101
+"_CommitSpoolData@12"
+"_ConfigurePortA@12"
+"_ConfigurePortW@12"
+"_ConnectToPrinterDlg@8"
+"_CorePrinterDriverInstalledA@44"
+"_CorePrinterDriverInstalledW@44"
+"_CreatePrintAsyncNotifyChannel@24"
+"_CreatePrinterIC@8"
+"_DEVICECAPABILITIES@20"
+"_DeleteFormA@8"
+"_DeleteFormW@8"
+"_DeleteMonitorA@12"
+"_DeleteMonitorW@12"
+"_DeletePerMachineConnectionA@8" @208
+"_DeletePerMachineConnectionW@8" @209
+"_DeletePortA@12"
+"_DeletePortW@12"
+"_DeletePrintProcessorA@12"
+"_DeletePrintProcessorW@12"
+"_DeletePrintProvidorA@12"
+"_DeletePrintProvidorW@12"
+"_DeletePrinter@4"
+"_DeletePrinterConnectionA@4"
+"_DeletePrinterConnectionW@4"
+"_DeletePrinterDataA@8"
+"_DeletePrinterDataExA@12"
+"_DeletePrinterDataExW@12"
+"_DeletePrinterDataW@8"
+"_DeletePrinterDriverA@12"
+"_DeletePrinterDriverExA@20"
+"_DeletePrinterDriverExW@20"
+"_DeletePrinterDriverPackageA@12"
+"_DeletePrinterDriverPackageW@12"
+"_DeletePrinterDriverW@12"
+"_DeletePrinterIC@4"
+"_DeletePrinterKeyA@8"
+"_DeletePrinterKeyW@8"
+"_DevQueryPrint@12"
+"_DevQueryPrintEx@4"
+"_DeviceCapabilities@20"
+"_DeviceCapabilitiesA@20"
+"_DeviceCapabilitiesW@20"
+"_DevicePropertySheets@8"
+"_DocumentPropertiesA@24"
+"_DocumentPropertiesW@24"
+"_DocumentPropertySheets@8"
+"_EXTDEVICEMODE@32"
+"_EndDocPrinter@4"
+"_EndPagePrinter@4"
+"_EnumFormsA@24"
+"_EnumFormsW@24"
+"_EnumJobsA@32"
+"_EnumJobsW@32"
+"_EnumMonitorsA@24"
+"_EnumMonitorsW@24"
+"_EnumPerMachineConnectionsA@20" @210
+"_EnumPerMachineConnectionsW@20" @211
+"_EnumPortsA@24"
+"_EnumPortsW@24"
+"_EnumPrintProcessorDatatypesA@28"
+"_EnumPrintProcessorDatatypesW@28"
+"_EnumPrintProcessorsA@28"
+"_EnumPrintProcessorsW@28"
+"_EnumPrinterDataA@36"
+"_EnumPrinterDataExA@24"
+"_EnumPrinterDataExW@24"
+"_EnumPrinterDataW@36"
+"_EnumPrinterDriversA@28"
+"_EnumPrinterDriversW@28"
+"_EnumPrinterKeyA@20"
+"_EnumPrinterKeyW@20"
+"_EnumPrinterPropertySheets@16" @100
+"_EnumPrintersA@28"
+"_EnumPrintersW@28"
+"_ExtDeviceMode@32"
+"_ExternalConnectToLd64In32Server@4" @224
+"_FindClosePrinterChangeNotification@4"
+"_FindFirstPrinterChangeNotification@16"
+"_FindNextPrinterChangeNotification@16"
+"_FlushPrinter@20"
+"_ForceUnloadDriver@4" @215
+"_FreePrinterNotifyInfo@4"
+"_GetCorePrinterDriversA@20"
+"_GetCorePrinterDriversW@20"
+"_GetDefaultPrinterA@8" @201
+"_GetDefaultPrinterW@8" @203
+"_GetFormA@24"
+"_GetFormW@24"
+"_GetJobA@24"
+"_GetJobW@24"
+"_GetPrintClassObject@12" @251
+"_GetPrintExecutionData@4"
+"_GetPrintProcessorDirectoryA@24"
+"_GetPrintProcessorDirectoryW@24"
+"_GetPrinterA@20"
+"_GetPrinterDataA@24"
+"_GetPrinterDataExA@28"
+"_GetPrinterDataExW@28"
+"_GetPrinterDataW@24"
+"_GetPrinterDriver2A@28"
+"_GetPrinterDriver2W@28"
+"_GetPrinterDriverA@24"
+"_GetPrinterDriverDirectoryA@24"
+"_GetPrinterDriverDirectoryW@24"
+"_GetPrinterDriverPackagePathA@28"
+"_GetPrinterDriverPackagePathW@28"
+"_GetPrinterDriverW@24"
+"_GetPrinterW@20"
+"_GetSpoolFileHandle@4"
+"_InstallPrinterDriverFromPackageA@20"
+"_InstallPrinterDriverFromPackageW@20"
+"_IsValidDevmodeA@8"
+"_IsValidDevmodeW@8"
+"_LoadPrinterDriver@4" @212
+"_OpenPrinter2A@16"
+"_OpenPrinter2W@16"
+"_OpenPrinterA@12"
+"_OpenPrinterW@12"
+"_PlayGdiScriptOnPrinterIC@24"
+"_PrintUICreateInstance@8" @228
+"_PrintUIWebPnpEntry@4" @226
+"_PrintUIWebPnpPostEntry@16" @227
+"_PrinterMessageBoxA@24"
+"_PrinterMessageBoxW@24"
+"_PrinterProperties@8"
+"_PublishPrinterA@24" @216
+"_PublishPrinterW@24" @217
+"_ReadPrinter@16"
+"_RefCntLoadDriver@16" @213
+"_RefCntUnloadDriver@8" @214
+"_RegisterForPrintAsyncNotifications@24"
+"_ReportJobProcessingProgress@16"
+"_ResetPrinterA@8"
+"_ResetPrinterW@8"
+"_RouterFreeBidiResponseContainer@4" @223
+"_ScheduleJob@8"
+"_SeekPrinter@24"
+"_SendRecvBidiData@16" @222
+"_SetDefaultPrinterA@4" @202
+"_SetDefaultPrinterW@4" @204
+"_SetFormA@16"
+"_SetFormW@16"
+"_SetJobA@20"
+"_SetJobW@20"
+"_SetPortA@16"
+"_SetPortW@16"
+"_SetPrinterA@16"
+"_SetPrinterDataA@20"
+"_SetPrinterDataExA@24"
+"_SetPrinterDataExW@24"
+"_SetPrinterDataW@20"
+"_SetPrinterW@16"
+"_SplDriverUnloadComplete@4"
+"_SplReadPrinter@12" @205
+"_SpoolerPrinterEvent@20"
+"_SpoolerSetPolicy@20" @250
+"_StartDocDlgA@8"
+"_StartDocPrinterA@12"
+"_StartDocPrinterW@12"
+"_StartPagePrinter@4"
+"_UnRegisterForPrintAsyncNotifications@4"
+"_UploadPrinterDriverPackageA@28"
+"_UploadPrinterDriverPackageW@28"
+"_WaitForPrinterChange@8"
+"_WritePrinter@16"
+"_XcvDataW@32"
+
+; Def built in 0.006768 seconds

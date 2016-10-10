@@ -1,0 +1,26 @@
+; Def File for lib <OleAcc.dll> created with fTools
+; Created on Mon Oct 10 13:11:35 2016
+
+LIBRARY OleAcc.dll
+EXPORTS
+; Log File for lib <OleAcc.dll> created with fTools
+
+"_AccessibleChildren@20"
+"_AccessibleObjectFromEvent@20"
+"_AccessibleObjectFromPoint@16"
+"_AccessibleObjectFromWindow@16"
+"_CreateStdAccessibleObject@16"
+"_CreateStdAccessibleProxyA@20"
+"_CreateStdAccessibleProxyW@20"
+"_GetOleaccVersionInfo@8"
+"_GetProcessHandleFromHwnd@4"
+"_GetRoleTextA@12"
+"_GetRoleTextW@12"
+"_GetStateTextA@12"
+"_GetStateTextW@12"
+"_LresultFromObject@12"
+"_ObjectFromLresult@16"
+"_PropMgrClient_LookupProp@28"
+"_WindowFromAccessibleObject@8"
+
+; Def built in 0.001506 seconds

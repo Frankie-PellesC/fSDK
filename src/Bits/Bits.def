@@ -1,9 +1,0 @@
-; Def File for lib <Bits.dll> created with fTools
-; Created on Mon Oct 10 13:06:07 2016
-
-LIBRARY Bits.dll
-EXPORTS
-; Log File for lib <Bits.dll> created with fTools
-
-
-; Def built in 0.085636 seconds

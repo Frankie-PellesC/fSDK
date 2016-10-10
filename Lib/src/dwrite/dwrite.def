@@ -1,0 +1,10 @@
+; Def File for lib <dwrite.dll> created with fTools
+; Created on Mon Oct 10 13:07:28 2016
+
+LIBRARY dwrite.dll
+EXPORTS
+; Log File for lib <dwrite.dll> created with fTools
+
+"_DWriteCreateFactory@12"
+
+; Def built in 0.001107 seconds

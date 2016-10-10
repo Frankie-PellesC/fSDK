@@ -1,0 +1,9 @@
+; Def File for lib <TranscodeImageUID.dll> created with fTools
+; Created on Mon Oct 10 12:01:36 2016
+
+LIBRARY TranscodeImageUID.dll
+EXPORTS
+; Log File for lib <TranscodeImageUID.dll> created with fTools
+
+
+; Def built in 0.005432 seconds

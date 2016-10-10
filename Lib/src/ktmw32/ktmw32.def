@@ -1,0 +1,53 @@
+; Def File for lib <ktmw32.dll> created with fTools
+; Created on Mon Oct 10 13:09:24 2016
+
+LIBRARY ktmw32.dll
+EXPORTS
+; Log File for lib <ktmw32.dll> created with fTools
+
+"_CommitComplete@8"
+"_CommitEnlistment@8"
+"_CommitTransaction@4"
+"_CommitTransactionAsync@4"
+"_CreateEnlistment@24"
+"_CreateResourceManager@20"
+"_CreateTransaction@28"
+"_CreateTransactionManager@16"
+"_GetCurrentClockTransactionManager@8"
+"_GetEnlistmentId@8"
+"_GetEnlistmentRecoveryInformation@16"
+"_GetNotificationResourceManager@20"
+"_GetNotificationResourceManagerAsync@20"
+"_GetTransactionId@8"
+"_GetTransactionInformation@28"
+"_GetTransactionManagerId@8"
+"_OpenEnlistment@12"
+"_OpenResourceManager@12"
+"_OpenTransaction@8"
+"_OpenTransactionManager@12"
+"_OpenTransactionManagerById@12"
+"_PrePrepareComplete@8"
+"_PrePrepareEnlistment@8"
+"_PrepareComplete@8"
+"_PrepareEnlistment@8"
+"_PrivCreateTransaction@28"
+"_PrivIsLogWritableTransactionManager@4"
+"_PrivPropagationComplete@16"
+"_PrivPropagationFailed@8"
+"_PrivRegisterProtocolAddressInformation@20"
+"_ReadOnlyEnlistment@8"
+"_RecoverEnlistment@8"
+"_RecoverResourceManager@4"
+"_RecoverTransactionManager@4"
+"_RenameTransactionManager@8"
+"_RollbackComplete@8"
+"_RollbackEnlistment@8"
+"_RollbackTransaction@4"
+"_RollbackTransactionAsync@4"
+"_RollforwardTransactionManager@8"
+"_SetEnlistmentRecoveryInformation@12"
+"_SetResourceManagerCompletionPort@12"
+"_SetTransactionInformation@20"
+"_SinglePhaseReject@8"
+
+; Def built in 0.002994 seconds

@@ -1,0 +1,21 @@
+; Def File for lib <rstrtmgr.dll> created with fTools
+; Created on Mon Oct 10 11:59:56 2016
+
+LIBRARY rstrtmgr.dll
+EXPORTS
+; Log File for lib <rstrtmgr.dll> created with fTools
+
+"RmAddFilter"
+"RmCancelCurrentTask"
+"RmEndSession"
+"RmGetFilterList"
+"RmGetList"
+"RmJoinSession"
+"RmRegisterResources"
+"RmRemoveFilter"
+"RmReserveHeap"
+"RmRestart"
+"RmShutdown"
+"RmStartSession"
+
+; Def built in 0.001557 seconds

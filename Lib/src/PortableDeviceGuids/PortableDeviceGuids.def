@@ -1,0 +1,9 @@
+; Def File for lib <PortableDeviceGuids.dll> created with fTools
+; Created on Mon Oct 10 13:11:47 2016
+
+LIBRARY PortableDeviceGuids.dll
+EXPORTS
+; Log File for lib <PortableDeviceGuids.dll> created with fTools
+
+
+; Def built in 1.847351 seconds

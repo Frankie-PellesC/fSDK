@@ -1,0 +1,31 @@
+; Def File for lib <ndfapi.dll> created with fTools
+; Created on Mon Oct 10 11:59:07 2016
+
+LIBRARY ndfapi.dll
+EXPORTS
+; Log File for lib <ndfapi.dll> created with fTools
+
+"?NdfRunDllDiagnoseIncident@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"?NdfRunDllDiagnoseNetConnectionIncident@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"?NdfRunDllDiagnoseWithAnswerFile@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"?NdfRunDllDuplicateIPDefendingSystem@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"?NdfRunDllDuplicateIPOffendingSystem@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"?NdfRunDllHelpTopic@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"NdfCancelIncident"
+"NdfCloseIncident"
+"NdfCreateConnectivityIncident"
+"NdfCreateDNSIncident"
+"NdfCreateGroupingIncident"
+"NdfCreateInboundIncident"
+"NdfCreateIncident"
+"NdfCreatePnrpIncident"
+"NdfCreateSharingIncident"
+"NdfCreateWebIncident"
+"NdfCreateWebIncidentEx"
+"NdfCreateWinSockIncident"
+"NdfDiagnoseIncident"
+"NdfExecuteDiagnosis"
+"NdfGetTraceFile"
+"NdfRepairIncident"
+
+; Def built in 0.001631 seconds

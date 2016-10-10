@@ -1,0 +1,81 @@
+/*+@@file@@----------------------------------------------------------------*//*!
+ \file		ehstormsg.h
+ \par Description 
+            Extension and update of headers for PellesC compiler suite.
+ \par Project: 
+            PellesC Headers extension
+ \date		Created  on Sat Jul  9 19:59:41 2016
+ \date		Modified on Sat Jul  9 19:59:41 2016
+ \author	frankie
+\*//*-@@file@@----------------------------------------------------------------*/
+
+#ifndef __ehstormsg_h__
+#define __ehstormsg_h__
+#if __POCC__ >= 500
+#pragma once
+#endif
+#define ES_RESERVED_COM_ERROR_START            0x0000
+#define ES_RESERVED_COM_ERROR_END              0x01FF
+#define ES_GENERAL_ERROR_START                 0x0200
+#define ES_GENERAL_ERROR_END                   0x03FF
+#define ES_AUTHN_ERROR_START                   0x0400
+#define ES_AUTHN_ERROR_END                     0x04FF
+#define ES_RESERVED_SILO_ERROR_START           0x0500
+#define ES_RESERVED_SILO_ERROR_END             0x0FFF
+#define ES_CERT_SILO_ERROR_START               0x1000
+#define ES_CERT_SILO_ERROR_END                 0x10FF
+#define ES_PW_SILO_ERROR_START                 0x1100
+#define ES_PW_SILO_ERROR_END                   0x11FF
+#define ES_RESERVED_SILO_SPECIFIC_ERROR_START  0x1200
+#define ES_RESERVED_SILO_SPECIFIC_ERROR_END    0xBFFF
+#define ES_VENDOR_ERROR_START                  0xC000
+#define ES_VENDOR_ERROR_END                    0xFFFF
+#define IS_ENHANCED_STORAGE_GENERAL_ERROR(x)     ((x) >= ES_GENERAL_ERROR_START && (x) <= ES_GENERAL_ERROR_END)
+#define IS_ENHANCED_STORAGE_AUTHN_ERROR(x)       ((x) >= ES_AUTHN_ERROR_START && (x) <= ES_AUTHN_ERROR_END)
+#define IS_ENHANCED_STORAGE_CERT_SILO_ERROR(x)   ((x) >= ES_CERT_SILO_ERROR_START && (x) <= ES_CERT_SILO_ERROR_END)
+#define IS_ENHANCED_STORAGE_PW_SILO_ERROR(x)     ((x) >= ES_PW_SILO_ERROR_START && (x) <= ES_PW_SILO_ERROR_END)
+#define IS_ENHANCED_STORAGE_VENDOR_ERROR(x)      ((x) >= ES_VENDOR_ERROR_START && (x) <= ES_VENDOR_ERROR_END)
+#define IS_ENHANCED_STORAGE_RESERVED_ERROR(x)    (((x) >= ES_RESERVED_SILO_ERROR_START && (x) <= ES_RESERVED_SILO_ERROR_END) || \
+														((x) >= ES_RESERVED_SILO_SPECIFIC_ERROR_START && (x) <= ES_RESERVED_SILO_SPECIFIC_ERROR_END) || \
+														((x) >= ES_RESERVED_COM_ERROR_START && (x) <= ES_RESERVED_COM_ERROR_END))
+#define FACILITY_ENHANCED_STORAGE        0x4
+#define STATUS_SEVERITY_WARNING          0x2
+#define STATUS_SEVERITY_SUCCESS          0x0
+#define STATUS_SEVERITY_INFORMATIONAL    0x1
+#define STATUS_SEVERITY_ERROR            0x3
+#define ES_E_INVALID_RESPONSE            ((DWORD)0xC0040200L)
+#define ES_E_UNSUPPORTED_CERTIFICATE     ((DWORD)0xC0040201L)
+#define ES_E_INVALID_CERTIFICATE         ((DWORD)0xC0040202L)
+#define ES_E_UNPROVISIONED_HARDWARE      ((DWORD)0xC0040204L)
+#define ES_E_UNSUPPORTED_HARDWARE        ((DWORD)0xC0040205L)
+#define ES_E_INCOMPLETE_COMMAND          ((DWORD)0xC0040206L)
+#define ES_E_BAD_SEQUENCE                ((DWORD)0xC0040207L)
+#define ES_E_NO_PROBE                    ((DWORD)0xC0040208L)
+#define ES_E_INVALID_SILO                ((DWORD)0xC0040209L)
+#define ES_E_INVALID_CAPABILITY          ((DWORD)0xC004020AL)
+#define ES_E_GROUP_POLICY_FORBIDDEN_USE  ((DWORD)0xC004020BL)
+#define ES_E_GROUP_POLICY_FORBIDDEN_OPERATION ((DWORD)0xC004020CL)
+#define ES_E_INVALID_PARAM_COMBINATION   ((DWORD)0xC004020DL)
+#define ES_E_INVALID_PARAM_LENGTH        ((DWORD)0xC004020EL)
+#define ES_E_INCONSISTENT_PARAM_LENGTH   ((DWORD)0xC004020FL)
+#define ES_E_NO_AUTHENTICATION_REQUIRED  ((DWORD)0xC0040400L)
+#define ES_E_WRONG_CERTIFICATE_TYPE      ((DWORD)0xC0041000L)
+#define ES_E_INDEX_OCCUPIED              ((DWORD)0xC0041001L)
+#define ES_E_INVALID_SIGNER_CERT_INDEX   ((DWORD)0xC0041002L)
+#define ES_E_FAIL_VALIDATION             ((DWORD)0xC0041003L)
+#define ES_E_UNSUPPORTED_VALIDATION      ((DWORD)0xC0041004L)
+#define ES_E_INVALID_VALIDATION_OPERATION ((DWORD)0xC0041005L)
+#define ES_E_INVALID_FIELD_IDENTIFIER    ((DWORD)0xC0041100L)
+#define ES_E_CHALLENGE_MISMATCH          ((DWORD)0xC0041101L)
+#define ES_E_CHALLENGE_SIZE_MISMATCH     ((DWORD)0xC0041102L)
+#define ES_E_FRIENDLY_NAME_TOO_LONG      ((DWORD)0xC0041103L)
+#define ES_E_SILO_NAME_TOO_LONG          ((DWORD)0xC0041104L)
+#define ES_E_PASSWORD_TOO_LONG           ((DWORD)0xC0041105L)
+#define ES_E_PASSWORD_HINT_TOO_LONG      ((DWORD)0xC0041106L)
+#define ES_E_OTHER_SECURITY_PROTOCOL_ACTIVE ((DWORD)0xC0041107L)
+#define ES_E_DEVICE_DIGEST_MISSING       ((DWORD)0xC0041108L)
+#define ES_E_NOT_AUTHORIZED_UNEXPECTED   ((DWORD)0xC0041109L)
+#define ES_E_AUTHORIZED_UNEXPECTED       ((DWORD)0xC004110AL)
+#define ES_E_PROVISIONED_UNEXPECTED      ((DWORD)0xC004110BL)
+#define ES_E_UNKNOWN_DIGEST_ALGORITHM    ((DWORD)0xC004110CL)
+#endif

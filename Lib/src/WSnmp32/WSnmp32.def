@@ -1,0 +1,60 @@
+; Def File for lib <WSnmp32.dll> created with fTools
+; Created on Mon Oct 10 13:25:12 2016
+
+LIBRARY WSnmp32.dll
+EXPORTS
+; Log File for lib <WSnmp32.dll> created with fTools
+
+"_SnmpCancelMsg@8" @222
+"_SnmpCleanup@0" @201
+"_SnmpCleanupEx@0" @292
+"_SnmpClose@4" @203
+"_SnmpContextToStr@8" @401
+"_SnmpConveyAgentAddress@4"
+"_SnmpCountVbl@4" @603
+"_SnmpCreatePdu@24" @500
+"_SnmpCreateSession@16" @220
+"_SnmpCreateVbl@12" @600
+"_SnmpDecodeMsg@24" @902
+"_SnmpDeleteVb@8" @606
+"_SnmpDuplicatePdu@8" @503
+"_SnmpDuplicateVbl@8" @601
+"_SnmpEncodeMsg@24" @901
+"_SnmpEntityToStr@12" @301
+"_SnmpFreeContext@4" @402
+"_SnmpFreeDescriptor@8" @900
+"_SnmpFreeEntity@4" @302
+"_SnmpFreePdu@4" @504
+"_SnmpFreeVbl@4" @602
+"_SnmpGetLastError@4" @999
+"_SnmpGetPduData@24" @501
+"_SnmpGetRetransmitMode@4" @102
+"_SnmpGetRetry@12" @106
+"_SnmpGetTimeout@12" @104
+"_SnmpGetTranslateMode@4" @100
+"_SnmpGetVb@16" @604
+"_SnmpGetVendorInfo@4" @120
+"_SnmpListen@8" @221
+"_SnmpListenEx@12" @293
+"_SnmpOidCompare@16" @906
+"_SnmpOidCopy@8" @905
+"_SnmpOidToStr@12" @904
+"_SnmpOpen@8" @202
+"_SnmpRecvMsg@20" @205
+"_SnmpRegister@24" @206
+"_SnmpSendMsg@20" @204
+"_SnmpSetAgentAddress@4"
+"_SnmpSetPduData@24" @502
+"_SnmpSetPort@8" @320
+"_SnmpSetRetransmitMode@4" @103
+"_SnmpSetRetry@8" @107
+"_SnmpSetTimeout@8" @105
+"_SnmpSetTranslateMode@4" @101
+"_SnmpSetVb@16" @605
+"_SnmpStartup@20" @200
+"_SnmpStartupEx@20" @291
+"_SnmpStrToContext@8" @400
+"_SnmpStrToEntity@8" @300
+"_SnmpStrToOid@8" @903
+
+; Def built in 0.003758 seconds

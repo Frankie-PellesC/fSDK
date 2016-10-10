@@ -1,0 +1,64 @@
+; Def File for lib <UserEnv.dll> created with fTools
+; Created on Mon Oct 10 12:01:38 2016
+
+LIBRARY UserEnv.dll
+EXPORTS
+; Log File for lib <UserEnv.dll> created with fTools
+
+"?RsopLoggingEnabled@@YAHXZ"
+"CheckDirectoryOwnership" @203
+"CheckXForestLogon" @175
+"CopyProfileDirectoryEx2" @209
+"CreateDirectoryJunctionsForSystem" @206
+"CreateDirectoryJunctionsForUserProfile" @207
+"CreateEnvironmentBlock"
+"CreateGroupEx" @137
+"CreateLinkFileEx" @139
+"CreateProfile"
+"DeleteGroup" @104
+"DeleteLinkFile" @122
+"DeleteProfileA"
+"DeleteProfileDirectory" @202
+"DeleteProfileW"
+"DestroyEnvironmentBlock"
+"EnterCriticalPolicySection"
+"ExpandEnvironmentStringsForUserA"
+"ExpandEnvironmentStringsForUserW"
+"ForceSyncFgPolicy"
+"FreeGPOListA"
+"FreeGPOListW"
+"GetAllUsersProfileDirectoryA"
+"GetAllUsersProfileDirectoryW"
+"GetAppliedGPOListA"
+"GetAppliedGPOListW"
+"GetDefaultUserProfileDirectoryA"
+"GetDefaultUserProfileDirectoryW"
+"GetGPOListA"
+"GetGPOListW"
+"GetNextFgPolicyRefreshInfo"
+"GetPreviousFgPolicyRefreshInfo"
+"GetProfileType"
+"GetProfilesDirectoryA"
+"GetProfilesDirectoryW"
+"GetUserProfileDirectoryA"
+"GetUserProfileDirectoryW"
+"LeaveCriticalPolicySection"
+"LoadUserProfileA"
+"LoadUserProfileW"
+"PingComputer" @135
+"ProcessGroupPolicyCompleted"
+"ProcessGroupPolicyCompletedEx"
+"RefreshPolicy"
+"RefreshPolicyEx"
+"RegisterGPNotification"
+"RemapProfile" @208
+"RsopAccessCheckByType"
+"RsopFileAccessCheck"
+"RsopResetPolicySettingStatus"
+"RsopSetPolicySettingStatus"
+"UnloadUserProfile"
+"UnregisterGPNotification"
+"WaitForMachinePolicyForegroundProcessing"
+"WaitForUserPolicyForegroundProcessing"
+
+; Def built in 0.003210 seconds

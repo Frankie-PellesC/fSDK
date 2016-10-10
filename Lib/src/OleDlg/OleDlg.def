@@ -1,0 +1,32 @@
+; Def File for lib <OleDlg.dll> created with fTools
+; Created on Mon Oct 10 13:11:37 2016
+
+LIBRARY OleDlg.dll
+EXPORTS
+; Log File for lib <OleDlg.dll> created with fTools
+
+"_OleUIAddVerbMenuA@36" @1
+"_OleUIAddVerbMenuW@36"
+"_OleUIBusyA@4" @8
+"_OleUIBusyW@4"
+"_OleUICanConvertOrActivateAs@12" @2
+"_OleUIChangeIconA@4" @6
+"_OleUIChangeIconW@4"
+"_OleUIChangeSourceA@4" @12
+"_OleUIChangeSourceW@4"
+"_OleUIConvertA@4" @7
+"_OleUIConvertW@4"
+"_OleUIEditLinksA@4" @5
+"_OleUIEditLinksW@4"
+"_OleUIInsertObjectA@4" @3
+"_OleUIInsertObjectW@4"
+"_OleUIObjectPropertiesA@4" @11
+"_OleUIObjectPropertiesW@4"
+"_OleUIPasteSpecialA@4" @4
+"_OleUIPasteSpecialW@4"
+"_OleUIPromptUserA" @10
+"_OleUIPromptUserW"
+"_OleUIUpdateLinksA@16" @9
+"_OleUIUpdateLinksW@16"
+
+; Def built in 0.001594 seconds

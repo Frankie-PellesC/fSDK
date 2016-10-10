@@ -1,0 +1,23 @@
+; Def File for lib <Lz32.dll> created with fTools
+; Created on Mon Oct 10 13:09:29 2016
+
+LIBRARY Lz32.dll
+EXPORTS
+; Log File for lib <Lz32.dll> created with fTools
+
+"_CopyLZFile@8"
+"_GetExpandedNameA@8"
+"_GetExpandedNameW@8"
+"_LZClose@4"
+"_LZCloseFile@4"
+"_LZCopy@8"
+"_LZCreateFileW@20"
+"_LZDone@0"
+"_LZInit@4"
+"_LZOpenFileA@12"
+"_LZOpenFileW@12"
+"_LZRead@12"
+"_LZSeek@12"
+"_LZStart@0"
+
+; Def built in 0.002069 seconds

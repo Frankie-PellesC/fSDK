@@ -1,0 +1,9 @@
+; Def File for lib <mbnapi_uuid.dll> created with fTools
+; Created on Mon Oct 10 13:09:30 2016
+
+LIBRARY mbnapi_uuid.dll
+EXPORTS
+; Log File for lib <mbnapi_uuid.dll> created with fTools
+
+
+; Def built in 0.088541 seconds

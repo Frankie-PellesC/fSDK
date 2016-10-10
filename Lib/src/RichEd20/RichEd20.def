@@ -1,0 +1,18 @@
+; Def File for lib <RichEd20.dll> created with fTools
+; Created on Mon Oct 10 13:12:23 2016
+
+LIBRARY RichEd20.dll
+EXPORTS
+; Log File for lib <RichEd20.dll> created with fTools
+
+"?REExtendedRegisterClass@@YGHXZ" @8
+"_CreateTextServices@12" @4
+"_IID_IRichEditOle" @2
+"_IID_IRichEditOleCallback" @3
+"_IID_ITextHost" @6
+"_IID_ITextHost2" @7
+"_IID_ITextServices" @5
+"_RichEdit10ANSIWndProc@16"
+"_RichEditANSIWndProc@16"
+
+; Def built in 0.001316 seconds

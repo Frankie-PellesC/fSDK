@@ -1,0 +1,21 @@
+; Def File for lib <virtdisk.dll> created with fTools
+; Created on Mon Oct 10 12:09:47 2016
+
+LIBRARY virtdisk.dll
+EXPORTS
+; Log File for lib <virtdisk.dll> created with fTools
+
+"AttachVirtualDisk"
+"CompactVirtualDisk"
+"CreateVirtualDisk"
+"DetachVirtualDisk"
+"ExpandVirtualDisk"
+"GetStorageDependencyInformation"
+"GetVirtualDiskInformation"
+"GetVirtualDiskOperationProgress"
+"GetVirtualDiskPhysicalPath"
+"MergeVirtualDisk"
+"OpenVirtualDisk"
+"SetVirtualDiskInformation"
+
+; Def built in 0.001204 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <daouuid.dll> created with fTools
+; Created on Mon Oct 10 13:07:11 2016
+
+LIBRARY daouuid.dll
+EXPORTS
+; Log File for lib <daouuid.dll> created with fTools
+
+
+; Def built in 0.070044 seconds

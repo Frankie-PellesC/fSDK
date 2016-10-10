@@ -1,0 +1,25 @@
+; Def File for lib <Sti.dll> created with fTools
+; Created on Mon Oct 10 12:00:34 2016
+
+LIBRARY Sti.dll
+EXPORTS
+; Log File for lib <Sti.dll> created with fTools
+
+"??0BUFFER@@QEAA@I@Z"
+"??0BUFFER_CHAIN@@QEAA@XZ"
+"??0BUFFER_CHAIN_ITEM@@QEAA@I@Z"
+"??1BUFFER@@QEAA@XZ"
+"??1BUFFER_CHAIN@@QEAA@XZ"
+"??1BUFFER_CHAIN_ITEM@@QEAA@XZ"
+"??_FBUFFER@@QEAAXXZ"
+"??_FBUFFER_CHAIN_ITEM@@QEAAXXZ"
+"?QueryPtr@BUFFER@@QEBAPEAXXZ"
+"?QuerySize@BUFFER@@QEBAIXZ"
+"?QueryUsed@BUFFER_CHAIN_ITEM@@QEBAKXZ"
+"?SetUsed@BUFFER_CHAIN_ITEM@@QEAAXK@Z"
+"MigrateRegisteredSTIAppsForWIAEvents"
+"SelectDeviceDialog2"
+"StiCreateInstance"
+"StiCreateInstanceW"
+
+; Def built in 0.001451 seconds

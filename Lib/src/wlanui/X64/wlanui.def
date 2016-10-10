@@ -1,0 +1,14 @@
+; Def File for lib <wlanui.dll> created with fTools
+; Created on Mon Oct 10 12:10:55 2016
+
+LIBRARY wlanui.dll
+EXPORTS
+; Log File for lib <wlanui.dll> created with fTools
+
+"?WLInvokeProfileUI@@YAKPEAU_PM_PROFILE@@PEAU_GUID@@PEAUHWND__@@HHW4_WL_DISPLAY_PAGES@@PEAPEAU1@PEAHPEAU_AUI_CREDS_INFO@@@Z"
+"?WLInvokeProfileUIFromXMLFile@@YAKPEAGPEAU_GUID@@PEAUHWND__@@HHW4_WL_DISPLAY_PAGES@@PEAUIXMLDOMSchemaCollection@@PEAHPEAPEAGPEAKPEAU_AUI_CREDS_INFO@@@Z"
+"WLFreeProfile"
+"WLFreeProfileXml"
+"WlanUIEditProfile"
+
+; Def built in 0.000893 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <wmcodecdspuuid.dll> created with fTools
+; Created on Mon Oct 10 13:24:49 2016
+
+LIBRARY wmcodecdspuuid.dll
+EXPORTS
+; Log File for lib <wmcodecdspuuid.dll> created with fTools
+
+
+; Def built in 0.802272 seconds

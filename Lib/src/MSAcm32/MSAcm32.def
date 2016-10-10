@@ -1,0 +1,53 @@
+; Def File for lib <MSAcm32.dll> created with fTools
+; Created on Mon Oct 10 13:11:06 2016
+
+LIBRARY MSAcm32.dll
+EXPORTS
+; Log File for lib <MSAcm32.dll> created with fTools
+
+"_XRegThunkEntry@36"
+"_acmDriverAddA@20"
+"_acmDriverAddW@20"
+"_acmDriverClose@8"
+"_acmDriverDetailsA@12"
+"_acmDriverDetailsW@12"
+"_acmDriverEnum@12"
+"_acmDriverID@12"
+"_acmDriverMessage@16"
+"_acmDriverOpen@12"
+"_acmDriverPriority@12"
+"_acmDriverRemove@8"
+"_acmFilterChooseA@4"
+"_acmFilterChooseW@4"
+"_acmFilterDetailsA@12"
+"_acmFilterDetailsW@12"
+"_acmFilterEnumA@20"
+"_acmFilterEnumW@20"
+"_acmFilterTagDetailsA@12"
+"_acmFilterTagDetailsW@12"
+"_acmFilterTagEnumA@20"
+"_acmFilterTagEnumW@20"
+"_acmFormatChooseA@4"
+"_acmFormatChooseW@4"
+"_acmFormatDetailsA@12"
+"_acmFormatDetailsW@12"
+"_acmFormatEnumA@20"
+"_acmFormatEnumW@20"
+"_acmFormatSuggest@20"
+"_acmFormatTagDetailsA@12"
+"_acmFormatTagDetailsW@12"
+"_acmFormatTagEnumA@20"
+"_acmFormatTagEnumW@20"
+"_acmGetVersion@0"
+"_acmMessage32@24"
+"_acmMetrics@12"
+"_acmStreamClose@8"
+"_acmStreamConvert@12"
+"_acmStreamMessage@16"
+"_acmStreamOpen@32"
+"_acmStreamPrepareHeader@12"
+"_acmStreamReset@8"
+"_acmStreamSize@16"
+"_acmStreamUnprepareHeader@12"
+
+; Def built in 0.002907 seconds

@@ -1,0 +1,51 @@
+; Def File for lib <slc.dll> created with fTools
+; Created on Mon Oct 10 13:12:57 2016
+
+LIBRARY slc.dll
+EXPORTS
+; Log File for lib <slc.dll> created with fTools
+
+"?SLGetInstalledSAMLicenseApplications@@YGJPAIPAPAU_GUID@@@Z"
+"?SLGetSAMLicense@@YGJPBU_GUID@@PAIPAPAE@Z"
+"?SLInstallSAMLicense@@YGJPBU_GUID@@IPBE@Z"
+"?SLUninstallSAMLicense@@YGJPBU_GUID@@@Z"
+"?SLpCheckProductKey@@YGJPAUDIGITALPID4@@PAH@Z"
+"?SLpGetGenuineLocal@@YGJPAXPBU_GUID@@PAW4_SL_GENUINE_STATE@@@Z"
+"?SLpUpdateComponentTokens@@YGJPAXPAH@Z"
+"_SLClose@4"
+"_SLConsumeRight@20"
+"_SLConsumeWindowsRight@4"
+"_SLDepositOfflineConfirmationId@16"
+"_SLFireEvent@12"
+"_SLGenerateOfflineInstallationId@12"
+"_SLGetApplicationInformation@24"
+"_SLGetGenuineInformation@20"
+"_SLGetInstalledProductKeyIds@16"
+"_SLGetLicense@16"
+"_SLGetLicenseFileId@16"
+"_SLGetLicenseInformation@24"
+"_SLGetLicensingStatusInformation@24"
+"_SLGetPKeyId@24"
+"_SLGetPKeyInformation@24"
+"_SLGetPolicyInformation@20"
+"_SLGetPolicyInformationDWORD@12"
+"_SLGetProductSkuInformation@24"
+"_SLGetSLIDList@24"
+"_SLGetServiceInformation@20"
+"_SLGetWindowsInformation@16"
+"_SLGetWindowsInformationDWORD@8"
+"_SLInstallLicense@16"
+"_SLInstallProofOfPurchase@24"
+"_SLIsWindowsGenuineLocal@4"
+"_SLOpen@4"
+"_SLReArmWindows@0"
+"_SLRegisterEvent@16"
+"_SLRegisterWindowsEvent@8"
+"_SLSetCurrentProductKey@12"
+"_SLSetGenuineInformation@20"
+"_SLUninstallLicense@8"
+"_SLUninstallProofOfPurchase@8"
+"_SLUnregisterEvent@16"
+"_SLUnregisterWindowsEvent@8"
+
+; Def built in 0.002264 seconds

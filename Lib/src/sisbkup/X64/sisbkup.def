@@ -1,0 +1,17 @@
+; Def File for lib <sisbkup.dll> created with fTools
+; Created on Mon Oct 10 12:00:32 2016
+
+LIBRARY sisbkup.dll
+EXPORTS
+; Log File for lib <sisbkup.dll> created with fTools
+
+"SisCSFilesToBackupForLink"
+"SisCreateBackupStructure"
+"SisCreateRestoreStructure"
+"SisFreeAllocatedMemory"
+"SisFreeBackupStructure"
+"SisFreeRestoreStructure"
+"SisRestoredCommonStoreFile"
+"SisRestoredLink"
+
+; Def built in 0.001565 seconds

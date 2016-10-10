@@ -1,9 +1,0 @@
-; Def File for lib <aux_ulib.dll> created with fTools
-; Created on Mon Oct 10 11:54:16 2016
-
-LIBRARY aux_ulib.dll
-EXPORTS
-; Log File for lib <aux_ulib.dll> created with fTools
-
-
-; Def built in 0.012390 seconds

@@ -1,0 +1,36 @@
+; Def File for lib <Psapi.dll> created with fTools
+; Created on Mon Oct 10 11:59:54 2016
+
+LIBRARY Psapi.dll
+EXPORTS
+; Log File for lib <Psapi.dll> created with fTools
+
+"EmptyWorkingSet"
+"EnumDeviceDrivers"
+"EnumPageFilesA"
+"EnumPageFilesW"
+"EnumProcessModules"
+"EnumProcessModulesEx"
+"EnumProcesses"
+"GetDeviceDriverBaseNameA"
+"GetDeviceDriverBaseNameW"
+"GetDeviceDriverFileNameA"
+"GetDeviceDriverFileNameW"
+"GetMappedFileNameA"
+"GetMappedFileNameW"
+"GetModuleBaseNameA"
+"GetModuleBaseNameW"
+"GetModuleFileNameExA"
+"GetModuleFileNameExW"
+"GetModuleInformation"
+"GetPerformanceInfo"
+"GetProcessImageFileNameA"
+"GetProcessImageFileNameW"
+"GetProcessMemoryInfo"
+"GetWsChanges"
+"GetWsChangesEx"
+"InitializeProcessForWsWatch"
+"QueryWorkingSet"
+"QueryWorkingSetEx"
+
+; Def built in 0.001743 seconds

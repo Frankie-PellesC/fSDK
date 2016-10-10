@@ -1,0 +1,22 @@
+; Def File for lib <wdsmc.dll> created with fTools
+; Created on Mon Oct 10 12:09:55 2016
+
+LIBRARY wdsmc.dll
+EXPORTS
+; Log File for lib <wdsmc.dll> created with fTools
+
+"?ClosePerfCounters@@YAKXZ"
+"?CollectPerfCounters@@YAKPEAGPEAPEAXPEAK2@Z"
+"?OpenPerfCounters@@YAKPEAG@Z"
+"?WdsProviderInitialize@@YAKPEAX@Z"
+"?WdsTransportServerCanJoinNamespace@@YAKPEBG@Z"
+"?WdsTransportServerRegisterNotification@@YAKP6AXPEAXKPEBG0@Z0PEAPEAX@Z"
+"?WdsTransportServerUnRegisterNotification@@YAKPEAX@Z"
+"WdsTransportServerAllocateBuffer"
+"WdsTransportServerCompleteRead"
+"WdsTransportServerFreeBuffer"
+"WdsTransportServerRegisterCallback"
+"WdsTransportServerTrace"
+"WdsTransportServerTraceV"
+
+; Def built in 0.001065 seconds

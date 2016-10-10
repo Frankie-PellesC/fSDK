@@ -1,9 +1,0 @@
-; Def File for lib <clfsmgmt.dll> created with fTools
-; Created on Mon Oct 10 13:06:28 2016
-
-LIBRARY clfsmgmt.dll
-EXPORTS
-; Log File for lib <clfsmgmt.dll> created with fTools
-
-
-; Def built in 0.246269 seconds

@@ -1,0 +1,11 @@
+; Def File for lib <ShFolder.dll> created with fTools
+; Created on Mon Oct 10 12:00:32 2016
+
+LIBRARY ShFolder.dll
+EXPORTS
+; Log File for lib <ShFolder.dll> created with fTools
+
+"SHGetFolderPathA"
+"SHGetFolderPathW"
+
+; Def built in 0.001437 seconds

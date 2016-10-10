@@ -1,0 +1,47 @@
+; Def File for lib <p2pgraph.dll> created with fTools
+; Created on Mon Oct 10 13:11:39 2016
+
+LIBRARY p2pgraph.dll
+EXPORTS
+; Log File for lib <p2pgraph.dll> created with fTools
+
+"?pMemoryHelper@@3PAU_DEBUG_MEMORY_CONTROL_BLOCK@@A" DATA
+"_PeerGraphAddRecord@12"
+"_PeerGraphClose@4"
+"_PeerGraphCloseDirectConnection@12"
+"_PeerGraphConnect@16"
+"_PeerGraphCreate@16"
+"_PeerGraphDelete@12"
+"_PeerGraphDeleteRecord@12"
+"_PeerGraphEndEnumeration@4"
+"_PeerGraphEnumConnections@12"
+"_PeerGraphEnumNodes@12"
+"_PeerGraphEnumRecords@16"
+"_PeerGraphExportDatabase@8"
+"_PeerGraphFreeData@4"
+"_PeerGraphGetEventData@8"
+"_PeerGraphGetItemCount@8"
+"_PeerGraphGetNextItem@12"
+"_PeerGraphGetNodeInfo@16"
+"_PeerGraphGetProperties@8"
+"_PeerGraphGetRecord@12"
+"_PeerGraphGetStatus@8"
+"_PeerGraphImportDatabase@8"
+"_PeerGraphListen@16"
+"_PeerGraphOpen@28"
+"_PeerGraphOpenDirectConnection@16"
+"_PeerGraphPeerTimeToUniversalTime@12"
+"_PeerGraphRegisterEvent@20"
+"_PeerGraphSearchRecords@12"
+"_PeerGraphSendData@24"
+"_PeerGraphSetNodeAttributes@8"
+"_PeerGraphSetPresence@8"
+"_PeerGraphSetProperties@8"
+"_PeerGraphShutdown@0"
+"_PeerGraphStartup@8"
+"_PeerGraphUniversalTimeToPeerTime@12"
+"_PeerGraphUnregisterEvent@4"
+"_PeerGraphUpdateRecord@8"
+"_PeerGraphValidateDeferredRecords@12"
+
+; Def built in 0.002803 seconds

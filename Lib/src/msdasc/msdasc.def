@@ -1,0 +1,9 @@
+; Def File for lib <msdasc.dll> created with fTools
+; Created on Mon Oct 10 13:11:08 2016
+
+LIBRARY msdasc.dll
+EXPORTS
+; Log File for lib <msdasc.dll> created with fTools
+
+
+; Def built in 0.023542 seconds

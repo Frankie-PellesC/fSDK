@@ -1,0 +1,27 @@
+; Def File for lib <infocardapi.dll> created with fTools
+; Created on Mon Oct 10 13:09:00 2016
+
+LIBRARY infocardapi.dll
+EXPORTS
+; Log File for lib <infocardapi.dll> created with fTools
+
+"?EnsureServiceRunning@@YGJXZ"
+"_CloseCryptoHandle@4"
+"_Decrypt@24"
+"_Encrypt@24"
+"_FreeToken@4"
+"_GenerateDerivedKey@40"
+"_GetBrowserToken@16"
+"_GetCryptoTransform@32"
+"_GetKeyedHash@8"
+"_GetToken@16"
+"_HashCore@12"
+"_HashFinal@20"
+"_ImportInformationCard@4"
+"_ManageCardSpace@0"
+"_SignHash@24"
+"_TransformBlock@20"
+"_TransformFinalBlock@20"
+"_VerifyHash@28"
+
+; Def built in 0.002613 seconds

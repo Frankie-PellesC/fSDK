@@ -1,0 +1,23 @@
+; Def File for lib <qwave.dll> created with fTools
+; Created on Mon Oct 10 11:59:55 2016
+
+LIBRARY qwave.dll
+EXPORTS
+; Log File for lib <qwave.dll> created with fTools
+
+"QDLHPathDiagnostics"
+"QDLHStartDiagnosingPath"
+"QOSAddSocketToFlow"
+"QOSCancel"
+"QOSCloseHandle"
+"QOSCreateHandle"
+"QOSEnumerateFlows"
+"QOSNotifyFlow"
+"QOSQueryFlow"
+"QOSRemoveSocketFromFlow"
+"QOSSetFlow"
+"QOSStartTrackingClient"
+"QOSStopTrackingClient"
+"ServiceMain"
+
+; Def built in 0.002068 seconds

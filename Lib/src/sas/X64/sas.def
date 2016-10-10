@@ -1,0 +1,10 @@
+; Def File for lib <sas.dll> created with fTools
+; Created on Mon Oct 10 11:59:57 2016
+
+LIBRARY sas.dll
+EXPORTS
+; Log File for lib <sas.dll> created with fTools
+
+"SendSAS"
+
+; Def built in 0.001183 seconds

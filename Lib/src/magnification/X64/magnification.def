@@ -1,0 +1,21 @@
+; Def File for lib <magnification.dll> created with fTools
+; Created on Mon Oct 10 11:57:08 2016
+
+LIBRARY magnification.dll
+EXPORTS
+; Log File for lib <magnification.dll> created with fTools
+
+"MagGetColorEffect"
+"MagGetImageScalingCallback"
+"MagGetWindowFilterList"
+"MagGetWindowSource"
+"MagGetWindowTransform"
+"MagInitialize"
+"MagSetColorEffect"
+"MagSetImageScalingCallback"
+"MagSetWindowFilterList"
+"MagSetWindowSource"
+"MagSetWindowTransform"
+"MagUninitialize"
+
+; Def built in 0.001485 seconds

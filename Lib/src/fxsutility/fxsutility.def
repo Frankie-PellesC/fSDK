@@ -1,0 +1,11 @@
+; Def File for lib <fxsutility.dll> created with fTools
+; Created on Mon Oct 10 13:08:50 2016
+
+LIBRARY fxsutility.dll
+EXPORTS
+; Log File for lib <fxsutility.dll> created with fTools
+
+"_CanSendToFaxRecipient@0"
+"_SendToFaxRecipient@8"
+
+; Def built in 0.002141 seconds

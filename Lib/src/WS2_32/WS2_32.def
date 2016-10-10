@@ -1,0 +1,176 @@
+; Def File for lib <WS2_32.dll> created with fTools
+; Created on Mon Oct 10 13:25:04 2016
+
+LIBRARY WS2_32.dll
+EXPORTS
+; Log File for lib <WS2_32.dll> created with fTools
+
+"_socket@12" @23
+"_shutdown@8" @22
+"_setsockopt@20" @21
+"_sendto@24" @20
+"_send@16" @19
+"_select@20" @18
+"_recvfrom@24" @17
+"_recv@16" @16
+"_ntohs@4" @15
+"_ntohl@4" @14
+"_listen@8" @13
+"_ioctlsocket@12" @10
+"_inet_pton@12"
+"_inet_ntop@16"
+"_inet_ntoa@4" @12
+"_inet_addr@4" @11
+"_htons@4" @9
+"_htonl@4" @8
+"_getsockopt@20" @7
+"_getsockname@12" @6
+"_getservbyport@8" @56
+"_getservbyname@8" @55
+"_getprotobynumber@4" @54
+"_getprotobyname@4" @53
+"_getpeername@12" @5
+"_getnameinfo@28"
+"_gethostname@8" @57
+"_gethostbyname@4" @52
+"_gethostbyaddr@12" @51
+"_getaddrinfo@16"
+"_freeaddrinfo@4"
+"_connect@12" @4
+"_closesocket@4" @3
+"_bind@12" @2
+"_accept@12" @1
+"___WSAFDIsSet@8" @151
+"_WahWriteLSPEvent@8"
+"_WahWaitForNotification@16"
+"_WahRemoveHandleContext@8"
+"_WahReferenceContextByHandle@8"
+"_WahQueueUserApc@16"
+"_WahOpenNotificationHandleHelper@4"
+"_WahOpenHandleHelper@4"
+"_WahOpenCurrentThread@8"
+"_WahOpenApcHelper@4"
+"_WahNotifyAllProcesses@4"
+"_WahInsertHandleContext@8"
+"_WahEnumerateHandleContexts@12"
+"_WahEnableNonIFSHandleSupport@0"
+"_WahDisableNonIFSHandleSupport@0"
+"_WahDestroyHandleContextTable@4"
+"_WahCreateSocketHandle@8"
+"_WahCreateNotificationHandle@8"
+"_WahCreateHandleContextTable@4"
+"_WahCompleteRequest@20"
+"_WahCloseThread@8"
+"_WahCloseSocketHandle@8"
+"_WahCloseNotificationHandleHelper@4"
+"_WahCloseHandleHelper@4"
+"_WahCloseApcHelper@4"
+"_WSCWriteProviderOrder@8"
+"_WSCWriteNameSpaceOrder@8"
+"_WSCUpdateProvider@20"
+"_WSCUnInstallNameSpace@4"
+"_WSCSetProviderInfo@24"
+"_WSCSetApplicationCategory@28"
+"_WSCInstallProviderAndChains@32"
+"_WSCInstallProvider@20"
+"_WSCInstallNameSpaceEx@24"
+"_WSCInstallNameSpace@20"
+"_WSCGetProviderPath@16"
+"_WSCGetProviderInfo@24"
+"_WSCGetApplicationCategory@24"
+"_WSCEnumProtocols@16"
+"_WSCEnableNSProvider@8"
+"_WSCDeinstallProvider@8"
+"_WSAWaitForMultipleEvents@20"
+"_WSAUnhookBlockingHook@0" @110
+"_WSAUnadvertiseProvider@4"
+"_WSAStringToAddressW@20"
+"_WSAStringToAddressA@20"
+"_WSAStartup@8" @115
+"_WSASocketW@24"
+"_WSASocketA@24"
+"_WSASetServiceW@12"
+"_WSASetServiceA@12"
+"_WSASetLastError@4" @112
+"_WSASetEvent@4"
+"_WSASetBlockingHook@4" @109
+"_WSASendTo@36"
+"_WSASendMsg@24"
+"_WSASendDisconnect@8"
+"_WSASend@28"
+"_WSAResetEvent@4"
+"_WSARemoveServiceClass@4"
+"_WSARecvFrom@36"
+"_WSARecvDisconnect@8"
+"_WSARecv@28"
+"_WSAProviderConfigChange@12"
+"_WSAProviderCompleteAsyncCall@8"
+"_WSAPoll@12"
+"_WSANtohs@12"
+"_WSANtohl@12"
+"_WSANSPIoctl@32"
+"_WSALookupServiceNextW@16"
+"_WSALookupServiceNextA@16"
+"_WSALookupServiceEnd@4"
+"_WSALookupServiceBeginW@12"
+"_WSALookupServiceBeginA@12"
+"_WSAJoinLeaf@32"
+"_WSAIsBlocking@0" @114
+"_WSAIoctl@36"
+"_WSAInstallServiceClassW@4"
+"_WSAInstallServiceClassA@4"
+"_WSAHtons@12"
+"_WSAHtonl@12"
+"_WSAGetServiceClassNameByClassIdW@12"
+"_WSAGetServiceClassNameByClassIdA@12"
+"_WSAGetServiceClassInfoW@16"
+"_WSAGetServiceClassInfoA@16"
+"_WSAGetQOSByName@12"
+"_WSAGetOverlappedResult@20"
+"_WSAGetLastError@0" @111
+"_WSAEventSelect@12"
+"_WSAEnumProtocolsW@12"
+"_WSAEnumProtocolsA@12"
+"_WSAEnumNetworkEvents@12"
+"_WSAEnumNameSpaceProvidersW@8"
+"_WSAEnumNameSpaceProvidersExW@8"
+"_WSAEnumNameSpaceProvidersExA@8"
+"_WSAEnumNameSpaceProvidersA@8"
+"_WSADuplicateSocketW@12"
+"_WSADuplicateSocketA@12"
+"_WSACreateEvent@0"
+"_WSAConnectByNameW@36"
+"_WSAConnectByNameA@36"
+"_WSAConnectByList@32"
+"_WSAConnect@28"
+"_WSACloseEvent@4"
+"_WSACleanup@0" @116
+"_WSACancelBlockingCall@0" @113
+"_WSACancelAsyncRequest@4" @108
+"_WSAAsyncSelect@16" @101
+"_WSAAsyncGetServByPort@24" @106
+"_WSAAsyncGetServByName@24" @107
+"_WSAAsyncGetProtoByNumber@20" @104
+"_WSAAsyncGetProtoByName@20" @105
+"_WSAAsyncGetHostByName@20" @103
+"_WSAAsyncGetHostByAddr@28" @102
+"_WSAAdvertiseProvider@8"
+"_WSAAddressToStringW@20"
+"_WSAAddressToStringA@20"
+"_WSAAccept@20"
+"_WPUCompleteOverlappedRequest@20"
+"_WEP@0" @500
+"_SetAddrInfoExW@48"
+"_SetAddrInfoExA@48"
+"_InetPtonW@12"
+"_InetNtopW@16"
+"_GetNameInfoW@28"
+"_GetAddrInfoW@16"
+"_GetAddrInfoExW@40"
+"_GetAddrInfoExA@40"
+"_FreeAddrInfoW@4"
+"_FreeAddrInfoExW@4"
+"_FreeAddrInfoEx@4"
+"?WSApSetPostRoutine@@YGHPAX@Z"
+
+; Def built in 0.129945 seconds

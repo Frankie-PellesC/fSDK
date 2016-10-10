@@ -1,0 +1,234 @@
+; Def File for lib <WinSpool.dll> created with fTools
+; Created on Mon Oct 10 12:10:48 2016
+
+LIBRARY WinSpool.dll
+EXPORTS
+; Log File for lib <WinSpool.dll> created with fTools
+
+"?ADVANCEDSETUPDIALOG@@YAJPEAUHWND__@@PEAXPEAU_devicemodeA@@2@Z"
+"?AdvancedSetupDialog@@YAJPEAUHWND__@@PEAXPEAU_devicemodeA@@2@Z"
+"?CallCommonPropertySheetUI@@YAJPEAUHWND__@@P6AJPEAU_PROPSHEETUI_INFO@@_J@Z2PEAK@Z" @218
+"?ConvertAnsiDevModeToUnicodeDevmode@@YAHPEAU_devicemodeA@@PEAU_devicemodeW@@KPEAK@Z"
+"?ConvertUnicodeDevModeToAnsiDevmode@@YAHPEAU_devicemodeW@@PEAU_devicemodeA@@KPEAK@Z"
+"?DEVICEMODE@@YAXPEAUHWND__@@PEAXPEAD2@Z"
+"?DeviceMode@@YAXPEAUHWND__@@PEAXPEAD2@Z"
+"?DocumentEvent@@YAHPEAXPEAUHDC__@@HK0K0@Z"
+"?FindCompatibleDriver@@YAJPEBG0PEAGKPEAK1K22@Z" @252
+"?FlushBuffer2@@YAHPEAX@Z" @255
+"?InternalGetPrinterDriverA@@YAHPEAXPEADKPEAEKPEAK@Z" @233
+"?InternalGetPrinterDriverW@@YAHPEAXPEAGKPEAEKPEAK@Z" @234
+"?PrintUIDocumentDefaults@@YAXPEAUHWND__@@PEBGH_J@Z" @221
+"?PrintUIDocumentPropertiesWrap@@YAJPEAUHWND__@@PEAXPEAGPEAU_devicemodeW@@3KK@Z" @229
+"?PrintUIPrinterPropPages@@YAXPEAUHWND__@@PEBGH_J@Z" @220
+"?PrintUIPrinterSetup@@YAHPEAUHWND__@@IIPEAGPEAIPEBG@Z" @230
+"?PrintUIQueueCreate@@YAXPEAUHWND__@@PEBGH_J@Z" @219
+"?PrintUIServerPropPages@@YAXPEAUHWND__@@PEBGH_J@Z" @231
+"?QueryColorProfile@@YAHPEAXPEAU_devicemodeW@@K0PEAK2@Z"
+"?QueryRemoteFonts@@YAHPEAXPEAU_UNIVERSAL_FONT_ID@@K@Z"
+"?QuerySpoolMode@@YAHPEAXPEAJPEAK@Z"
+"?SetPrintExecutionData@@YAXW4PRINT_EXECUTION_CONTEXT@@KK@Z" @254
+"?SetWinspoolOptions@@YAXHH@Z" @253
+"?SpoolerDevQueryPrintW@@YAHPEAXPEAU_devicemodeW@@PEAKPEAGK@Z"
+"?StartDocDlgW@@YAPEAGPEAXPEAU_DOCINFOW@@@Z"
+"AbortPrinter"
+"AddFormA"
+"AddFormW"
+"AddJobA"
+"AddJobW"
+"AddMonitorA"
+"AddMonitorW"
+"AddPerMachineConnectionA" @206
+"AddPerMachineConnectionW" @207
+"AddPortA"
+"AddPortExA"
+"AddPortExW"
+"AddPortW"
+"AddPrintProcessorA"
+"AddPrintProcessorW"
+"AddPrintProvidorA"
+"AddPrintProvidorW"
+"AddPrinterA"
+"AddPrinterConnection2A"
+"AddPrinterConnection2W"
+"AddPrinterConnectionA"
+"AddPrinterConnectionW"
+"AddPrinterDriverA"
+"AddPrinterDriverExA"
+"AddPrinterDriverExW"
+"AddPrinterDriverW"
+"AddPrinterW"
+"AdvancedDocumentPropertiesA"
+"AdvancedDocumentPropertiesW"
+"ClosePrinter"
+"CloseSpoolFileHandle"
+"ClusterSplClose" @102
+"ClusterSplIsAlive" @103
+"ClusterSplOpen" @101
+"CommitSpoolData"
+"ConfigurePortA"
+"ConfigurePortW"
+"ConnectToPrinterDlg"
+"CorePrinterDriverInstalledA"
+"CorePrinterDriverInstalledW"
+"CreatePrintAsyncNotifyChannel"
+"CreatePrinterIC"
+"DEVICECAPABILITIES"
+"DeleteFormA"
+"DeleteFormW"
+"DeleteMonitorA"
+"DeleteMonitorW"
+"DeletePerMachineConnectionA" @208
+"DeletePerMachineConnectionW" @209
+"DeletePortA"
+"DeletePortW"
+"DeletePrintProcessorA"
+"DeletePrintProcessorW"
+"DeletePrintProvidorA"
+"DeletePrintProvidorW"
+"DeletePrinter"
+"DeletePrinterConnectionA"
+"DeletePrinterConnectionW"
+"DeletePrinterDataA"
+"DeletePrinterDataExA"
+"DeletePrinterDataExW"
+"DeletePrinterDataW"
+"DeletePrinterDriverA"
+"DeletePrinterDriverExA"
+"DeletePrinterDriverExW"
+"DeletePrinterDriverPackageA"
+"DeletePrinterDriverPackageW"
+"DeletePrinterDriverW"
+"DeletePrinterIC"
+"DeletePrinterKeyA"
+"DeletePrinterKeyW"
+"DevQueryPrint"
+"DevQueryPrintEx"
+"DeviceCapabilities"
+"DeviceCapabilitiesA"
+"DeviceCapabilitiesW"
+"DevicePropertySheets"
+"DocumentPropertiesA"
+"DocumentPropertiesW"
+"DocumentPropertySheets"
+"EXTDEVICEMODE"
+"EndDocPrinter"
+"EndPagePrinter"
+"EnumFormsA"
+"EnumFormsW"
+"EnumJobsA"
+"EnumJobsW"
+"EnumMonitorsA"
+"EnumMonitorsW"
+"EnumPerMachineConnectionsA" @210
+"EnumPerMachineConnectionsW" @211
+"EnumPortsA"
+"EnumPortsW"
+"EnumPrintProcessorDatatypesA"
+"EnumPrintProcessorDatatypesW"
+"EnumPrintProcessorsA"
+"EnumPrintProcessorsW"
+"EnumPrinterDataA"
+"EnumPrinterDataExA"
+"EnumPrinterDataExW"
+"EnumPrinterDataW"
+"EnumPrinterDriversA"
+"EnumPrinterDriversW"
+"EnumPrinterKeyA"
+"EnumPrinterKeyW"
+"EnumPrinterPropertySheets" @100
+"EnumPrintersA"
+"EnumPrintersW"
+"ExtDeviceMode"
+"ExternalConnectToLd64In32Server" @224
+"FindClosePrinterChangeNotification"
+"FindFirstPrinterChangeNotification"
+"FindNextPrinterChangeNotification"
+"FlushPrinter"
+"ForceUnloadDriver" @215
+"FreePrinterNotifyInfo"
+"GetCorePrinterDriversA"
+"GetCorePrinterDriversW"
+"GetDefaultPrinterA" @201
+"GetDefaultPrinterW" @203
+"GetFormA"
+"GetFormW"
+"GetJobA"
+"GetJobW"
+"GetPrintClassObject" @251
+"GetPrintExecutionData"
+"GetPrintProcessorDirectoryA"
+"GetPrintProcessorDirectoryW"
+"GetPrinterA"
+"GetPrinterDataA"
+"GetPrinterDataExA"
+"GetPrinterDataExW"
+"GetPrinterDataW"
+"GetPrinterDriver2A"
+"GetPrinterDriver2W"
+"GetPrinterDriverA"
+"GetPrinterDriverDirectoryA"
+"GetPrinterDriverDirectoryW"
+"GetPrinterDriverPackagePathA"
+"GetPrinterDriverPackagePathW"
+"GetPrinterDriverW"
+"GetPrinterW"
+"GetSpoolFileHandle"
+"InstallPrinterDriverFromPackageA"
+"InstallPrinterDriverFromPackageW"
+"IsValidDevmodeA"
+"IsValidDevmodeW"
+"LoadPrinterDriver" @212
+"OpenPrinter2A"
+"OpenPrinter2W"
+"OpenPrinterA"
+"OpenPrinterW"
+"PlayGdiScriptOnPrinterIC"
+"PrintUICreateInstance" @228
+"PrintUIWebPnpEntry" @226
+"PrintUIWebPnpPostEntry" @227
+"PrinterMessageBoxA"
+"PrinterMessageBoxW"
+"PrinterProperties"
+"PublishPrinterA" @216
+"PublishPrinterW" @217
+"ReadPrinter"
+"RefCntLoadDriver" @213
+"RefCntUnloadDriver" @214
+"RegisterForPrintAsyncNotifications"
+"ReportJobProcessingProgress"
+"ResetPrinterA"
+"ResetPrinterW"
+"RouterFreeBidiResponseContainer" @223
+"ScheduleJob"
+"SeekPrinter"
+"SendRecvBidiData" @222
+"SetDefaultPrinterA" @202
+"SetDefaultPrinterW" @204
+"SetFormA"
+"SetFormW"
+"SetJobA"
+"SetJobW"
+"SetPortA"
+"SetPortW"
+"SetPrinterA"
+"SetPrinterDataA"
+"SetPrinterDataExA"
+"SetPrinterDataExW"
+"SetPrinterDataW"
+"SetPrinterW"
+"SplDriverUnloadComplete"
+"SplReadPrinter" @205
+"SpoolerPrinterEvent"
+"SpoolerSetPolicy" @250
+"StartDocDlgA"
+"StartDocPrinterA"
+"StartDocPrinterW"
+"StartPagePrinter"
+"UnRegisterForPrintAsyncNotifications"
+"UploadPrinterDriverPackageA"
+"UploadPrinterDriverPackageW"
+"WaitForPrinterChange"
+"WritePrinter"
+"XcvDataW"
+
+; Def built in 0.007017 seconds

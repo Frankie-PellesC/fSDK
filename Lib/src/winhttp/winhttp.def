@@ -1,0 +1,38 @@
+; Def File for lib <winhttp.dll> created with fTools
+; Created on Mon Oct 10 13:24:40 2016
+
+LIBRARY winhttp.dll
+EXPORTS
+; Log File for lib <winhttp.dll> created with fTools
+
+"_SvchostPushServiceGlobals@4"
+"_WinHttpAddRequestHeaders@16"
+"_WinHttpAutoProxySvcMain@8"
+"_WinHttpCheckPlatform@0"
+"_WinHttpCloseHandle@4"
+"_WinHttpConnect@16"
+"_WinHttpCrackUrl@16"
+"_WinHttpCreateUrl@16"
+"_WinHttpDetectAutoProxyConfigUrl@8"
+"_WinHttpGetDefaultProxyConfiguration@4"
+"_WinHttpGetIEProxyConfigForCurrentUser@4"
+"_WinHttpGetProxyForUrl@16"
+"_WinHttpOpen@20"
+"_WinHttpOpenRequest@28"
+"_WinHttpQueryAuthSchemes@16"
+"_WinHttpQueryDataAvailable@8"
+"_WinHttpQueryHeaders@24"
+"_WinHttpQueryOption@16"
+"_WinHttpReadData@16"
+"_WinHttpReceiveResponse@8"
+"_WinHttpSendRequest@28"
+"_WinHttpSetCredentials@24"
+"_WinHttpSetDefaultProxyConfiguration@4"
+"_WinHttpSetOption@16"
+"_WinHttpSetStatusCallback@16"
+"_WinHttpSetTimeouts@20"
+"_WinHttpTimeFromSystemTime@8"
+"_WinHttpTimeToSystemTime@8"
+"_WinHttpWriteData@16"
+
+; Def built in 0.002729 seconds

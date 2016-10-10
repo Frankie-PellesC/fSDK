@@ -1,0 +1,52 @@
+; Def File for lib <Mpr.dll> created with fTools
+; Created on Mon Oct 10 11:58:43 2016
+
+LIBRARY Mpr.dll
+EXPORTS
+; Log File for lib <Mpr.dll> created with fTools
+
+"MultinetGetConnectionPerformanceA"
+"MultinetGetConnectionPerformanceW"
+"WNetAddConnection2A"
+"WNetAddConnection2W"
+"WNetAddConnection3A"
+"WNetAddConnection3W"
+"WNetAddConnectionA"
+"WNetAddConnectionW"
+"WNetCancelConnection2A"
+"WNetCancelConnection2W"
+"WNetCancelConnectionA"
+"WNetCancelConnectionW"
+"WNetCloseEnum"
+"WNetConnectionDialog"
+"WNetConnectionDialog1A"
+"WNetConnectionDialog1W"
+"WNetDisconnectDialog"
+"WNetDisconnectDialog1A"
+"WNetDisconnectDialog1W"
+"WNetEnumResourceA"
+"WNetEnumResourceW"
+"WNetGetConnectionA"
+"WNetGetConnectionW"
+"WNetGetLastErrorA"
+"WNetGetLastErrorW"
+"WNetGetNetworkInformationA"
+"WNetGetNetworkInformationW"
+"WNetGetProviderNameA"
+"WNetGetProviderNameW"
+"WNetGetResourceInformationA"
+"WNetGetResourceInformationW"
+"WNetGetResourceParentA"
+"WNetGetResourceParentW"
+"WNetGetUniversalNameA"
+"WNetGetUniversalNameW"
+"WNetGetUserA"
+"WNetGetUserW"
+"WNetOpenEnumA"
+"WNetOpenEnumW"
+"WNetSetLastErrorA"
+"WNetSetLastErrorW"
+"WNetUseConnectionA"
+"WNetUseConnectionW"
+
+; Def built in 0.001967 seconds

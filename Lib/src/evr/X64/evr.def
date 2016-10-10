@@ -1,0 +1,19 @@
+; Def File for lib <evr.dll> created with fTools
+; Created on Mon Oct 10 11:56:14 2016
+
+LIBRARY evr.dll
+EXPORTS
+; Log File for lib <evr.dll> created with fTools
+
+"MFCreateDXSurfaceBuffer"
+"MFCreateVideoMixer"
+"MFCreateVideoMixerAndPresenter"
+"MFCreateVideoOTA"
+"MFCreateVideoPresenter"
+"MFCreateVideoPresenter2"
+"MFCreateVideoSampleAllocator"
+"MFCreateVideoSampleFromSurface"
+"MFGetPlaneSize"
+"MFIsFormatYUV"
+
+; Def built in 0.001077 seconds

@@ -1,0 +1,46 @@
+; Def File for lib <certadm.dll> created with fTools
+; Created on Mon Oct 10 11:54:20 2016
+
+LIBRARY certadm.dll
+EXPORTS
+; Log File for lib <certadm.dll> created with fTools
+
+"?GetAccessRights@@YAJPEAXQEAPEAXKQEAK@Z" @212
+"?GetLocaleName@@YAJPEAPEAG@Z" @213
+"?GetToken@@YAJPEAGPEBU_CERT_CONTEXT@@PEAPEAX@Z" @216
+"?GetUserPrincipalName@@YAJPEAPEAG@Z" @217
+"?VerifyCertContextWithNtAuth@@YAJPEBU_CERT_CONTEXT@@@Z" @215
+"?myGetColumnDisplayName@@YAJPEBGPEAPEBG@Z" @210
+"?myGetColumnName@@YAJKHPEAPEBG@Z" @211
+"CertSrvBackupClose" @5
+"CertSrvBackupEnd" @6
+"CertSrvBackupFree" @15
+"CertSrvBackupGetBackupLogsW" @7
+"CertSrvBackupGetDatabaseNamesW" @8
+"CertSrvBackupGetDynamicFileListW" @14
+"CertSrvBackupOpenFileW" @9
+"CertSrvBackupPrepareW" @10
+"CertSrvBackupRead" @11
+"CertSrvBackupTruncateLogs" @12
+"CertSrvIsServerOnlineW" @13
+"CertSrvRestoreEnd" @21
+"CertSrvRestoreGetDatabaseLocationsW" @17
+"CertSrvRestorePrepareW" @18
+"CertSrvRestoreRegisterComplete" @20
+"CertSrvRestoreRegisterThroughFile" @22
+"CertSrvRestoreRegisterW" @19
+"CertSrvServerControlW" @16
+"ClosePerfMon"
+"CollectPerfMon"
+"CreatePerfObject" @203
+"CreatePerfObjectWithAlias" @209
+"DecrementPerfCounter" @207
+"DeletePerfObject" @204
+"IncrementPerfCounter" @206
+"InitPerfMon" @201
+"OpenPerfMon"
+"ResetPerfObjectList" @205
+"UninitPerfMon" @202
+"UpdatePerfCounter" @208
+
+; Def built in 0.001949 seconds

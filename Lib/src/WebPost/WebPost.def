@@ -1,0 +1,9 @@
+; Def File for lib <WebPost.dll> created with fTools
+; Created on Mon Oct 10 13:23:51 2016
+
+LIBRARY WebPost.dll
+EXPORTS
+; Log File for lib <WebPost.dll> created with fTools
+
+
+; Def built in 0.005681 seconds

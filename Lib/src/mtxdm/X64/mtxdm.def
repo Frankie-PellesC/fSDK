@@ -1,0 +1,10 @@
+; Def File for lib <mtxdm.dll> created with fTools
+; Created on Mon Oct 10 11:59:06 2016
+
+LIBRARY mtxdm.dll
+EXPORTS
+; Log File for lib <mtxdm.dll> created with fTools
+
+"GetDispenserManager"
+
+; Def built in 0.000984 seconds

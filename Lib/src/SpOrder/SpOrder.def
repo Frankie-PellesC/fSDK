@@ -1,0 +1,11 @@
+; Def File for lib <SpOrder.dll> created with fTools
+; Created on Mon Oct 10 13:12:59 2016
+
+LIBRARY SpOrder.dll
+EXPORTS
+; Log File for lib <SpOrder.dll> created with fTools
+
+"_WSCWriteNameSpaceOrder@8"
+"_WSCWriteProviderOrder@8"
+
+; Def built in 0.001266 seconds

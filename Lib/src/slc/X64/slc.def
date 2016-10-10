@@ -1,0 +1,51 @@
+; Def File for lib <slc.dll> created with fTools
+; Created on Mon Oct 10 12:00:33 2016
+
+LIBRARY slc.dll
+EXPORTS
+; Log File for lib <slc.dll> created with fTools
+
+"?SLGetInstalledSAMLicenseApplications@@YAJPEAIPEAPEAU_GUID@@@Z"
+"?SLGetSAMLicense@@YAJPEBU_GUID@@PEAIPEAPEAE@Z"
+"?SLInstallSAMLicense@@YAJPEBU_GUID@@IPEBE@Z"
+"?SLUninstallSAMLicense@@YAJPEBU_GUID@@@Z"
+"?SLpCheckProductKey@@YAJPEAUDIGITALPID4@@PEAH@Z"
+"?SLpGetGenuineLocal@@YAJPEAXPEBU_GUID@@PEAW4_SL_GENUINE_STATE@@@Z"
+"?SLpUpdateComponentTokens@@YAJPEAXPEAH@Z"
+"SLClose"
+"SLConsumeRight"
+"SLConsumeWindowsRight"
+"SLDepositOfflineConfirmationId"
+"SLFireEvent"
+"SLGenerateOfflineInstallationId"
+"SLGetApplicationInformation"
+"SLGetGenuineInformation"
+"SLGetInstalledProductKeyIds"
+"SLGetLicense"
+"SLGetLicenseFileId"
+"SLGetLicenseInformation"
+"SLGetLicensingStatusInformation"
+"SLGetPKeyId"
+"SLGetPKeyInformation"
+"SLGetPolicyInformation"
+"SLGetPolicyInformationDWORD"
+"SLGetProductSkuInformation"
+"SLGetSLIDList"
+"SLGetServiceInformation"
+"SLGetWindowsInformation"
+"SLGetWindowsInformationDWORD"
+"SLInstallLicense"
+"SLInstallProofOfPurchase"
+"SLIsWindowsGenuineLocal"
+"SLOpen"
+"SLReArmWindows"
+"SLRegisterEvent"
+"SLRegisterWindowsEvent"
+"SLSetCurrentProductKey"
+"SLSetGenuineInformation"
+"SLUninstallLicense"
+"SLUninstallProofOfPurchase"
+"SLUnregisterEvent"
+"SLUnregisterWindowsEvent"
+
+; Def built in 0.002500 seconds

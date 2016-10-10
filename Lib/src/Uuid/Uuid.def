@@ -1,0 +1,9 @@
+; Def File for lib <Uuid.dll> created with fTools
+; Created on Mon Oct 10 13:14:09 2016
+
+LIBRARY Uuid.dll
+EXPORTS
+; Log File for lib <Uuid.dll> created with fTools
+
+
+; Def built in 28.107520 seconds

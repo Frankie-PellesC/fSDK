@@ -1,0 +1,33 @@
+; Def File for lib <NtQuery.dll> created with fTools
+; Created on Mon Oct 10 13:11:34 2016
+
+LIBRARY NtQuery.dll
+EXPORTS
+; Log File for lib <NtQuery.dll> created with fTools
+
+"_BindIFilterFromStorage@12"
+"_BindIFilterFromStream@12"
+"_CIBuildQueryNode@28"
+"_CIBuildQueryTree@20"
+"_CICreateCommand@20"
+"_CIGetGlobalPropertyList@4"
+"_CIMakeICommand@24"
+"_CIRestrictionToFullTree@32"
+"_CIShutdown@0"
+"_CIState@12"
+"_CITextToFullTree@32"
+"_CITextToFullTreeEx@36"
+"_CITextToSelectTree@20"
+"_CITextToSelectTreeEx@24"
+"_InternalBindIFilterFromDocCLSID@20"
+"_InternalBindIFilterFromFileName@16"
+"_InternalBindIFilterFromStorage@16"
+"_InternalBindIFilterFromStream@16"
+"_LoadIFilter@12"
+"_LoadIFilterEx@16"
+"_LocateCatalogs@24"
+"_LocateCatalogsA@24"
+"_LocateCatalogsW@24"
+"_SetCatalogState@16"
+
+; Def built in 0.002269 seconds

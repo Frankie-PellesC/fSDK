@@ -1,0 +1,21 @@
+; Def File for lib <Version.dll> created with fTools
+; Created on Mon Oct 10 13:23:40 2016
+
+LIBRARY Version.dll
+EXPORTS
+; Log File for lib <Version.dll> created with fTools
+
+"_GetFileVersionInfoA@16"
+"_GetFileVersionInfoExW@20"
+"_GetFileVersionInfoSizeA@8"
+"_GetFileVersionInfoSizeExW@12"
+"_GetFileVersionInfoSizeW@8"
+"_GetFileVersionInfoW@16"
+"_VerFindFileA@32"
+"_VerFindFileW@32"
+"_VerInstallFileA@32"
+"_VerInstallFileW@32"
+"_VerQueryValueA@16"
+"_VerQueryValueW@16"
+
+; Def built in 0.001896 seconds

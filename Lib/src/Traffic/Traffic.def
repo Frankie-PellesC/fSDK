@@ -1,0 +1,31 @@
+; Def File for lib <Traffic.dll> created with fTools
+; Created on Mon Oct 10 13:14:05 2016
+
+LIBRARY Traffic.dll
+EXPORTS
+; Log File for lib <Traffic.dll> created with fTools
+
+"_TcAddFilter@12"
+"_TcAddFlow@20"
+"_TcCloseInterface@4"
+"_TcDeleteFilter@4"
+"_TcDeleteFlow@4"
+"_TcDeregisterClient@4"
+"_TcEnumerateFlows@20"
+"_TcEnumerateInterfaces@12"
+"_TcGetFlowNameA@12"
+"_TcGetFlowNameW@12"
+"_TcGetInterfaceList@12"
+"_TcModifyFlow@8"
+"_TcOpenInterfaceA@16"
+"_TcOpenInterfaceW@16"
+"_TcQueryFlowA@16"
+"_TcQueryFlowW@16"
+"_TcQueryInterface@20"
+"_TcRegisterClient@16"
+"_TcSetFlowA@16"
+"_TcSetFlowW@16"
+"_TcSetInterface@16"
+"_TcSetSocketFlow@8"
+
+; Def built in 0.002556 seconds

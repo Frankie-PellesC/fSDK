@@ -1,0 +1,26 @@
+; Def File for lib <wecapi.dll> created with fTools
+; Created on Mon Oct 10 12:09:56 2016
+
+LIBRARY wecapi.dll
+EXPORTS
+; Log File for lib <wecapi.dll> created with fTools
+
+"?EcIsConfigRequired@@YAHPEAH@Z"
+"?EcQuickConfig@@YAHXZ"
+"EcClose"
+"EcDeleteSubscription"
+"EcEnumNextSubscription"
+"EcGetObjectArrayProperty"
+"EcGetObjectArraySize"
+"EcGetSubscriptionProperty"
+"EcGetSubscriptionRunTimeStatus"
+"EcInsertObjectArrayElement"
+"EcOpenSubscription"
+"EcOpenSubscriptionEnum"
+"EcRemoveObjectArrayElement"
+"EcRetrySubscription"
+"EcSaveSubscription"
+"EcSetObjectArrayProperty"
+"EcSetSubscriptionProperty"
+
+; Def built in 0.001816 seconds

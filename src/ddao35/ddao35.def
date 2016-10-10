@@ -1,9 +1,0 @@
-; Def File for lib <ddao35.dll> created with fTools
-; Created on Mon Oct 10 13:07:13 2016
-
-LIBRARY ddao35.dll
-EXPORTS
-; Log File for lib <ddao35.dll> created with fTools
-
-
-; Def built in 0.103841 seconds

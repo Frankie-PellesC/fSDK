@@ -1,0 +1,18 @@
+; Def File for lib <MgmtAPI.dll> created with fTools
+; Created on Mon Oct 10 13:10:43 2016
+
+LIBRARY MgmtAPI.dll
+EXPORTS
+; Log File for lib <MgmtAPI.dll> created with fTools
+
+"_SnmpMgrClose@4"
+"_SnmpMgrCtl@28"
+"_SnmpMgrGetTrap@24"
+"_SnmpMgrGetTrapEx@32"
+"_SnmpMgrOidToStr@8"
+"_SnmpMgrOpen@16"
+"_SnmpMgrRequest@20"
+"_SnmpMgrStrToOid@8"
+"_SnmpMgrTrapListen@4"
+
+; Def built in 0.001771 seconds

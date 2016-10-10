@@ -1,0 +1,9 @@
+; Def File for lib <oledb.dll> created with fTools
+; Created on Mon Oct 10 11:59:11 2016
+
+LIBRARY oledb.dll
+EXPORTS
+; Log File for lib <oledb.dll> created with fTools
+
+
+; Def built in 0.036282 seconds

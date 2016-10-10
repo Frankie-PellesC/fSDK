@@ -1,0 +1,13 @@
+; Def File for lib <ksuser.dll> created with fTools
+; Created on Mon Oct 10 11:56:42 2016
+
+LIBRARY ksuser.dll
+EXPORTS
+; Log File for lib <ksuser.dll> created with fTools
+
+"KsCreateTopologyNode"
+"KsCreatePin"
+"KsCreateClock"
+"KsCreateAllocator"
+
+; Def built in 0.621664 seconds

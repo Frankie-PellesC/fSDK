@@ -1,0 +1,46 @@
+; Def File for lib <httpapi.dll> created with fTools
+; Created on Mon Oct 10 13:08:58 2016
+
+LIBRARY httpapi.dll
+EXPORTS
+; Log File for lib <httpapi.dll> created with fTools
+
+"_HttpAddFragmentToCache@20"
+"_HttpAddUrl@12"
+"_HttpAddUrlToUrlGroup@24"
+"_HttpCancelHttpRequest@16"
+"_HttpCloseRequestQueue@4"
+"_HttpCloseServerSession@8"
+"_HttpCloseUrlGroup@8"
+"_HttpControlService@20"
+"_HttpCreateHttpHandle@8"
+"_HttpCreateRequestQueue@20"
+"_HttpCreateServerSession@12"
+"_HttpCreateUrlGroup@16"
+"_HttpDeleteServiceConfiguration@20"
+"_HttpFlushResponseCache@16"
+"_HttpGetCounters@24"
+"_HttpInitialize@12"
+"_HttpQueryRequestQueueProperty@28"
+"_HttpQueryServerSessionProperty@24"
+"_HttpQueryServiceConfiguration@32"
+"_HttpQueryUrlGroupProperty@24"
+"_HttpReadFragmentFromCache@28"
+"_HttpReceiveClientCertificate@32"
+"_HttpReceiveHttpRequest@32"
+"_HttpReceiveRequestEntityBody@32"
+"_HttpRemoveUrl@8"
+"_HttpRemoveUrlFromUrlGroup@16"
+"_HttpSendHttpResponse@44"
+"_HttpSendResponseEntityBody@44"
+"_HttpSetRequestQueueProperty@24"
+"_HttpSetServerSessionProperty@20"
+"_HttpSetServiceConfiguration@20"
+"_HttpSetUrlGroupProperty@20"
+"_HttpShutdownRequestQueue@4"
+"_HttpTerminate@8"
+"_HttpWaitForDemandStart@8"
+"_HttpWaitForDisconnect@16"
+"_HttpWaitForDisconnectEx@20"
+
+; Def built in 0.002038 seconds

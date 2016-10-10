@@ -1,0 +1,15 @@
+; Def File for lib <KSProxy.dll> created with fTools
+; Created on Mon Oct 10 11:56:41 2016
+
+LIBRARY KSProxy.dll
+EXPORTS
+; Log File for lib <KSProxy.dll> created with fTools
+
+"KsGetMediaType"
+"KsGetMediaTypeCount"
+"KsGetMultiplePinFactoryItems"
+"KsOpenDefaultDevice"
+"KsResolveRequiredAttributes"
+"KsSynchronousDeviceControl"
+
+; Def built in 0.001891 seconds

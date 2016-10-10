@@ -1,0 +1,37 @@
+; Def File for lib <odbcbcp.dll> created with fTools
+; Created on Mon Oct 10 13:11:34 2016
+
+LIBRARY odbcbcp.dll
+EXPORTS
+; Log File for lib <odbcbcp.dll> created with fTools
+
+"_LibMain@12" @24
+"_SQLCloseEnumServers@4" @27
+"_SQLGetNextEnumeration@12" @26
+"_SQLInitEnumServers@8" @25
+"_SQLLinkedCatalogsA@12" @23
+"_SQLLinkedCatalogsW@12" @22
+"_SQLLinkedServers@4" @21
+"_bcp_batch@4" @2
+"_bcp_bind@32" @3
+"_bcp_colfmt@32" @4
+"_bcp_collen@12" @5
+"_bcp_colptr@12" @6
+"_bcp_columns@8" @8
+"_bcp_control@12" @9
+"_bcp_done@4" @10
+"_bcp_exec@8" @12
+"_bcp_getcolfmt@24" @28
+"_bcp_initA@20" @11
+"_bcp_initW@20" @18
+"_bcp_moretext@12" @13
+"_bcp_readfmtA@8" @15
+"_bcp_readfmtW@8" @19
+"_bcp_sendrow@4" @14
+"_bcp_setcolfmt@20" @29
+"_bcp_writefmtA@8" @16
+"_bcp_writefmtW@8" @20
+"_dbprtypeA@4" @1
+"_dbprtypeW@4" @17
+
+; Def built in 0.002390 seconds

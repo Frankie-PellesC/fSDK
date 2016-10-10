@@ -1,0 +1,9 @@
+; Def File for lib <gpmuuid.dll> created with fTools
+; Created on Mon Oct 10 13:08:55 2016
+
+LIBRARY gpmuuid.dll
+EXPORTS
+; Log File for lib <gpmuuid.dll> created with fTools
+
+
+; Def built in 0.115028 seconds

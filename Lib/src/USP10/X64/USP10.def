@@ -1,0 +1,49 @@
+; Def File for lib <USP10.dll> created with fTools
+; Created on Mon Oct 10 12:01:38 2016
+
+LIBRARY USP10.dll
+EXPORTS
+; Log File for lib <USP10.dll> created with fTools
+
+"ScriptApplyDigitSubstitution"
+"ScriptApplyLogicalWidth"
+"ScriptBreak"
+"ScriptCPtoX"
+"ScriptCacheGetHeight"
+"ScriptFreeCache"
+"ScriptGetCMap"
+"ScriptGetFontAlternateGlyphs"
+"ScriptGetFontFeatureTags"
+"ScriptGetFontLanguageTags"
+"ScriptGetFontProperties"
+"ScriptGetFontScriptTags"
+"ScriptGetGlyphABCWidth"
+"ScriptGetLogicalWidths"
+"ScriptGetProperties"
+"ScriptIsComplex"
+"ScriptItemize"
+"ScriptItemizeOpenType"
+"ScriptJustify"
+"ScriptLayout"
+"ScriptPlace"
+"ScriptPlaceOpenType"
+"ScriptPositionSingleGlyph"
+"ScriptRecordDigitSubstitution"
+"ScriptShape"
+"ScriptShapeOpenType"
+"ScriptStringAnalyse"
+"ScriptStringCPtoX"
+"ScriptStringFree"
+"ScriptStringGetLogicalWidths"
+"ScriptStringGetOrder"
+"ScriptStringOut"
+"ScriptStringValidate"
+"ScriptStringXtoCP"
+"ScriptString_pLogAttr"
+"ScriptString_pSize"
+"ScriptString_pcOutChars"
+"ScriptSubstituteSingleGlyph"
+"ScriptTextOut"
+"ScriptXtoCP"
+
+; Def built in 0.001944 seconds

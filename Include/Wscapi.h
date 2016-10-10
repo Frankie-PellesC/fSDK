@@ -1,0 +1,44 @@
+/*+@@file@@----------------------------------------------------------------*//*!
+ \file		Wscapi.h
+ \par Description 
+            Extension and update of headers for PellesC compiler suite.
+ \par Project: 
+            PellesC Headers extension
+ \date		Created  on Sun Sep  4 15:39:04 2016
+ \date		Modified on Sun Sep  4 15:39:04 2016
+ \author	frankie
+\*//*-@@file@@----------------------------------------------------------------*/
+
+#ifndef __Wscapi_h__
+#define __Wscapi_h__
+#if __POCC__ >= 500
+#pragma once
+#endif
+#if(_WIN32_WINNT >= 0x0600)
+typedef enum _WSC_SECURITY_PROVIDER
+{
+	WSC_SECURITY_PROVIDER_FIREWALL = 0x1,
+	WSC_SECURITY_PROVIDER_AUTOUPDATE_SETTINGS = 0x2,
+	WSC_SECURITY_PROVIDER_ANTIVIRUS = 0x4,
+	WSC_SECURITY_PROVIDER_ANTISPYWARE = 0x8,
+	WSC_SECURITY_PROVIDER_INTERNET_SETTINGS = 0x10,
+	WSC_SECURITY_PROVIDER_USER_ACCOUNT_CONTROL = 0x20,
+	WSC_SECURITY_PROVIDER_SERVICE = 0x40,
+	WSC_SECURITY_PROVIDER_NONE = 0,
+	WSC_SECURITY_PROVIDER_ALL = WSC_SECURITY_PROVIDER_FIREWALL | WSC_SECURITY_PROVIDER_AUTOUPDATE_SETTINGS			 |
+								WSC_SECURITY_PROVIDER_ANTIVIRUS | WSC_SECURITY_PROVIDER_ANTISPYWARE					 |
+								WSC_SECURITY_PROVIDER_INTERNET_SETTINGS | WSC_SECURITY_PROVIDER_USER_ACCOUNT_CONTROL |
+								WSC_SECURITY_PROVIDER_SERVICE
+} WSC_SECURITY_PROVIDER, *PWSC_SECURITY_PROVIDER;
+typedef enum _WSC_SECURITY_PROVIDER_HEALTH
+{
+    WSC_SECURITY_PROVIDER_HEALTH_GOOD,
+    WSC_SECURITY_PROVIDER_HEALTH_NOTMONITORED,
+    WSC_SECURITY_PROVIDER_HEALTH_POOR,
+    WSC_SECURITY_PROVIDER_HEALTH_SNOOZE,
+} WSC_SECURITY_PROVIDER_HEALTH, *PWSC_SECURITY_PROVIDER_HEALTH;
+STDAPI WscRegisterForChanges(LPVOID Reserved, PHANDLE phCallbackRegistration, LPTHREAD_START_ROUTINE lpCallbackAddress, PVOID pContext);
+STDAPI WscUnRegisterChanges(HANDLE hRegistrationHandle);
+STDAPI WscGetSecurityProviderHealth(DWORD Providers, PWSC_SECURITY_PROVIDER_HEALTH pHealth);
+#endif
+#endif

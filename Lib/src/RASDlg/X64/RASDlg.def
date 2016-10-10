@@ -1,0 +1,34 @@
+; Def File for lib <RASDlg.dll> created with fTools
+; Created on Mon Oct 10 11:59:55 2016
+
+LIBRARY RASDlg.dll
+EXPORTS
+; Log File for lib <RASDlg.dll> created with fTools
+
+"?RasHandleDiagnostics@@YAXPEAUHWND__@@PEAUHINSTANCE__@@PEBDH@Z"
+"DwTerminalDlg"
+"GetRasDialOutProtocols"
+"RasAutodialQueryDlgA"
+"RasAutodialQueryDlgW"
+"RasDialDlgA"
+"RasDialDlgW"
+"RasEntryDlgA"
+"RasEntryDlgW"
+"RasPhonebookDlgA"
+"RasPhonebookDlgW"
+"RasSrvAddPropPages"
+"RasSrvAllowConnectionsConfig"
+"RasSrvCleanupService"
+"RasSrvEnumConnections"
+"RasSrvHangupConnection"
+"RasSrvInitializeService"
+"RasSrvIsConnectionConnected"
+"RasSrvIsICConfigured"
+"RasSrvIsServiceRunning"
+"RasUserEnableManualDial"
+"RasUserGetManualDial"
+"RasUserPrefsDlg"
+"RouterEntryDlgA"
+"RouterEntryDlgW"
+
+; Def built in 0.001613 seconds

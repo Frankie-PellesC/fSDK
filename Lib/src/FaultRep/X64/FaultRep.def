@@ -1,0 +1,18 @@
+; Def File for lib <FaultRep.dll> created with fTools
+; Created on Mon Oct 10 11:56:15 2016
+
+LIBRARY FaultRep.dll
+EXPORTS
+; Log File for lib <FaultRep.dll> created with fTools
+
+"?AddERExcludedApplicationA@@YAHPEBD@Z"
+"?AddERExcludedApplicationW@@YAHPEBG@Z"
+"?CheckPerUserCrossProcessThrottle@@YAJPEAH@Z"
+"?ReportFault@@YA?AW4tagEFaultRepRetVal@@PEAU_EXCEPTION_POINTERS@@K@Z"
+"?UpdatePerUserLastCrossProcessCollectionTime@@YAJXZ"
+"?WerReportHang@@YAJPEAUHWND__@@PEBG@Z"
+"CancelHangReporting"
+"ReportHang"
+"WerpInitiateCrashReporting"
+
+; Def built in 0.001324 seconds

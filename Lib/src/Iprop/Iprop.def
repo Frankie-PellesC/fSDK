@@ -1,0 +1,17 @@
+; Def File for lib <Iprop.dll> created with fTools
+; Created on Mon Oct 10 13:09:01 2016
+
+LIBRARY Iprop.dll
+EXPORTS
+; Log File for lib <Iprop.dll> created with fTools
+
+"_FmtIdToPropStgName"
+"_FreePropVariantArray"
+"_PropStgNameToFmtId"
+"_PropVariantClear"
+"_PropVariantCopy"
+"_StgCreatePropSetStg"
+"_StgCreatePropStg"
+"_StgOpenPropStg"
+
+; Def built in 0.001762 seconds

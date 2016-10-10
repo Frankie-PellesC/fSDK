@@ -1,0 +1,11 @@
+; Def File for lib <fontsub.dll> created with fTools
+; Created on Mon Oct 10 13:08:47 2016
+
+LIBRARY fontsub.dll
+EXPORTS
+; Log File for lib <fontsub.dll> created with fTools
+
+"_CreateFontPackage"
+"_MergeFontPackage"
+
+; Def built in 0.001138 seconds

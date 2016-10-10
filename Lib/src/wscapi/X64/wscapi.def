@@ -1,0 +1,30 @@
+; Def File for lib <wscapi.dll> created with fTools
+; Created on Mon Oct 10 12:11:16 2016
+
+LIBRARY wscapi.dll
+EXPORTS
+; Log File for lib <wscapi.dll> created with fTools
+
+"WscGetSecurityProviderHealth"
+"WscRegisterForChanges"
+"WscUnRegisterChanges"
+"wscAntiSpywareGetStatus"
+"wscAntiVirusGetStatus"
+"wscAutoUpdatesEnableScheduledMode"
+"wscAutoUpdatesGetStatus"
+"wscFirewallGetStatus"
+"wscGeneralSecurityGetStatus"
+"wscGetAlertStatus"
+"wscIcfEnable"
+"wscIeSettingsFix"
+"wscLuaSettingsFix"
+"wscOverrideComponentStatus"
+"wscPing"
+"wscProductInfoFree"
+"wscRegisterChangeNotification"
+"wscRegisterSecurityProduct"
+"wscUnRegisterChangeNotification"
+"wscUnregisterSecurityProduct"
+"wscUpdateProductStatus"
+
+; Def built in 0.001475 seconds

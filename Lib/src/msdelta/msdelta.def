@@ -1,0 +1,24 @@
+; Def File for lib <msdelta.dll> created with fTools
+; Created on Mon Oct 10 13:11:08 2016
+
+LIBRARY msdelta.dll
+EXPORTS
+; Log File for lib <msdelta.dll> created with fTools
+
+"_ApplyDeltaA@20"
+"_ApplyDeltaB@36"
+"_ApplyDeltaProvidedB@40"
+"_ApplyDeltaW@20"
+"_CreateDeltaA@64"
+"_CreateDeltaB@96"
+"_CreateDeltaW@64"
+"_DeltaFree@4"
+"_DeltaNormalizeProvidedB@36"
+"_GetDeltaInfoA@8"
+"_GetDeltaInfoB@16"
+"_GetDeltaInfoW@8"
+"_GetDeltaSignatureA@20"
+"_GetDeltaSignatureB@28"
+"_GetDeltaSignatureW@20"
+
+; Def built in 0.001732 seconds

@@ -1,0 +1,64 @@
+; Def File for lib <UserEnv.dll> created with fTools
+; Created on Mon Oct 10 13:14:08 2016
+
+LIBRARY UserEnv.dll
+EXPORTS
+; Log File for lib <UserEnv.dll> created with fTools
+
+"?RsopLoggingEnabled@@YGHXZ"
+"_CheckDirectoryOwnership@12" @203
+"_CheckXForestLogon@4" @175
+"_CopyProfileDirectoryEx2@28" @209
+"_CreateDirectoryJunctionsForSystem@0" @206
+"_CreateDirectoryJunctionsForUserProfile@4" @207
+"_CreateEnvironmentBlock@12"
+"_CreateGroupEx@16" @137
+"_CreateLinkFileEx@48" @139
+"_CreateProfile@16"
+"_DeleteGroup@8" @104
+"_DeleteLinkFile@16" @122
+"_DeleteProfileA@12"
+"_DeleteProfileDirectory@12" @202
+"_DeleteProfileW@12"
+"_DestroyEnvironmentBlock@4"
+"_EnterCriticalPolicySection@4"
+"_ExpandEnvironmentStringsForUserA@16"
+"_ExpandEnvironmentStringsForUserW@16"
+"_ForceSyncFgPolicy@4"
+"_FreeGPOListA@4"
+"_FreeGPOListW@4"
+"_GetAllUsersProfileDirectoryA@8"
+"_GetAllUsersProfileDirectoryW@8"
+"_GetAppliedGPOListA@20"
+"_GetAppliedGPOListW@20"
+"_GetDefaultUserProfileDirectoryA@8"
+"_GetDefaultUserProfileDirectoryW@8"
+"_GetGPOListA@24"
+"_GetGPOListW@24"
+"_GetNextFgPolicyRefreshInfo@8"
+"_GetPreviousFgPolicyRefreshInfo@8"
+"_GetProfileType@4"
+"_GetProfilesDirectoryA@8"
+"_GetProfilesDirectoryW@8"
+"_GetUserProfileDirectoryA@12"
+"_GetUserProfileDirectoryW@12"
+"_LeaveCriticalPolicySection@4"
+"_LoadUserProfileA@8"
+"_LoadUserProfileW@8"
+"_PingComputer@8" @135
+"_ProcessGroupPolicyCompleted@12"
+"_ProcessGroupPolicyCompletedEx@16"
+"_RefreshPolicy@4"
+"_RefreshPolicyEx@8"
+"_RegisterGPNotification@8"
+"_RemapProfile@12" @208
+"_RsopAccessCheckByType@44"
+"_RsopFileAccessCheck@20"
+"_RsopResetPolicySettingStatus@12"
+"_RsopSetPolicySettingStatus@20"
+"_UnloadUserProfile@8"
+"_UnregisterGPNotification@4"
+"_WaitForMachinePolicyForegroundProcessing@0"
+"_WaitForUserPolicyForegroundProcessing@0"
+
+; Def built in 0.002989 seconds

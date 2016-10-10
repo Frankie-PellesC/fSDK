@@ -1,0 +1,47 @@
+; Def File for lib <SnmpAPI.dll> created with fTools
+; Created on Mon Oct 10 13:12:58 2016
+
+LIBRARY SnmpAPI.dll
+EXPORTS
+; Log File for lib <SnmpAPI.dll> created with fTools
+
+"_SnmpSvcAddrIsIpx@12"
+"_SnmpSvcAddrToSocket@8"
+"_SnmpSvcGetEnterpriseOID@0"
+"_SnmpSvcGetUptime@0"
+"_SnmpSvcGetUptimeFromTime@4"
+"_SnmpSvcInitUptime@0"
+"_SnmpSvcSetLogLevel@4"
+"_SnmpSvcSetLogType@4"
+"_SnmpTfxClose@4"
+"_SnmpTfxOpen@8"
+"_SnmpTfxQuery@20"
+"_SnmpUtilAnsiToUnicode@16"
+"_SnmpUtilAsnAnyCpy@8"
+"_SnmpUtilAsnAnyFree@4"
+"_SnmpUtilDbgPrint"
+"_SnmpUtilIdsToA@8"
+"_SnmpUtilMemAlloc@4"
+"_SnmpUtilMemFree@4"
+"_SnmpUtilMemReAlloc@8"
+"_SnmpUtilOctetsCmp@8"
+"_SnmpUtilOctetsCpy@8"
+"_SnmpUtilOctetsFree@4"
+"_SnmpUtilOctetsNCmp@12"
+"_SnmpUtilOidAppend@8"
+"_SnmpUtilOidCmp@8"
+"_SnmpUtilOidCpy@8"
+"_SnmpUtilOidFree@4"
+"_SnmpUtilOidNCmp@12"
+"_SnmpUtilOidToA@4"
+"_SnmpUtilPrintAsnAny@4"
+"_SnmpUtilPrintOid@4"
+"_SnmpUtilUTF8ToUnicode@16"
+"_SnmpUtilUnicodeToAnsi@16"
+"_SnmpUtilUnicodeToUTF8@16"
+"_SnmpUtilVarBindCpy@8"
+"_SnmpUtilVarBindFree@4"
+"_SnmpUtilVarBindListCpy@8"
+"_SnmpUtilVarBindListFree@4"
+
+; Def built in 0.002050 seconds

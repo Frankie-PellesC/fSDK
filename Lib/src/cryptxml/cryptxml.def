@@ -1,0 +1,28 @@
+; Def File for lib <cryptxml.dll> created with fTools
+; Created on Mon Oct 10 13:07:09 2016
+
+LIBRARY cryptxml.dll
+EXPORTS
+; Log File for lib <cryptxml.dll> created with fTools
+
+"_CryptXmlAddObject@24"
+"_CryptXmlClose@4"
+"_CryptXmlCreateReference@36"
+"_CryptXmlDigestReference@12"
+"_CryptXmlEncode@24"
+"_CryptXmlEnumAlgorithmInfo@16"
+"_CryptXmlFindAlgorithmInfo@16"
+"_CryptXmlGetAlgorithmInfo@12"
+"_CryptXmlGetDocContext@8"
+"_CryptXmlGetReference@8"
+"_CryptXmlGetSignature@8"
+"_CryptXmlGetStatus@8"
+"_CryptXmlGetTransforms@4"
+"_CryptXmlImportPublicKey@12"
+"_CryptXmlOpenToDecode@24"
+"_CryptXmlOpenToEncode@28"
+"_CryptXmlSetHMACSecret@12"
+"_CryptXmlSign@32"
+"_CryptXmlVerifySignature@12"
+
+; Def built in 0.001639 seconds

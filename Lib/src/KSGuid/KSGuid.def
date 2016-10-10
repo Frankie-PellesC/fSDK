@@ -1,0 +1,9 @@
+; Def File for lib <KSGuid.dll> created with fTools
+; Created on Mon Oct 10 13:09:02 2016
+
+LIBRARY KSGuid.dll
+EXPORTS
+; Log File for lib <KSGuid.dll> created with fTools
+
+
+; Def built in 0.041657 seconds

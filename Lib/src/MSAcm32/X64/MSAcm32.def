@@ -1,0 +1,51 @@
+; Def File for lib <MSAcm32.dll> created with fTools
+; Created on Mon Oct 10 11:58:44 2016
+
+LIBRARY MSAcm32.dll
+EXPORTS
+; Log File for lib <MSAcm32.dll> created with fTools
+
+"acmDriverAddA"
+"acmDriverAddW"
+"acmDriverClose"
+"acmDriverDetailsA"
+"acmDriverDetailsW"
+"acmDriverEnum"
+"acmDriverID"
+"acmDriverMessage"
+"acmDriverOpen"
+"acmDriverPriority"
+"acmDriverRemove"
+"acmFilterChooseA"
+"acmFilterChooseW"
+"acmFilterDetailsA"
+"acmFilterDetailsW"
+"acmFilterEnumA"
+"acmFilterEnumW"
+"acmFilterTagDetailsA"
+"acmFilterTagDetailsW"
+"acmFilterTagEnumA"
+"acmFilterTagEnumW"
+"acmFormatChooseA"
+"acmFormatChooseW"
+"acmFormatDetailsA"
+"acmFormatDetailsW"
+"acmFormatEnumA"
+"acmFormatEnumW"
+"acmFormatSuggest"
+"acmFormatTagDetailsA"
+"acmFormatTagDetailsW"
+"acmFormatTagEnumA"
+"acmFormatTagEnumW"
+"acmGetVersion"
+"acmMetrics"
+"acmStreamClose"
+"acmStreamConvert"
+"acmStreamMessage"
+"acmStreamOpen"
+"acmStreamPrepareHeader"
+"acmStreamReset"
+"acmStreamSize"
+"acmStreamUnprepareHeader"
+
+; Def built in 0.002253 seconds

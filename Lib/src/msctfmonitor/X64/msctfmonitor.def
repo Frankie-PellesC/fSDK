@@ -1,0 +1,12 @@
+; Def File for lib <msctfmonitor.dll> created with fTools
+; Created on Mon Oct 10 11:58:45 2016
+
+LIBRARY msctfmonitor.dll
+EXPORTS
+; Log File for lib <msctfmonitor.dll> created with fTools
+
+"DoMsCtfMonitor"
+"InitLocalMsCtfMonitor"
+"UninitLocalMsCtfMonitor"
+
+; Def built in 0.001117 seconds

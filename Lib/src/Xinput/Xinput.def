@@ -1,0 +1,14 @@
+; Def File for lib <Xinput.dll> created with fTools
+; Created on Mon Oct 10 13:25:14 2016
+
+LIBRARY Xinput.dll
+EXPORTS
+; Log File for lib <Xinput.dll> created with fTools
+
+"_DllMain@12"
+"_XInputGetCapabilities@12"
+"_XInputGetDSoundAudioDeviceGuids@12"
+"_XInputGetState@8"
+"_XInputSetState@8"
+
+; Def built in 0.001505 seconds

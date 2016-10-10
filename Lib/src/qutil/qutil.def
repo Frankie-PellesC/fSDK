@@ -1,0 +1,25 @@
+; Def File for lib <qutil.dll> created with fTools
+; Created on Mon Oct 10 13:12:22 2016
+
+LIBRARY qutil.dll
+EXPORTS
+; Log File for lib <qutil.dll> created with fTools
+
+"_AllocConnections@8"
+"_AllocCountedString@8"
+"_AllocFixupInfo@8"
+"_FreeConnections@4"
+"_FreeCountedString@4"
+"_FreeFixupInfo@4"
+"_FreeIsolationInfo@4"
+"_FreeIsolationInfoEx@4"
+"_FreeNapComponentRegistrationInfoArray@8"
+"_FreeNetworkSoH@4"
+"_FreePrivateData@4"
+"_FreeSoH@4"
+"_FreeSoHAttributeValue@8"
+"_FreeSystemHealthAgentState@4"
+"_InitializeNapAgentNotifier@8"
+"_UninitializeNapAgentNotifier@4"
+
+; Def built in 0.001446 seconds

@@ -1,0 +1,375 @@
+; Def File for lib <ShLwApi.dll> created with fTools
+; Created on Mon Oct 10 13:12:57 2016
+
+LIBRARY ShLwApi.dll
+EXPORTS
+; Log File for lib <ShLwApi.dll> created with fTools
+
+"_AssocCreate@24"
+"_AssocGetPerceivedType@16"
+"_AssocIsDangerous@4"
+"_AssocQueryKeyA@20"
+"_AssocQueryKeyW@20"
+"_AssocQueryStringA@24"
+"_AssocQueryStringByKeyA@24"
+"_AssocQueryStringByKeyW@24"
+"_AssocQueryStringW@24"
+"_ChrCmpIA@8"
+"_ChrCmpIW@8"
+"_ColorAdjustLuma@12"
+"_ColorHLSToRGB@12"
+"_ColorRGBToHLS@16"
+"_ConnectToConnectionPoint@24" @168
+"_GetAcceptLanguagesA@8" @14
+"_GetAcceptLanguagesW@8" @15
+"_GetMenuPosFromID@8"
+"_HashData@16"
+"_IStream_Copy@12" @568
+"_IStream_Read@12" @184
+"_IStream_ReadPidl@8" @512
+"_IStream_ReadStr@8" @596
+"_IStream_Reset@4" @213
+"_IStream_Size@8" @214
+"_IStream_Write@12" @212
+"_IStream_WritePidl@8" @513
+"_IStream_WriteStr@8" @597
+"_IUnknown_AtomicRelease@4" @169
+"_IUnknown_GetSite@12" @256
+"_IUnknown_GetWindow@8" @172
+"_IUnknown_QueryService@16" @176
+"_IUnknown_Set@8" @199
+"_IUnknown_SetSite@8" @174
+"_IntlStrEqWorkerA@16"
+"_IntlStrEqWorkerW@16"
+"_IsCharSpaceA@4"
+"_IsCharSpaceW@4" @29
+"_IsInternetESCEnabled@0" @553
+"_IsOS@4" @437
+"_MLFreeLibrary@4" @418
+"_MLLoadLibraryA@12" @377
+"_MLLoadLibraryW@12" @378
+"_ParseURLA@8" @1
+"_ParseURLW@8" @2
+"_PathAddBackslashA@4"
+"_PathAddBackslashW@4"
+"_PathAddExtensionA@8"
+"_PathAddExtensionW@8"
+"_PathAppendA@8"
+"_PathAppendW@8"
+"_PathBuildRootA@8"
+"_PathBuildRootW@8"
+"_PathCanonicalizeA@8"
+"_PathCanonicalizeW@8"
+"_PathCombineA@12"
+"_PathCombineW@12"
+"_PathCommonPrefixA@12"
+"_PathCommonPrefixW@12"
+"_PathCompactPathA@12"
+"_PathCompactPathExA@16"
+"_PathCompactPathExW@16"
+"_PathCompactPathW@12"
+"_PathCreateFromUrlA@16"
+"_PathCreateFromUrlAlloc@12"
+"_PathCreateFromUrlW@16"
+"_PathFileExistsA@4"
+"_PathFileExistsW@4"
+"_PathFindExtensionA@4"
+"_PathFindExtensionW@4"
+"_PathFindFileNameA@4"
+"_PathFindFileNameW@4"
+"_PathFindNextComponentA@4"
+"_PathFindNextComponentW@4"
+"_PathFindOnPathA@8"
+"_PathFindOnPathW@8"
+"_PathFindSuffixArrayA@12"
+"_PathFindSuffixArrayW@12"
+"_PathGetArgsA@4"
+"_PathGetArgsW@4"
+"_PathGetCharTypeA@4"
+"_PathGetCharTypeW@4"
+"_PathGetDriveNumberA@4"
+"_PathGetDriveNumberW@4"
+"_PathIsContentTypeA@8"
+"_PathIsContentTypeW@8"
+"_PathIsDirectoryA@4"
+"_PathIsDirectoryEmptyA@4"
+"_PathIsDirectoryEmptyW@4"
+"_PathIsDirectoryW@4"
+"_PathIsFileSpecA@4"
+"_PathIsFileSpecW@4"
+"_PathIsLFNFileSpecA@4"
+"_PathIsLFNFileSpecW@4"
+"_PathIsNetworkPathA@4"
+"_PathIsNetworkPathW@4"
+"_PathIsPrefixA@8"
+"_PathIsPrefixW@8"
+"_PathIsRelativeA@4"
+"_PathIsRelativeW@4"
+"_PathIsRootA@4"
+"_PathIsRootW@4"
+"_PathIsSameRootA@8"
+"_PathIsSameRootW@8"
+"_PathIsSystemFolderA@8"
+"_PathIsSystemFolderW@8"
+"_PathIsUNCA@4"
+"_PathIsUNCServerA@4"
+"_PathIsUNCServerShareA@4"
+"_PathIsUNCServerShareW@4"
+"_PathIsUNCServerW@4"
+"_PathIsUNCW@4"
+"_PathIsURLA@4"
+"_PathIsURLW@4"
+"_PathMakePrettyA@4"
+"_PathMakePrettyW@4"
+"_PathMakeSystemFolderA@4"
+"_PathMakeSystemFolderW@4"
+"_PathMatchSpecA@8"
+"_PathMatchSpecExA@12"
+"_PathMatchSpecExW@12"
+"_PathMatchSpecW@8"
+"_PathParseIconLocationA@4"
+"_PathParseIconLocationW@4"
+"_PathQuoteSpacesA@4"
+"_PathQuoteSpacesW@4"
+"_PathRelativePathToA@20"
+"_PathRelativePathToW@20"
+"_PathRemoveArgsA@4"
+"_PathRemoveArgsW@4"
+"_PathRemoveBackslashA@4"
+"_PathRemoveBackslashW@4"
+"_PathRemoveBlanksA@4"
+"_PathRemoveBlanksW@4"
+"_PathRemoveExtensionA@4"
+"_PathRemoveExtensionW@4"
+"_PathRemoveFileSpecA@4"
+"_PathRemoveFileSpecW@4"
+"_PathRenameExtensionA@8"
+"_PathRenameExtensionW@8"
+"_PathSearchAndQualifyA@12"
+"_PathSearchAndQualifyW@12"
+"_PathSetDlgItemPathA@12"
+"_PathSetDlgItemPathW@12"
+"_PathSkipRootA@4"
+"_PathSkipRootW@4"
+"_PathStripPathA@4"
+"_PathStripPathW@4"
+"_PathStripToRootA@4"
+"_PathStripToRootW@4"
+"_PathUnExpandEnvStringsA@12"
+"_PathUnExpandEnvStringsW@12"
+"_PathUndecorateA@4"
+"_PathUndecorateW@4"
+"_PathUnmakeSystemFolderA@4"
+"_PathUnmakeSystemFolderW@4"
+"_PathUnquoteSpacesA@4"
+"_PathUnquoteSpacesW@4"
+"_QISearch@16" @219
+"_SHAllocShared@12" @7
+"_SHAnsiToAnsi@12" @345
+"_SHAnsiToUnicode@12" @215
+"_SHAutoComplete@8"
+"_SHCopyKeyA@16"
+"_SHCopyKeyW@16"
+"_SHCreateMemStream@8" @12
+"_SHCreateShellPalette@4"
+"_SHCreateStreamOnFileA@12"
+"_SHCreateStreamOnFileEx@24"
+"_SHCreateStreamOnFileW@12"
+"_SHCreateThread@16" @16
+"_SHCreateThreadRef@8"
+"_SHCreateThreadWithHandle@20" @615
+"_SHDeleteEmptyKeyA@8"
+"_SHDeleteEmptyKeyW@8"
+"_SHDeleteKeyA@8"
+"_SHDeleteKeyW@8"
+"_SHDeleteValueA@12"
+"_SHDeleteValueW@12"
+"_SHEnumKeyExA@16"
+"_SHEnumKeyExW@16"
+"_SHEnumValueA@28"
+"_SHEnumValueW@28"
+"_SHFormatDateTimeA@16" @353
+"_SHFormatDateTimeW@16" @354
+"_SHFreeShared@8" @10
+"_SHGetInverseCMAP@8"
+"_SHGetThreadRef@4"
+"_SHGetValueA@24"
+"_SHGetValueW@24"
+"_SHGetViewStatePropertyBag@20" @515
+"_SHGlobalCounterDecrement@4" @634
+"_SHGlobalCounterGetValue@4" @632
+"_SHGlobalCounterIncrement@4" @633
+"_SHIsChildOrSelf@8" @204
+"_SHIsLowMemoryMachine@4"
+"_SHLoadIndirectString@16" @487
+"_SHLockShared@8" @8
+"_SHMessageBoxCheckA@24" @185
+"_SHMessageBoxCheckW@24" @191
+"_SHOpenRegStream2A@16"
+"_SHOpenRegStream2W@16"
+"_SHOpenRegStreamA@16"
+"_SHOpenRegStreamW@16"
+"_SHPropertyBag_ReadStrAlloc@12" @567
+"_SHPropertyBag_WriteBSTR@12" @570
+"_SHQueryInfoKeyA@20"
+"_SHQueryInfoKeyW@20"
+"_SHQueryValueExA@24"
+"_SHQueryValueExW@24"
+"_SHRegCloseUSKey@4"
+"_SHRegCreateUSKeyA@20"
+"_SHRegCreateUSKeyW@20"
+"_SHRegDeleteEmptyUSKeyA@12"
+"_SHRegDeleteEmptyUSKeyW@12"
+"_SHRegDeleteUSValueA@12"
+"_SHRegDeleteUSValueW@12"
+"_SHRegDuplicateHKey@4"
+"_SHRegEnumUSKeyA@20"
+"_SHRegEnumUSKeyW@20"
+"_SHRegEnumUSValueA@32"
+"_SHRegEnumUSValueW@32"
+"_SHRegGetBoolUSValueA@16"
+"_SHRegGetBoolUSValueW@16"
+"_SHRegGetIntW@12" @280
+"_SHRegGetPathA@20"
+"_SHRegGetPathW@20"
+"_SHRegGetUSValueA@32"
+"_SHRegGetUSValueW@32"
+"_SHRegGetValueA@28"
+"_SHRegGetValueW@28"
+"_SHRegOpenUSKeyA@20"
+"_SHRegOpenUSKeyW@20"
+"_SHRegQueryInfoUSKeyA@24"
+"_SHRegQueryInfoUSKeyW@24"
+"_SHRegQueryUSValueA@32"
+"_SHRegQueryUSValueW@32"
+"_SHRegSetPathA@20"
+"_SHRegSetPathW@20"
+"_SHRegSetUSValueA@24"
+"_SHRegSetUSValueW@24"
+"_SHRegWriteUSValueA@24"
+"_SHRegWriteUSValueW@24"
+"_SHReleaseThreadRef@0"
+"_SHRunIndirectRegClientCommand@8" @467
+"_SHSendMessageBroadcastA@12" @432
+"_SHSendMessageBroadcastW@12" @433
+"_SHSetThreadRef@4"
+"_SHSetValueA@24"
+"_SHSetValueW@24"
+"_SHSkipJunction@8"
+"_SHStrDupA@8"
+"_SHStrDupW@8"
+"_SHStripMneumonicA@4" @203
+"_SHStripMneumonicW@4" @225
+"_SHUnicodeToAnsi@12" @217
+"_SHUnicodeToUnicode@12" @346
+"_SHUnlockShared@4" @9
+"_ShellMessageBoxA"
+"_ShellMessageBoxW" @388
+"_StrCSpnA@8"
+"_StrCSpnIA@8"
+"_StrCSpnIW@8"
+"_StrCSpnW@8"
+"_StrCatBuffA@12"
+"_StrCatBuffW@12"
+"_StrCatChainW@16"
+"_StrCatW@8"
+"_StrChrA@8"
+"_StrChrIA@8"
+"_StrChrIW@8"
+"_StrChrNIW@12"
+"_StrChrNW@12"
+"_StrChrW@8"
+"_StrCmpCA@8" @155
+"_StrCmpCW@8" @156
+"_StrCmpICA@8" @157
+"_StrCmpICW@8" @158
+"_StrCmpIW@8"
+"_StrCmpLogicalW@8"
+"_StrCmpNA@12"
+"_StrCmpNCA@12" @151
+"_StrCmpNCW@12" @152
+"_StrCmpNIA@12"
+"_StrCmpNICA@12" @153
+"_StrCmpNICW@12" @154
+"_StrCmpNIW@12"
+"_StrCmpNW@12"
+"_StrCmpW@8"
+"_StrCpyNW@12"
+"_StrCpyW@8"
+"_StrDupA@4"
+"_StrDupW@4"
+"_StrFormatByteSize64A@16"
+"_StrFormatByteSizeA@12"
+"_StrFormatByteSizeEx@20"
+"_StrFormatByteSizeW@16"
+"_StrFormatKBSizeA@16"
+"_StrFormatKBSizeW@16"
+"_StrFromTimeIntervalA@16"
+"_StrFromTimeIntervalW@16"
+"_StrIsIntlEqualA@16"
+"_StrIsIntlEqualW@16"
+"_StrNCatA@12"
+"_StrNCatW@12"
+"_StrPBrkA@8"
+"_StrPBrkW@8"
+"_StrRChrA@12"
+"_StrRChrIA@12"
+"_StrRChrIW@12"
+"_StrRChrW@12"
+"_StrRStrIA@12"
+"_StrRStrIW@12"
+"_StrRetToBSTR@12"
+"_StrRetToBufA@16"
+"_StrRetToBufW@16"
+"_StrRetToStrA@12"
+"_StrRetToStrW@12"
+"_StrSpnA@8"
+"_StrSpnW@8"
+"_StrStrA@8"
+"_StrStrIA@8"
+"_StrStrIW@8"
+"_StrStrNIW@12"
+"_StrStrNW@12"
+"_StrStrW@8"
+"_StrToInt64ExA@12"
+"_StrToInt64ExW@12"
+"_StrToIntA@4"
+"_StrToIntExA@12"
+"_StrToIntExW@12"
+"_StrToIntW@4"
+"_StrTrimA@8"
+"_StrTrimW@8"
+"_UrlApplySchemeA@16"
+"_UrlApplySchemeW@16"
+"_UrlCanonicalizeA@16"
+"_UrlCanonicalizeW@16"
+"_UrlCombineA@20"
+"_UrlCombineW@20"
+"_UrlCompareA@12"
+"_UrlCompareW@12"
+"_UrlCreateFromPathA@16"
+"_UrlCreateFromPathW@16"
+"_UrlEscapeA@16"
+"_UrlEscapeW@16"
+"_UrlFixupW@12" @462
+"_UrlGetLocationA@4"
+"_UrlGetLocationW@4"
+"_UrlGetPartA@20"
+"_UrlGetPartW@20"
+"_UrlHashA@12"
+"_UrlHashW@12"
+"_UrlIsA@8"
+"_UrlIsNoHistoryA@4"
+"_UrlIsNoHistoryW@4"
+"_UrlIsOpaqueA@4"
+"_UrlIsOpaqueW@4"
+"_UrlIsW@8"
+"_UrlUnescapeA@16"
+"_UrlUnescapeW@16"
+"_WhichPlatform@0" @276
+"_wnsprintfA"
+"_wnsprintfW"
+"_wvnsprintfA@16"
+"_wvnsprintfW@16"
+
+; Def built in 0.010464 seconds

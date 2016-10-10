@@ -1,0 +1,23 @@
+; Def File for lib <MsPatchC.dll> created with fTools
+; Created on Mon Oct 10 13:11:10 2016
+
+LIBRARY MsPatchC.dll
+EXPORTS
+; Log File for lib <MsPatchC.dll> created with fTools
+
+"_CreatePatchFileA@20"
+"_CreatePatchFileByHandles@20"
+"_CreatePatchFileByHandlesEx@32"
+"_CreatePatchFileExA@32"
+"_CreatePatchFileExW@32"
+"_CreatePatchFileW@20"
+"_ExtractPatchHeaderToFileA@8"
+"_ExtractPatchHeaderToFileByHandles@8"
+"_ExtractPatchHeaderToFileW@8"
+"_GetFilePatchSignatureA@36"
+"_GetFilePatchSignatureByBuffer@40"
+"_GetFilePatchSignatureByHandle@36"
+"_GetFilePatchSignatureW@36"
+"_NormalizeFileForPatchSignature@40"
+
+; Def built in 0.001755 seconds

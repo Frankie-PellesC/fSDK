@@ -1,0 +1,14 @@
+; Def File for lib <SCardDlg.dll> created with fTools
+; Created on Mon Oct 10 13:12:26 2016
+
+LIBRARY SCardDlg.dll
+EXPORTS
+; Log File for lib <SCardDlg.dll> created with fTools
+
+"_GetOpenCardNameA@4" @1
+"_GetOpenCardNameW@4" @2
+"_SCardDlgExtendedError@0" @3
+"_SCardUIDlgSelectCardA@4" @4
+"_SCardUIDlgSelectCardW@4" @5
+
+; Def built in 0.001589 seconds

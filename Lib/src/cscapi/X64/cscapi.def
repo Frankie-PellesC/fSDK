@@ -1,0 +1,12 @@
+; Def File for lib <cscapi.dll> created with fTools
+; Created on Mon Oct 10 11:54:55 2016
+
+LIBRARY cscapi.dll
+EXPORTS
+; Log File for lib <cscapi.dll> created with fTools
+
+"CscSearchApiGetInterface"
+"OfflineFilesEnable"
+"OfflineFilesQueryStatus"
+
+; Def built in 0.001054 seconds

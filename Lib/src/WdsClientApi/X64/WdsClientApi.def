@@ -1,0 +1,48 @@
+; Def File for lib <WdsClientApi.dll> created with fTools
+; Created on Mon Oct 10 12:09:55 2016
+
+LIBRARY WdsClientApi.dll
+EXPORTS
+; Log File for lib <WdsClientApi.dll> created with fTools
+
+"WdsCliAuthorizeSession"
+"WdsCliCancelTransfer"
+"WdsCliClose"
+"WdsCliCreateSession"
+"WdsCliFindFirstImage"
+"WdsCliFindNextImage"
+"WdsCliFreeDomainJoinInformation"
+"WdsCliFreeStringArray"
+"WdsCliFreeUnattendVariables"
+"WdsCliGetClientUnattend"
+"WdsCliGetDomainJoinInformation"
+"WdsCliGetEnumerationFlags"
+"WdsCliGetImageArchitecture"
+"WdsCliGetImageDescription"
+"WdsCliGetImageFiles"
+"WdsCliGetImageGroup"
+"WdsCliGetImageHalName"
+"WdsCliGetImageHandleFromFindHandle"
+"WdsCliGetImageHandleFromTransferHandle"
+"WdsCliGetImageIndex"
+"WdsCliGetImageLanguage"
+"WdsCliGetImageLanguages"
+"WdsCliGetImageLastModifiedTime"
+"WdsCliGetImageName"
+"WdsCliGetImageNamespace"
+"WdsCliGetImageParameter"
+"WdsCliGetImagePath"
+"WdsCliGetImageSize"
+"WdsCliGetImageType"
+"WdsCliGetImageVersion"
+"WdsCliGetTransferSize"
+"WdsCliGetUnattendVariables"
+"WdsCliInitializeLog"
+"WdsCliLog"
+"WdsCliObtainDriverPackages"
+"WdsCliRegisterTrace"
+"WdsCliTransferFile"
+"WdsCliTransferImage"
+"WdsCliWaitForTransfer"
+
+; Def built in 0.002282 seconds

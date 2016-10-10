@@ -1,0 +1,41 @@
+; Def File for lib <MSRating.dll> created with fTools
+; Created on Mon Oct 10 13:11:10 2016
+
+LIBRARY MSRating.dll
+EXPORTS
+; Log File for lib <MSRating.dll> created with fTools
+
+"_ChangeSupervisorPassword@8"
+"_ClickedOnPRF@16"
+"_ClickedOnRAT@16"
+"_RatingAccessDeniedDialog2@12"
+"_RatingAccessDeniedDialog2W@12"
+"_RatingAccessDeniedDialog@16"
+"_RatingAccessDeniedDialogW@16"
+"_RatingAddPropertyPages@12"
+"_RatingAddToApprovedSites@28"
+"_RatingCheckUserAccess@24"
+"_RatingCheckUserAccessW@24"
+"_RatingClickedOnPRFInternal@16"
+"_RatingClickedOnRATInternal@16"
+"_RatingCustomAddRatingHelper@24"
+"_RatingCustomAddRatingSystem@8"
+"_RatingCustomCrackData@12"
+"_RatingCustomDeleteCrackedData@4"
+"_RatingCustomInit@4"
+"_RatingCustomRemoveRatingHelper@16"
+"_RatingCustomSetDefaultBureau@4"
+"_RatingCustomSetUserOptions@8"
+"_RatingEnable@12"
+"_RatingEnableW@12"
+"_RatingEnabledQuery@0"
+"_RatingFreeDetails@4"
+"_RatingInit@0"
+"_RatingObtainCancel@4"
+"_RatingObtainQuery@16"
+"_RatingObtainQueryW@16"
+"_RatingSetupUI@8"
+"_RatingSetupUIW@8"
+"_VerifySupervisorPassword@4"
+
+; Def built in 0.002986 seconds

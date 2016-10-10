@@ -1,0 +1,48 @@
+; Def File for lib <WdsClientApi.dll> created with fTools
+; Created on Mon Oct 10 13:23:50 2016
+
+LIBRARY WdsClientApi.dll
+EXPORTS
+; Log File for lib <WdsClientApi.dll> created with fTools
+
+"_WdsCliAuthorizeSession@8"
+"_WdsCliCancelTransfer@4"
+"_WdsCliClose@4"
+"_WdsCliCreateSession@12"
+"_WdsCliFindFirstImage@8"
+"_WdsCliFindNextImage@4"
+"_WdsCliFreeDomainJoinInformation@4"
+"_WdsCliFreeStringArray@8"
+"_WdsCliFreeUnattendVariables@8"
+"_WdsCliGetClientUnattend@20"
+"_WdsCliGetDomainJoinInformation@16"
+"_WdsCliGetEnumerationFlags@8"
+"_WdsCliGetImageArchitecture@8"
+"_WdsCliGetImageDescription@8"
+"_WdsCliGetImageFiles@12"
+"_WdsCliGetImageGroup@8"
+"_WdsCliGetImageHalName@8"
+"_WdsCliGetImageHandleFromFindHandle@8"
+"_WdsCliGetImageHandleFromTransferHandle@8"
+"_WdsCliGetImageIndex@8"
+"_WdsCliGetImageLanguage@8"
+"_WdsCliGetImageLanguages@12"
+"_WdsCliGetImageLastModifiedTime@8"
+"_WdsCliGetImageName@8"
+"_WdsCliGetImageNamespace@8"
+"_WdsCliGetImageParameter@16"
+"_WdsCliGetImagePath@8"
+"_WdsCliGetImageSize@8"
+"_WdsCliGetImageType@8"
+"_WdsCliGetImageVersion@8"
+"_WdsCliGetTransferSize@8"
+"_WdsCliGetUnattendVariables@20"
+"_WdsCliInitializeLog@16"
+"_WdsCliLog"
+"_WdsCliObtainDriverPackages@16"
+"_WdsCliRegisterTrace@4"
+"_WdsCliTransferFile@36"
+"_WdsCliTransferImage@28"
+"_WdsCliWaitForTransfer@4"
+
+; Def built in 0.119376 seconds

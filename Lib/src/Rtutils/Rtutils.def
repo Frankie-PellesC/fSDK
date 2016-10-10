@@ -1,0 +1,50 @@
+; Def File for lib <Rtutils.dll> created with fTools
+; Created on Mon Oct 10 13:12:25 2016
+
+LIBRARY Rtutils.dll
+EXPORTS
+; Log File for lib <Rtutils.dll> created with fTools
+
+"_LogErrorA@16"
+"_LogErrorW@16"
+"_LogEventA@16"
+"_LogEventW@16"
+"_MprSetupProtocolEnum@12"
+"_MprSetupProtocolFree@4"
+"_RouterAssert@16"
+"_RouterGetErrorStringA@8"
+"_RouterGetErrorStringW@8"
+"_RouterLogDeregisterA@4"
+"_RouterLogDeregisterW@4"
+"_RouterLogEventA@24"
+"_RouterLogEventDataA@28"
+"_RouterLogEventDataW@28"
+"_RouterLogEventExA"
+"_RouterLogEventExW"
+"_RouterLogEventStringA@28"
+"_RouterLogEventStringW@28"
+"_RouterLogEventValistExA@24"
+"_RouterLogEventValistExW@24"
+"_RouterLogEventW@24"
+"_RouterLogRegisterA@4"
+"_RouterLogRegisterW@4"
+"_TraceDeregisterA@4"
+"_TraceDeregisterExA@8"
+"_TraceDeregisterExW@8"
+"_TraceDeregisterW@4"
+"_TraceDumpExA@28"
+"_TraceDumpExW@28"
+"_TraceGetConsoleA@8"
+"_TraceGetConsoleW@8"
+"_TracePrintfA"
+"_TracePrintfExA"
+"_TracePrintfExW"
+"_TracePrintfW"
+"_TracePutsExA@12"
+"_TracePutsExW@12"
+"_TraceRegisterExA@8"
+"_TraceRegisterExW@8"
+"_TraceVprintfExA@16"
+"_TraceVprintfExW@16"
+
+; Def built in 0.002072 seconds

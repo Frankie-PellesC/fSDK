@@ -1,0 +1,32 @@
+; Def File for lib <NetSh.dll> created with fTools
+; Created on Mon Oct 10 11:59:08 2016
+
+LIBRARY NetSh.dll
+EXPORTS
+; Log File for lib <NetSh.dll> created with fTools
+
+"ConvertGuidToString"
+"ConvertStringToGuid"
+"DisplayMessageM"
+"DisplayMessageToConsole"
+"FreeQuotedString"
+"FreeString"
+"GenericMonitor"
+"GetEnumString"
+"InitializeConsole"
+"MakeQuotedString"
+"MakeString"
+"MatchCmdLine"
+"MatchEnumTag"
+"MatchTagsInCmdLine"
+"MatchToken"
+"PreprocessCommand"
+"PrintError"
+"PrintMessage"
+"PrintMessageFromModule"
+"ProcessCommand"
+"RefreshConsole"
+"RegisterContext"
+"RegisterHelper"
+
+; Def built in 0.001356 seconds

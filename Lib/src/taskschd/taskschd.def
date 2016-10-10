@@ -1,0 +1,9 @@
+; Def File for lib <taskschd.dll> created with fTools
+; Created on Mon Oct 10 13:14:03 2016
+
+LIBRARY taskschd.dll
+EXPORTS
+; Log File for lib <taskschd.dll> created with fTools
+
+
+; Def built in 0.014215 seconds

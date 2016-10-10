@@ -1,0 +1,269 @@
+; Def File for lib <shell32.dll> created with fTools
+; Created on Mon Oct 10 13:12:40 2016
+
+LIBRARY shell32.dll
+EXPORTS
+; Log File for lib <shell32.dll> created with fTools
+
+"_WriteCabinetState@4" @652
+"_Win32DeleteFile@4" @164
+"_WOWShellExecute@28"
+"_StgMakeUniqueName@20" @682
+"_SignalFileOpen@4" @103
+"_Shell_NotifyIconW@8"
+"_Shell_NotifyIconGetRect@8"
+"_Shell_NotifyIconA@8"
+"_Shell_NotifyIcon@8"
+"_Shell_MergeMenus@24" @67
+"_Shell_GetImageLists@8" @71
+"_Shell_GetCachedImageIndexW@12"
+"_Shell_GetCachedImageIndexA@12"
+"_Shell_GetCachedImageIndex@12" @72
+"_ShellHookProc@12"
+"_ShellExecuteW@24"
+"_ShellExecuteExW@4"
+"_ShellExecuteExA@4"
+"_ShellExecuteEx@4"
+"_ShellExecuteA@24"
+"_ShellAboutW@16"
+"_ShellAboutA@16"
+"_SetCurrentProcessExplicitAppUserModelID@4"
+"_SHValidateUNC@12" @173
+"_SHUpdateImageW@16" @192
+"_SHUpdateImageA@16" @191
+"_SHTestTokenMembership@8" @245
+"_SHStartNetConnectionDialogW@12" @14
+"_SHSimpleIDListFromPath@4" @162
+"_SHShowManageLibraryUI@20"
+"_SHShellFolderView_Message@12" @73
+"_SHSetUnreadMailCountW@12"
+"_SHSetTemporaryPropertyForItem@12"
+"_SHSetLocalizedName@12"
+"_SHSetKnownFolderPath@16"
+"_SHSetInstanceExplorer@4" @176
+"_SHSetFolderPathW@16" @232
+"_SHSetFolderPathA@16" @231
+"_SHSetDefaultProperties@16"
+"_SHRestricted@4" @100
+"_SHResolveLibrary@4"
+"_SHReplaceFromPropSheetExtArray@16" @170
+"_SHRemoveLocalizedName@4"
+"_SHQueryUserNotificationState@4"
+"_SHQueryRecycleBinW@8"
+"_SHQueryRecycleBinA@8"
+"_SHPropStgWriteMultiple@24" @689
+"_SHPropStgReadMultiple@20" @688
+"_SHPropStgCreate@32" @685
+"_SHPathPrepareForWriteW@16"
+"_SHPathPrepareForWriteA@16"
+"_SHParseDisplayName@20"
+"_SHOpenWithDialog@8"
+"_SHOpenPropSheetW@28" @80
+"_SHOpenFolderAndSelectItems@16"
+"_SHObjectProperties@16" @178
+"_SHMultiFileProperties@8" @716
+"_SHMapPIDLToSystemImageListIndex@12" @77
+"_SHLoadNonloadedIconOverlayIdentifiers@0"
+"_SHLoadInProc@4"
+"_SHLimitInputEdit@8" @747
+"_SHIsFileAvailableOffline@8"
+"_SHInvokePrinterCommandW@20"
+"_SHInvokePrinterCommandA@20"
+"_SHILCreateFromPath@12" @28
+"_SHHandleUpdateImage@4" @193
+"_SHGetUnreadMailCountW@24"
+"_SHGetTemporaryPropertyForItem@12"
+"_SHGetStockIconInfo@12"
+"_SHGetSpecialFolderPathW@16"
+"_SHGetSpecialFolderPathA@16"
+"_SHGetSpecialFolderPath@16" @175
+"_SHGetSpecialFolderLocation@12"
+"_SHGetSettings@8"
+"_SHGetSetSettings@12" @68
+"_SHGetSetFolderCustomSettings@12" @709
+"_SHGetRealIDL@12" @98
+"_SHGetPropertyStoreFromParsingName@20"
+"_SHGetPropertyStoreFromIDList@16"
+"_SHGetPropertyStoreForWindow@12"
+"_SHGetPathFromIDListW@8"
+"_SHGetPathFromIDListEx@16"
+"_SHGetPathFromIDListA@8"
+"_SHGetPathFromIDList@8"
+"_SHGetNewLinkInfoW@20" @180
+"_SHGetNewLinkInfoA@20" @179
+"_SHGetNameFromIDList@12"
+"_SHGetMalloc@4"
+"_SHGetLocalizedName@16"
+"_SHGetKnownFolderPath@16"
+"_SHGetKnownFolderItem@20"
+"_SHGetKnownFolderIDList@16"
+"_SHGetItemFromObject@12"
+"_SHGetItemFromDataObject@16"
+"_SHGetInstanceExplorer@4"
+"_SHGetImageList@12" @727
+"_SHGetIconOverlayIndexW@8"
+"_SHGetIconOverlayIndexA@8"
+"_SHGetIDListFromObject@8"
+"_SHGetFolderPathW@20"
+"_SHGetFolderPathEx@20"
+"_SHGetFolderPathAndSubDirW@24"
+"_SHGetFolderPathAndSubDirA@24"
+"_SHGetFolderPathA@20"
+"_SHGetFolderLocation@20"
+"_SHGetFileInfoW@20"
+"_SHGetFileInfoA@20"
+"_SHGetFileInfo@20"
+"_SHGetDriveMedia@8"
+"_SHGetDiskFreeSpaceExW@16"
+"_SHGetDiskFreeSpaceExA@16"
+"_SHGetDiskFreeSpaceA@16"
+"_SHGetDesktopFolder@4"
+"_SHGetDataFromIDListW@20"
+"_SHGetDataFromIDListA@20"
+"_SHGetAttributesFromDataObject@16" @750
+"_SHFreeNameMappings@4"
+"_SHFree@4" @195
+"_SHFormatDrive@16"
+"_SHFlushSFCache@0" @526
+"_SHFind_InitMenuPopup@16" @149
+"_SHFindFiles@8" @90
+"_SHFileOperationW@4"
+"_SHFileOperationA@4"
+"_SHFileOperation@4"
+"_SHEvaluateSystemCommandTemplate@16"
+"_SHEnumerateUnreadMailAccountsW@16"
+"_SHEmptyRecycleBinW@12"
+"_SHEmptyRecycleBinA@12"
+"_SHDoDragDrop@20" @88
+"_SHDestroyPropSheetExtArray@4" @169
+"_SHDefExtractIconW@24" @6
+"_SHDefExtractIconA@24" @3
+"_SHCreateStdEnumFmtEtc@12" @74
+"_SHCreateShellItemArrayFromShellItem@12"
+"_SHCreateShellItemArrayFromIDLists@12"
+"_SHCreateShellItemArrayFromDataObject@12"
+"_SHCreateShellItemArray@20"
+"_SHCreateShellItem@16"
+"_SHCreateShellFolderViewEx@8" @174
+"_SHCreateShellFolderView@8" @256
+"_SHCreateQueryCancelAutoPlayMoniker@4"
+"_SHCreatePropSheetExtArray@12" @168
+"_SHCreateProcessAsUserW@4"
+"_SHCreateItemWithParent@20"
+"_SHCreateItemInKnownFolder@20"
+"_SHCreateItemFromRelativeName@20"
+"_SHCreateItemFromParsingName@16"
+"_SHCreateItemFromIDList@12"
+"_SHCreateFileExtractIconW@16" @743
+"_SHCreateDirectoryExW@12"
+"_SHCreateDirectoryExA@12"
+"_SHCreateDirectory@8" @165
+"_SHCreateDefaultPropertiesOp@8"
+"_SHCreateDefaultExtractIcon@8"
+"_SHCreateDefaultContextMenu@12"
+"_SHCreateDataObject@24"
+"_SHCreateAssociationRegistration@8"
+"_SHCoCreateInstance@20" @102
+"_SHCloneSpecialIDList@12" @89
+"_SHChangeNotifyRegisterThread@4"
+"_SHChangeNotifyRegister@24" @2
+"_SHChangeNotifyDeregister@4" @4
+"_SHChangeNotify@16"
+"_SHChangeNotification_Unlock@4" @645
+"_SHChangeNotification_Lock@16" @644
+"_SHCLSIDFromString@8" @147
+"_SHBrowseForFolderW@4"
+"_SHBrowseForFolderA@4"
+"_SHBrowseForFolder@4"
+"_SHBindToParent@16"
+"_SHBindToObject@20"
+"_SHBindToFolderIDListParentEx@24"
+"_SHBindToFolderIDListParent@20"
+"_SHAssocEnumHandlersForProtocolByApplication@12"
+"_SHAssocEnumHandlers@12"
+"_SHAppBarMessage@8"
+"_SHAlloc@4" @196
+"_SHAddToRecentDocs@8"
+"_SHAddFromPropSheetExtArray@12" @167
+"_SHAddDefaultPropertiesByExt@8"
+"_RestartDialogEx@16" @730
+"_RestartDialog@12" @59
+"_RealDriveType@8" @524
+"_ReadCabinetState@8" @654
+"_PifMgr_SetProperties@20" @11
+"_PifMgr_OpenProperties@16" @9
+"_PifMgr_GetProperties@20" @10
+"_PifMgr_CloseProperties@8" @13
+"_PickIconDlg@16" @62
+"_PathYetAnotherMakeUniqueName@16" @75
+"_PathResolve@12" @51
+"_PathQualify@4" @49
+"_PathMakeUniqueName@20" @47
+"_PathIsSlowW@8" @239
+"_PathIsSlowA@8" @240
+"_PathIsExe@4" @43
+"_PathGetShortPath@4" @92
+"_PathCleanupSpec@8" @171
+"_OpenRegStream@16" @85
+"_IsUserAnAdmin@0" @680
+"_IsNetDrive@4" @66
+"_IsLFNDriveW@4" @42
+"_IsLFNDriveA@4" @41
+"_IsLFNDrive@4" @119
+"_InitNetworkAddressControl@0"
+"_ILSaveToStream@8" @27
+"_ILRemoveLastID@4" @17
+"_ILLoadFromStreamEx@8" @846
+"_ILIsParent@12" @23
+"_ILIsEqual@8" @21
+"_ILGetSize@4" @152
+"_ILGetNext@4" @153
+"_ILFree@4" @155
+"_ILFindLastID@4" @16
+"_ILFindChild@8" @24
+"_ILCreateFromPathW@4" @190
+"_ILCreateFromPathA@4" @189
+"_ILCreateFromPath@4" @157
+"_ILCombine@8" @25
+"_ILCloneFirst@4" @19
+"_ILClone@4" @18
+"_ILAppendID@12" @154
+"_GetFileNameFromBrowse@28" @63
+"_GetCurrentProcessExplicitAppUserModelID@4"
+"_FindExecutableW@12"
+"_FindExecutableA@12"
+"_ExtractIconW@12"
+"_ExtractIconExW@20"
+"_ExtractIconExA@20"
+"_ExtractIconEx@20"
+"_ExtractIconA@12"
+"_ExtractAssociatedIconW@12"
+"_ExtractAssociatedIconExW@16"
+"_ExtractAssociatedIconExA@16"
+"_ExtractAssociatedIconA@12"
+"_DuplicateIcon@8"
+"_DriveType@4" @64
+"_DragQueryPoint@8"
+"_DragQueryFileW@16"
+"_DragQueryFileAorW@24"
+"_DragQueryFileA@16"
+"_DragQueryFile@16"
+"_DragFinish@4"
+"_DragAcceptFiles@8"
+"_DoEnvironmentSubstW@8"
+"_DoEnvironmentSubstA@8"
+"_DAD_ShowDragImage@4" @137
+"_DAD_SetDragImage@8" @136
+"_DAD_DragMove@8" @134
+"_DAD_DragLeave@0" @132
+"_DAD_DragEnterEx@12" @131
+"_DAD_DragEnterEx2@16" @22
+"_DAD_AutoScroll@12" @129
+"_CommandLineToArgvW@8"
+"_CheckEscapesW@8"
+"_CIDLData_CreateFromIDArray@16" @83
+"_CDefFolderMenu_Create2@36" @701
+"_AssocGetDetailsOfPropKey@20"
+"_AssocCreateForClasses@16"
+
+; Def built in 0.695188 seconds

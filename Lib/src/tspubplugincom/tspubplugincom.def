@@ -1,0 +1,9 @@
+; Def File for lib <tspubplugincom.dll> created with fTools
+; Created on Mon Oct 10 13:14:06 2016
+
+LIBRARY tspubplugincom.dll
+EXPORTS
+; Log File for lib <tspubplugincom.dll> created with fTools
+
+
+; Def built in 0.024393 seconds

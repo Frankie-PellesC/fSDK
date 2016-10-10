@@ -1,0 +1,10 @@
+; Def File for lib <Wst.dll> created with fTools
+; Created on Mon Oct 10 13:25:13 2016
+
+LIBRARY Wst.dll
+EXPORTS
+; Log File for lib <Wst.dll> created with fTools
+
+"__penter"
+
+; Def built in 0.000948 seconds

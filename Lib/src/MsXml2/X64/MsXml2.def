@@ -1,0 +1,9 @@
+; Def File for lib <MsXml2.dll> created with fTools
+; Created on Mon Oct 10 11:58:50 2016
+
+LIBRARY MsXml2.dll
+EXPORTS
+; Log File for lib <MsXml2.dll> created with fTools
+
+
+; Def built in 0.229628 seconds

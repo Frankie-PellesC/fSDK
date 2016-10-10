@@ -1,0 +1,20 @@
+; Def File for lib <GPEdit.dll> created with fTools
+; Created on Mon Oct 10 13:08:54 2016
+
+LIBRARY GPEdit.dll
+EXPORTS
+; Log File for lib <GPEdit.dll> created with fTools
+
+"_BrowseForGPO@4"
+"_CreateGPOLink@12"
+"_CreateRSOPQuery@8" @100
+"_DeleteAllGPOLinks@4"
+"_DeleteGPOLink@8"
+"_ExportRSoPData@8"
+"_FreeRSOPQuery@4" @101
+"_FreeRSOPQueryResults@8" @102
+"_ImportRSoPData@8"
+"_RunRSOPQuery@12" @103
+"_SetSysvolSecurityFromDSSecurity@12" @104
+
+; Def built in 0.002098 seconds

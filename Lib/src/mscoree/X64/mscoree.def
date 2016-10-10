@@ -1,0 +1,93 @@
+; Def File for lib <mscoree.dll> created with fTools
+; Created on Mon Oct 10 11:58:45 2016
+
+LIBRARY mscoree.dll
+EXPORTS
+; Log File for lib <mscoree.dll> created with fTools
+
+"?CloseCtrs@@YAKXZ"
+"?CollectCtrs@@YAKPEAGPEAPEAXPEAK2@Z"
+"?EEDllGetClassObjectFromClass@@YAJPEBG0AEBU_GUID@@PEAPEAX@Z"
+"?GetProcessExecutableHeap@@YAPEAXXZ"
+"?GetVersionExWrapper@@YAHPEAU_OSVERSIONINFOW@@@Z" @142
+"?InitErrors@@YAXPEAK@Z" @17
+"?InitSSAutoEnterThread@@YAPEAJXZ" @19
+"?OpenCtrs@@YAKPEAG@Z"
+"?PostError@@YAJJZZ" @18
+"?UpdateError@@YAXXZ" @20
+"CLRCreateInstance"
+"CallFunctionShim"
+"ClrCreateManagedInstance"
+"CoEEShutDownCOM"
+"CoInitializeCor"
+"CoInitializeEE"
+"CoUninitializeCor"
+"CoUninitializeEE"
+"CorBindToCurrentRuntime"
+"CorBindToRuntime"
+"CorBindToRuntimeByCfg"
+"CorBindToRuntimeEx"
+"CorBindToRuntimeHost"
+"CorExitProcess"
+"CorGetSvc"
+"CorMarkThreadInThreadPool"
+"CreateConfigStream"
+"CreateDebuggingInterfaceFromVersion"
+"GetCLRUEFManager" @24
+"GetCORRequiredVersion"
+"GetCORSystemDirectory"
+"GetCORVersion"
+"GetCompileInfo"
+"GetFileVersion"
+"GetHashFromAssemblyFile"
+"GetHashFromAssemblyFileW"
+"GetHashFromBlob"
+"GetHashFromFile"
+"GetHashFromFileW"
+"GetHashFromHandle"
+"GetMetaDataInternalInterface"
+"GetMetaDataInternalInterfaceFromPublic"
+"GetMetaDataPublicInterfaceFromInternal"
+"GetPermissionRequests"
+"GetRealProcAddress"
+"GetRequestedRuntimeInfo"
+"GetRequestedRuntimeVersion"
+"GetRequestedRuntimeVersionForCLSID"
+"GetVersionFromProcess"
+"GetXMLObject"
+"LoadLibraryShim"
+"LoadLibraryWithPolicyShim"
+"LoadStringRC" @22
+"LoadStringRCEx"
+"LockClrVersion"
+"MetaDataGetDispenser"
+"ReOpenMetaDataWithMemory" @23
+"RunDll32ShimW"
+"StrongNameCompareAssemblies"
+"StrongNameErrorInfo"
+"StrongNameFreeBuffer"
+"StrongNameGetBlob"
+"StrongNameGetBlobFromImage"
+"StrongNameGetPublicKey"
+"StrongNameHashSize"
+"StrongNameKeyDelete"
+"StrongNameKeyGen"
+"StrongNameKeyGenEx"
+"StrongNameKeyInstall"
+"StrongNameSignatureGeneration"
+"StrongNameSignatureGenerationEx"
+"StrongNameSignatureSize"
+"StrongNameSignatureVerification"
+"StrongNameSignatureVerificationEx"
+"StrongNameSignatureVerificationFromImage"
+"StrongNameTokenFromAssembly"
+"StrongNameTokenFromAssemblyEx"
+"StrongNameTokenFromPublicKey"
+"TranslateSecurityAttributes"
+"_CorDllMain"
+"_CorExeMain"
+"_CorExeMain2"
+"_CorImageUnloading"
+"_CorValidateImage"
+
+; Def built in 0.003463 seconds

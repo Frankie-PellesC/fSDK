@@ -1,0 +1,24 @@
+; Def File for lib <msdmo.dll> created with fTools
+; Created on Mon Oct 10 13:11:09 2016
+
+LIBRARY msdmo.dll
+EXPORTS
+; Log File for lib <msdmo.dll> created with fTools
+
+"_DMOEnum@28"
+"_DMOGetName@8"
+"_DMOGetTypes@28"
+"_DMOGuidToStrA@8"
+"_DMOGuidToStrW@8"
+"_DMORegister@32"
+"_DMOStrToGuidA@8"
+"_DMOStrToGuidW@8"
+"_DMOUnregister@8"
+"_MoCopyMediaType@8"
+"_MoCreateMediaType@8"
+"_MoDeleteMediaType@4"
+"_MoDuplicateMediaType@8"
+"_MoFreeMediaType@4"
+"_MoInitMediaType@8"
+
+; Def built in 0.002209 seconds

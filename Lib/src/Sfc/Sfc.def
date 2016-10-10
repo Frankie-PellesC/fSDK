@@ -1,0 +1,25 @@
+; Def File for lib <Sfc.dll> created with fTools
+; Created on Mon Oct 10 13:12:39 2016
+
+LIBRARY Sfc.dll
+EXPORTS
+; Log File for lib <Sfc.dll> created with fTools
+
+"_SRSetRestorePoint@8"
+"_SRSetRestorePointA@8"
+"_SRSetRestorePointW@8"
+"_SfcClose@4" @4
+"_SfcConnectToServer@4" @3
+"_SfcFileException@12" @5
+"_SfcGetNextProtectedFile@8"
+"_SfcInitProt@28" @1
+"_SfcInitiateScan@8" @6
+"_SfcInstallProtectedFiles@28" @7
+"_SfcIsFileProtected@8"
+"_SfcIsKeyProtected@12"
+"_SfcTerminateWatcherThread@0" @2
+"_SfpDeleteCatalog@8" @9
+"_SfpInstallCatalog@12" @8
+"_SfpVerifyFile@12"
+
+; Def built in 0.001561 seconds

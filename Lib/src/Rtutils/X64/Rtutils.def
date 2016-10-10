@@ -1,0 +1,50 @@
+; Def File for lib <Rtutils.dll> created with fTools
+; Created on Mon Oct 10 11:59:57 2016
+
+LIBRARY Rtutils.dll
+EXPORTS
+; Log File for lib <Rtutils.dll> created with fTools
+
+"LogErrorA"
+"LogErrorW"
+"LogEventA"
+"LogEventW"
+"MprSetupProtocolEnum"
+"MprSetupProtocolFree"
+"RouterAssert"
+"RouterGetErrorStringA"
+"RouterGetErrorStringW"
+"RouterLogDeregisterA"
+"RouterLogDeregisterW"
+"RouterLogEventA"
+"RouterLogEventDataA"
+"RouterLogEventDataW"
+"RouterLogEventExA"
+"RouterLogEventExW"
+"RouterLogEventStringA"
+"RouterLogEventStringW"
+"RouterLogEventValistExA"
+"RouterLogEventValistExW"
+"RouterLogEventW"
+"RouterLogRegisterA"
+"RouterLogRegisterW"
+"TraceDeregisterA"
+"TraceDeregisterExA"
+"TraceDeregisterExW"
+"TraceDeregisterW"
+"TraceDumpExA"
+"TraceDumpExW"
+"TraceGetConsoleA"
+"TraceGetConsoleW"
+"TracePrintfA"
+"TracePrintfExA"
+"TracePrintfExW"
+"TracePrintfW"
+"TracePutsExA"
+"TracePutsExW"
+"TraceRegisterExA"
+"TraceRegisterExW"
+"TraceVprintfExA"
+"TraceVprintfExW"
+
+; Def built in 0.001785 seconds

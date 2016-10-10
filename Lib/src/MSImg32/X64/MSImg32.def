@@ -1,0 +1,12 @@
+; Def File for lib <MSImg32.dll> created with fTools
+; Created on Mon Oct 10 11:58:47 2016
+
+LIBRARY MSImg32.dll
+EXPORTS
+; Log File for lib <MSImg32.dll> created with fTools
+
+"AlphaBlend"
+"GradientFill"
+"TransparentBlt"
+
+; Def built in 0.000897 seconds

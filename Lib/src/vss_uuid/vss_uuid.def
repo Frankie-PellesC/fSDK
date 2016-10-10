@@ -1,0 +1,9 @@
+; Def File for lib <vss_uuid.dll> created with fTools
+; Created on Mon Oct 10 13:23:43 2016
+
+LIBRARY vss_uuid.dll
+EXPORTS
+; Log File for lib <vss_uuid.dll> created with fTools
+
+
+; Def built in 0.035106 seconds

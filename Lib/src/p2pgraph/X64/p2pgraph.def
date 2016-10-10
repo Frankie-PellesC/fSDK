@@ -1,0 +1,47 @@
+; Def File for lib <p2pgraph.dll> created with fTools
+; Created on Mon Oct 10 11:59:14 2016
+
+LIBRARY p2pgraph.dll
+EXPORTS
+; Log File for lib <p2pgraph.dll> created with fTools
+
+"?pMemoryHelper@@3PEAU_DEBUG_MEMORY_CONTROL_BLOCK@@EA" DATA
+"PeerGraphAddRecord"
+"PeerGraphClose"
+"PeerGraphCloseDirectConnection"
+"PeerGraphConnect"
+"PeerGraphCreate"
+"PeerGraphDelete"
+"PeerGraphDeleteRecord"
+"PeerGraphEndEnumeration"
+"PeerGraphEnumConnections"
+"PeerGraphEnumNodes"
+"PeerGraphEnumRecords"
+"PeerGraphExportDatabase"
+"PeerGraphFreeData"
+"PeerGraphGetEventData"
+"PeerGraphGetItemCount"
+"PeerGraphGetNextItem"
+"PeerGraphGetNodeInfo"
+"PeerGraphGetProperties"
+"PeerGraphGetRecord"
+"PeerGraphGetStatus"
+"PeerGraphImportDatabase"
+"PeerGraphListen"
+"PeerGraphOpen"
+"PeerGraphOpenDirectConnection"
+"PeerGraphPeerTimeToUniversalTime"
+"PeerGraphRegisterEvent"
+"PeerGraphSearchRecords"
+"PeerGraphSendData"
+"PeerGraphSetNodeAttributes"
+"PeerGraphSetPresence"
+"PeerGraphSetProperties"
+"PeerGraphShutdown"
+"PeerGraphStartup"
+"PeerGraphUniversalTimeToPeerTime"
+"PeerGraphUnregisterEvent"
+"PeerGraphUpdateRecord"
+"PeerGraphValidateDeferredRecords"
+
+; Def built in 0.003252 seconds

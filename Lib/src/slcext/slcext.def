@@ -1,0 +1,18 @@
+; Def File for lib <slcext.dll> created with fTools
+; Created on Mon Oct 10 13:12:58 2016
+
+LIBRARY slcext.dll
+EXPORTS
+; Log File for lib <slcext.dll> created with fTools
+
+"_SLAcquireGenuineTicket@20"
+"_SLActivateProduct@28"
+"_SLGetPackageProductKey@12"
+"_SLGetPackageProperties@16"
+"_SLGetPackageToken@16"
+"_SLGetReferralInformation@20"
+"_SLGetServerStatus@20"
+"_SLInstallPackage@24"
+"_SLUninstallPackage@20"
+
+; Def built in 0.001628 seconds

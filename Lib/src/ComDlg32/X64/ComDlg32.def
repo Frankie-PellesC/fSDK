@@ -1,0 +1,30 @@
+; Def File for lib <ComDlg32.dll> created with fTools
+; Created on Mon Oct 10 11:54:51 2016
+
+LIBRARY ComDlg32.dll
+EXPORTS
+; Log File for lib <ComDlg32.dll> created with fTools
+
+"ChooseColorA"
+"ChooseColorW"
+"ChooseFontA"
+"ChooseFontW"
+"CommDlgExtendedError"
+"FindTextA"
+"FindTextW"
+"GetFileTitleA"
+"GetFileTitleW"
+"GetOpenFileNameA"
+"GetOpenFileNameW"
+"GetSaveFileNameA"
+"GetSaveFileNameW"
+"PageSetupDlgA"
+"PageSetupDlgW"
+"PrintDlgA"
+"PrintDlgExA"
+"PrintDlgExW"
+"PrintDlgW"
+"ReplaceTextA"
+"ReplaceTextW"
+
+; Def built in 0.001576 seconds

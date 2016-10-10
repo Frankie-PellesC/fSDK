@@ -1,0 +1,18 @@
+; Def File for lib <Url.dll> created with fTools
+; Created on Mon Oct 10 13:14:07 2016
+
+LIBRARY Url.dll
+EXPORTS
+; Log File for lib <Url.dll> created with fTools
+
+"_AddMIMEFileTypesPS@8"
+"_InetIsOffline@4"
+"_MIMEAssociationDialogA@24"
+"_MIMEAssociationDialogW@24"
+"_SetInetOffline@4" @101
+"_TranslateURLA@12"
+"_TranslateURLW@12"
+"_URLAssociationDialogA@24"
+"_URLAssociationDialogW@24"
+
+; Def built in 0.001611 seconds

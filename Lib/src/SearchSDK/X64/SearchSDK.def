@@ -1,0 +1,9 @@
+; Def File for lib <SearchSDK.dll> created with fTools
+; Created on Mon Oct 10 11:59:58 2016
+
+LIBRARY SearchSDK.dll
+EXPORTS
+; Log File for lib <SearchSDK.dll> created with fTools
+
+
+; Def built in 0.013172 seconds

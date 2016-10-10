@@ -1,0 +1,29 @@
+; Def File for lib <dciman32.dll> created with fTools
+; Created on Mon Oct 10 11:54:57 2016
+
+LIBRARY dciman32.dll
+EXPORTS
+; Log File for lib <dciman32.dll> created with fTools
+
+"DCIBeginAccess"
+"DCICloseProvider"
+"DCICreateOffscreen"
+"DCICreateOverlay"
+"DCICreatePrimary"
+"DCIDestroy"
+"DCIDraw"
+"DCIEndAccess"
+"DCIEnum"
+"DCIOpenProvider"
+"DCISetClipList"
+"DCISetDestination"
+"DCISetSrcDestClip"
+"GetDCRegionData"
+"GetWindowRegionData"
+"WinWatchClose"
+"WinWatchDidStatusChange"
+"WinWatchGetClipList"
+"WinWatchNotify"
+"WinWatchOpen"
+
+; Def built in 0.002024 seconds

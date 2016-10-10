@@ -1,0 +1,9 @@
+; Def File for lib <WiaGuid.dll> created with fTools
+; Created on Mon Oct 10 13:23:54 2016
+
+LIBRARY WiaGuid.dll
+EXPORTS
+; Log File for lib <WiaGuid.dll> created with fTools
+
+
+; Def built in 1.998738 seconds

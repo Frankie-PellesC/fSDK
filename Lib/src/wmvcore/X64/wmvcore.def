@@ -1,0 +1,29 @@
+; Def File for lib <wmvcore.dll> created with fTools
+; Created on Mon Oct 10 12:11:10 2016
+
+LIBRARY wmvcore.dll
+EXPORTS
+; Log File for lib <wmvcore.dll> created with fTools
+
+"?WMCheckURLExtension@@YAJPEBG@Z"
+"?WMCheckURLScheme@@YAJPEBG@Z"
+"?WMCreateBackupRestorerPrivate@@YAJPEAUIUnknown@@PEAPEAUIWMLicenseBackup@@@Z"
+"?WMCreateLicenseRevocationAgentPrivate@@YAJPEAPEAUIWMLicenseRevocationAgent@@@Z"
+"?WMCreateSyncReaderPriv@@YAJPEAPEAUIWMSyncReader@@@Z"
+"?WMIsAvailableOffline@@YAJPEBG0PEAH@Z"
+"?WMValidateData@@YAJPEAEPEAK@Z"
+"WMCreateBackupRestorer"
+"WMCreateEditor"
+"WMCreateIndexer"
+"WMCreateProfileManager"
+"WMCreateReader"
+"WMCreateReaderPriv"
+"WMCreateSyncReader"
+"WMCreateWriter"
+"WMCreateWriterFileSink"
+"WMCreateWriterNetworkSink"
+"WMCreateWriterPriv"
+"WMCreateWriterPushSink"
+"WMIsContentProtected"
+
+; Def built in 0.001539 seconds

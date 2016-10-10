@@ -1,0 +1,15 @@
+; Def File for lib <wdsbp.dll> created with fTools
+; Created on Mon Oct 10 13:23:49 2016
+
+LIBRARY wdsbp.dll
+EXPORTS
+; Log File for lib <wdsbp.dll> created with fTools
+
+"_WdsBpAddOption@16"
+"_WdsBpCloseHandle@4"
+"_WdsBpGetOptionBuffer@16"
+"_WdsBpInitialize@8"
+"_WdsBpParseInitialize@16"
+"_WdsBpQueryOption@20"
+
+; Def built in 0.001819 seconds

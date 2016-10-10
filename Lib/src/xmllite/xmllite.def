@@ -1,0 +1,15 @@
+; Def File for lib <xmllite.dll> created with fTools
+; Created on Mon Oct 10 13:25:15 2016
+
+LIBRARY xmllite.dll
+EXPORTS
+; Log File for lib <xmllite.dll> created with fTools
+
+"_CreateXmlReader@12"
+"_CreateXmlReaderInputWithEncodingCodePage@24"
+"_CreateXmlReaderInputWithEncodingName@24"
+"_CreateXmlWriter@12"
+"_CreateXmlWriterOutputWithEncodingCodePage@16"
+"_CreateXmlWriterOutputWithEncodingName@16"
+
+; Def built in 0.001791 seconds

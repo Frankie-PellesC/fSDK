@@ -1,0 +1,14 @@
+; Def File for lib <mfreadwrite.dll> created with fTools
+; Created on Mon Oct 10 11:57:11 2016
+
+LIBRARY mfreadwrite.dll
+EXPORTS
+; Log File for lib <mfreadwrite.dll> created with fTools
+
+"MFCreateSinkWriterFromMediaSink"
+"MFCreateSinkWriterFromURL"
+"MFCreateSourceReaderFromByteStream"
+"MFCreateSourceReaderFromMediaSource"
+"MFCreateSourceReaderFromURL"
+
+; Def built in 0.001633 seconds

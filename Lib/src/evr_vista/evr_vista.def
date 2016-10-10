@@ -1,0 +1,32 @@
+; Def File for lib <evr_vista.dll> created with fTools
+; Created on Mon Oct 10 13:08:34 2016
+
+LIBRARY evr_vista.dll
+EXPORTS
+; Log File for lib <evr_vista.dll> created with fTools
+
+"?MFGetUncompressedVideoFormat@@YGKPBU_MFVIDEOFORMAT@@@Z"
+"_MFConvertColorInfoFromDXVA@8"
+"_MFConvertColorInfoToDXVA@8"
+"_MFConvertFromFP16Array@12"
+"_MFConvertToFP16Array@12"
+"_MFCopyImage@24"
+"_MFCreateDXSurfaceBuffer@16"
+"_MFCreateVideoMediaType@8"
+"_MFCreateVideoMediaTypeFromBitMapInfoHeader@48"
+"_MFCreateVideoMediaTypeFromSubtype@8"
+"_MFCreateVideoMediaTypeFromVideoInfoHeader2@24"
+"_MFCreateVideoMediaTypeFromVideoInfoHeader@36"
+"_MFCreateVideoMixer@16"
+"_MFCreateVideoMixerAndPresenter@24"
+"_MFCreateVideoOTA@8"
+"_MFCreateVideoPresenter@16"
+"_MFCreateVideoSampleAllocator@8"
+"_MFCreateVideoSampleFromSurface@8"
+"_MFGetPlaneSize@16"
+"_MFGetStrideForBitmapInfoHeader@12"
+"_MFInitVideoFormat@8"
+"_MFInitVideoFormat_RGB@16"
+"_MFIsFormatYUV@4"
+
+; Def built in 0.002449 seconds

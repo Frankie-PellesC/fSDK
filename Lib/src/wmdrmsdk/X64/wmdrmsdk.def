@@ -1,0 +1,14 @@
+; Def File for lib <wmdrmsdk.dll> created with fTools
+; Created on Mon Oct 10 12:11:09 2016
+
+LIBRARY wmdrmsdk.dll
+EXPORTS
+; Log File for lib <wmdrmsdk.dll> created with fTools
+
+"MFWMDRMOutputTrustAuthority_CreateInstance"
+"WMDRMCreateProvider"
+"WMDRMShutdown"
+"WMDRMStartup"
+"_WMDRMCreateProvider"
+
+; Def built in 0.000984 seconds

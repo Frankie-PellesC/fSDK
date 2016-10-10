@@ -1,0 +1,9 @@
+; Def File for lib <wuguid.dll> created with fTools
+; Created on Mon Oct 10 12:11:18 2016
+
+LIBRARY wuguid.dll
+EXPORTS
+; Log File for lib <wuguid.dll> created with fTools
+
+
+; Def built in 0.029491 seconds

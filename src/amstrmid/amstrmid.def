@@ -1,9 +1,0 @@
-; Def File for lib <amstrmid.dll> created with fTools
-; Created on Mon Oct 10 11:53:36 2016
-
-LIBRARY amstrmid.dll
-EXPORTS
-; Log File for lib <amstrmid.dll> created with fTools
-
-
-; Def built in 1.532141 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <strmiids.dll> created with fTools
+; Created on Mon Oct 10 13:13:00 2016
+
+LIBRARY strmiids.dll
+EXPORTS
+; Log File for lib <strmiids.dll> created with fTools
+
+
+; Def built in 2.086883 seconds

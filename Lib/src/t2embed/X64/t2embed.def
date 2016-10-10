@@ -1,0 +1,23 @@
+; Def File for lib <t2embed.dll> created with fTools
+; Created on Mon Oct 10 12:01:34 2016
+
+LIBRARY t2embed.dll
+EXPORTS
+; Log File for lib <t2embed.dll> created with fTools
+
+"TTCharToUnicode"
+"TTDeleteEmbeddedFont"
+"TTEmbedFont"
+"TTEmbedFontEx"
+"TTEmbedFontFromFileA"
+"TTEnableEmbeddingForFacename"
+"TTGetEmbeddedFontInfo"
+"TTGetEmbeddingType"
+"TTGetNewFontName"
+"TTIsEmbeddingEnabled"
+"TTIsEmbeddingEnabledForFacename"
+"TTLoadEmbeddedFont"
+"TTRunValidationTests"
+"TTRunValidationTestsEx"
+
+; Def built in 0.001129 seconds

@@ -1,0 +1,9 @@
+; Def File for lib <wcmguid.dll> created with fTools
+; Created on Mon Oct 10 13:23:49 2016
+
+LIBRARY wcmguid.dll
+EXPORTS
+; Log File for lib <wcmguid.dll> created with fTools
+
+
+; Def built in 0.017993 seconds

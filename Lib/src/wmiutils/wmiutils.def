@@ -1,0 +1,9 @@
+; Def File for lib <wmiutils.dll> created with fTools
+; Created on Mon Oct 10 13:25:02 2016
+
+LIBRARY wmiutils.dll
+EXPORTS
+; Log File for lib <wmiutils.dll> created with fTools
+
+
+; Def built in 0.001325 seconds

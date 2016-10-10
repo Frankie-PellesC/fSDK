@@ -1,0 +1,46 @@
+; Def File for lib <httpapi.dll> created with fTools
+; Created on Mon Oct 10 11:56:38 2016
+
+LIBRARY httpapi.dll
+EXPORTS
+; Log File for lib <httpapi.dll> created with fTools
+
+"HttpAddFragmentToCache"
+"HttpAddUrl"
+"HttpAddUrlToUrlGroup"
+"HttpCancelHttpRequest"
+"HttpCloseRequestQueue"
+"HttpCloseServerSession"
+"HttpCloseUrlGroup"
+"HttpControlService"
+"HttpCreateHttpHandle"
+"HttpCreateRequestQueue"
+"HttpCreateServerSession"
+"HttpCreateUrlGroup"
+"HttpDeleteServiceConfiguration"
+"HttpFlushResponseCache"
+"HttpGetCounters"
+"HttpInitialize"
+"HttpQueryRequestQueueProperty"
+"HttpQueryServerSessionProperty"
+"HttpQueryServiceConfiguration"
+"HttpQueryUrlGroupProperty"
+"HttpReadFragmentFromCache"
+"HttpReceiveClientCertificate"
+"HttpReceiveHttpRequest"
+"HttpReceiveRequestEntityBody"
+"HttpRemoveUrl"
+"HttpRemoveUrlFromUrlGroup"
+"HttpSendHttpResponse"
+"HttpSendResponseEntityBody"
+"HttpSetRequestQueueProperty"
+"HttpSetServerSessionProperty"
+"HttpSetServiceConfiguration"
+"HttpSetUrlGroupProperty"
+"HttpShutdownRequestQueue"
+"HttpTerminate"
+"HttpWaitForDemandStart"
+"HttpWaitForDisconnect"
+"HttpWaitForDisconnectEx"
+
+; Def built in 0.002076 seconds

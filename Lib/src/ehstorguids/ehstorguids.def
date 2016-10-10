@@ -1,0 +1,9 @@
+; Def File for lib <ehstorguids.dll> created with fTools
+; Created on Mon Oct 10 13:07:29 2016
+
+LIBRARY ehstorguids.dll
+EXPORTS
+; Log File for lib <ehstorguids.dll> created with fTools
+
+
+; Def built in 3.413825 seconds

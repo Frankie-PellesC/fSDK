@@ -1,0 +1,184 @@
+; Def File for lib <odbc32.dll> created with fTools
+; Created on Mon Oct 10 13:11:34 2016
+
+LIBRARY odbc32.dll
+EXPORTS
+; Log File for lib <odbc32.dll> created with fTools
+
+"_CloseODBCPerfData@0"
+"_CollectODBCPerfData@16"
+"_CursorLibLockDbc@8"
+"_CursorLibLockDesc@8"
+"_CursorLibLockStmt@8"
+"_CursorLibTransact@12"
+"_DllBidEntryPoint@36"
+"_GetODBCSharedData@0"
+"_LockHandle@12"
+"_ODBCGetTryWaitValue@0" @84
+"_ODBCInternalConnectW@36"
+"_ODBCQualifyFileDSNW@4" @301
+"_ODBCSetTryWaitValue@4" @86
+"_OpenODBCPerfData@4"
+"_PostComponentError@4"
+"_PostODBCComponentError@4"
+"_PostODBCError@16"
+"_SQLAllocConnect@8" @1
+"_SQLAllocEnv@4" @2
+"_SQLAllocHandle@12" @24
+"_SQLAllocHandleStd@12" @77
+"_SQLAllocStmt@8" @3
+"_SQLBindCol@24" @4
+"_SQLBindParam@32" @25
+"_SQLBindParameter@40" @72
+"_SQLBrowseConnect@24" @55
+"_SQLBrowseConnectA@24" @255
+"_SQLBrowseConnectW@24" @155
+"_SQLBulkOperations@8" @78
+"_SQLCancel@4" @5
+"_SQLCancelHandle@8"
+"_SQLCloseCursor@4" @26
+"_SQLColAttribute@28" @27
+"_SQLColAttributeA@28" @227
+"_SQLColAttributeW@28" @127
+"_SQLColAttributes@28" @6
+"_SQLColAttributesA@28" @206
+"_SQLColAttributesW@28" @106
+"_SQLColumnPrivileges@36" @56
+"_SQLColumnPrivilegesA@36" @256
+"_SQLColumnPrivilegesW@36" @156
+"_SQLColumns@36" @40
+"_SQLColumnsA@36" @240
+"_SQLColumnsW@36" @140
+"_SQLConnect@28" @7
+"_SQLConnectA@28" @207
+"_SQLConnectW@28" @107
+"_SQLCopyDesc@8" @28
+"_SQLDataSources@32" @57
+"_SQLDataSourcesA@32" @257
+"_SQLDataSourcesW@32" @157
+"_SQLDescribeCol@36" @8
+"_SQLDescribeColA@36" @208
+"_SQLDescribeColW@36" @108
+"_SQLDescribeParam@24" @58
+"_SQLDisconnect@4" @9
+"_SQLDriverConnect@32" @41
+"_SQLDriverConnectA@32" @241
+"_SQLDriverConnectW@32" @141
+"_SQLDrivers@32" @71
+"_SQLDriversA@32" @271
+"_SQLDriversW@32" @171
+"_SQLEndTran@12" @29
+"_SQLError@32" @10
+"_SQLErrorA@32" @210
+"_SQLErrorW@32" @110
+"_SQLExecDirect@12" @11
+"_SQLExecDirectA@12" @211
+"_SQLExecDirectW@12" @111
+"_SQLExecute@4" @12
+"_SQLExtendedFetch@20" @59
+"_SQLFetch@4" @13
+"_SQLFetchScroll@12" @30
+"_SQLForeignKeys@52" @60
+"_SQLForeignKeysA@52" @260
+"_SQLForeignKeysW@52" @160
+"_SQLFreeConnect@4" @14
+"_SQLFreeEnv@4" @15
+"_SQLFreeHandle@8" @31
+"_SQLFreeStmt@8" @16
+"_SQLGetConnectAttr@20" @32
+"_SQLGetConnectAttrA@20" @232
+"_SQLGetConnectAttrW@20" @132
+"_SQLGetConnectOption@12" @42
+"_SQLGetConnectOptionA@12" @242
+"_SQLGetConnectOptionW@12" @142
+"_SQLGetCursorName@16" @17
+"_SQLGetCursorNameA@16" @217
+"_SQLGetCursorNameW@16" @117
+"_SQLGetData@24" @43
+"_SQLGetDescField@24" @33
+"_SQLGetDescFieldA@24" @233
+"_SQLGetDescFieldW@24" @133
+"_SQLGetDescRec@44" @34
+"_SQLGetDescRecA@44" @234
+"_SQLGetDescRecW@44" @134
+"_SQLGetDiagField@28" @35
+"_SQLGetDiagFieldA@28" @235
+"_SQLGetDiagFieldW@28" @135
+"_SQLGetDiagRec@32" @36
+"_SQLGetDiagRecA@32" @236
+"_SQLGetDiagRecW@32" @136
+"_SQLGetEnvAttr@20" @37
+"_SQLGetFunctions@12" @44
+"_SQLGetInfo@20" @45
+"_SQLGetInfoA@20" @245
+"_SQLGetInfoW@20" @145
+"_SQLGetStmtAttr@20" @38
+"_SQLGetStmtAttrA@20" @238
+"_SQLGetStmtAttrW@20" @138
+"_SQLGetStmtOption@12" @46
+"_SQLGetTypeInfo@8" @47
+"_SQLGetTypeInfoA@8" @247
+"_SQLGetTypeInfoW@8" @147
+"_SQLMoreResults@4" @61
+"_SQLNativeSql@24" @62
+"_SQLNativeSqlA@24" @262
+"_SQLNativeSqlW@24" @162
+"_SQLNumParams@8" @63
+"_SQLNumResultCols@8" @18
+"_SQLParamData@8" @48
+"_SQLParamOptions@12" @64
+"_SQLPrepare@12" @19
+"_SQLPrepareA@12" @219
+"_SQLPrepareW@12" @119
+"_SQLPrimaryKeys@28" @65
+"_SQLPrimaryKeysA@28" @265
+"_SQLPrimaryKeysW@28" @165
+"_SQLProcedureColumns@36" @66
+"_SQLProcedureColumnsA@36" @266
+"_SQLProcedureColumnsW@36" @166
+"_SQLProcedures@28" @67
+"_SQLProceduresA@28" @267
+"_SQLProceduresW@28" @167
+"_SQLPutData@12" @49
+"_SQLRowCount@8" @20
+"_SQLSetConnectAttr@16" @39
+"_SQLSetConnectAttrA@16" @239
+"_SQLSetConnectAttrW@16" @139
+"_SQLSetConnectOption@12" @50
+"_SQLSetConnectOptionA@12" @250
+"_SQLSetConnectOptionW@12" @150
+"_SQLSetCursorName@12" @21
+"_SQLSetCursorNameA@12" @221
+"_SQLSetCursorNameW@12" @121
+"_SQLSetDescField@20" @73
+"_SQLSetDescFieldA@20" @273
+"_SQLSetDescFieldW@20" @173
+"_SQLSetDescRec@40" @74
+"_SQLSetEnvAttr@16" @75
+"_SQLSetParam@32" @22
+"_SQLSetPos@16" @68
+"_SQLSetScrollOptions@16" @69
+"_SQLSetStmtAttr@16" @76
+"_SQLSetStmtAttrA@16" @276
+"_SQLSetStmtAttrW@16" @176
+"_SQLSetStmtOption@12" @51
+"_SQLSpecialColumns@40" @52
+"_SQLSpecialColumnsA@40" @252
+"_SQLSpecialColumnsW@40" @152
+"_SQLStatistics@36" @53
+"_SQLStatisticsA@36" @253
+"_SQLStatisticsW@36" @153
+"_SQLTablePrivileges@28" @70
+"_SQLTablePrivilegesA@28" @270
+"_SQLTablePrivilegesW@28" @170
+"_SQLTables@36" @54
+"_SQLTablesA@36" @254
+"_SQLTablesW@36" @154
+"_SQLTransact@12" @23
+"_SearchStatusCode@8"
+"_VFreeErrors@4"
+"_VRetrieveDriverErrorsRowCol@24"
+"_ValidateErrorQueue@8"
+"_g_hHeapMalloc" DATA
+
+; Def built in 0.005215 seconds

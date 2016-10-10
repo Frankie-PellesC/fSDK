@@ -1,0 +1,52 @@
+/*+@@file@@----------------------------------------------------------------*//*!
+ \file		d2derr.h
+ \par Description 
+            Extension and update of headers for PellesC compiler suite.
+ \par Project: 
+            PellesC Headers extension
+ \date		Created  on Fri Jun  3 17:37:23 2016
+ \date		Modified on Fri Jun  3 17:37:23 2016
+ \author	frankie
+\*//*-@@file@@----------------------------------------------------------------*/
+#ifndef _D2DERR_INCLUDED
+#define _D2DERR_INCLUDED
+#if __POCC__ >= 500
+#pragma once
+#endif
+#define FACILITY_D2D 0x899
+#define MAKE_D2DHR( sev, code )\
+    MAKE_HRESULT( sev, FACILITY_D2D, (code) )
+#define MAKE_D2DHR_ERR( code )\
+    MAKE_D2DHR( 1, code )
+#define D2DERR_UNSUPPORTED_PIXEL_FORMAT     WINCODEC_ERR_UNSUPPORTEDPIXELFORMAT
+#define D2DERR_INSUFFICIENT_BUFFER          HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)
+#define D2DERR_WRONG_STATE                  MAKE_D2DHR_ERR(0x001)
+#define D2DERR_NOT_INITIALIZED              MAKE_D2DHR_ERR(0x002)
+#define D2DERR_UNSUPPORTED_OPERATION        MAKE_D2DHR_ERR(0x003)
+#define D2DERR_SCANNER_FAILED               MAKE_D2DHR_ERR(0x004)
+#define D2DERR_SCREEN_ACCESS_DENIED         MAKE_D2DHR_ERR(0x005)
+#define D2DERR_DISPLAY_STATE_INVALID        MAKE_D2DHR_ERR(0x006)
+#define D2DERR_ZERO_VECTOR                  MAKE_D2DHR_ERR(0x007)
+#define D2DERR_INTERNAL_ERROR               MAKE_D2DHR_ERR(0x008)
+#define D2DERR_DISPLAY_FORMAT_NOT_SUPPORTED MAKE_D2DHR_ERR(0x009)
+#define D2DERR_INVALID_CALL                 MAKE_D2DHR_ERR(0x00A)
+#define D2DERR_NO_HARDWARE_DEVICE           MAKE_D2DHR_ERR(0x00B)
+#define D2DERR_RECREATE_TARGET              MAKE_D2DHR_ERR(0x00C)
+#define D2DERR_TOO_MANY_SHADER_ELEMENTS     MAKE_D2DHR_ERR(0x00D)
+#define D2DERR_SHADER_COMPILE_FAILED        MAKE_D2DHR_ERR(0x00E)
+#define D2DERR_MAX_TEXTURE_SIZE_EXCEEDED    MAKE_D2DHR_ERR(0x00F)
+#define D2DERR_UNSUPPORTED_VERSION          MAKE_D2DHR_ERR(0x010)
+#define D2DERR_BAD_NUMBER                   MAKE_D2DHR_ERR(0x0011)
+#define D2DERR_WRONG_FACTORY                MAKE_D2DHR_ERR(0x012)
+#define D2DERR_LAYER_ALREADY_IN_USE         MAKE_D2DHR_ERR(0x013)
+#define D2DERR_POP_CALL_DID_NOT_MATCH_PUSH  MAKE_D2DHR_ERR(0x014)
+#define D2DERR_WRONG_RESOURCE_DOMAIN        MAKE_D2DHR_ERR(0x015)
+#define D2DERR_PUSH_POP_UNBALANCED          MAKE_D2DHR_ERR(0x016)
+#define D2DERR_RENDER_TARGET_HAS_LAYER_OR_CLIPRECT MAKE_D2DHR_ERR(0x017)
+#define D2DERR_INCOMPATIBLE_BRUSH_TYPES     MAKE_D2DHR_ERR(0x018)
+#define D2DERR_WIN32_ERROR                  MAKE_D2DHR_ERR(0x019)
+#define D2DERR_TARGET_NOT_GDI_COMPATIBLE    MAKE_D2DHR_ERR(0x01A)
+#define D2DERR_TEXT_EFFECT_IS_WRONG_TYPE    MAKE_D2DHR_ERR(0x01B)
+#define D2DERR_TEXT_RENDERER_NOT_RELEASED   MAKE_D2DHR_ERR(0x01C)
+#define D2DERR_EXCEEDS_MAX_BITMAP_SIZE     MAKE_D2DHR_ERR(0x01D)
+#endif

@@ -1,0 +1,14 @@
+; Def File for lib <ElsCore.dll> created with fTools
+; Created on Mon Oct 10 11:56:14 2016
+
+LIBRARY ElsCore.dll
+EXPORTS
+; Log File for lib <ElsCore.dll> created with fTools
+
+"MappingDoAction"
+"MappingFreePropertyBag"
+"MappingFreeServices"
+"MappingGetServices"
+"MappingRecognizeText"
+
+; Def built in 0.001320 seconds

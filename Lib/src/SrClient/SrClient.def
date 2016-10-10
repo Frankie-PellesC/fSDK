@@ -1,0 +1,9 @@
+; Def File for lib <SrClient.dll> created with fTools
+; Created on Mon Oct 10 13:12:59 2016
+
+LIBRARY SrClient.dll
+EXPORTS
+; Log File for lib <SrClient.dll> created with fTools
+
+
+; Def built in 0.012730 seconds

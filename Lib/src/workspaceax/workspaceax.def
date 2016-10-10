@@ -1,0 +1,9 @@
+; Def File for lib <workspaceax.dll> created with fTools
+; Created on Mon Oct 10 13:25:03 2016
+
+LIBRARY workspaceax.dll
+EXPORTS
+; Log File for lib <workspaceax.dll> created with fTools
+
+
+; Def built in 0.036572 seconds

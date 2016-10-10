@@ -1,0 +1,13 @@
+; Def File for lib <quartz.dll> created with fTools
+; Created on Mon Oct 10 11:59:54 2016
+
+LIBRARY quartz.dll
+EXPORTS
+; Log File for lib <quartz.dll> created with fTools
+
+"AMGetErrorTextA"
+"AMGetErrorTextW"
+"AmpFactorToDB"
+"DBToAmpFactor"
+
+; Def built in 0.002518 seconds

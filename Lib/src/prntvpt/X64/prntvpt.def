@@ -1,0 +1,32 @@
+; Def File for lib <prntvpt.dll> created with fTools
+; Created on Mon Oct 10 11:59:54 2016
+
+LIBRARY prntvpt.dll
+EXPORTS
+; Log File for lib <prntvpt.dll> created with fTools
+
+"BindPTProviderThunk"
+"ConvertDevModeToPrintTicketThunk"
+"ConvertDevModeToPrintTicketThunk2"
+"ConvertPrintTicketToDevModeThunk"
+"ConvertPrintTicketToDevModeThunk2"
+"DllMain"
+"GetDeviceDefaultPrintTicketThunk"
+"GetDeviceNamespacesThunk"
+"GetPrintCapabilitiesThunk"
+"GetPrintCapabilitiesThunk2"
+"GetSchemaVersionThunk"
+"MergeAndValidatePrintTicketThunk"
+"MergeAndValidatePrintTicketThunk2"
+"PTCloseProvider" @4
+"PTConvertDevModeToPrintTicket" @9
+"PTConvertPrintTicketToDevMode" @8
+"PTGetPrintCapabilities" @6
+"PTMergeAndValidatePrintTicket" @7
+"PTOpenProvider" @2
+"PTOpenProviderEx" @3
+"PTQuerySchemaVersionSupport" @1
+"PTReleaseMemory" @10
+"UnbindPTProviderThunk"
+
+; Def built in 0.001845 seconds

@@ -1,0 +1,52 @@
+; Def File for lib <Mpr.dll> created with fTools
+; Created on Mon Oct 10 13:11:04 2016
+
+LIBRARY Mpr.dll
+EXPORTS
+; Log File for lib <Mpr.dll> created with fTools
+
+"_MultinetGetConnectionPerformanceA@8"
+"_MultinetGetConnectionPerformanceW@8"
+"_WNetAddConnection2A@16"
+"_WNetAddConnection2W@16"
+"_WNetAddConnection3A@20"
+"_WNetAddConnection3W@20"
+"_WNetAddConnectionA@12"
+"_WNetAddConnectionW@12"
+"_WNetCancelConnection2A@12"
+"_WNetCancelConnection2W@12"
+"_WNetCancelConnectionA@8"
+"_WNetCancelConnectionW@8"
+"_WNetCloseEnum@4"
+"_WNetConnectionDialog1A@4"
+"_WNetConnectionDialog1W@4"
+"_WNetConnectionDialog@8"
+"_WNetDisconnectDialog1A@4"
+"_WNetDisconnectDialog1W@4"
+"_WNetDisconnectDialog@8"
+"_WNetEnumResourceA@16"
+"_WNetEnumResourceW@16"
+"_WNetGetConnectionA@12"
+"_WNetGetConnectionW@12"
+"_WNetGetLastErrorA@20"
+"_WNetGetLastErrorW@20"
+"_WNetGetNetworkInformationA@8"
+"_WNetGetNetworkInformationW@8"
+"_WNetGetProviderNameA@12"
+"_WNetGetProviderNameW@12"
+"_WNetGetResourceInformationA@16"
+"_WNetGetResourceInformationW@16"
+"_WNetGetResourceParentA@12"
+"_WNetGetResourceParentW@12"
+"_WNetGetUniversalNameA@16"
+"_WNetGetUniversalNameW@16"
+"_WNetGetUserA@12"
+"_WNetGetUserW@12"
+"_WNetOpenEnumA@20"
+"_WNetOpenEnumW@20"
+"_WNetSetLastErrorA@12"
+"_WNetSetLastErrorW@12"
+"_WNetUseConnectionA@32"
+"_WNetUseConnectionW@32"
+
+; Def built in 0.002882 seconds

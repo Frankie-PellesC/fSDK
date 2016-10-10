@@ -1,0 +1,100 @@
+/*+@@file@@----------------------------------------------------------------*//*!
+ \file		FunctionDiscoveryConstraints.h
+ \par Description 
+            Extension and update of headers for PellesC compiler suite.
+ \par Project: 
+            PellesC Headers extension
+ \date		Created  on Sun Jul 10 19:35:30 2016
+ \date		Modified on Sun Jul 10 19:35:30 2016
+ \author	frankie
+\*//*-@@file@@----------------------------------------------------------------*/
+
+#ifndef __FunctionDiscoveryConstraints_h__
+#define __FunctionDiscoveryConstraints_h__
+#if __POCC__ >= 500
+#pragma once
+#endif
+#define MAX_FDCONSTRAINTNAME_LENGTH                     100
+#define MAX_FDCONSTRAINTVALUE_LENGTH                    1000
+#define FD_QUERYCONSTRAINT_PROVIDERINSTANCEID           L"ProviderInstanceID"
+#define FD_QUERYCONSTRAINT_SUBCATEGORY                  L"Subcategory"
+#define FD_QUERYCONSTRAINT_RECURSESUBCATEGORY           L"RecurseSubcategory"
+#define FD_QUERYCONSTRAINT_VISIBILITY                   L"Visibility"
+#define FD_QUERYCONSTRAINT_COMCLSCONTEXT                L"COMClsContext"
+#define FD_QUERYCONSTRAINT_ROUTINGSCOPE                 L"RoutingScope"
+#define FD_CONSTRAINTVALUE_TRUE                         L"TRUE"
+#define FD_CONSTRAINTVALUE_FALSE                        L"FALSE"
+#define FD_CONSTRAINTVALUE_RECURSESUBCATEGORY_TRUE      FD_CONSTRAINTVALUE_TRUE
+#define FD_CONSTRAINTVALUE_VISIBILITY_DEFAULT           L"0"
+#define FD_CONSTRAINTVALUE_VISIBILITY_ALL               L"1"
+#define FD_CONSTRAINTVALUE_COMCLSCONTEXT_INPROC_SERVER  L"1"
+#define FD_CONSTRAINTVALUE_COMCLSCONTEXT_LOCAL_SERVER   L"4"
+#define FD_CONSTRAINTVALUE_PAIRED                       L"Paired"
+#define FD_CONSTRAINTVALUE_UNPAIRED                     L"UnPaired"
+#define FD_CONSTRAINTVALUE_ALL                          L"All"
+#define FD_CONSTRAINTVALUE_ROUTINGSCOPE_ALL             L"All"
+#define FD_CONSTRAINTVALUE_ROUTINGSCOPE_DIRECT          L"Direct"
+#define FD_QUERYCONSTRAINT_PAIRING_STATE                L"PairingState"
+#define FD_QUERYCONSTRAINT_INQUIRY_TIMEOUT              L"InquiryModeTimeout"
+#define PROVIDERPNP_QUERYCONSTRAINT_INTERFACECLASS      L"InterfaceClass"
+#define PROVIDERPNP_QUERYCONSTRAINT_NOTPRESENT          L"NotPresent"
+#define PROVIDERPNP_QUERYCONSTRAINT_NOTIFICATIONSONLY   L"NotifyOnly"
+#define PNP_CONSTRAINTVALUE_NOTPRESENT                  FD_CONSTRAINTVALUE_TRUE
+#define PNP_CONSTRAINTVALUE_NOTIFICATIONSONLY           FD_CONSTRAINTVALUE_TRUE
+#define PROVIDERSSDP_QUERYCONSTRAINT_TYPE               L"Type"
+#define PROVIDERSSDP_QUERYCONSTRAINT_CUSTOMXMLPROPERTY  L"CustomXmlProperty"
+#define SSDP_CONSTRAINTVALUE_TYPE_ALL                   L"ssdp:all"
+#define SSDP_CONSTRAINTVALUE_TYPE_ROOT                  L"upnp:rootdevice"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX         L"urn:schemas-upnp-org:device:"
+#define SSDP_CONSTRAINTVALUE_TYPE_SVC_PREFIX            L"urn:schemas-upnp-org:service:"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_LIGHTING          SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"Lighting:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_REMINDER          SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"Reminder:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_POWERDEVICE       SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"PowerDevice:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_IGD               SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"InternetGatewayDevice:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_WANDEVICE         SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"WANDevice:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_LANDEVICE         SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"LANDevice:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_WANCONNDEVICE     SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"WANConnectionDevice:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_LUXMETER          SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"Luxmeter:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_MDARNDR           SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"MediaRenderer:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_DEV_MDASRVR           SSDP_CONSTRAINTVALUE_TYPE_DEVICE_PREFIX L"MediaServer:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_SVC_SCANNER           SSDP_CONSTRAINTVALUE_TYPE_SVC_PREFIX L"Scanner:1"
+#define SSDP_CONSTRAINTVALUE_TYPE_SVC_DIMMING           SSDP_CONSTRAINTVALUE_TYPE_SVC_PREFIX L"DimmingService:1"
+#define PROVIDERWSD_QUERYCONSTRAINT_DIRECTEDADDRESS                     L"RemoteAddress"
+#define PROVIDERWSD_QUERYCONSTRAINT_TYPE                                L"Type"
+#define PROVIDERWSD_QUERYCONSTRAINT_SCOPE                               L"Scope"
+#define PROVIDERWSD_QUERYCONSTRAINT_SECURITY_REQUIREMENTS               L"SecurityRequirements"
+#define PROVIDERWSD_QUERYCONSTRAINT_SSL_CERT_FOR_CLIENT_AUTH            L"SSLClientAuthCert"
+#define WSD_CONSTRAINTVALUE_REQUIRE_SECURECHANNEL                                   L"1"
+#define WSD_CONSTRAINTVALUE_REQUIRE_SECURECHANNEL_AND_COMPACTSIGNATURE              L"2"
+#define WSD_CONSTRAINTVALUE_NO_TRUST_VERIFICATION                                   L"3"
+#define PROVIDERWNET_QUERYCONSTRAINT_TYPE               L"Type"
+#define PROVIDERWNET_QUERYCONSTRAINT_PROPERTIES         L"Properties"
+#define PROVIDERWNET_QUERYCONSTRAINT_RESOURCETYPE       L"ResourceType"
+#define WNET_CONSTRAINTVALUE_TYPE_ALL                   L"All"
+#define WNET_CONSTRAINTVALUE_TYPE_SERVER                L"Server"
+#define WNET_CONSTRAINTVALUE_TYPE_DOMAIN                L"Domain"
+#define WNET_CONSTRAINTVALUE_PROPERTIES_ALL             L"All"
+#define WNET_CONSTRAINTVALUE_PROPERTIES_LIMITED         L"Limited"
+#define WNET_CONSTRAINTVALUE_RESOURCETYPE_DISK          L"Disk"
+#define WNET_CONSTRAINTVALUE_RESOURCETYPE_PRINTER       L"Printer"
+#define WNET_CONSTRAINTVALUE_RESOURCETYPE_DISKORPRINTER L"DiskOrPrinter"
+#define ONLINE_PROVIDER_DEVICES_QUERYCONSTRAINT_OWNERNAME   L"OwnerName"
+#define PROVIDERDDO_QUERYCONSTRAINT_DEVICEFUNCTIONDISPLAYOBJECTS    L"DeviceFunctionDisplayObjects"
+#define PROVIDERDDO_QUERYCONSTRAINT_ONLYCONNECTEDDEVICES            L"OnlyConnectedDevices"
+#define PROVIDERDDO_QUERYCONSTRAINT_DEVICEINTERFACES                L"DeviceInterfaces"
+#ifndef FDPropertyConstraint
+typedef enum tagPropertyConstraint
+{
+    QC_EQUALS = 0,
+    QC_NOTEQUAL = 1,
+    QC_LESSTHAN = 2,
+    QC_LESSTHANOREQUAL = 3,
+    QC_GREATERTHAN = 4,
+    QC_GREATERTHANOREQUAL = 5,
+    QC_STARTSWITH = 6,
+    QC_EXISTS = 7,
+    QC_DOESNOTEXIST = 8,
+    QC_CONTAINS = 9
+} PropertyConstraint;
+#endif
+#endif

@@ -1,0 +1,9 @@
+; Def File for lib <vpccominterfaces.dll> created with fTools
+; Created on Mon Oct 10 13:23:42 2016
+
+LIBRARY vpccominterfaces.dll
+EXPORTS
+; Log File for lib <vpccominterfaces.dll> created with fTools
+
+
+; Def built in 0.018467 seconds

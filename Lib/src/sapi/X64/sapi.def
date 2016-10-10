@@ -1,0 +1,9 @@
+; Def File for lib <sapi.dll> created with fTools
+; Created on Mon Oct 10 11:59:57 2016
+
+LIBRARY sapi.dll
+EXPORTS
+; Log File for lib <sapi.dll> created with fTools
+
+
+; Def built in 0.062059 seconds

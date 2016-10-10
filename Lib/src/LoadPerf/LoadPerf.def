@@ -1,0 +1,23 @@
+; Def File for lib <LoadPerf.dll> created with fTools
+; Created on Mon Oct 10 13:09:24 2016
+
+LIBRARY LoadPerf.dll
+EXPORTS
+; Log File for lib <LoadPerf.dll> created with fTools
+
+"_BackupPerfRegistryToFileW@8"
+"_InstallPerfDllA@12"
+"_InstallPerfDllW@12"
+"_LoadPerfCounterTextStringsA@8"
+"_LoadPerfCounterTextStringsW@8"
+"_LpAcquireInstallationMutex@0"
+"_LpReleaseInstallationMutex@0"
+"_RestorePerfRegistryFromFileW@8"
+"_SetServiceAsTrustedA@8"
+"_SetServiceAsTrustedW@8"
+"_UnloadPerfCounterTextStringsA@8"
+"_UnloadPerfCounterTextStringsW@8"
+"_UpdatePerfNameFilesA@16"
+"_UpdatePerfNameFilesW@16"
+
+; Def built in 0.001821 seconds

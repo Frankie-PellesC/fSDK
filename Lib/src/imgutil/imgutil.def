@@ -1,0 +1,18 @@
+; Def File for lib <imgutil.dll> created with fTools
+; Created on Mon Oct 10 13:09:00 2016
+
+LIBRARY imgutil.dll
+EXPORTS
+; Log File for lib <imgutil.dll> created with fTools
+
+"_ComputeInvCMAP@16"
+"_CreateDDrawSurfaceOnDIB@8"
+"_CreateMIMEMap@4"
+"_DecodeImage@12"
+"_DecodeImageEx@16"
+"_DitherTo8@56"
+"_GetMaxMIMEIDBytes@4"
+"_IdentifyMIMEType@12"
+"_SniffStream@12"
+
+; Def built in 0.001563 seconds

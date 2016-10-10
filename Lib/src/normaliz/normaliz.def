@@ -1,0 +1,14 @@
+; Def File for lib <normaliz.dll> created with fTools
+; Created on Mon Oct 10 13:11:33 2016
+
+LIBRARY normaliz.dll
+EXPORTS
+; Log File for lib <normaliz.dll> created with fTools
+
+"_IdnToAscii@20"
+"_IdnToNameprepUnicode@20"
+"_IdnToUnicode@20"
+"_IsNormalizedString@12"
+"_NormalizeString@20"
+
+; Def built in 0.001914 seconds

@@ -1,0 +1,18 @@
+; Def File for lib <txfw32.dll> created with fTools
+; Created on Mon Oct 10 13:14:06 2016
+
+LIBRARY txfw32.dll
+EXPORTS
+; Log File for lib <txfw32.dll> created with fTools
+
+"_TxfGetThreadMiniVersionForCreate@4"
+"_TxfLogCreateFileReadContext@28"
+"_TxfLogCreateRangeReadContext@36"
+"_TxfLogDestroyReadContext@4"
+"_TxfLogReadRecords@20"
+"_TxfLogRecordGetFileName@20"
+"_TxfLogRecordGetGenericType@16"
+"_TxfReadMetadataInfo@20"
+"_TxfSetThreadMiniVersionForCreate@4"
+
+; Def built in 0.001955 seconds

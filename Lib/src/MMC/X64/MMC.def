@@ -1,0 +1,9 @@
+; Def File for lib <MMC.dll> created with fTools
+; Created on Mon Oct 10 11:58:20 2016
+
+LIBRARY MMC.dll
+EXPORTS
+; Log File for lib <MMC.dll> created with fTools
+
+
+; Def built in 0.335281 seconds

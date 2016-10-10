@@ -1,0 +1,26 @@
+; Def File for lib <NMSupp.dll> created with fTools
+; Created on Mon Oct 10 13:11:33 2016
+
+LIBRARY NMSupp.dll
+EXPORTS
+; Log File for lib <NMSupp.dll> created with fTools
+
+"_AllocMemory@4"
+"_AllocObject@4"
+"_BhAllocSystemMemory@4"
+"_BhFreeSystemMemory@4"
+"_BhGetLastError@0"
+"_BhSetLastError@4"
+"_CreateObjectHeap@8"
+"_DestroyObjectHeap@4"
+"_FreeMemory@4"
+"_FreeObject@8"
+"_GetObjectHeapSize@4"
+"_GrowObjectHeap@8"
+"_MemorySize@4"
+"_NormalizeAddress@4"
+"_PurgeObjectHeap@4"
+"_ReallocMemory@8"
+"_TestMemory@4"
+
+; Def built in 0.001688 seconds

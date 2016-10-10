@@ -1,0 +1,15 @@
+; Def File for lib <tbs.dll> created with fTools
+; Created on Mon Oct 10 13:14:03 2016
+
+LIBRARY tbs.dll
+EXPORTS
+; Log File for lib <tbs.dll> created with fTools
+
+"_Tbsi_Context_Create@8"
+"_Tbsi_Get_TCG_Log@12"
+"_Tbsi_Physical_Presence_Command@20"
+"_Tbsip_Cancel_Commands@4"
+"_Tbsip_Context_Close@4"
+"_Tbsip_Submit_Command@28"
+
+; Def built in 0.002083 seconds

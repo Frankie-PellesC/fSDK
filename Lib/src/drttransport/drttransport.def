@@ -1,0 +1,11 @@
+; Def File for lib <drttransport.dll> created with fTools
+; Created on Mon Oct 10 13:07:26 2016
+
+LIBRARY drttransport.dll
+EXPORTS
+; Log File for lib <drttransport.dll> created with fTools
+
+"_DrtCreateIpv6UdpTransport@20"
+"_DrtDeleteIpv6UdpTransport@4"
+
+; Def built in 0.001995 seconds

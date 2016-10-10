@@ -1,0 +1,9 @@
+; Def File for lib <MqOA.dll> created with fTools
+; Created on Mon Oct 10 13:11:05 2016
+
+LIBRARY MqOA.dll
+EXPORTS
+; Log File for lib <MqOA.dll> created with fTools
+
+
+; Def built in 0.024138 seconds

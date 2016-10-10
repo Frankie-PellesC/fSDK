@@ -1,9 +1,0 @@
-; Def File for lib <Ad1.dll> created with fTools
-; Created on Mon Oct 10 13:05:05 2016
-
-LIBRARY Ad1.dll
-EXPORTS
-; Log File for lib <Ad1.dll> created with fTools
-
-
-; Def built in 0.029989 seconds

@@ -1,0 +1,56 @@
+; Def File for lib <msvfw32.dll> created with fTools
+; Created on Mon Oct 10 11:58:50 2016
+
+LIBRARY msvfw32.dll
+EXPORTS
+; Log File for lib <msvfw32.dll> created with fTools
+
+"DrawDibBegin"
+"DrawDibChangePalette"
+"DrawDibClose"
+"DrawDibDraw"
+"DrawDibEnd"
+"DrawDibGetBuffer"
+"DrawDibGetPalette"
+"DrawDibOpen"
+"DrawDibProfileDisplay"
+"DrawDibRealize"
+"DrawDibSetPalette"
+"DrawDibStart"
+"DrawDibStop"
+"DrawDibTime"
+"GetOpenFileNamePreview"
+"GetOpenFileNamePreviewA"
+"GetOpenFileNamePreviewW"
+"GetSaveFileNamePreviewA"
+"GetSaveFileNamePreviewW"
+"ICClose"
+"ICCompress"
+"ICCompressorChoose"
+"ICCompressorFree"
+"ICDecompress"
+"ICDraw"
+"ICDrawBegin"
+"ICGetDisplayFormat"
+"ICGetInfo"
+"ICImageCompress"
+"ICImageDecompress"
+"ICInfo"
+"ICInstall"
+"ICLocate"
+"ICMThunk32"
+"ICOpen"
+"ICOpenFunction"
+"ICRemove"
+"ICSendMessage"
+"ICSeqCompressFrame"
+"ICSeqCompressFrameEnd"
+"ICSeqCompressFrameStart"
+"MCIWndCreate"
+"MCIWndCreateA"
+"MCIWndCreateW"
+"MCIWndRegisterClass"
+"StretchDIB"
+"VideoForWindowsVersion" @2
+
+; Def built in 0.002291 seconds
