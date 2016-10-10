@@ -1,0 +1,46 @@
+; Def File for lib <dxva2.dll> created with fTools
+; Created on Mon Oct 10 11:55:10 2016
+
+LIBRARY dxva2.dll
+EXPORTS
+; Log File for lib <dxva2.dll> created with fTools
+
+"CapabilitiesRequestAndCapabilitiesReply"
+"DXVA2CreateDirect3DDeviceManager9"
+"DXVA2CreateVideoService"
+"DXVAHD_CreateDevice"
+"DegaussMonitor"
+"DestroyPhysicalMonitor"
+"DestroyPhysicalMonitors"
+"GetCapabilitiesStringLength"
+"GetMonitorBrightness"
+"GetMonitorCapabilities"
+"GetMonitorColorTemperature"
+"GetMonitorContrast"
+"GetMonitorDisplayAreaPosition"
+"GetMonitorDisplayAreaSize"
+"GetMonitorRedGreenOrBlueDrive"
+"GetMonitorRedGreenOrBlueGain"
+"GetMonitorTechnologyType"
+"GetNumberOfPhysicalMonitorsFromHMONITOR"
+"GetNumberOfPhysicalMonitorsFromIDirect3DDevice9"
+"GetPhysicalMonitorsFromHMONITOR"
+"GetPhysicalMonitorsFromIDirect3DDevice9"
+"GetTimingReport"
+"GetVCPFeatureAndVCPFeatureReply"
+"OPMGetVideoOutputsFromHMONITOR"
+"OPMGetVideoOutputsFromIDirect3DDevice9Object"
+"RestoreMonitorFactoryColorDefaults"
+"RestoreMonitorFactoryDefaults"
+"SaveCurrentMonitorSettings"
+"SaveCurrentSettings"
+"SetMonitorBrightness"
+"SetMonitorColorTemperature"
+"SetMonitorContrast"
+"SetMonitorDisplayAreaPosition"
+"SetMonitorDisplayAreaSize"
+"SetMonitorRedGreenOrBlueDrive"
+"SetMonitorRedGreenOrBlueGain"
+"SetVCPFeature"
+
+; Def built in 0.002468 seconds

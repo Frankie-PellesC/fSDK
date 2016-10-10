@@ -1,0 +1,12 @@
+; Def File for lib <dpx.dll> created with fTools
+; Created on Mon Oct 10 13:07:25 2016
+
+LIBRARY dpx.dll
+EXPORTS
+; Log File for lib <dpx.dll> created with fTools
+
+"_DpxFreeMemory@4"
+"_DpxNewJob@8"
+"_DpxRestoreJob@8"
+
+; Def built in 0.001565 seconds

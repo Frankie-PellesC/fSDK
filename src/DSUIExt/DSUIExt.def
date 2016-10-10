@@ -1,0 +1,42 @@
+; Def File for lib <DSUIExt.dll> created with fTools
+; Created on Mon Oct 10 13:07:27 2016
+
+LIBRARY DSUIExt.dll
+EXPORTS
+; Log File for lib <DSUIExt.dll> created with fTools
+
+"_CheckDsPolicy@8" @575
+"_DsBrowseForContainerA@4" @9
+"_DsBrowseForContainerW@4" @10
+"_DsGetFriendlyClassName@12" @259
+"_DsGetIcon@16" @257
+"_FormatDirectoryName@12" @578
+"_FormatMsgBox" @571
+"_FormatMsgResource" @570
+"_GetArrayContents@12" @576
+"_GetDisplayNameFromADsPath@20" @574
+"_GetStringElementA@16" @562
+"_GetStringElementW@16" @563
+"_LocalAllocStringA2W@8" @544
+"_LocalAllocStringA@8" @520
+"_LocalAllocStringLenA@8" @521
+"_LocalAllocStringLenW@8" @541
+"_LocalAllocStringW2A@8" @524
+"_LocalAllocStringW@8" @540
+"_LocalFreeStringA@4" @522
+"_LocalFreeStringW@4" @542
+"_LocalQueryStringA@12" @523
+"_LocalQueryStringW@12" @543
+"_ObjectClassFromSearchColumn@8" @573
+"_PutStringElementA@16" @560
+"_PutStringElementW@16" @561
+"_ShowDirectoryUI@0" @577
+"_StringDPA_AppendStringA@12" @514
+"_StringDPA_AppendStringW@12" @515
+"_StringDPA_DeleteString@8" @516
+"_StringDPA_Destroy@4" @517
+"_StringDPA_InsertStringA@12" @512
+"_StringDPA_InsertStringW@12" @513
+"_StringFromSearchColumn@8" @572
+
+; Def built in 0.002515 seconds

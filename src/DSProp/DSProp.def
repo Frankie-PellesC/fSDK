@@ -1,0 +1,28 @@
+; Def File for lib <DSProp.dll> created with fTools
+; Created on Mon Oct 10 13:07:27 2016
+
+LIBRARY DSProp.dll
+EXPORTS
+; Log File for lib <DSProp.dll> created with fTools
+
+"?CheckADsError@@YGHPAJHPBDHPAUHWND__@@@Z"
+"?CrackName@@YGJPBGPAPAGW4CRACK_NAME_OPR@@PAUHWND__@@@Z"
+"?DSPROP_GetGCSearchOnDomain@@YGJPBGABU_GUID@@PAPAX@Z"
+"?ErrMsg@@YGXIPAUHWND__@@@Z"
+"?ErrMsgParam@@YGXIJPAUHWND__@@@Z"
+"?FindSheet@@YGHPBG@Z"
+"?MsgBox@@YGXIPAUHWND__@@@Z"
+"?ReportError@@YGXJHPAUHWND__@@@Z"
+"?Smart_PADS_ATTR_INFO__Empty@@YGXPAPAU_ads_attr_info@@@Z"
+"_ADsPropCheckIfWritable@8"
+"_ADsPropCreateNotifyObj@12"
+"_ADsPropGetInitInfo@8"
+"_ADsPropSendErrorMessage@8"
+"_ADsPropSetHwnd@8"
+"_ADsPropSetHwndWithTitle@12"
+"_ADsPropShowErrorDialog@8"
+"_BringSheetToForeground@8"
+"_IsSheetAlreadyUp@4"
+"_PostADsPropSheet@16"
+
+; Def built in 0.002411 seconds

@@ -1,0 +1,35 @@
+; Def File for lib <dwmapi.dll> created with fTools
+; Created on Mon Oct 10 13:07:27 2016
+
+LIBRARY dwmapi.dll
+EXPORTS
+; Log File for lib <dwmapi.dll> created with fTools
+
+"_DwmAttachMilContent@4"
+"_DwmDefWindowProc@20"
+"_DwmDetachMilContent@4"
+"_DwmEnableBlurBehindWindow@8"
+"_DwmEnableComposition@4" @102
+"_DwmEnableMMCSS@4"
+"_DwmExtendFrameIntoClientArea@8"
+"_DwmFlush@0"
+"_DwmGetColorizationColor@8"
+"_DwmGetCompositionTimingInfo@8"
+"_DwmGetGraphicsStreamClient@8"
+"_DwmGetGraphicsStreamTransformHint@8"
+"_DwmGetTransportAttributes@12"
+"_DwmGetWindowAttribute@16"
+"_DwmInvalidateIconicBitmaps@4"
+"_DwmIsCompositionEnabled@4"
+"_DwmModifyPreviousDxFrameDuration@12"
+"_DwmQueryThumbnailSourceSize@8"
+"_DwmRegisterThumbnail@12"
+"_DwmSetDxFrameDuration@8"
+"_DwmSetIconicLivePreviewBitmap@16"
+"_DwmSetIconicThumbnail@12"
+"_DwmSetPresentParameters@8"
+"_DwmSetWindowAttribute@16"
+"_DwmUnregisterThumbnail@4"
+"_DwmUpdateThumbnailProperties@8"
+
+; Def built in 0.002355 seconds
