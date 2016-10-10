@@ -11,7 +11,7 @@ The distribution includes the most relevant, and most common headers, enough to 
 But despite its size it is very powerful, able to compile complex projects and advanced code.
 Anyway to make the PellesC compiler suite core able to deal with nowadays sources available around, that makes use of functions and interfaces that are'nt in the actual distribution, it needs the full set of headers and libraries.
 
-This installer will made them available in the compiler include\win directory to let you use them in your programs, including **fGdiPlusFlat.h to use GDI+ under plain 'C'.
+This installer will made them available in the compiler include\win directory to let you use them in your programs, including **fGdiPlusFlat.h to use GDI+ under plain 'C'**.
 
 You'll understand that I couldn't have deep checked all headers! And even if I can compile and run all my projects I expect anyway problems around.
 To solve them I need your cooperation. Check against you projects and report errors possibly with a small sample that reproduce the problem.
@@ -28,6 +28,7 @@ I'll wait your feedbacks to fix the package then move it to contributions.
         * These headers are intended for PellesC, so almost all references to _MSC_VER have
           been translated to __POCC__ equivalent.
     * MS compliance.
+
       Because many sources available have been written for MSVC compilers the headers have been
       'adjusted' to fit MS requirements. Some of the technical problems found are:
         *  Missing __declspec(selectany) for COMDAT sections.
