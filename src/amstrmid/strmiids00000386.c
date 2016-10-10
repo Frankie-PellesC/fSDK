@@ -1,4 +1,4 @@
-// Created file "Lib\src\amstrmid\strmiids"
+// Created file "Lib\src\amstrmid\X64\strmiids"
 
 typedef struct _GUID
 {
