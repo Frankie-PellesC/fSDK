@@ -88,7 +88,7 @@ I'll wait your feedbacks to fix the package then move it to contributions.
             {
                 int bar;
             };
-            struct foo mystruct = {0};  //Still Fails in C
+            foo mystruct = {0};  //Still Fails in C
 
       The solution used is a modified, **ANSI** compliant, declarations:
       
