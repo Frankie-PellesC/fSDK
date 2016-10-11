@@ -37,7 +37,7 @@ I'll wait your feedbacks to fix the package then move it to contributions.
 
           Note that the **PellesC** linker have the option '/FORCE:MULTIPLE' that could mimic the behavior of `__declspec(selectany)`, but, opposed to the specifier working way, it will ignore **all** multiple definitions, de facto masking also eventual errors.
 
-          The solution actually used, in headers, is the conversion of all symbol instances with an equivalent #define.
+          The solution actually used, in headers, is the conversion of all symbol instances with an equivalent `#define`.
 
           This should work well for base types (`int`, `char`, `float`, `double`, etc), but could be a problem with complex types (`struct`s, `union`s, etc).
         *  **GUID**s, **PROPKEYS**s and other complex types that are tagged by `__declspec(selectany)`.
@@ -55,42 +55,57 @@ I'll wait your feedbacks to fix the package then move it to contributions.
 
       Consider these 2 declarations:
 
-            struct foo
+            struct foo      //This is the most diffused declaration type
             {
                 int bar;
             };
 
-      or
+      and
 
             typedef struct
             {
                 int bar;
             } foo;
 
-      Under **C++** you can declare a variable of type 'foo' indifferently with both declarations because the global and struct namespaces are coincident meaning that the type 'foo' will be defined in any case, and the statement:
+      Under **C++** instantiating a copy of the struct 'foo' using the following declaration:
 
             foo mystruct = {0};
 
-      will not produce errors with both declarations.
+      will not produce errors with both 'foo' definitions because the global and struct namespaces are coincident, meaning that the type 'foo' is fully defined with both declarations.
 
-      But in **C**, in the first case, the type 'foo' is defined only in the structs namespace, and the statement above will produce an error.
+      But in **C** this is not the case. In the first case, the type 'foo' is defined only in the structs namespace, and the statement above will produce an error.
 
-      To make it work it should be:
+      To successfully instantiate a 'foo' struct copy in plain **C** using the first declaration, that is widly used in 'MS' headers, you must specify the `struct` namespace. The declaration then should be:
 
-            struct foo mystruct = {0};
+            foo mystruct = {0};         //Fail in C
+            struct foo mystruct = {0};  //Works in C and C++
 
-      In the second case it will work for both. The solution used is a modified, **ANSI** compliant, declarations:
+      But this workarond will require corrections in all the code you will compile, prepending a struct namespace definition. The compliance with native 'MS' code is broken.
+      
+      On the other hand the second declaration can work for **C** and **C++**, but fails if namespace is is qualified (struct):
 
-            struct foo
+            struct foo      //This is the most diffused declaration type
+            {
+                int bar;
+            };
+            struct foo mystruct = {0};  //Still Fails in C
+
+      The solution used is a modified, **ANSI** compliant, declarations:
+      
+            typedef struct foo
             {
                 int bar;
             } foo;
+
+      Now it will work for both languages.
 
       The above code defines 'foo' in both namespaces and fix the ANSI compliance  (or at least should...).
 
 * Porting of **C++** only headers.
 
   Many headers are C++ only, even if their content can be used under plain **C**. An example of this type of files are `gdiplus.h`, `Ddraw.h`, etc.
+
+  All headers that can be of any use in plain **C** have been **translated** to **C**.
 
   In the port process of **C++** headers to **C** the helper classes have not been translated. Not all **C++** files are currently translated, but they are included in the distribution generating an error "**C++ only header!**". If you encounter one you can  translate it yourself and then make it available, or ask for translation and wait.
 
