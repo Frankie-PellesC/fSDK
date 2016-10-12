@@ -41,7 +41,7 @@
 #endif
 #ifndef DUMMYSTRUCTNAME
 #if defined(NONAMELESSUNION) || !defined(_MSC_EXTENSIONS)
-#define DUMMYSTRUCTNAME
+#define DUMMYSTRUCTNAME  s
 #define DUMMYSTRUCTNAME2 s2
 #define DUMMYSTRUCTNAME3 s3
 #define DUMMYSTRUCTNAME4 s4
@@ -54,10 +54,7 @@
 #define DUMMYSTRUCTNAME5
 #endif
 #endif
-#if defined(STRICT_GS_ENABLED)
-#pragma strict_gs_check(push, on)
-#endif
-#if (__POCC__ >= 700)
+#if defined(_M_MRX000) && defined(ENABLE_RESTRICTED)
 #define RESTRICTED_POINTER __restrict
 #else
 #define RESTRICTED_POINTER
@@ -82,7 +79,11 @@
 #define MAX_NATURAL_ALIGNMENT sizeof(DWORD)
 #define MEMORY_ALLOCATION_ALIGNMENT 8
 #endif
-#define TYPE_ALIGNMENT( t )		FIELD_OFFSET( struct { char x; t test; }, test )
+#if __POCC__ >= 500
+#define TYPE_ALIGNMENT(t)  __alignof(t)
+#else
+#define TYPE_ALIGNMENT(t)  FIELD_OFFSET( struct { char x; t test; }, test )
+#endif
 #if defined(_WIN64)
 #if defined(_AMD64_)
 #define PROBE_ALIGNMENT( _s ) TYPE_ALIGNMENT( DWORD )
@@ -95,11 +96,7 @@
 #else
 #define PROBE_ALIGNMENT( _s ) TYPE_ALIGNMENT( DWORD )
 #endif
-#ifndef SORTPP_PASS
 #define C_ASSERT(e) typedef char __C_ASSERT__[(e)?1:-1]
-#else
-#define C_ASSERT(e)
-#endif
 #include <basetsd.h>
 #if (defined(_M_IX86) || defined(_M_IA64) || defined(_M_AMD64))
 #define DECLSPEC_IMPORT __declspec(dllimport)
@@ -143,11 +140,7 @@
 #define DECLSPEC_SELECTANY
 #endif
 #ifndef NOP_FUNCTION
-#if (__POCC__ >= 1210)			//Frankie PellesC don't have it
-#define NOP_FUNCTION __noop
-#else
 #define NOP_FUNCTION (void)0
-#endif
 #endif
 #ifndef DECLSPEC_ADDRSAFE
 #define DECLSPEC_ADDRSAFE
@@ -160,7 +153,7 @@
 #endif
 #endif
 #ifndef FORCEINLINE
-#if (__POCC__ >= 280)
+#if (__POCC__ >= 300)
 #define FORCEINLINE __forceinline
 #else
 #define FORCEINLINE __inline
@@ -191,29 +184,16 @@
 #endif
 typedef void *PVOID;
 typedef void *POINTER_64 PVOID64;
-#if (__POCC__ >= 260) || defined(_STDCALL_SUPPORTED)
+#if (__POCC__ >= 250) || defined(_STDCALL_SUPPORTED)
 #define NTAPI __stdcall
 #else
 #define _cdecl
 #define __cdecl
 #define NTAPI
 #endif
-#if !defined(_M_CEE_PURE)
-#define NTAPI_INLINE    NTAPI
-#else
-#define NTAPI_INLINE
-#endif
-#if !defined(_NTSYSTEM_)
+#define NTAPI_INLINE  NTAPI
 #define NTSYSAPI     DECLSPEC_IMPORT
 #define NTSYSCALLAPI DECLSPEC_IMPORT
-#else
-#define NTSYSAPI
-#if defined(_NTDLLBUILD_)
-#define NTSYSCALLAPI
-#else
-#define NTSYSCALLAPI DECLSPEC_ADDRSAFE
-#endif
-#endif
 #ifndef VOID
 #define VOID void
 typedef char CHAR;
@@ -278,7 +258,7 @@ typedef LPWSTR PTSTR, LPTSTR;
 typedef LPCWSTR PCTSTR, LPCTSTR;
 typedef LPUWSTR PUTSTR, LPUTSTR;
 typedef LPCUWSTR PCUTSTR, LPCUTSTR;
-typedef LPWSTR LP;
+//typedef LPWSTR LP;
 typedef PZZWSTR PZZTSTR;
 typedef PCZZWSTR PCZZTSTR;
 typedef PUZZWSTR PUZZTSTR;
@@ -322,11 +302,7 @@ typedef struct _GROUP_AFFINITY
 } GROUP_AFFINITY, *PGROUP_AFFINITY;
 #ifdef STRICT
 typedef void *HANDLE;
-#if (__POCC__ > 600)
-#define DECLARE_HANDLE(name) struct name##__; typedef struct name##__ *name
-#else
 #define DECLARE_HANDLE(name) struct name##__{int unused;}; typedef struct name##__ *name
-#endif
 #else
 typedef PVOID HANDLE;
 #define DECLARE_HANDLE(name) typedef HANDLE name
@@ -498,11 +474,11 @@ __inline ULONGLONG NTAPI Int64ShrlMod32(ULONGLONG Value, DWORD ShiftCount)
 //#pragma intrinsic(_rotr8)
 //#pragma intrinsic(_rotr16)
 //#endif
-#if __POCC__ >= 600
+#if __POCC__ >= 290
 #define RotateLeft32 _rotl
-#define RotateLeft64 _rotl64
+//#define RotateLeft64 _rotl64
 #define RotateRight32 _rotr
-#define RotateRight64 _rotr64
+//#define RotateRight64 _rotr64
 unsigned int __cdecl _rotl(unsigned int Value, int Shift);
 //unsigned __int64 __cdecl _rotl64(unsigned __int64 Value, int Shift);
 unsigned int __cdecl _rotr(unsigned int Value, int Shift);
@@ -1175,20 +1151,17 @@ typedef struct DECLSPEC_ALIGN (16) _XSAVE_FORMAT
 	DWORD StackControl[7];
 	DWORD Cr0NpxState;
 #endif
-}
-XSAVE_FORMAT, *PXSAVE_FORMAT;
+} XSAVE_FORMAT, *PXSAVE_FORMAT;
 typedef struct DECLSPEC_ALIGN (8) _XSAVE_AREA_HEADER
 {
 	DWORD64 Mask;
 	DWORD64 Reserved[7];
-}
-XSAVE_AREA_HEADER, *PXSAVE_AREA_HEADER;
+} XSAVE_AREA_HEADER, *PXSAVE_AREA_HEADER;
 typedef struct DECLSPEC_ALIGN (16) _XSAVE_AREA
 {
 	XSAVE_FORMAT LegacyState;
 	XSAVE_AREA_HEADER Header;
-}
-XSAVE_AREA, *PXSAVE_AREA;
+} XSAVE_AREA, *PXSAVE_AREA;
 typedef struct _XSTATE_CONTEXT
 {
 	DWORD64 Mask;
@@ -1227,7 +1200,7 @@ C_ASSERT((sizeof(XSAVE_FORMAT) & (XSAVE_ALIGN - 1)) == 0);
 C_ASSERT((FIELD_OFFSET(XSAVE_AREA, Header) & (XSAVE_ALIGN - 1)) == 0);
 C_ASSERT(MINIMAL_XSTATE_AREA_LENGTH == 512 + 64);
 #ifdef _AMD64_
-#if defined(_M_AMD64) && !defined(RC_INVOKED) && !defined(MIDL_PASS)
+#if defined(_M_AMD64)
 #define BitTest _bittest
 #define BitTestAndComplement _bittestandcomplement
 #define BitTestAndSet _bittestandset
@@ -1240,18 +1213,18 @@ C_ASSERT(MINIMAL_XSTATE_AREA_LENGTH == 512 + 64);
 #define BitTestAndReset64 _bittestandreset64
 #define InterlockedBitTestAndSet64 _interlockedbittestandset64
 #define InterlockedBitTestAndReset64 _interlockedbittestandreset64
-BOOLEAN _bittest(LONG const *Base, LONG Offset);
-BOOLEAN _bittestandcomplement(LONG *Base, LONG Offset);
-BOOLEAN _bittestandset(LONG *Base, LONG Offset);
-BOOLEAN _bittestandreset(LONG *Base, LONG Offset);
-BOOLEAN _interlockedbittestandset(LONG volatile *Base, LONG Offset);
-BOOLEAN _interlockedbittestandreset(LONG volatile *Base, LONG Offset);
-BOOLEAN _bittest64(LONG64 const *Base, LONG64 Offset);
-BOOLEAN _bittestandcomplement64(LONG64 *Base, LONG64 Offset);
-BOOLEAN _bittestandset64(LONG64 *Base, LONG64 Offset);
-BOOLEAN _bittestandreset64(LONG64 *Base, LONG64 Offset);
-BOOLEAN _interlockedbittestandset64(LONG64 volatile *Base, LONG64 Offset);
-BOOLEAN _interlockedbittestandreset64(LONG64 volatile *Base, LONG64 Offset);
+BOOLEAN __cdecl _bittest(LONG const *Base, LONG Offset);
+BOOLEAN __cdecl _bittestandcomplement(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _bittestandset(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _bittestandreset(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _interlockedbittestandset(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _interlockedbittestandreset(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _bittest64(LONG64 const *Base, LONG64 Offset);
+BOOLEAN __cdecl _bittestandcomplement64(LONG64 *Base, LONG64 Offset);
+BOOLEAN __cdecl _bittestandset64(LONG64 *Base, LONG64 Offset);
+BOOLEAN __cdecl _bittestandreset64(LONG64 *Base, LONG64 Offset);
+BOOLEAN __cdecl _interlockedbittestandset64(LONG64 *Base, LONG64 Offset);
+BOOLEAN __cdecl _interlockedbittestandreset64(LONG64 *Base, LONG64 Offset);
 #pragma intrinsic(_bittest)
 #pragma intrinsic(_bittestandcomplement)
 #pragma intrinsic(_bittestandset)
@@ -1268,14 +1241,24 @@ BOOLEAN _interlockedbittestandreset64(LONG64 volatile *Base, LONG64 Offset);
 #define BitScanReverse _BitScanReverse
 #define BitScanForward64 _BitScanForward64
 #define BitScanReverse64 _BitScanReverse64
-BOOLEAN _BitScanForward(DWORD *Index, DWORD Mask);
-BOOLEAN _BitScanReverse(DWORD *Index, DWORD Mask);
-BOOLEAN _BitScanForward64(DWORD *Index, DWORD64 Mask);
-BOOLEAN _BitScanReverse64(DWORD *Index, DWORD64 Mask);
+BOOLEAN __cdecl _BitScanForward(DWORD *Index, DWORD Mask);
+BOOLEAN __cdecl _BitScanReverse(DWORD *Index, DWORD Mask);
+BOOLEAN __cdecl _BitScanForward64(DWORD *Index, DWORD64 Mask);
+BOOLEAN __cdecl _BitScanReverse64(DWORD *Index, DWORD64 Mask);
 #pragma intrinsic(_BitScanForward)
 #pragma intrinsic(_BitScanReverse)
 #pragma intrinsic(_BitScanForward64)
 #pragma intrinsic(_BitScanReverse64)
+LONG __cdecl _InterlockedExchange(LONG volatile *, LONG);
+LONG __cdecl _InterlockedExchangeAdd(LONG volatile *, LONG);
+LONG __cdecl _InterlockedIncrement(LONG volatile *);
+LONG __cdecl _InterlockedDecrement(LONG volatile *);
+LONG64 __cdecl _InterlockedExchange64(LONG64 volatile *, LONG64);
+LONG64 __cdecl _InterlockedExchangeAdd64(LONG64 volatile *, LONG64);
+LONG64 __cdecl _InterlockedIncrement64(LONG64 volatile *);
+LONG64 __cdecl _InterlockedDecrement64(LONG64 volatile *);
+LONG __cdecl _InterlockedCompareExchange(LONG volatile *, LONG, LONG);
+LONG64 __cdecl _InterlockedCompareExchange64(volatile LONG64 *, LONG64, LONG64);
 #define InterlockedIncrement16 _InterlockedIncrement16
 #define InterlockedDecrement16 _InterlockedDecrement16
 #define InterlockedCompareExchange16 _InterlockedCompareExchange16
@@ -1323,6 +1306,7 @@ BOOLEAN _BitScanReverse64(DWORD *Index, DWORD64 Mask);
 #define InterlockedExchangeAddSizeT(a, b) InterlockedExchangeAdd64((LONG64 *)a, b)
 #define InterlockedIncrementSizeT(a) InterlockedIncrement64((LONG64 *)a)
 #define InterlockedDecrementSizeT(a) InterlockedDecrement64((LONG64 *)a)
+/*
 SHORT  __cdecl InterlockedIncrement16(SHORT volatile *Addend);
 SHORT  __cdecl InterlockedDecrement16(SHORT volatile *Addend);
 SHORT  __cdecl InterlockedCompareExchange16(SHORT volatile *Destination, SHORT ExChange, SHORT Comperand);
@@ -1336,40 +1320,47 @@ LONG   __cdecl InterlockedIncrement(LONG volatile *Addend);
 LONG   __cdecl InterlockedDecrement(LONG volatile *Addend);
 LONG   __cdecl InterlockedExchange(LONG volatile *Target, LONG Value);
 LONG   __cdecl InterlockedExchangeAdd(LONG volatile *Addend, LONG Value);
+*/
 #if !defined(_X86AMD64_)
 __forceinline LONG InterlockedAdd(LONG volatile *Addend, LONG Value)
 {
 	return InterlockedExchangeAdd(Addend, Value) + Value;
 }
 #endif
+/*
 LONG   __cdecl InterlockedCompareExchange(LONG volatile *Destination, LONG ExChange, LONG Comperand);
 LONG64 __cdecl InterlockedIncrement64(LONG64 volatile *Addend);
 LONG64 __cdecl InterlockedDecrement64(LONG64 volatile *Addend);
 LONG64 __cdecl InterlockedExchange64(LONG64 volatile *Target, LONG64 Value);
 LONG64 __cdecl InterlockedExchangeAdd64(LONG64 volatile *Addend, LONG64 Value);
+*/
 #if !defined(_X86AMD64_)
 __forceinline LONG64 InterlockedAdd64(LONG64 volatile *Addend, LONG64 Value)
 {
 	return InterlockedExchangeAdd64(Addend, Value) + Value;
 }
 #endif
+/*
 LONG64 __cdecl InterlockedCompareExchange64(LONG64 volatile *Destination, LONG64 ExChange, LONG64 Comperand);
 PVOID  __cdecl InterlockedCompareExchangePointer(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
 PVOID  __cdecl InterlockedExchangePointer(PVOID volatile *Target, PVOID Value);
-//#pragma intrinsic(_InterlockedIncrement16)
-//#pragma intrinsic(_InterlockedDecrement16)
-//#pragma intrinsic(_InterlockedCompareExchange16)
-//#pragma intrinsic(_InterlockedAnd)
-//#pragma intrinsic(_InterlockedOr)
-//#pragma intrinsic(_InterlockedXor)
+#pragma intrinsic(_InterlockedIncrement16)
+#pragma intrinsic(_InterlockedDecrement16)
+#pragma intrinsic(_InterlockedCompareExchange16)
+#pragma intrinsic(_InterlockedAnd)
+#pragma intrinsic(_InterlockedOr)
+#pragma intrinsic(_InterlockedXor)
+*/
 #pragma intrinsic(_InterlockedIncrement)
 #pragma intrinsic(_InterlockedDecrement)
 #pragma intrinsic(_InterlockedExchange)
 #pragma intrinsic(_InterlockedExchangeAdd)
 #pragma intrinsic(_InterlockedCompareExchange)
-//#pragma intrinsic(_InterlockedAnd64)
-//#pragma intrinsic(_InterlockedOr64)
-//#pragma intrinsic(_InterlockedXor64)
+/*
+#pragma intrinsic(_InterlockedAnd64)
+#pragma intrinsic(_InterlockedOr64)
+#pragma intrinsic(_InterlockedXor64)
+*/
 #pragma intrinsic(_InterlockedIncrement64)
 #pragma intrinsic(_InterlockedDecrement64)
 #pragma intrinsic(_InterlockedExchange64)
@@ -1377,7 +1368,7 @@ PVOID  __cdecl InterlockedExchangePointer(PVOID volatile *Target, PVOID Value);
 #pragma intrinsic(_InterlockedCompareExchange64)
 #pragma intrinsic(_InterlockedExchangePointer)
 #pragma intrinsic(_InterlockedCompareExchangePointer)
-#if _MSC_FULL_VER >= 140041204
+#if __POCC__ >= 1500
 #define InterlockedAnd8 _InterlockedAnd8
 #define InterlockedOr8 _InterlockedOr8
 #define InterlockedXor8 _InterlockedXor8
@@ -1400,19 +1391,21 @@ SHORT InterlockedXor16(SHORT volatile *Destination, SHORT Value);
 #define CacheLineFlush(Address) _mm_clflush(Address)
 VOID _mm_clflush(VOID const *Address);
 #pragma intrinsic(_mm_clflush)
-VOID _ReadWriteBarrier(VOID);
-//#pragma intrinsic(_ReadWriteBarrier)
-//#define FastFence __faststorefence
+#if __POCC__ >= 650
+#pragma intrinsic(__memory_barrier)
+#undef  _ReadWriteBarrier
+#define _ReadWriteBarrier  __memory_barrier
+#endif
 #define LoadFence _mm_lfence
 #define MemoryFence _mm_mfence
 #define StoreFence _mm_sfence
-VOID __faststorefence(VOID);
-VOID _mm_lfence(VOID);
-VOID _mm_mfence(VOID);
-VOID _mm_sfence(VOID);
-VOID _mm_pause(VOID);
-VOID _mm_prefetch(CHAR CONST *a, int sel);
-VOID _m_prefetchw(volatile CONST VOID *Source);
+//VOID __faststorefence(VOID);
+VOID __cdecl _mm_lfence(VOID);
+VOID __cdecl _mm_mfence(VOID);
+VOID __cdecl _mm_sfence(VOID);
+VOID __cdecl _mm_pause(VOID);
+VOID __cdecl _mm_prefetch(CHAR *a, int sel);
+//VOID _m_prefetchw(volatile CONST VOID *Source);
 #define _MM_HINT_T0     1
 #define _MM_HINT_T1     2
 #define _MM_HINT_T2     3
@@ -1425,74 +1418,74 @@ VOID _m_prefetchw(volatile CONST VOID *Source);
 #pragma intrinsic(_mm_sfence)
 //#pragma intrinsic(_m_prefetchw)
 #define YieldProcessor _mm_pause
-#define MemoryBarrier __faststorefence
+//#define MemoryBarrier __faststorefence
 #define PreFetchCacheLine(l, a)  _mm_prefetch((CHAR CONST *) a, l)
-#define PrefetchForWrite(p) _m_prefetchw(p)
-#define ReadForWriteAccess(p) (_m_prefetchw(p), *(p))
+//#define PrefetchForWrite(p) _m_prefetchw(p)
+//#define ReadForWriteAccess(p) (_m_prefetchw(p), *(p))
 #define PF_TEMPORAL_LEVEL_1 _MM_HINT_T0
 #define PF_TEMPORAL_LEVEL_2 _MM_HINT_T1
 #define PF_TEMPORAL_LEVEL_3 _MM_HINT_T2
 #define PF_NON_TEMPORAL_LEVEL_ALL _MM_HINT_NTA
 #define ReadMxCsr _mm_getcsr
 #define WriteMxCsr _mm_setcsr
-unsigned int _mm_getcsr(VOID);
-VOID _mm_setcsr(unsigned int MxCsr);
+unsigned int __cdecl _mm_getcsr(VOID);
+VOID __cdecl _mm_setcsr(unsigned int MxCsr);
 #pragma intrinsic(_mm_getcsr)
 #pragma intrinsic(_mm_setcsr)
+#if __POCC__ >= 1500
 VOID __int2c(VOID);
-//#pragma intrinsic(__int2c)
-FORCEINLINE VOID DbgRaiseAssertionFailure(VOID)
-{
-	__int2c();
-}
-#define GetCallersEflags() __getcallerseflags()
+#pragma intrinsic(__int2c)
+FORCEINLINE VOID DbgRaiseAssertionFailure(VOID) { __int2c(); }
+#define GetCallersEflags()  __getcallerseflags()
 unsigned __int32 __getcallerseflags(VOID);
-//#pragma intrinsic(__getcallerseflags)
-#define GetSegmentLimit __segmentlimit
-DWORD __segmentlimit(DWORD Selector);
-//#pragma intrinsic(__segmentlimit)
-#define ReadPMC __readpmc
-DWORD64 __readpmc(DWORD Counter);
-//#pragma intrinsic(__readpmc)
+#pragma intrinsic(__getcallerseflags)
+#define GetSegmentLimit  __segmentlimit
+DWORD __segmentlimit(DWORD);
+#pragma intrinsic(__segmentlimit)
+#define ReadPMC  __readpmc
+DWORD64 __readpmc(DWORD);
+#pragma intrinsic(__readpmc)
+#endif
 #define ReadTimeStampCounter() __rdtsc()
-DWORD64 __rdtsc(VOID);
+DWORD64 __cdecl __rdtsc(VOID);
 #pragma intrinsic(__rdtsc)
-VOID __movsb(PBYTE Destination, BYTE const *Source, SIZE_T Count);
-VOID __movsw(PWORD Destination, WORD const *Source, SIZE_T Count);
-VOID __movsd(PDWORD Destination, DWORD const *Source, SIZE_T Count);
-VOID __movsq(PDWORD64 Destination, DWORD64 const *Source, SIZE_T Count);
+VOID __cdecl __movsb(PBYTE Destination, BYTE const *Source, SIZE_T Count);
+VOID __cdecl __movsw(PWORD Destination, WORD const *Source, SIZE_T Count);
+VOID __cdecl __movsd(PDWORD Destination, DWORD const *Source, SIZE_T Count);
+VOID __cdecl __movsq(PDWORD64 Destination, DWORD64 const *Source, SIZE_T Count);
 #pragma intrinsic(__movsb)
 #pragma intrinsic(__movsw)
 #pragma intrinsic(__movsd)
 #pragma intrinsic(__movsq)
-VOID __stosb(PBYTE Destination, BYTE Value, SIZE_T Count);
-VOID __stosw(PWORD Destination, WORD Value, SIZE_T Count);
-VOID __stosd(PDWORD Destination, DWORD Value, SIZE_T Count);
-VOID __stosq(PDWORD64 Destination, DWORD64 Value, SIZE_T Count);
+VOID __cdecl __stosb(PBYTE Destination, BYTE Value, SIZE_T Count);
+VOID __cdecl __stosw(PWORD Destination, WORD Value, SIZE_T Count);
+VOID __cdecl __stosd(PDWORD Destination, DWORD Value, SIZE_T Count);
+VOID __cdecl __stosq(PDWORD64 Destination, DWORD64 Value, SIZE_T Count);
 #pragma intrinsic(__stosb)
 #pragma intrinsic(__stosw)
 #pragma intrinsic(__stosd)
 #pragma intrinsic(__stosq)
+#if __POCC__ >= 1500
 #define MultiplyHigh __mulh
 #define UnsignedMultiplyHigh __umulh
 LONGLONG MultiplyHigh(LONG64 Multiplier, LONG64 Multiplicand);
 ULONGLONG UnsignedMultiplyHigh(DWORD64 Multiplier, DWORD64 Multiplicand);
-//#pragma intrinsic(__mulh)
-//#pragma intrinsic(__umulh)
-//#define ShiftLeft128 __shiftleft128
-//#define ShiftRight128 __shiftright128
+#pragma intrinsic(__mulh)
+#pragma intrinsic(__umulh)
+#define ShiftLeft128 __shiftleft128
+#define ShiftRight128 __shiftright128
 DWORD64 ShiftLeft128(DWORD64 LowPart, DWORD64 HighPart, BYTE Shift);
 DWORD64 ShiftRight128(DWORD64 LowPart, DWORD64 HighPart, BYTE Shift);
-//#pragma intrinsic(__shiftleft128)
-//#pragma intrinsic(__shiftright128)
+#pragma intrinsic(__shiftleft128)
+#pragma intrinsic(__shiftright128)
 #define Multiply128 _mul128
 LONG64 Multiply128(LONG64 Multiplier, LONG64 Multiplicand, LONG64 *HighProduct);
-//#pragma intrinsic(_mul128)
-//#ifndef UnsignedMultiply128
-//#define UnsignedMultiply128 _umul128
-//DWORD64 UnsignedMultiply128(DWORD64 Multiplier, DWORD64 Multiplicand, DWORD64 *HighProduct);
-//#pragma intrinsic(_umul128)
-//#endif
+#pragma intrinsic(_mul128)
+#ifndef UnsignedMultiply128
+#define UnsignedMultiply128 _umul128
+DWORD64 UnsignedMultiply128(DWORD64 Multiplier, DWORD64 Multiplicand, DWORD64 *HighProduct);
+#pragma intrinsic(_umul128)
+#endif
 __forceinline LONG64 MultiplyExtract128(LONG64 Multiplier, LONG64 Multiplicand, BYTE Shift)
 {
 	LONG64 extractedProduct;
@@ -1522,24 +1515,25 @@ __forceinline LONG64 MultiplyExtract128(LONG64 Multiplier, LONG64 Multiplicand, 
 	}
 	return extractedProduct;
 }
-//__forceinline DWORD64 UnsignedMultiplyExtract128(DWORD64 Multiplier, DWORD64 Multiplicand, BYTE Shift)
-//
-//{
-//DWORD64 extractedProduct;
-//DWORD64 highProduct;
-//DWORD64 lowProduct;
-//lowProduct = UnsignedMultiply128(Multiplier, Multiplicand, &highProduct);
-//extractedProduct = ShiftRight128(lowProduct, highProduct, Shift);
-//return extractedProduct;
-//}
-BYTE __readgsbyte(DWORD Offset);
-WORD __readgsword(DWORD Offset);
-DWORD __readgsdword(DWORD Offset);
-DWORD64 __readgsqword(DWORD Offset);
-VOID __writegsbyte(DWORD Offset, BYTE Data);
-VOID __writegsword(DWORD Offset, WORD Data);
-VOID __writegsdword(DWORD Offset, DWORD Data);
-VOID __writegsqword(DWORD Offset, DWORD64 Data);
+__forceinline DWORD64 UnsignedMultiplyExtract128(DWORD64 Multiplier, DWORD64 Multiplicand, BYTE Shift)
+
+{
+DWORD64 extractedProduct;
+DWORD64 highProduct;
+DWORD64 lowProduct;
+lowProduct = UnsignedMultiply128(Multiplier, Multiplicand, &highProduct);
+extractedProduct = ShiftRight128(lowProduct, highProduct, Shift);
+return extractedProduct;
+}
+#endif
+BYTE __cdecl __readgsbyte(DWORD Offset);
+WORD __cdecl __readgsword(DWORD Offset);
+DWORD __cdecl __readgsdword(DWORD Offset);
+DWORD64 __cdecl __readgsqword(DWORD Offset);
+VOID __cdecl __writegsbyte(DWORD Offset, BYTE Data);
+VOID __cdecl __writegsword(DWORD Offset, WORD Data);
+VOID __cdecl __writegsdword(DWORD Offset, DWORD Data);
+VOID __cdecl __writegsqword(DWORD Offset, DWORD64 Data);
 #pragma intrinsic(__readgsbyte)
 #pragma intrinsic(__readgsword)
 #pragma intrinsic(__readgsdword)
@@ -1548,7 +1542,6 @@ VOID __writegsqword(DWORD Offset, DWORD64 Data);
 #pragma intrinsic(__writegsword)
 #pragma intrinsic(__writegsdword)
 #pragma intrinsic(__writegsqword)
-#if !defined(_MANAGED)
 VOID __incgsbyte(DWORD Offset);
 VOID __addgsbyte(DWORD Offset, BYTE Value);
 VOID __incgsword(DWORD Offset);
@@ -1568,7 +1561,6 @@ VOID __addgsqword(DWORD Offset, DWORD64 Value);
 #pragma intrinsic(__addgsqword)
 #endif
 #endif
-#endif
 #define EXCEPTION_READ_FAULT 0
 #define EXCEPTION_WRITE_FAULT 1
 #define EXCEPTION_EXECUTE_FAULT 8
@@ -1581,7 +1573,7 @@ VOID __addgsqword(DWORD Offset, DWORD64 Value);
 #define CONTEXT_DEBUG_REGISTERS (CONTEXT_AMD64 | 0x10L)
 #define CONTEXT_FULL (CONTEXT_CONTROL | CONTEXT_INTEGER | CONTEXT_FLOATING_POINT)
 #define CONTEXT_ALL (CONTEXT_CONTROL | CONTEXT_INTEGER | CONTEXT_SEGMENTS | CONTEXT_FLOATING_POINT | CONTEXT_DEBUG_REGISTERS)
-#define CONTEXT_XSTATE (CONTEXT_AMD64 | 0x20L)
+#define CONTEXT_XSTATE (CONTEXT_AMD64|0x40L)  /* 13-11-19: apparently 0x20 -> 0x40 */
 #define CONTEXT_EXCEPTION_ACTIVE 0x8000000
 #define CONTEXT_SERVICE_ACTIVE 0x10000000
 #define CONTEXT_EXCEPTION_REQUEST 0x40000000
@@ -1766,12 +1758,12 @@ NTSYSAPI BOOLEAN __cdecl RtlDeleteFunctionTable(PRUNTIME_FUNCTION FunctionTable)
 #define BitTestAndReset _bittestandreset
 #define InterlockedBitTestAndSet _interlockedbittestandset
 #define InterlockedBitTestAndReset _interlockedbittestandreset
-BOOLEAN _bittest(LONG const *Base, LONG Offset);
-BOOLEAN _bittestandcomplement(LONG *Base, LONG Offset);
-BOOLEAN _bittestandset(LONG *Base, LONG Offset);
-BOOLEAN _bittestandreset(LONG *Base, LONG Offset);
-BOOLEAN _interlockedbittestandset(LONG volatile *Base, LONG Offset);
-BOOLEAN _interlockedbittestandreset(LONG volatile *Base, LONG Offset);
+BOOLEAN __cdecl _bittest(LONG const *Base, LONG Offset);
+BOOLEAN __cdecl _bittestandcomplement(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _bittestandset(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _bittestandreset(LONG *Base, LONG Offset);
+BOOLEAN __cdecl _interlockedbittestandset(LONG volatile *Base, LONG Offset);
+BOOLEAN __cdecl _interlockedbittestandreset(LONG volatile *Base, LONG Offset);
 #pragma intrinsic(_bittest)
 #pragma intrinsic(_bittestandcomplement)
 #pragma intrinsic(_bittestandset)
@@ -1780,8 +1772,8 @@ BOOLEAN _interlockedbittestandreset(LONG volatile *Base, LONG Offset);
 #pragma intrinsic(_interlockedbittestandreset)
 #define BitScanForward _BitScanForward
 #define BitScanReverse _BitScanReverse
-BOOLEAN _BitScanForward(DWORD *Index, DWORD Mask);
-BOOLEAN _BitScanReverse(DWORD *Index, DWORD Mask);
+BOOLEAN __cdecl _BitScanForward(DWORD *Index, DWORD Mask);
+BOOLEAN __cdecl _BitScanReverse(DWORD *Index, DWORD Mask);
 #pragma intrinsic(_BitScanForward)
 #pragma intrinsic(_BitScanReverse)
 #else
@@ -1817,7 +1809,6 @@ SHORT _InterlockedOr16(SHORT volatile *Destination, SHORT Value);
 #pragma intrinsic(_InterlockedCompareExchange16)
 #pragma intrinsic(_InterlockedOr16)
 #endif
-#if !defined(_M_CEE_PURE)
 FORCEINLINE BOOLEAN InterlockedBitTestAndComplement(LONG volatile *Base, LONG Bit)
 {
 	__asm
@@ -1828,14 +1819,13 @@ FORCEINLINE BOOLEAN InterlockedBitTestAndComplement(LONG volatile *Base, LONG Bi
 		setc al
 	};
 }
-#endif
-#if (_MSC_FULL_VER >= 13012035) || defined(_PREFIX_) || defined(_PREFAST_)
-BYTE __readfsbyte(DWORD Offset);
-WORD __readfsword(DWORD Offset);
-DWORD __readfsdword(DWORD Offset);
-VOID __writefsbyte(DWORD Offset, BYTE Data);
-VOID __writefsword(DWORD Offset, WORD Data);
-VOID __writefsdword(DWORD Offset, DWORD Data);
+#if (__POCC__ >= 500)
+BYTE __cdecl __readfsbyte(DWORD Offset);
+WORD __cdecl __readfsword(DWORD Offset);
+DWORD __cdecl __readfsdword(DWORD Offset);
+VOID __cdecl __writefsbyte(DWORD Offset, BYTE Data);
+VOID __cdecl __writefsword(DWORD Offset, WORD Data);
+VOID __cdecl __writefsdword(DWORD Offset, DWORD Data);
 #pragma intrinsic(__readfsbyte)
 #pragma intrinsic(__readfsword)
 #pragma intrinsic(__readfsdword)
@@ -1843,8 +1833,7 @@ VOID __writefsdword(DWORD Offset, DWORD Data);
 #pragma intrinsic(__writefsword)
 #pragma intrinsic(__writefsdword)
 #endif
-#if (_MSC_FULL_VER >= 140050727) || defined(_PREFIX_) || defined(_PREFAST_)
-#if !defined(_MANAGED)
+#if (__POCC__ >= 1500)
 VOID __incfsbyte(DWORD Offset);
 VOID __addfsbyte(DWORD Offset, BYTE Value);
 VOID __incfsword(DWORD Offset);
@@ -1858,19 +1847,15 @@ VOID __addfsdword(DWORD Offset, DWORD Value);
 #pragma intrinsic(__incfsdword)
 #pragma intrinsic(__addfsdword)
 #endif
-#endif
-#if (_MSC_FULL_VER >= 140041204) || defined(_PREFIX_) || defined(_PREFAST_)
-VOID _mm_pause(VOID);
+#if (__POCC__ >= 1500)
+VOID __cdecl _mm_pause(VOID);
 #pragma intrinsic(_mm_pause)
 #define YieldProcessor _mm_pause
 #else
-#if !defined(_M_CEE_PURE)
 #define YieldProcessor() __asm { rep nop }
 #endif
 #endif
-#endif
 #if defined(_M_IX86)
-#if !defined(_M_CEE_PURE)
 FORCEINLINE VOID MemoryBarrier(VOID)
 {
 	LONG Barrier;
@@ -1879,7 +1864,6 @@ FORCEINLINE VOID MemoryBarrier(VOID)
 		xchg Barrier, eax
 	}
 }
-#endif
 #define PreFetchCacheLine(l, a)
 #define PrefetchForWrite(p)
 #define ReadForWriteAccess(p) (*(p))
@@ -1899,7 +1883,7 @@ FORCEINLINE DWORD64 ReadPMC(DWORD Counter)
 	};
 }
 #endif
-#if __POCC__ >= 500
+#if __POCC__ >= 290
 #define ReadTimeStampCounter() __rdtsc()
 DWORD64 __cdecl __rdtsc(VOID);
 #pragma intrinsic(__rdtsc)
@@ -1909,8 +1893,8 @@ FORCEINLINE DWORD64 ReadTimeStampCounter(VOID)
 	__asm rdtsc
 }
 #endif
-#if defined(_X86_) && defined(_M_IX86) && !defined(RC_INVOKED)
-#if _MSC_FULL_VER >= 140030222
+#if defined(_X86_) && defined(_M_IX86)
+#if (__POCC__ >= 500)
 VOID __int2c(VOID);
 #pragma intrinsic(__int2c)
 FORCEINLINE VOID DbgRaiseAssertionFailure(VOID)
@@ -1922,10 +1906,9 @@ FORCEINLINE VOID DbgRaiseAssertionFailure(VOID)
 {
 	__asm int 0x2c
 }
-#pragma warning( pop )
 #endif
 #endif
-#if (_MSC_FULL_VER >= 13012035)
+#if (__POCC__ >= 500)
 __inline PVOID GetFiberData(void)
 {
 	return *(PVOID *) (ULONG_PTR)__readfsdword(0x10);
@@ -1935,26 +1918,24 @@ __inline PVOID GetCurrentFiber(void)
 	return (PVOID) (ULONG_PTR)__readfsdword(0x10);
 }
 #else
-#if _MSC_VER >= 1200
-#pragma warning(push)
-#endif
-#pragma warning (disable:4035 4793)
 __inline PVOID GetFiberData(void)
 {
 	__asm
-{
-	mov eax, fs:[0x10] mov eax,[eax]}
+	{
+		mov eax, fs:[0x10]
+		mov eax,[eax]
+	}
 }
 __inline PVOID GetCurrentFiber(void)
 {
-__asm mov eax, fs:[0x10]}
+	__asm mov eax, fs:[0x10]
+}
 #endif
 #endif
 #define EXCEPTION_READ_FAULT          0
 #define EXCEPTION_WRITE_FAULT         1
 #define EXCEPTION_EXECUTE_FAULT       8
 #define SIZE_OF_80387_REGISTERS      80
-#if !defined(RC_INVOKED)
 #define CONTEXT_i386    0x00010000
 #define CONTEXT_i486    0x00010000
 #define CONTEXT_CONTROL         (CONTEXT_i386 | 0x00000001L)
@@ -1966,7 +1947,6 @@ __asm mov eax, fs:[0x10]}
 #define CONTEXT_FULL (CONTEXT_CONTROL | CONTEXT_INTEGER | CONTEXT_SEGMENTS)
 #define CONTEXT_ALL             (CONTEXT_CONTROL | CONTEXT_INTEGER | CONTEXT_SEGMENTS | CONTEXT_FLOATING_POINT | CONTEXT_DEBUG_REGISTERS | CONTEXT_EXTENDED_REGISTERS)
 #define CONTEXT_XSTATE          (CONTEXT_i386 | 0x00000040L)
-#endif
 typedef struct _FLOATING_SAVE_AREA
 {
 	DWORD ControlWord;
@@ -2045,7 +2025,7 @@ typedef struct _LDT_ENTRY
 	} HighWord;
 } LDT_ENTRY, *PLDT_ENTRY;
 #endif
-#if defined(_M_IA64) && !defined(RC_INVOKED)
+#if defined(_M_IA64)
 #define BitTest _bittest
 #define BitTestAndComplement _bittestandcomplement
 #define BitTestAndSet _bittestandset
@@ -2424,7 +2404,7 @@ void *__cdecl _rdtebex(void);
 #define NtCurrentTeb() ((struct _TEB *)_rdtebex())
 #define GetCurrentFiber() (((PNT_TIB)NtCurrentTeb())->FiberData)
 #define GetFiberData() (*(PVOID *)(GetCurrentFiber()))
-#if defined(_IA64_) && defined(_M_IA64) && !defined(RC_INVOKED) && !defined(MIDL_PASS)
+#if defined(_IA64_) && defined(_M_IA64)
 void __break(int StIIM);
 #pragma intrinsic (__break)
 #define BREAK_DEBUG_BASE    0x080000
@@ -2465,7 +2445,7 @@ unsigned __int64 __getReg(int Number);
 #define UnsignedMultiplyHigh __UMULH
 ULONGLONG UnsignedMultiplyHigh(ULONGLONG Multiplier, ULONGLONG Multiplicand);
 #pragma intrinsic(__UMULH)
-#if (_MSC_VER >= 1400)
+#if (__POCC__ >= 1500)
 #define UnsignedMultiply128 _umul128
 DWORD64 UnsignedMultiply128(unsigned __int64 Multiplier, unsigned __int64 Multiplicand, unsigned __int64 *HighProduct);
 #pragma intrinsic(_umul128)
@@ -2478,7 +2458,6 @@ struct _TEB *NtCurrentTeb(void);
 #define EXCEPTION_READ_FAULT          0
 #define EXCEPTION_WRITE_FAULT         1
 #define EXCEPTION_EXECUTE_FAULT       2
-#if !defined(RC_INVOKED)
 #define CONTEXT_IA64                    0x00080000
 #define CONTEXT_CONTROL                 (CONTEXT_IA64 | 0x00000001L)
 #define CONTEXT_LOWER_FLOATING_POINT    (CONTEXT_IA64 | 0x00000002L)
@@ -2493,7 +2472,6 @@ struct _TEB *NtCurrentTeb(void);
 #define CONTEXT_SERVICE_ACTIVE          0x10000000
 #define CONTEXT_EXCEPTION_REQUEST       0x40000000
 #define CONTEXT_EXCEPTION_REPORTING     0x80000000
-#endif
 typedef struct _CONTEXT
 {
 	DWORD ContextFlags;
@@ -2802,7 +2780,6 @@ NTSYSAPI ULONGLONG NTAPI RtlVirtualUnwind(ULONGLONG ImageBase, ULONGLONG Control
 NTSYSAPI VOID NTAPI RtlRestoreContext(PCONTEXT ContextRecord, struct _EXCEPTION_RECORD *ExceptionRecord);
 NTSYSAPI VOID NTAPI __jump_unwind(ULONGLONG TargetMsFrame, ULONGLONG TargetBsFrame, ULONGLONG TargetPc);
 #endif
-#if !defined(RC_INVOKED)
 #define WOW64_CONTEXT_i386					0x00010000
 #define WOW64_CONTEXT_i486					0x00010000
 #define WOW64_CONTEXT_CONTROL               (WOW64_CONTEXT_i386 | 0x00000001L)
@@ -2814,7 +2791,6 @@ NTSYSAPI VOID NTAPI __jump_unwind(ULONGLONG TargetMsFrame, ULONGLONG TargetBsFra
 #define WOW64_CONTEXT_FULL					(WOW64_CONTEXT_CONTROL | WOW64_CONTEXT_INTEGER | WOW64_CONTEXT_SEGMENTS)
 #define WOW64_CONTEXT_ALL					(WOW64_CONTEXT_CONTROL | WOW64_CONTEXT_INTEGER | WOW64_CONTEXT_SEGMENTS | WOW64_CONTEXT_FLOATING_POINT | WOW64_CONTEXT_DEBUG_REGISTERS | WOW64_CONTEXT_EXTENDED_REGISTERS)
 #define WOW64_CONTEXT_XSTATE                (WOW64_CONTEXT_i386 | 0x00000040L)
-#endif
 #define WOW64_SIZE_OF_80387_REGISTERS			80
 #define WOW64_MAXIMUM_SUPPORTED_EXTENSION		512
 typedef struct _WOW64_FLOATING_SAVE_AREA
@@ -2998,9 +2974,7 @@ typedef struct _SID
 #define SID_REVISION                     (1)
 #define SID_MAX_SUB_AUTHORITIES          (15)
 #define SID_RECOMMENDED_SUB_AUTHORITIES  (1)
-#ifndef MIDL_PASS
 #define SECURITY_MAX_SID_SIZE (sizeof(SID) - sizeof(DWORD) + (SID_MAX_SUB_AUTHORITIES * sizeof(DWORD)))
-#endif
 typedef enum _SID_NAME_USE
 {
 	SidTypeUser = 1,
