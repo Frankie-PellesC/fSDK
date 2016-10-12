@@ -1894,7 +1894,7 @@ FORCEINLINE DWORD64 ReadTimeStampCounter(VOID)
 }
 #endif
 #if defined(_X86_) && defined(_M_IX86)
-#if (__POCC__ >= 500)
+#if (__POCC__ >= 1500)
 VOID __int2c(VOID);
 #pragma intrinsic(__int2c)
 FORCEINLINE VOID DbgRaiseAssertionFailure(VOID)
