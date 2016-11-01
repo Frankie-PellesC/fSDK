@@ -161,7 +161,7 @@
 #define _WIN32_IE       0x0800
 #endif
 #endif
-#if defined(_WIN32_WINNT) && !defined(MIDL_PASS) && !defined(RC_INVOKED)
+#if defined(_WIN32_WINNT)
 #if (defined(WINVER) && (WINVER < 0x0400) && (_WIN32_WINNT > 0x0400))
 #error WINVER setting conflicts with _WIN32_WINNT setting
 #endif

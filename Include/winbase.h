@@ -597,11 +597,9 @@ typedef struct _JIT_DEBUG_INFO {
 } JIT_DEBUG_INFO, *LPJIT_DEBUG_INFO;
 typedef JIT_DEBUG_INFO JIT_DEBUG_INFO32, *LPJIT_DEBUG_INFO32;
 typedef JIT_DEBUG_INFO JIT_DEBUG_INFO64, *LPJIT_DEBUG_INFO64;
-#if !defined(MIDL_PASS)
 typedef PCONTEXT LPCONTEXT;
 typedef PEXCEPTION_RECORD LPEXCEPTION_RECORD;
 typedef PEXCEPTION_POINTERS LPEXCEPTION_POINTERS;
-#endif
 #define DRIVE_UNKNOWN     0
 #define DRIVE_NO_ROOT_DIR 1
 #define DRIVE_REMOVABLE   2
@@ -893,7 +891,6 @@ PVOID __cdecl InterlockedExchangePointer(PVOID volatile *Target, PVOID Value);
 PVOID __cdecl InterlockedCompareExchangePointer(PVOID volatile *Destination, PVOID ExChange, PVOID Comperand);
 PVOID __cdecl InterlockedCompareExchangePointerAcquire(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
 PVOID __cdecl InterlockedCompareExchangePointerRelease(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
-#if !defined(MIDL_PASS)
 #if !defined (InterlockedAnd)
 #define InterlockedAnd InterlockedAnd_Inline
 FORCEINLINE LONG InterlockedAnd_Inline(LONG volatile *Target, LONG Set)
@@ -1001,7 +998,6 @@ FORCEINLINE BOOLEAN InterlockedBitTestAndComplement_Inline(LONG volatile *Base, 
 	tBit = 1 << (Bit & (sizeof(*Base) * 8 - 1));
 	return (BOOLEAN) ((InterlockedXor(&Base[Bit / (sizeof(*Base) * 8)], tBit) & tBit) != 0);
 }
-#endif
 #endif
 #pragma intrinsic(_InterlockedIncrement)
 #pragma intrinsic(_InterlockedIncrement_acq)
@@ -1157,7 +1153,6 @@ WINBASEAPI LONG WINAPI InterlockedCompareExchange(LONG volatile *Destination, LO
 #if (_WIN32_WINNT >= 0x0502)
 WINBASEAPI LONGLONG WINAPI InterlockedCompareExchange64(LONGLONG volatile *Destination, LONGLONG Exchange, LONGLONG Comperand);
 #endif
-#if !defined(MIDL_PASS)
 #if (_WIN32_WINNT >= 0x0502)
 FORCEINLINE LONGLONG InterlockedAnd64(LONGLONG volatile *Destination, LONGLONG Value)
 {
@@ -1222,7 +1217,6 @@ FORCEINLINE LONGLONG InterlockedExchangeAdd64(LONGLONG volatile *Addend, LONGLON
 	} while (InterlockedCompareExchange64(Addend, Old + Value, Old) != Old);
 	return Old;
 }
-#endif
 #endif
 
 #define InterlockedCompareExchangePointer(Destination, ExChange, Comperand) \
@@ -1491,7 +1485,7 @@ WINBASEAPI BOOL WINAPI IsThreadAFiber(VOID);
 #endif
 WINBASEAPI VOID WINAPI SwitchToFiber(LPVOID lpFiber);
 WINBASEAPI BOOL WINAPI SwitchToThread(VOID);
-#if (_WIN32_WINNT >= 0x0601) && !defined(MIDL_PASS)
+#if (_WIN32_WINNT >= 0x0601)
 #define UMS_VERSION RTL_UMS_VERSION
 typedef void *PUMS_CONTEXT;
 typedef void *PUMS_COMPLETION_LIST;
@@ -1633,7 +1627,6 @@ WINBASEAPI DWORD WINAPI GetThreadErrorMode(VOID);
 WINBASEAPI BOOL WINAPI SetThreadErrorMode(DWORD dwNewMode, LPDWORD lpOldMode);
 WINBASEAPI BOOL WINAPI ReadProcessMemory(HANDLE hProcess, LPCVOID lpBaseAddress, LPVOID lpBuffer, SIZE_T nSize, SIZE_T * lpNumberOfBytesRead);
 WINBASEAPI BOOL WINAPI WriteProcessMemory(HANDLE hProcess, LPVOID lpBaseAddress, LPCVOID lpBuffer, SIZE_T nSize, SIZE_T *lpNumberOfBytesWritten);
-#if !defined(MIDL_PASS)
 WINBASEAPI BOOL WINAPI GetThreadContext(HANDLE hThread, LPCONTEXT lpContext);
 WINBASEAPI BOOL WINAPI SetThreadContext(HANDLE hThread, CONST CONTEXT *lpContext);
 WINBASEAPI BOOL WINAPI Wow64GetThreadContext(HANDLE hThread, PWOW64_CONTEXT lpContext);
@@ -1641,7 +1634,6 @@ WINBASEAPI BOOL WINAPI Wow64GetThreadContext(HANDLE hThread, PWOW64_CONTEXT lpCo
 WINBASEAPI BOOL WINAPI Wow64GetThreadSelectorEntry(HANDLE hThread, DWORD dwSelector, PWOW64_LDT_ENTRY lpSelectorEntry);
 #endif
 WINBASEAPI BOOL WINAPI Wow64SetThreadContext(HANDLE hThread, CONST WOW64_CONTEXT *lpContext);
-#endif
 WINBASEAPI DWORD WINAPI SuspendThread(HANDLE hThread);
 WINBASEAPI DWORD WINAPI Wow64SuspendThread(HANDLE hThread);
 WINBASEAPI DWORD WINAPI ResumeThread(HANDLE hThread);
@@ -1854,7 +1846,6 @@ WINBASEAPI ULONGLONG WINAPI GetTickCount64(VOID);
 #endif
 WINBASEAPI BOOL WINAPI SetSystemTimeAdjustment(DWORD dwTimeAdjustment, BOOL bTimeAdjustmentDisabled);
 WINBASEAPI BOOL WINAPI GetSystemTimeAdjustment(PDWORD lpTimeAdjustment, PDWORD lpTimeIncrement, PBOOL lpTimeAdjustmentDisabled);
-#if !defined(MIDL_PASS)
 WINBASEAPI DWORD WINAPI FormatMessageA(DWORD dwFlags, LPCVOID lpSource, DWORD dwMessageId, DWORD dwLanguageId, LPSTR lpBuffer, DWORD nSize, va_list *Arguments);
 WINBASEAPI DWORD WINAPI FormatMessageW(DWORD dwFlags, LPCVOID lpSource, DWORD dwMessageId, DWORD dwLanguageId, LPWSTR lpBuffer, DWORD nSize, va_list *Arguments);
 #ifdef UNICODE
@@ -1873,7 +1864,6 @@ __inline DWORD FormatMessage(DWORD dwFlags, LPCVOID lpSource, DWORD dwMessageId,
 #endif
 		dwFlags, lpSource, dwMessageId, dwLanguageId, lpBuffer, nSize, Arguments);
 }
-#endif
 #endif
 #define FORMAT_MESSAGE_ALLOCATE_BUFFER 0x00000100
 #define FORMAT_MESSAGE_IGNORE_INSERTS  0x00000200
@@ -3978,7 +3968,6 @@ WINBASEAPI VOID WINAPI CloseThreadpool(PTP_POOL ptpp);
 WINBASEAPI PTP_CLEANUP_GROUP WINAPI CreateThreadpoolCleanupGroup(VOID);
 WINBASEAPI VOID WINAPI CloseThreadpoolCleanupGroupMembers(PTP_CLEANUP_GROUP ptpcg, BOOL fCancelPendingCallbacks, PVOID pvCleanupContext);
 WINBASEAPI VOID WINAPI CloseThreadpoolCleanupGroup(PTP_CLEANUP_GROUP ptpcg);
-#if !defined(MIDL_PASS)
 FORCEINLINE VOID InitializeThreadpoolEnvironment(PTP_CALLBACK_ENVIRON pcbe)
 {
 	TpInitializeCallbackEnviron(pcbe);
@@ -4013,7 +4002,6 @@ FORCEINLINE VOID DestroyThreadpoolEnvironment(PTP_CALLBACK_ENVIRON pcbe)
 {
 	TpDestroyCallbackEnviron(pcbe);
 }
-#endif
 WINBASEAPI VOID WINAPI SetEventWhenCallbackReturns(PTP_CALLBACK_INSTANCE pci, HANDLE evt);
 WINBASEAPI VOID WINAPI ReleaseSemaphoreWhenCallbackReturns(PTP_CALLBACK_INSTANCE pci, HANDLE sem, DWORD crel);
 WINBASEAPI VOID WINAPI ReleaseMutexWhenCallbackReturns(PTP_CALLBACK_INSTANCE pci, HANDLE mut);

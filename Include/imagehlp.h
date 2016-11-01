@@ -29,7 +29,7 @@
 #define DBHLP_DEPRECIATED
 #else
 #define IMAGEAPI DECLSPEC_IMPORT __stdcall
-#if (_MSC_VER >= 1300) && !defined(MIDL_PASS)
+#if (_MSC_VER >= 1300)
 #define DBHLP_DEPRECIATED   __declspec(deprecated)
 #else
 #define DBHLP_DEPRECIATED

@@ -54,41 +54,6 @@ typedef struct ImageList ImageList;
 #define WINCOMMCTRLAPI
 #endif
 #endif
-#ifdef MIDL_PASS
-typedef DWORD RGBQUAD;
-typedef IUnknown *HIMAGELIST;
-typedef struct _IMAGELIST* HIMAGELIST;
-typedef struct _IMAGELISTDRAWPARAMS
-    {
-    DWORD cbSize;
-    HIMAGELIST himl;
-    int i;
-    HDC hdcDst;
-    int x;
-    int y;
-    int cx;
-    int cy;
-    int xBitmap;
-    int yBitmap;
-    COLORREF rgbBk;
-    COLORREF rgbFg;
-    UINT fStyle;
-    DWORD dwRop;
-    DWORD fState;
-    DWORD Frame;
-    COLORREF crEffect;
-    } 	IMAGELISTDRAWPARAMS;
-typedef IMAGELISTDRAWPARAMS *LPIMAGELISTDRAWPARAMS;
-typedef struct tagIMAGEINFO
-    {
-    HBITMAP hbmImage;
-    HBITMAP hbmMask;
-    int Unused1;
-    int Unused2;
-    RECT rcImage;
-    } 	IMAGEINFO;
-typedef IMAGEINFO *LPIMAGEINFO;
-#endif
 #if _WIN32_WINNT >= 0x0600
 WINCOMMCTRLAPI HRESULT WINAPI ImageList_CoCreateInstance(
          REFCLSID rclsid,

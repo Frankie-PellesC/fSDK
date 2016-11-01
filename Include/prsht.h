@@ -50,10 +50,8 @@
 #define MAXPROPPAGES            100
 struct _PSP;
 typedef struct _PSP *HPROPSHEETPAGE;
-#ifndef MIDL_PASS
 struct _PROPSHEETPAGEA;
 struct _PROPSHEETPAGEW;
-#endif
 typedef UINT(CALLBACK *LPFNPSPCALLBACKA) (HWND hwnd, UINT uMsg, struct _PROPSHEETPAGEA *ppsp);
 typedef UINT(CALLBACK *LPFNPSPCALLBACKW) (HWND hwnd, UINT uMsg, struct _PROPSHEETPAGEW *ppsp);
 #ifdef UNICODE

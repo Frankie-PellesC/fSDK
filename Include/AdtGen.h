@@ -52,9 +52,6 @@ typedef struct _AUDIT_OBJECT_TYPES
 {
     USHORT Count;
     USHORT Flags;
-#ifdef MIDL_PASS
-    [size_is(Count)]
-#endif
     AUDIT_OBJECT_TYPE* pObjectTypes;
 } AUDIT_OBJECT_TYPES, *PAUDIT_OBJECT_TYPES;
 #define _AUTHZ_SS_MAXSIZE 128
@@ -67,62 +64,20 @@ typedef struct _AUDIT_PARAM
     AUDIT_PARAM_TYPE Type;
     ULONG Length;
     DWORD Flags;
-#ifdef MIDL_PASS
-    [switch_type(AUDIT_PARAM_TYPE),switch_is(Type)]
-#endif
     union 
     {
-#ifdef MIDL_PASS
-        [default]
-#endif
         ULONG_PTR Data0;
-#ifdef MIDL_PASS
-        [case(APT_String)]
-        [string]
-#endif
         PWSTR  String;
-        
-#ifdef MIDL_PASS
-        [case(APT_Ulong,
-              APT_Pointer)]
-#endif
         ULONG_PTR u;
-        
-#ifdef MIDL_PASS
-        [case(APT_Sid)]
-#endif
         SID* psid;
-        
-#ifdef MIDL_PASS
-        [case(APT_Guid)]
-#endif
         GUID* pguid;
-#ifdef MIDL_PASS
-        [case(APT_LogonId)]
-#endif
         ULONG LogonId_LowPart;
-#ifdef MIDL_PASS
-        [case(APT_ObjectTypeList)]
-#endif
         AUDIT_OBJECT_TYPES* pObjectTypes;
-        
-#ifdef MIDL_PASS
-        [case(APT_IpAddress)]
-#endif
         AUDIT_IP_ADDRESS* pIpAddress;
     };
-#ifdef MIDL_PASS
-    [switch_type(AUDIT_PARAM_TYPE),switch_is(Type)]
-#endif
     union 
     {
-#ifdef MIDL_PASS
-        [default]
-#endif
         ULONG_PTR Data1;
-#ifdef MIDL_PASS
-        [case(APT_LogonId)]
-#endif
         LONG LogonId_HighPart;
     };
     
@@ -135,9 +90,6 @@ typedef struct _AUDIT_PARAMS
     ULONG  Length;
     DWORD  Flags;
     USHORT Count;
-#ifdef MIDL_PASS
-    [size_is(Count)]
-#endif    
     AUDIT_PARAM* Parameters;
 } AUDIT_PARAMS, *PAUDIT_PARAMS;
 typedef struct _AUTHZ_AUDIT_EVENT_TYPE_LEGACY
@@ -147,15 +99,8 @@ typedef struct _AUTHZ_AUDIT_EVENT_TYPE_LEGACY
     USHORT ParameterCount;
     
 } AUTHZ_AUDIT_EVENT_TYPE_LEGACY, *PAUTHZ_AUDIT_EVENT_TYPE_LEGACY;
-typedef
-#ifdef MIDL_PASS
-[switch_type(BYTE)]
-#endif
-union _AUTHZ_AUDIT_EVENT_TYPE_UNION
+typedef union _AUTHZ_AUDIT_EVENT_TYPE_UNION
 {
-#ifdef MIDL_PASS
-        [case(AUDIT_TYPE_LEGACY)]
-#endif
         AUTHZ_AUDIT_EVENT_TYPE_LEGACY Legacy;
 } AUTHZ_AUDIT_EVENT_TYPE_UNION, *PAUTHZ_AUDIT_EVENT_TYPE_UNION;
 typedef
@@ -166,21 +111,10 @@ struct _AUTHZ_AUDIT_EVENT_TYPE_OLD
     LONG  RefCount;
     ULONG_PTR hAudit;
     LUID  LinkId;
-#ifdef MIDL_PASS
-    [switch_is(Version)] 
-#endif
     AUTHZ_AUDIT_EVENT_TYPE_UNION u;
 } AUTHZ_AUDIT_EVENT_TYPE_OLD;
-typedef
-#ifdef MIDL_PASS
-[handle]
-#endif
-AUTHZ_AUDIT_EVENT_TYPE_OLD* PAUTHZ_AUDIT_EVENT_TYPE_OLD;
-typedef
-#ifdef MIDL_PASS
-[context_handle]
-#endif
-PVOID AUDIT_HANDLE, *PAUDIT_HANDLE;
+typedef AUTHZ_AUDIT_EVENT_TYPE_OLD* PAUTHZ_AUDIT_EVENT_TYPE_OLD;
+typedef PVOID AUDIT_HANDLE, *PAUDIT_HANDLE;
 #define AUTHZ_ALLOW_MULTIPLE_SOURCE_INSTANCES 0x1
 #define AUTHZ_MIGRATED_LEGACY_PUBLISHER       0x2
 #define AUTHZ_AUDIT_INSTANCE_INFORMATION 0x2

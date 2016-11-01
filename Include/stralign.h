@@ -9,7 +9,7 @@
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
-#if !defined(__STRALIGN_H_) && !defined(MIDL_PASS)
+#if !defined(__STRALIGN_H_)
 #define __STRALIGN_H_
 #if __POCC__ >= 500
 #pragma once

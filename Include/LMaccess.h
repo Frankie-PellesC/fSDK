@@ -729,21 +729,20 @@ NTSTATUS NET_API_FUNCTION NetEnumerateTrustedDomains(LPWSTR ServerName, LPWSTR *
 #define NETLOGON_CONTROL_TRUNCATE_LOG       0xFFFD
 #define NETLOGON_CONTROL_SET_DBFLAG         0xFFFE
 #define NETLOGON_CONTROL_BREAKPOINT         0xFFFF
-typedef struct _NETLOGON_INFO_1 {
+typedef struct _NETLOGON_INFO_1
+{
 	DWORD netlog1_flags;
 	NET_API_STATUS netlog1_pdc_connection_status;
 } NETLOGON_INFO_1, *PNETLOGON_INFO_1;
-typedef struct _NETLOGON_INFO_2 {
+typedef struct _NETLOGON_INFO_2
+{
 	DWORD netlog2_flags;
 	NET_API_STATUS netlog2_pdc_connection_status;
-#ifdef MIDL_PASS
-	[string]       wchar_t * netlog2_trusted_dc_name;
-#else
 	LPWSTR netlog2_trusted_dc_name;
-#endif
 	NET_API_STATUS netlog2_tc_connection_status;
 } NETLOGON_INFO_2, *PNETLOGON_INFO_2;
-typedef struct _NETLOGON_INFO_3 {
+typedef struct _NETLOGON_INFO_3
+{
 	DWORD netlog3_flags;
 	DWORD netlog3_logon_attempts;
 	DWORD netlog3_reserved1;
@@ -752,14 +751,10 @@ typedef struct _NETLOGON_INFO_3 {
 	DWORD netlog3_reserved4;
 	DWORD netlog3_reserved5;
 } NETLOGON_INFO_3, *PNETLOGON_INFO_3;
-typedef struct _NETLOGON_INFO_4 {
-#ifdef MIDL_PASS
-	[string] wchar_t * netlog4_trusted_dc_name;
-	[string] wchar_t * netlog4_trusted_domain_name;
-#else
+typedef struct _NETLOGON_INFO_4
+{
 	LPWSTR netlog4_trusted_dc_name;
 	LPWSTR netlog4_trusted_domain_name;
-#endif
 } NETLOGON_INFO_4, *PNETLOGON_INFO_4;
 #define NETLOGON_REPLICATION_NEEDED       0x01
 #define NETLOGON_REPLICATION_IN_PROGRESS  0x02

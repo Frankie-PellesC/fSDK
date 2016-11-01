@@ -301,13 +301,9 @@ struct tagVARIANT
 typedef VARIANT *LPVARIANT;
 typedef VARIANT VARIANTARG;
 typedef VARIANT *LPVARIANTARG;
-#ifdef MIDL_PASS
-typedef const VARIANT *REFVARIANT;
-#else
 #ifndef _REFVARIANT_DEFINED
 #define _REFVARIANT_DEFINED
 #define REFVARIANT const VARIANT * __MIDL_CONST
-#endif
 #endif
 struct _wireBRECORD
 {

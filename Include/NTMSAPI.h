@@ -100,7 +100,6 @@ enum NtmsAsyncOperations
     NTMS_ASYNCOP_MOUNT = 1
 };
 #endif
-#ifndef MIDL_PASS
 enum NtmsSessionOptions
 {
     NTMS_SESSION_QUERYEXPEDITE = 0x1
@@ -108,7 +107,6 @@ enum NtmsSessionOptions
 HANDLE WINAPI OpenNtmsSessionW(LPCWSTR lpServer, LPCWSTR lpApplication, DWORD dwOptions);
 HANDLE WINAPI OpenNtmsSessionA(LPCSTR lpServer, LPCSTR lpApplication, DWORD dwOptions);
 DWORD WINAPI CloseNtmsSession(HANDLE hSession);
-#endif
 #ifndef NTMS_NOREDEF
 enum NtmsMountOptions
 {

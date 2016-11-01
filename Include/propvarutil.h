@@ -223,7 +223,8 @@ typedef enum DRAWPROGRESSFLAGS
     DPF_WARNING             = 0x8,
     DPF_STOPPED             = 0x10,
 } DRAWPROGRESSFLAGS;
-#if defined(__cplusplus) && !defined(NO_PROPVAR_INLINES)
+//#if defined(__cplusplus) && !defined(NO_PROPVAR_INLINES)
+#if !defined(NO_PROPVAR_INLINES)
 inline HRESULT InitPropVariantFromBoolean(BOOL fVal, PROPVARIANT *ppropvar)
 {
     ppropvar->vt = VT_BOOL;
@@ -288,12 +289,13 @@ inline HRESULT InitPropVariantFromGUIDAsBuffer(REFGUID guid, PROPVARIANT *ppropv
 }
 inline BOOL IsPropVariantVector(REFPROPVARIANT propvar)
 {
-    return (propvar.vt & (VT_ARRAY | VT_VECTOR));
+    return (propvar->vt & (VT_ARRAY | VT_VECTOR));
 }
 inline BOOL IsPropVariantString(REFPROPVARIANT propvar)
 {
     return (PropVariantToStringWithDefault(propvar, NULL) != NULL);
 }
+#if 0
 inline HRESULT PropVariantToInt32(REFPROPVARIANT propvarIn, int *piRet)
 {
     return PropVariantToInt32(propvarIn, (LONG*)piRet);
@@ -314,6 +316,7 @@ inline HRESULT PropVariantGetElem(REFPROPVARIANT propvarIn, ULONG iElem, PROPVAR
 {
     return InitPropVariantFromPropVariantVectorElem(propvarIn, iElem, ppropvar);
 }
+#endif
 inline HRESULT InitVariantFromBoolean(BOOL fVal, VARIANT *pvar)
 {
     pvar->vt = VT_BOOL;
@@ -379,7 +382,7 @@ inline HRESULT InitVariantFromDispatch(IDispatch* pdisp, VARIANT *pvar)
     pvar->pdispVal = pdisp;
     if (pvar->pdispVal)
     {
-        (pvar->pdispVal)->AddRef();
+        (pvar->pdispVal)->lpVtbl->AddRef(pvar->pdispVal);
     }
     return S_OK;
 }
@@ -394,25 +397,21 @@ inline BOOL IsVarTypeFloat(VARTYPE vt)
 }
 inline BOOL IsVariantArray(REFVARIANT var)
 {
-    return (var.vt & VT_ARRAY);
+    return (var->vt & VT_ARRAY);
 }
 inline BOOL IsVariantString(REFVARIANT var)
 {
     return (VariantToStringWithDefault(var, NULL) != NULL);
-}
-inline BOOL IsVarTypeNumber(VARTYPE vt)
-{
-    return IsVarTypeInteger(vt) || IsVarTypeFloat(vt);
 }
 inline BOOL IsVarTypeSignedInteger(VARTYPE vt)
 {
     BOOL fRet = FALSE;
     switch (vt)
     {
-        case VT_I1
-        case VT_I2
-        case VT_I4
-        case VT_I8
+        case VT_I1:
+        case VT_I2:
+        case VT_I4:
+        case VT_I8:
         fRet = TRUE;
     }
     return fRet;
@@ -422,10 +421,10 @@ inline BOOL IsVarTypeUnsignedInteger(VARTYPE vt)
     BOOL fRet = FALSE;
     switch (vt)
     {
-        case VT_UI1
-        case VT_UI2
-        case VT_UI4
-        case VT_UI8
+        case VT_UI1:
+        case VT_UI2:
+        case VT_UI4:
+        case VT_UI8:
         fRet = TRUE;
     }
     return fRet;
@@ -438,17 +437,21 @@ inline HRESULT InitVariantFromGUIDAsBuffer(REFGUID guid, VARIANT *pvar)
 {
     return InitVariantFromBuffer(&guid, sizeof(GUID), pvar);
 }
-inline HRESULT VariantToInt32(REFVARIANT varIn, int *piRet)
-{
-    return VariantToInt32(varIn, (LONG*)piRet);
-}
-inline HRESULT VariantToUInt32(REFVARIANT varIn, UINT *piRet)
-{
-    return VariantToUInt32(varIn, (ULONG*)piRet);
-}
+//inline HRESULT VariantToInt32(REFVARIANT varIn, int *piRet)
+//{
+    //return VariantToInt32(varIn, (LONG*)piRet);
+//}
+//inline HRESULT VariantToUInt32(REFVARIANT varIn, UINT *piRet)
+//{
+    //return VariantToUInt32(varIn, (ULONG*)piRet);
+//}
 inline HRESULT VariantGetElem(REFVARIANT varIn, ULONG iElem, VARIANT *pvar)
 {
     return InitVariantFromVariantArrayElem(varIn, iElem, pvar);
+}
+inline BOOL IsVarTypeNumber(VARTYPE vt)
+{
+    return IsVarTypeInteger(vt) || IsVarTypeFloat(vt);
 }
 #endif
 #endif

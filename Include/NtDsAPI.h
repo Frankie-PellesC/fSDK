@@ -26,11 +26,6 @@
 #define NTDSAPI
 #define NTDSAPI_POSTXP
 #endif
-#ifdef MIDL_PASS
-typedef GUID UUID;
-typedef void * RPC_AUTH_IDENTITY_HANDLE;
-typedef void VOID;
-#endif
 #define DS_BEHAVIOR_WIN2000                            0
 #define DS_BEHAVIOR_WIN2003_WITH_MIXED_DOMAINS         1
 #define DS_BEHAVIOR_WIN2003                            2
@@ -637,23 +632,17 @@ VOID WINAPI DsQuerySitesFree(PDS_SITE_COST_INFO rgSiteInfo);
 #define DS_SCHEMA_GUID_ATTR_SET             2
 #define DS_SCHEMA_GUID_CLASS                3
 #define DS_SCHEMA_GUID_CONTROL_RIGHT        4
-typedef struct {
+typedef struct
+{
 	GUID guid;
 	DWORD guidType;
-#ifdef MIDL_PASS
-	[string, unique] CHAR * pName;
-#else
 	LPSTR pName;
-#endif
 } DS_SCHEMA_GUID_MAPA, *PDS_SCHEMA_GUID_MAPA;
-typedef struct {
+typedef struct
+{
 	GUID guid;
 	DWORD guidType;
-#ifdef MIDL_PASS
-	[string, unique] WCHAR * pName;
-#else
 	LPWSTR pName;
-#endif
 } DS_SCHEMA_GUID_MAPW, *PDS_SCHEMA_GUID_MAPW;
 NTDSAPI DWORD WINAPI DsMapSchemaGuidsA(HANDLE hDs, DWORD cGuids, GUID *rGuids, DS_SCHEMA_GUID_MAPA **ppGuidMap);
 NTDSAPI VOID WINAPI DsFreeSchemaGuidMapA(PDS_SCHEMA_GUID_MAPA pGuidMap);
@@ -670,50 +659,28 @@ NTDSAPI VOID WINAPI DsFreeSchemaGuidMapW(PDS_SCHEMA_GUID_MAPW pGuidMap);
 #define DsMapSchemaGuids DsMapSchemaGuidsA
 #define DsFreeSchemaGuidMap DsFreeSchemaGuidMapA
 #endif
-typedef struct {
-#ifdef MIDL_PASS
-	[string, unique] CHAR * NetbiosName;
-	[string, unique] CHAR * DnsHostName;
-	[string, unique] CHAR * SiteName;
-	[string, unique] CHAR * ComputerObjectName;
-	[string, unique] CHAR * ServerObjectName;
-#else
+typedef struct
+{
 	LPSTR NetbiosName;
 	LPSTR DnsHostName;
 	LPSTR SiteName;
 	LPSTR ComputerObjectName;
 	LPSTR ServerObjectName;
-#endif
 	BOOL fIsPdc;
 	BOOL fDsEnabled;
 } DS_DOMAIN_CONTROLLER_INFO_1A, *PDS_DOMAIN_CONTROLLER_INFO_1A;
-typedef struct {
-#ifdef MIDL_PASS
-	[string, unique] WCHAR * NetbiosName;
-	[string, unique] WCHAR * DnsHostName;
-	[string, unique] WCHAR * SiteName;
-	[string, unique] WCHAR * ComputerObjectName;
-	[string, unique] WCHAR * ServerObjectName;
-#else
+typedef struct
+{
 	LPWSTR NetbiosName;
 	LPWSTR DnsHostName;
 	LPWSTR SiteName;
 	LPWSTR ComputerObjectName;
 	LPWSTR ServerObjectName;
-#endif
 	BOOL fIsPdc;
 	BOOL fDsEnabled;
 } DS_DOMAIN_CONTROLLER_INFO_1W, *PDS_DOMAIN_CONTROLLER_INFO_1W;
-typedef struct {
-#ifdef MIDL_PASS
-	[string, unique] CHAR * NetbiosName;
-	[string, unique] CHAR * DnsHostName;
-	[string, unique] CHAR * SiteName;
-	[string, unique] CHAR * SiteObjectName;
-	[string, unique] CHAR * ComputerObjectName;
-	[string, unique] CHAR * ServerObjectName;
-	[string, unique] CHAR * NtdsDsaObjectName;
-#else
+typedef struct
+{
 	LPSTR NetbiosName;
 	LPSTR DnsHostName;
 	LPSTR SiteName;
@@ -721,7 +688,6 @@ typedef struct {
 	LPSTR ComputerObjectName;
 	LPSTR ServerObjectName;
 	LPSTR NtdsDsaObjectName;
-#endif
 	BOOL fIsPdc;
 	BOOL fDsEnabled;
 	BOOL fIsGc;
@@ -730,16 +696,8 @@ typedef struct {
 	GUID ServerObjectGuid;
 	GUID NtdsDsaObjectGuid;
 } DS_DOMAIN_CONTROLLER_INFO_2A, *PDS_DOMAIN_CONTROLLER_INFO_2A;
-typedef struct {
-#ifdef MIDL_PASS
-	[string, unique] WCHAR * NetbiosName;
-	[string, unique] WCHAR * DnsHostName;
-	[string, unique] WCHAR * SiteName;
-	[string, unique] WCHAR * SiteObjectName;
-	[string, unique] WCHAR * ComputerObjectName;
-	[string, unique] WCHAR * ServerObjectName;
-	[string, unique] WCHAR * NtdsDsaObjectName;
-#else
+typedef struct
+{
 	LPWSTR NetbiosName;
 	LPWSTR DnsHostName;
 	LPWSTR SiteName;
@@ -747,7 +705,6 @@ typedef struct {
 	LPWSTR ComputerObjectName;
 	LPWSTR ServerObjectName;
 	LPWSTR NtdsDsaObjectName;
-#endif
 	BOOL fIsPdc;
 	BOOL fDsEnabled;
 	BOOL fIsGc;
@@ -756,16 +713,8 @@ typedef struct {
 	GUID ServerObjectGuid;
 	GUID NtdsDsaObjectGuid;
 } DS_DOMAIN_CONTROLLER_INFO_2W, *PDS_DOMAIN_CONTROLLER_INFO_2W;
-typedef struct {
-#ifdef MIDL_PASS
-	[string, unique] CHAR * NetbiosName;
-	[string, unique] CHAR * DnsHostName;
-	[string, unique] CHAR * SiteName;
-	[string, unique] CHAR * SiteObjectName;
-	[string, unique] CHAR * ComputerObjectName;
-	[string, unique] CHAR * ServerObjectName;
-	[string, unique] CHAR * NtdsDsaObjectName;
-#else
+typedef struct
+{
 	LPSTR NetbiosName;
 	LPSTR DnsHostName;
 	LPSTR SiteName;
@@ -773,7 +722,6 @@ typedef struct {
 	LPSTR ComputerObjectName;
 	LPSTR ServerObjectName;
 	LPSTR NtdsDsaObjectName;
-#endif
 	BOOL fIsPdc;
 	BOOL fDsEnabled;
 	BOOL fIsGc;
@@ -783,16 +731,8 @@ typedef struct {
 	GUID ServerObjectGuid;
 	GUID NtdsDsaObjectGuid;
 } DS_DOMAIN_CONTROLLER_INFO_3A, *PDS_DOMAIN_CONTROLLER_INFO_3A;
-typedef struct {
-#ifdef MIDL_PASS
-	[string, unique] WCHAR * NetbiosName;
-	[string, unique] WCHAR * DnsHostName;
-	[string, unique] WCHAR * SiteName;
-	[string, unique] WCHAR * SiteObjectName;
-	[string, unique] WCHAR * ComputerObjectName;
-	[string, unique] WCHAR * ServerObjectName;
-	[string, unique] WCHAR * NtdsDsaObjectName;
-#else
+typedef struct
+{
 	LPWSTR NetbiosName;
 	LPWSTR DnsHostName;
 	LPWSTR SiteName;
@@ -800,7 +740,6 @@ typedef struct {
 	LPWSTR ComputerObjectName;
 	LPWSTR ServerObjectName;
 	LPWSTR NtdsDsaObjectName;
-#endif
 	BOOL fIsPdc;
 	BOOL fDsEnabled;
 	BOOL fIsGc;
@@ -926,64 +865,57 @@ typedef struct _DS_REPL_NEIGHBORW_BLOB {
 	DWORD dwLastSyncResult;
 	DWORD cNumConsecutiveSyncFailures;
 } DS_REPL_NEIGHBORW_BLOB;
-typedef struct _DS_REPL_NEIGHBORSW {
+typedef struct _DS_REPL_NEIGHBORSW
+{
 	DWORD cNumNeighbors;
 	DWORD dwReserved;
-#ifdef MIDL_PASS
-	[size_is(cNumNeighbors)] DS_REPL_NEIGHBORW rgNeighbor[];
-#else
 	DS_REPL_NEIGHBORW rgNeighbor[1];
-#endif
 } DS_REPL_NEIGHBORSW;
-typedef struct _DS_REPL_CURSOR {
+typedef struct _DS_REPL_CURSOR
+{
 	UUID uuidSourceDsaInvocationID;
 	USN usnAttributeFilter;
 } DS_REPL_CURSOR;
-typedef struct _DS_REPL_CURSOR_2 {
+typedef struct _DS_REPL_CURSOR_2
+{
 	UUID uuidSourceDsaInvocationID;
 	USN usnAttributeFilter;
 	FILETIME ftimeLastSyncSuccess;
 } DS_REPL_CURSOR_2;
-typedef struct _DS_REPL_CURSOR_3W {
+typedef struct _DS_REPL_CURSOR_3W
+{
 	UUID uuidSourceDsaInvocationID;
 	USN usnAttributeFilter;
 	FILETIME ftimeLastSyncSuccess;
 	LPWSTR pszSourceDsaDN;
 } DS_REPL_CURSOR_3W;
-typedef struct _DS_REPL_CURSOR_BLOB {
+typedef struct _DS_REPL_CURSOR_BLOB
+{
 	UUID uuidSourceDsaInvocationID;
 	USN usnAttributeFilter;
 	FILETIME ftimeLastSyncSuccess;
 	DWORD oszSourceDsaDN;
 } DS_REPL_CURSOR_BLOB;
-typedef struct _DS_REPL_CURSORS {
+typedef struct _DS_REPL_CURSORS
+{
 	DWORD cNumCursors;
 	DWORD dwReserved;
-#ifdef MIDL_PASS
-	[size_is(cNumCursors)] DS_REPL_CURSOR rgCursor[];
-#else
 	DS_REPL_CURSOR rgCursor[1];
-#endif
 } DS_REPL_CURSORS;
-typedef struct _DS_REPL_CURSORS_2 {
+typedef struct _DS_REPL_CURSORS_2
+{
 	DWORD cNumCursors;
 	DWORD dwEnumerationContext;
-#ifdef MIDL_PASS
-	[size_is(cNumCursors)] DS_REPL_CURSOR_2 rgCursor[];
-#else
 	DS_REPL_CURSOR_2 rgCursor[1];
-#endif
 } DS_REPL_CURSORS_2;
-typedef struct _DS_REPL_CURSORS_3W {
+typedef struct _DS_REPL_CURSORS_3W
+{
 	DWORD cNumCursors;
 	DWORD dwEnumerationContext;
-#ifdef MIDL_PASS
-	[size_is(cNumCursors)] DS_REPL_CURSOR_3W rgCursor[];
-#else
 	DS_REPL_CURSOR_3W rgCursor[1];
-#endif
 } DS_REPL_CURSORS_3W;
-typedef struct _DS_REPL_ATTR_META_DATA {
+typedef struct _DS_REPL_ATTR_META_DATA
+{
 	LPWSTR pszAttributeName;
 	DWORD dwVersion;
 	FILETIME ftimeLastOriginatingChange;
@@ -991,7 +923,8 @@ typedef struct _DS_REPL_ATTR_META_DATA {
 	USN usnOriginatingChange;
 	USN usnLocalChange;
 } DS_REPL_ATTR_META_DATA;
-typedef struct _DS_REPL_ATTR_META_DATA_2 {
+typedef struct _DS_REPL_ATTR_META_DATA_2
+{
 	LPWSTR pszAttributeName;
 	DWORD dwVersion;
 	FILETIME ftimeLastOriginatingChange;
@@ -1000,7 +933,8 @@ typedef struct _DS_REPL_ATTR_META_DATA_2 {
 	USN usnLocalChange;
 	LPWSTR pszLastOriginatingDsaDN;
 } DS_REPL_ATTR_META_DATA_2;
-typedef struct _DS_REPL_ATTR_META_DATA_BLOB {
+typedef struct _DS_REPL_ATTR_META_DATA_BLOB
+{
 	DWORD oszAttributeName;
 	DWORD dwVersion;
 	FILETIME ftimeLastOriginatingChange;
@@ -1009,55 +943,50 @@ typedef struct _DS_REPL_ATTR_META_DATA_BLOB {
 	USN usnLocalChange;
 	DWORD oszLastOriginatingDsaDN;
 } DS_REPL_ATTR_META_DATA_BLOB;
-typedef struct _DS_REPL_OBJ_META_DATA {
+typedef struct _DS_REPL_OBJ_META_DATA
+{
 	DWORD cNumEntries;
 	DWORD dwReserved;
-#ifdef MIDL_PASS
-	[size_is(cNumEntries)] DS_REPL_ATTR_META_DATA rgMetaData[];
-#else
 	DS_REPL_ATTR_META_DATA rgMetaData[1];
-#endif
 } DS_REPL_OBJ_META_DATA;
-typedef struct _DS_REPL_OBJ_META_DATA_2 {
+typedef struct _DS_REPL_OBJ_META_DATA_2
+{
 	DWORD cNumEntries;
 	DWORD dwReserved;
-#ifdef MIDL_PASS
-	[size_is(cNumEntries)] DS_REPL_ATTR_META_DATA_2 rgMetaData[];
-#else
 	DS_REPL_ATTR_META_DATA_2 rgMetaData[1];
-#endif
 } DS_REPL_OBJ_META_DATA_2;
-typedef struct _DS_REPL_KCC_DSA_FAILUREW {
+typedef struct _DS_REPL_KCC_DSA_FAILUREW
+{
 	LPWSTR pszDsaDN;
 	UUID uuidDsaObjGuid;
 	FILETIME ftimeFirstFailure;
 	DWORD cNumFailures;
 	DWORD dwLastResult;
 } DS_REPL_KCC_DSA_FAILUREW;
-typedef struct _DS_REPL_KCC_DSA_FAILUREW_BLOB {
+typedef struct _DS_REPL_KCC_DSA_FAILUREW_BLOB
+{
 	DWORD oszDsaDN;
 	UUID uuidDsaObjGuid;
 	FILETIME ftimeFirstFailure;
 	DWORD cNumFailures;
 	DWORD dwLastResult;
 } DS_REPL_KCC_DSA_FAILUREW_BLOB;
-typedef struct _DS_REPL_KCC_DSA_FAILURESW {
+typedef struct _DS_REPL_KCC_DSA_FAILURESW
+{
 	DWORD cNumEntries;
 	DWORD dwReserved;
-#ifdef MIDL_PASS
-	[size_is(cNumEntries)] DS_REPL_KCC_DSA_FAILUREW rgDsaFailure[];
-#else
 	DS_REPL_KCC_DSA_FAILUREW rgDsaFailure[1];
-#endif
 } DS_REPL_KCC_DSA_FAILURESW;
-typedef enum _DS_REPL_OP_TYPE {
+typedef enum _DS_REPL_OP_TYPE
+{
 	DS_REPL_OP_TYPE_SYNC = 0,
 	DS_REPL_OP_TYPE_ADD,
 	DS_REPL_OP_TYPE_DELETE,
 	DS_REPL_OP_TYPE_MODIFY,
 	DS_REPL_OP_TYPE_UPDATE_REFS
 } DS_REPL_OP_TYPE;
-typedef struct _DS_REPL_OPW {
+typedef struct _DS_REPL_OPW
+{
 	FILETIME ftimeEnqueued;
 	ULONG ulSerialNumber;
 	ULONG ulPriority;
@@ -1069,7 +998,8 @@ typedef struct _DS_REPL_OPW {
 	UUID uuidNamingContextObjGuid;
 	UUID uuidDsaObjGuid;
 } DS_REPL_OPW;
-typedef struct _DS_REPL_OPW_BLOB {
+typedef struct _DS_REPL_OPW_BLOB
+{
 	FILETIME ftimeEnqueued;
 	ULONG ulSerialNumber;
 	ULONG ulPriority;
@@ -1081,24 +1011,18 @@ typedef struct _DS_REPL_OPW_BLOB {
 	UUID uuidNamingContextObjGuid;
 	UUID uuidDsaObjGuid;
 } DS_REPL_OPW_BLOB;
-typedef struct _DS_REPL_PENDING_OPSW {
+typedef struct _DS_REPL_PENDING_OPSW
+{
 	FILETIME ftimeCurrentOpStarted;
 	DWORD cNumPendingOps;
-#ifdef MIDL_PASS
-	[size_is(cNumPendingOps)] DS_REPL_OPW rgPendingOp[];
-#else
 	DS_REPL_OPW rgPendingOp[1];
-#endif
 } DS_REPL_PENDING_OPSW;
-typedef struct _DS_REPL_VALUE_META_DATA {
+typedef struct _DS_REPL_VALUE_META_DATA
+{
 	LPWSTR pszAttributeName;
 	LPWSTR pszObjectDn;
 	DWORD cbData;
-#ifdef MIDL_PASS
-	[size_is(cbData), ptr] BYTE * pbData;
-#else
 	BYTE *pbData;
-#endif
 	FILETIME ftimeDeleted;
 	FILETIME ftimeCreated;
 	DWORD dwVersion;
@@ -1107,15 +1031,12 @@ typedef struct _DS_REPL_VALUE_META_DATA {
 	USN usnOriginatingChange;
 	USN usnLocalChange;
 } DS_REPL_VALUE_META_DATA;
-typedef struct _DS_REPL_VALUE_META_DATA_2 {
+typedef struct _DS_REPL_VALUE_META_DATA_2
+{
 	LPWSTR pszAttributeName;
 	LPWSTR pszObjectDn;
 	DWORD cbData;
-#ifdef MIDL_PASS
-	[size_is(cbData), ptr] BYTE * pbData;
-#else
 	BYTE *pbData;
-#endif
 	FILETIME ftimeDeleted;
 	FILETIME ftimeCreated;
 	DWORD dwVersion;
@@ -1125,7 +1046,8 @@ typedef struct _DS_REPL_VALUE_META_DATA_2 {
 	USN usnLocalChange;
 	LPWSTR pszLastOriginatingDsaDN;
 } DS_REPL_VALUE_META_DATA_2;
-typedef struct _DS_REPL_VALUE_META_DATA_BLOB {
+typedef struct _DS_REPL_VALUE_META_DATA_BLOB
+{
 	DWORD oszAttributeName;
 	DWORD oszObjectDn;
 	DWORD cbData;
@@ -1139,25 +1061,20 @@ typedef struct _DS_REPL_VALUE_META_DATA_BLOB {
 	USN usnLocalChange;
 	DWORD oszLastOriginatingDsaDN;
 } DS_REPL_VALUE_META_DATA_BLOB;
-typedef struct _DS_REPL_ATTR_VALUE_META_DATA {
+typedef struct _DS_REPL_ATTR_VALUE_META_DATA
+{
 	DWORD cNumEntries;
 	DWORD dwEnumerationContext;
-#ifdef MIDL_PASS
-	[size_is(cNumEntries)] DS_REPL_VALUE_META_DATA rgMetaData[];
-#else
 	DS_REPL_VALUE_META_DATA rgMetaData[1];
-#endif
 } DS_REPL_ATTR_VALUE_META_DATA;
-typedef struct _DS_REPL_ATTR_VALUE_META_DATA_2 {
+typedef struct _DS_REPL_ATTR_VALUE_META_DATA_2
+{
 	DWORD cNumEntries;
 	DWORD dwEnumerationContext;
-#ifdef MIDL_PASS
-	[size_is(cNumEntries)] DS_REPL_VALUE_META_DATA_2 rgMetaData[];
-#else
 	DS_REPL_VALUE_META_DATA_2 rgMetaData[1];
-#endif
 } DS_REPL_ATTR_VALUE_META_DATA_2;
-typedef struct _DS_REPL_QUEUE_STATISTICSW {
+typedef struct _DS_REPL_QUEUE_STATISTICSW
+{
 	FILETIME ftimeCurrentOpStarted;
 	DWORD cNumPendingOps;
 	FILETIME ftimeOldestSync;

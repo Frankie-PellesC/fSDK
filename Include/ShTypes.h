@@ -80,38 +80,6 @@ typedef const ITEMIDLIST __unaligned *LPCITEMIDLIST;
 #define PCUIDLIST_RELATIVE_ARRAY LPCITEMIDLIST *
 #define PCIDLIST_ABSOLUTE_ARRAY  LPCITEMIDLIST *
 #define PCUIDLIST_ABSOLUTE_ARRAY LPCITEMIDLIST *
-#ifdef MIDL_PASS
-typedef struct _WIN32_FIND_DATAA
-{
-    DWORD dwFileAttributes;
-    FILETIME ftCreationTime;
-    FILETIME ftLastAccessTime;
-    FILETIME ftLastWriteTime;
-    DWORD nFileSizeHigh;
-    DWORD nFileSizeLow;
-    DWORD dwReserved0;
-    DWORD dwReserved1;
-    CHAR cFileName[ 260 ];
-    CHAR cAlternateFileName[ 14 ];
-} WIN32_FIND_DATAA;
-typedef struct _WIN32_FIND_DATAA *PWIN32_FIND_DATAA;
-typedef struct _WIN32_FIND_DATAA *LPWIN32_FIND_DATAA;
-typedef struct _WIN32_FIND_DATAW
-{
-    DWORD dwFileAttributes;
-    FILETIME ftCreationTime;
-    FILETIME ftLastAccessTime;
-    FILETIME ftLastWriteTime;
-    DWORD nFileSizeHigh;
-    DWORD nFileSizeLow;
-    DWORD dwReserved0;
-    DWORD dwReserved1;
-    WCHAR cFileName[ 260 ];
-    WCHAR cAlternateFileName[ 14 ];
-} WIN32_FIND_DATAW;
-typedef struct _WIN32_FIND_DATAW *PWIN32_FIND_DATAW;
-typedef struct _WIN32_FIND_DATAW *LPWIN32_FIND_DATAW;
-#endif
 typedef 
 enum tagSTRRET_TYPE
     {	STRRET_WSTR	= 0,

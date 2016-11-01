@@ -64,12 +64,8 @@ typedef double JET_DATESERIAL;
 typedef unsigned long JET_CBTYP;
 #endif
 typedef JET_ERR(JET_API *JET_PFNSTATUS) (JET_SESID sesid, JET_SNP snp, JET_SNT snt, void *pv);
-#ifdef	MIDL_PASS
-#define	xRPC_STRING [string]
-#else
 #define	xRPC_STRING
 typedef wchar_t WCHAR;
-#endif
 typedef char *  JET_PSTR;
 typedef const char *  JET_PCSTR;
 typedef WCHAR * JET_PWSTR;

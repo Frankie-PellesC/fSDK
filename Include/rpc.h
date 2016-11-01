@@ -46,7 +46,7 @@ typedef long RPC_STATUS;
 #endif
 #define __RPC_FAR
 #if !defined(DECLSPEC_IMPORT)
-#if (defined(_M_MRX000) || defined(_M_IX86) || defined(_M_IA64) || defined(_M_AMD64)) && !defined(MIDL_PASS)
+#if (defined(_M_MRX000) || defined(_M_IX86) || defined(_M_IA64) || defined(_M_AMD64))
 #define DECLSPEC_IMPORT __declspec(dllimport)
 #else
 #define DECLSPEC_IMPORT

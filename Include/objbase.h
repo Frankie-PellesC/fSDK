@@ -376,4 +376,6 @@ WINOLEAPI CreateStdProgressIndicator(HWND hwndParent, LPCOLESTR pszTitle, IBindS
 #ifndef RC_INVOKED
 #include <poppack.h>
 #endif
+//Frankie
+#define __uuidof(x) &IID_##x
 #endif

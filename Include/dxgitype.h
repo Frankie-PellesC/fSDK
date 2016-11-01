@@ -8,6 +8,7 @@
  \date		Modified on Fri Jun  3 17:37:23 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
+
 #ifndef __dxgitype_h__
 #define __dxgitype_h__
 #if __POCC__ >= 500
@@ -51,21 +52,28 @@
 #define DXGI_USAGE_READ_ONLY                    ( 1L << (4 + 4) )
 #define DXGI_USAGE_DISCARD_ON_PRESENT           ( 1L << (5 + 4) )
 #define DXGI_USAGE_UNORDERED_ACCESS             ( 1L << (6 + 4) )
-
 typedef struct DXGI_RGB
 {
     float Red;
     float Green;
     float Blue;
 } DXGI_RGB;
-
+#ifndef D3DCOLORVALUE_DEFINED
+typedef struct _D3DCOLORVALUE {
+    float r;
+    float g;
+    float b;
+    float a;
+} D3DCOLORVALUE;
+#define D3DCOLORVALUE_DEFINED
+#endif
+typedef D3DCOLORVALUE DXGI_RGBA;
 typedef struct DXGI_GAMMA_CONTROL
 {
     DXGI_RGB Scale;
     DXGI_RGB Offset;
     DXGI_RGB GammaCurve[ 1025 ];
 } DXGI_GAMMA_CONTROL;
-
 typedef struct DXGI_GAMMA_CONTROL_CAPABILITIES
 {
     BOOL ScaleAndOffsetSupported;
@@ -74,13 +82,11 @@ typedef struct DXGI_GAMMA_CONTROL_CAPABILITIES
     UINT NumGammaControlPoints;
     float ControlPointPositions[1025];
 } DXGI_GAMMA_CONTROL_CAPABILITIES;
-
 typedef struct DXGI_RATIONAL
 {
     UINT Numerator;
     UINT Denominator;
 } DXGI_RATIONAL;
-
 typedef enum DXGI_MODE_SCANLINE_ORDER
 {
     DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED        = 0,
@@ -88,14 +94,12 @@ typedef enum DXGI_MODE_SCANLINE_ORDER
     DXGI_MODE_SCANLINE_ORDER_UPPER_FIELD_FIRST  = 2,
     DXGI_MODE_SCANLINE_ORDER_LOWER_FIELD_FIRST  = 3
 } DXGI_MODE_SCANLINE_ORDER;
-
 typedef enum DXGI_MODE_SCALING
 {
     DXGI_MODE_SCALING_UNSPECIFIED   = 0,
     DXGI_MODE_SCALING_CENTERED      = 1,
     DXGI_MODE_SCALING_STRETCHED     = 2
 } DXGI_MODE_SCALING;
-
 typedef enum DXGI_MODE_ROTATION
 {
     DXGI_MODE_ROTATION_UNSPECIFIED  = 0,
@@ -104,7 +108,6 @@ typedef enum DXGI_MODE_ROTATION
     DXGI_MODE_ROTATION_ROTATE180    = 3,
     DXGI_MODE_ROTATION_ROTATE270    = 4
 } DXGI_MODE_ROTATION;
-
 typedef struct DXGI_MODE_DESC
 {
     UINT Width;
@@ -114,11 +117,9 @@ typedef struct DXGI_MODE_DESC
     DXGI_MODE_SCANLINE_ORDER ScanlineOrdering;
     DXGI_MODE_SCALING Scaling;
 } DXGI_MODE_DESC;
-
 typedef struct DXGI_SAMPLE_DESC
 {
     UINT Count;
     UINT Quality;
 } DXGI_SAMPLE_DESC;
-
 #endif

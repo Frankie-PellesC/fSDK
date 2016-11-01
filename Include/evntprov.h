@@ -15,12 +15,10 @@
 #pragma once
 #endif
 #ifndef EVNTAPI
-#ifndef MIDL_PASS
 #ifdef _EVNT_SOURCE_
 #define EVNTAPI __stdcall
 #else
 #define EVNTAPI DECLSPEC_IMPORT __stdcall
-#endif
 #endif
 #endif
 #define EVENT_MIN_LEVEL                      (0)

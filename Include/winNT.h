@@ -1742,13 +1742,9 @@ NTSYSAPI BOOLEAN __cdecl RtlInstallFunctionTableCallback(DWORD64 TableIdentifier
 NTSYSAPI BOOLEAN __cdecl RtlDeleteFunctionTable(PRUNTIME_FUNCTION FunctionTable);
 #endif
 #ifdef _X86_
-#if !defined(MIDL_PASS)
-#if !defined(RC_INVOKED)
 #ifdef _M_IX86
 #pragma function(_enable)
 #pragma function(_disable)
-#endif
-#endif
 #endif
 #if defined(_M_IX86) && !defined(RC_INVOKED)
 #if (_MSC_FULL_VER >= 14000101)
@@ -6798,12 +6794,10 @@ NTSYSAPI DWORD NTAPI RtlRunOnceComplete(PRTL_RUN_ONCE RunOnce, DWORD Flags, PVOI
 #define HEAP_MAXIMUM_TAG                0x0FFF
 #define HEAP_PSEUDO_TAG_FLAG            0x8000
 #define HEAP_TAG_SHIFT                  18
-#if !defined(MIDL_PASS)
 FORCEINLINE DWORD HEAP_MAKE_TAG_FLAGS(DWORD TagBase, DWORD Tag)
 {
 	return ((DWORD) ((TagBase) + ((Tag) << HEAP_TAG_SHIFT)));
 }
-#endif
 #if (NTDDI_VERSION > NTDDI_WINXP)
 NTSYSAPI WORD NTAPI RtlCaptureStackBackTrace(DWORD FramesToSkip, DWORD FramesToCapture, PVOID *BackTrace, PDWORD BackTraceHash);
 #endif
@@ -6832,7 +6826,7 @@ NTSYSAPI VOID NTAPI RtlCaptureContext(PCONTEXT ContextRecord);
 #define COMPRESSION_ENGINE_STANDARD      (0x0000)
 #define COMPRESSION_ENGINE_MAXIMUM       (0x0100)
 #define COMPRESSION_ENGINE_HIBER         (0x0200)
-#if _DBG_MEMCPY_INLINE_ && !defined(MIDL_PASS) && !defined(_MEMCPY_INLINE_) && !defined(_CRTBLD)
+#if _DBG_MEMCPY_INLINE_ && !defined(_MEMCPY_INLINE_) && !defined(_CRTBLD)
 #define _MEMCPY_INLINE_
 FORCEINLINE PVOID __cdecl memcpy_inline(void *dst, const void *src, size_t size)
 {
@@ -6852,7 +6846,6 @@ NTSYSAPI SIZE_T NTAPI RtlCompareMemory(const VOID *Source1, const VOID *Source2,
 #define RtlCopyMemory(Destination,Source,Length) memcpy((Destination),(Source),(Length))
 #define RtlFillMemory(Destination,Length,Fill) memset((Destination),(Fill),(Length))
 #define RtlZeroMemory(Destination,Length) memset((Destination),0,(Length))
-#if !defined(MIDL_PASS)
 FORCEINLINE PVOID RtlSecureZeroMemory(PVOID ptr, SIZE_T cnt)
 {
 	volatile char *vptr = (volatile char *)ptr;
@@ -6868,7 +6861,6 @@ FORCEINLINE PVOID RtlSecureZeroMemory(PVOID ptr, SIZE_T cnt)
 #endif
 	return ptr;
 }
-#endif
 #define SEF_DACL_AUTO_INHERIT             0x01
 #define SEF_SACL_AUTO_INHERIT             0x02
 #define SEF_DEFAULT_DESCRIPTOR_FOR_OBJECT 0x04
@@ -7818,7 +7810,6 @@ typedef struct _TP_CALLBACK_ENVIRON_V1
 } TP_CALLBACK_ENVIRON_V1;
 typedef TP_CALLBACK_ENVIRON_V1 TP_CALLBACK_ENVIRON, *PTP_CALLBACK_ENVIRON;
 #endif
-#if !defined(MIDL_PASS)
 FORCEINLINE VOID TpInitializeCallbackEnviron(PTP_CALLBACK_ENVIRON CallbackEnviron)
 {
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
@@ -7881,7 +7872,6 @@ FORCEINLINE VOID TpDestroyCallbackEnviron(PTP_CALLBACK_ENVIRON CallbackEnviron)
 {
 	UNREFERENCED_PARAMETER(CallbackEnviron);
 }
-#endif
 typedef struct _TP_WORK TP_WORK, *PTP_WORK;
 typedef VOID(NTAPI *PTP_WORK_CALLBACK) (PTP_CALLBACK_INSTANCE Instance, PVOID Context, PTP_WORK Work);
 typedef struct _TP_TIMER TP_TIMER, *PTP_TIMER;

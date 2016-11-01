@@ -126,7 +126,6 @@ typedef struct peer_event_synchronized_data_tag
 	GUID recordType;
 } PEER_EVENT_SYNCHRONIZED_DATA, *PPEER_EVENT_SYNCHRONIZED_DATA;
 #ifndef NO_P2P_GRAPH
-#ifndef   MIDL_PASS
 typedef PVOID HGRAPH, *PHGRAPH;
 #define PEER_GRAPH_VERSION MAKEWORD(1,0)
 typedef enum peer_graph_event_type_tag
@@ -267,7 +266,6 @@ HRESULT WINAPI PeerGraphGetNodeInfo(HGRAPH hGraph, ULONGLONG ullNodeId, PPEER_NO
 HRESULT WINAPI PeerGraphSetNodeAttributes(HGRAPH hGraph, PCWSTR pwzAttributes);
 HRESULT WINAPI PeerGraphPeerTimeToUniversalTime(HGRAPH hGraph, FILETIME *pftPeerTime, FILETIME *pftUniversalTime);
 HRESULT WINAPI PeerGraphUniversalTimeToPeerTime(HGRAPH hGraph, FILETIME *pftUniversalTime, FILETIME *pftPeerTime);
-#endif
 #endif
 #if (!(defined (NO_P2P_GROUP)) || (!defined (NO_P2P_IDENTITY)))
 #include <wincrypt.h>

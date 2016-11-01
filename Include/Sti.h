@@ -206,7 +206,6 @@ typedef struct _STINOTIFY
 #define STIEDFL_ATTACHEDONLY           0x00000001
 typedef  DWORD STI_RAW_CONTROL_CODE;
 #define STI_RAW_RESERVED    0x1000
-#ifndef MIDL_PASS
 STDMETHODIMP StiCreateInstanceW(HINSTANCE hinst, DWORD dwVer, interface IStillImageW **ppSti, LPUNKNOWN punkOuter);
 #if defined(UNICODE) || defined(STI_UNICODE)
 #define IID_IStillImage     IID_IStillImageW
@@ -312,6 +311,5 @@ DECLARE_INTERFACE_(IStiDevice, IUnknown)
 #define IStiDevice_GetNotificationData(p,a)     (p)->lpVtbl->GetNotificationData(p,a)
 #define IStiDevice_UnSubscribe(p)               (p)->lpVtbl->UnSubscribe(p)
 #define IStiDevice_GetLastErrorInfo(p,a)        (p)->lpVtbl->GetLastErrorInfo(p,a)
-#endif
 #include <poppack.h>
 #endif

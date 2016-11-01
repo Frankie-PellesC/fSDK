@@ -24,52 +24,25 @@ typedef unsigned int ALG_ID;
 #endif
 typedef struct _CERTIFICATE_BLOB {
 	DWORD dwCertEncodingType;
-#ifdef MIDL_PASS
-	[range(0, 32768)]
-#endif
-	      DWORD cbData;
-#ifdef MIDL_PASS
-	[size_is(cbData)]
-#endif
-	      PBYTE pbData;
+  DWORD cbData;
+  PBYTE pbData;
 }
 EFS_CERTIFICATE_BLOB, *PEFS_CERTIFICATE_BLOB;
 typedef struct _EFS_HASH_BLOB {
-#ifdef MIDL_PASS
-	[range(0, 100)]
-#endif
 	DWORD cbData;
-#ifdef MIDL_PASS
-	[size_is(cbData)]
-#endif
 	PBYTE pbData;
 } EFS_HASH_BLOB, *PEFS_HASH_BLOB;
 #if (NTDDI_VERSION >= NTDDI_WINXP)
 typedef struct _EFS_RPC_BLOB {
-#ifdef MIDL_PASS
-	[range(0, 266240)]
-#endif
 	DWORD cbData;
-#ifdef MIDL_PASS
-	[size_is(cbData)]
-#endif
 	PBYTE pbData;
 } EFS_RPC_BLOB, *PEFS_RPC_BLOB;
 #endif
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 typedef struct _EFS_PIN_BLOB {
 
-#ifdef MIDL_PASS
-	[range(0, 8)]
-#endif
 	DWORD cbPadding;
-#ifdef MIDL_PASS
-	[range(0, 2048)]
-#endif
 	DWORD cbData;
-#ifdef MIDL_PASS
-	[size_is(cbData + cbPadding)]
-#endif
 	PBYTE pbData;
 } EFS_PIN_BLOB, *PEFS_PIN_BLOB;
 #endif
@@ -114,30 +87,15 @@ typedef struct _ENCRYPTION_CERTIFICATE_HASH {
 	DWORD cbTotalLength;
 	SID *pUserSid;
 	PEFS_HASH_BLOB pHash;
-#ifdef MIDL_PASS
-	[string]
-#endif
-	               LPWSTR lpDisplayInformation;
+  LPWSTR lpDisplayInformation;
 }
 ENCRYPTION_CERTIFICATE_HASH, *PENCRYPTION_CERTIFICATE_HASH;
 typedef struct _ENCRYPTION_CERTIFICATE_HASH_LIST {
-#ifdef MIDL_PASS
-	[range(0, 500)]
-#endif
 	DWORD nCert_Hash;
-#ifdef MIDL_PASS
-	[size_is(nCert_Hash)]
-#endif
 	PENCRYPTION_CERTIFICATE_HASH * pUsers;
 } ENCRYPTION_CERTIFICATE_HASH_LIST, *PENCRYPTION_CERTIFICATE_HASH_LIST;
 typedef struct _ENCRYPTION_CERTIFICATE_LIST {
-#ifdef MIDL_PASS
-	[range(0, 500)]
-#endif
 	DWORD nUsers;
-#ifdef MIDL_PASS
-	[size_is(nUsers)]
-#endif
 	PENCRYPTION_CERTIFICATE * pUsers;
 } ENCRYPTION_CERTIFICATE_LIST, *PENCRYPTION_CERTIFICATE_LIST;
 #if (NTDDI_VERSION >= NTDDI_VISTA)
@@ -177,6 +135,5 @@ __declspec(deprecated) WINADVAPI DWORD WINAPI GetEncryptedFileMetadata(LPCWSTR l
 __declspec(deprecated) WINADVAPI DWORD WINAPI SetEncryptedFileMetadata(LPCWSTR lpFileName, PBYTE pbOldMetadata, PBYTE pbNewMetadata, PENCRYPTION_CERTIFICATE_HASH pOwnerHash, DWORD dwOperation, PENCRYPTION_CERTIFICATE_HASH_LIST pCertificatesAdded);
 __declspec(deprecated) WINADVAPI VOID WINAPI FreeEncryptedFileMetadata(PBYTE pbMetadata);
 #endif
-
 #endif
 #endif

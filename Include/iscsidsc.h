@@ -296,9 +296,6 @@ typedef struct
     ULONG OSBusNumber;
     ULONG OSTargetNumber;
     ULONG LUNCount;
-#ifdef MIDL_PASS
-    [size_is(LUNCount)]
-#endif
     PSCSI_LUN_LIST LUNList;
 } ISCSI_TARGET_MAPPINGW, *PISCSI_TARGET_MAPPINGW;
 typedef struct
@@ -310,9 +307,6 @@ typedef struct
     ULONG OSBusNumber;
     ULONG OSTargetNumber;
     ULONG LUNCount;
-#ifdef MIDL_PASS
-    [size_is(LUNCount)]
-#endif
     PSCSI_LUN_LIST LUNList;
 } ISCSI_TARGET_MAPPINGA, *PISCSI_TARGET_MAPPINGA;
 #ifdef UNICODE
@@ -487,7 +481,6 @@ typedef struct
     ULONG ConnectionCount;
     PISCSI_CONNECTION_INFO_EX Connections;
 } ISCSI_SESSION_INFO_EX, *PISCSI_SESSION_INFO_EX;
-#ifndef MIDL_PASS
 typedef struct
 {
     WCHAR InitiatorName[MAX_ISCSI_HBANAME_LEN];
@@ -516,7 +509,6 @@ typedef PISCSI_DEVICE_ON_SESSIONW PISCSI_DEVICE_ON_SESSION;
 #else
 typedef ISCSI_DEVICE_ON_SESSIONA ISCSI_DEVICE_ON_SESSION;
 typedef PISCSI_DEVICE_ON_SESSIONA PISCSI_DEVICE_ON_SESSION;
-#endif
 #endif
 typedef struct
 {

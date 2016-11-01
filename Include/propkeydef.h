@@ -29,7 +29,7 @@
 #define DEFINE_PROPERTYKEY(name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8, pid) extern const PROPERTYKEY name
 #endif
 #ifndef IsEqualPropertyKey
-#define IsEqualPropertyKey(a, b)   (((a).pid == (b).pid) && IsEqualIID((a).fmtid, (b).fmtid) )
+#define IsEqualPropertyKey(a, b)   (((a)->pid == (b)->pid) && IsEqualIID(&((a)->fmtid), &((b)->fmtid)) )
 #endif
 #ifndef _PROPERTYKEY_EQUALITY_OPERATORS_
 #define _PROPERTYKEY_EQUALITY_OPERATORS_

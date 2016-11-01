@@ -26,18 +26,6 @@ typedef struct  _IP4_ARRAY
     DWORD           AddrCount;
     IP4_ADDRESS     AddrArray[1];
 } IP4_ARRAY, *PIP4_ARRAY;
-#ifdef MIDL_PASS
-#ifdef _WIN64
-#pragma pack(push, 8)
-#else
-#pragma pack(push, 4)
-#endif
-typedef struct
-{
-    QWORD       IP6Qword[2];
-} IP6_ADDRESS, *PIP6_ADDRESS;
-#pragma pack(pop)
-#else
 typedef union
 {
 #ifdef _WIN64
@@ -50,7 +38,6 @@ typedef union
     IN6_ADDR    In6;
 #endif
 } IP6_ADDRESS, *PIP6_ADDRESS;
-#endif
 #undef  IP6_ADDRESS_STRING_LENGTH
 #define IP6_ADDRESS_STRING_LENGTH           (65)
 #define IP6_ADDRESS_STRING_BUFFER_LENGTH    (65)
@@ -756,11 +743,6 @@ typedef enum _DnsSection
 #define     DNSREC_UPDATE       (0x00000002)
 #define     DNSREC_DELETE       (0x00000004)
 #define     DNSREC_NOEXIST      (0x00000004)
-#ifdef MIDL_PASS
-#define PDNS_RECORD     PVOID
-#define PDNS_RECORDA    PVOID
-#define PDNS_RECORDW    PVOID
-#else
 typedef struct _DnsRecordW
 {
     struct _DnsRecordW *    pNext;
@@ -922,7 +904,6 @@ typedef DNS_RECORD_OPTA     DNS_RECORD_OPT, *PDNS_RECORD_OPT;
 #endif
 #define DNS_RECORD_FIXED_SIZE       FIELD_OFFSET( DNS_RECORD, Data )
 #define SIZEOF_DNS_RECORD_HEADER    DNS_RECORD_FIXED_SIZE
-#endif
 typedef struct _DnsRRSet
 {
     PDNS_RECORD     pFirstRR;

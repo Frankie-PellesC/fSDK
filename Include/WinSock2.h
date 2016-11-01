@@ -659,13 +659,10 @@ typedef struct _WSACOMPLETION {
 #define _tagBLOB_DEFINED
 #define _BLOB_DEFINED
 #define _LPBLOB_DEFINED
-typedef struct _BLOB {
+typedef struct _BLOB
+{
 	ULONG cbSize;
-#ifdef MIDL_PASS
-	[size_is(cbSize)] BYTE * pBlobData;
-#else
 	BYTE *pBlobData;
-#endif
 } BLOB, *LPBLOB;
 #endif
 #define SERVICE_MULTIPLE       (0x00000001)

@@ -1,0 +1,19 @@
+/*+@@file@@----------------------------------------------------------------*//*!
+ \file		DropDownColorPicker.rc
+ \par Description 
+ \par  Status: 
+ \par Project: 
+ \date		Created  on Sun Oct 30 21:30:38 2016
+ \date		Modified on Sun Oct 30 21:30:38 2016
+ \author	
+\*//*-@@file@@----------------------------------------------------------------*/
+#include "resource.h"
+
+IDI_RIBBONAPP       ICON         "res\\DDCP.ico"
+IDI_SMALL           ICON         "res\\DDCP.ico"
+
+STRINGTABLE
+BEGIN   
+   IDS_APP_TITLE       "DDCPSampleApp"
+   IDS_APP_CLASS       "RIBBONAPP"
+END

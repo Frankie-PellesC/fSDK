@@ -5216,9 +5216,6 @@ interface ITaskbarList2
 #define ITaskbarList2_MarkFullscreenWindow(This,hwnd,fFullscreen)( (This)->lpVtbl -> MarkFullscreenWindow(This,hwnd,fFullscreen) )
 #endif
 #endif
-#ifdef MIDL_PASS
-typedef IUnknown *HIMAGELIST;
-#endif
 typedef enum THUMBBUTTONFLAGS
 {
 	THBF_ENABLED = 0,

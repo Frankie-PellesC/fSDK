@@ -59,11 +59,7 @@ typedef struct tagVersionedStream *LPVERSIONEDSTREAM;
 #define	PROPSETFLAG_UNBUFFERED	( 4 )
 #define	PROPSETFLAG_CASE_SENSITIVE	( 8 )
 #define	PROPSET_BEHAVIOR_CASE_SENSITIVE	( 1 )
-#ifdef MIDL_PASS
-typedef struct tag_inner_PROPVARIANT PROPVARIANT;
-#else
 typedef struct tagPROPVARIANT PROPVARIANT;
-#endif
 typedef struct tagCAC
 {
 	ULONG cElems;
@@ -174,25 +170,17 @@ typedef struct tagCACLSID
 	ULONG cElems;
 	CLSID *pElems;
 } CACLSID;
-#ifdef MIDL_PASS
-typedef BYTE PROPVAR_PAD1;
-typedef BYTE PROPVAR_PAD2;
-typedef ULONG PROPVAR_PAD3;
-#else
 typedef WORD PROPVAR_PAD1;
 typedef WORD PROPVAR_PAD2;
 typedef WORD PROPVAR_PAD3;
 #define tag_inner_PROPVARIANT
-#endif
 #if !defined(_MSC_EXTENSIONS)
 struct tagPROPVARIANT;
 #else
-#ifndef MIDL_PASS
 struct tagPROPVARIANT
 {
 	union
 	{
-#endif
 		struct tag_inner_PROPVARIANT
 		{
 			VARTYPE vt;
@@ -276,21 +264,14 @@ struct tagPROPVARIANT
 				PROPVARIANT *pvarVal;
 			};
 		};
-#ifndef MIDL_PASS
 		DECIMAL decVal;
 	};
 };
 #endif
-#endif
-#ifdef MIDL_PASS
-typedef struct tag_inner_PROPVARIANT *LPPROPVARIANT;
-typedef const PROPVARIANT *REFPROPVARIANT;
-#else
 typedef struct tagPROPVARIANT *LPPROPVARIANT;
 #ifndef _REFPROPVARIANT_DEFINED
 #define _REFPROPVARIANT_DEFINED
 #define REFPROPVARIANT const PROPVARIANT * __MIDL_CONST
-#endif
 #endif
 #define	PID_DICTIONARY	( 0 )
 #define	PID_CODEPAGE	( 0x1 )
