@@ -19,7 +19,7 @@ EXPORTS
 "_SnmpUtilAnsiToUnicode@16"
 "_SnmpUtilAsnAnyCpy@8"
 "_SnmpUtilAsnAnyFree@4"
-"_SnmpUtilDbgPrint"
+"SnmpUtilDbgPrint"
 "_SnmpUtilIdsToA@8"
 "_SnmpUtilMemAlloc@4"
 "_SnmpUtilMemFree@4"

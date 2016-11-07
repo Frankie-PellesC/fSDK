@@ -89,7 +89,7 @@ EXPORTS
 "_SafeArrayUnaccessData@4" @24
 "_SafeArrayUnlock@4" @22
 "_SetErrorInfo@8" @201
-"_SetOaNoCache" @327
+"SetOaNoCache" @327
 "_SetVarConversionLocaleSetting@4" @325
 "_SysAllocString@4" @2
 "_SysAllocStringByteLen@8" @150

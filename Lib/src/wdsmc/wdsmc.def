@@ -16,7 +16,7 @@ EXPORTS
 "_WdsTransportServerCompleteRead@16"
 "_WdsTransportServerFreeBuffer@8"
 "_WdsTransportServerRegisterCallback@12"
-"_WdsTransportServerTrace"
+"WdsTransportServerTrace"
 "_WdsTransportServerTraceV@16"
 
 ; Def built in 0.001806 seconds

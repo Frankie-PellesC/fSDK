@@ -692,8 +692,8 @@ EXPORTS
 "_WindowFromPoint@8"
 "_keybd_event@16"
 "_mouse_event@20"
-"_wsprintfA"
-"_wsprintfW"
+"wsprintfA"
+"wsprintfW"
 "_wvsprintfA@12"
 "_wvsprintfW@12"
 

@@ -31,14 +31,14 @@ EXPORTS
 "_AVIMakeFileFromStreams@12"
 "_AVIMakeStreamFromClipboard@12"
 "_AVIPutFileOnClipboard@4"
-"_AVISave"
-"_AVISaveA"
+"AVISave"
+"AVISaveA"
 "_AVISaveOptions@20"
 "_AVISaveOptionsFree@8"
 "_AVISaveV@24"
 "_AVISaveVA@24"
 "_AVISaveVW@24"
-"_AVISaveW"
+"AVISaveW"
 "_AVIStreamAddRef@4"
 "_AVIStreamBeginStreaming@16"
 "_AVIStreamCreate@16"
@@ -75,9 +75,9 @@ EXPORTS
 "_EditStreamSetName@8"
 "_EditStreamSetNameA@8"
 "_EditStreamSetNameW@8"
-"_IID_IAVIEditStream"
-"_IID_IAVIFile"
-"_IID_IAVIStream"
-"_IID_IGetFrame"
+"IID_IAVIEditStream" DATA
+"IID_IAVIFile" DATA
+"IID_IAVIStream" DATA
+"IID_IGetFrame" DATA
 
 ; Def built in 0.004283 seconds

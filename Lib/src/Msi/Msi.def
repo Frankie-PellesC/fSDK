@@ -160,7 +160,7 @@ EXPORTS
 "_MsiInstallMissingFileW@8" @86
 "_MsiInstallProductA@8" @87
 "_MsiInstallProductW@8" @88
-"_MsiInvalidateFeatureCache" @191
+"MsiInvalidateFeatureCache" @191
 "_MsiIsProductElevatedA@8" @214
 "_MsiIsProductElevatedW@8" @215
 "_MsiJoinTransaction@12" @287

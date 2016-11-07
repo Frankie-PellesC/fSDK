@@ -5,7 +5,7 @@ LIBRARY fontsub.dll
 EXPORTS
 ; Log File for lib <fontsub.dll> created with fTools
 
-"_CreateFontPackage"
-"_MergeFontPackage"
+"CreateFontPackage"
+"MergeFontPackage"
 
 ; Def built in 0.001138 seconds

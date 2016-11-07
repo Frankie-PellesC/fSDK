@@ -5,6 +5,6 @@ LIBRARY Wst.dll
 EXPORTS
 ; Log File for lib <Wst.dll> created with fTools
 
-"__penter"
+"_penter"
 
 ; Def built in 0.000948 seconds

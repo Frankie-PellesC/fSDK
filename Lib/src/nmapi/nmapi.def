@@ -75,7 +75,7 @@ EXPORTS
 "_FindPreviousFrame@28"
 "_FindPropertyInstance@8"
 "_FindPropertyInstanceRestart@16"
-"_FormatPropertyInstance"
+"FormatPropertyInstance"
 "_FrameRecognize@4"
 "_GetASRThWnd@0"
 "_GetAddressDatabaseInstanceData@4"
@@ -161,6 +161,6 @@ EXPORTS
 "_UnlockFrame@4"
 "_UnlockFramePropertyTable@4"
 "_UnlockFrameText@4"
-"_bInsert"
+"bInsert"
 
 ; Def built in 0.005136 seconds

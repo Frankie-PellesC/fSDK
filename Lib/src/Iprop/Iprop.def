@@ -5,13 +5,13 @@ LIBRARY Iprop.dll
 EXPORTS
 ; Log File for lib <Iprop.dll> created with fTools
 
-"_FmtIdToPropStgName"
-"_FreePropVariantArray"
-"_PropStgNameToFmtId"
-"_PropVariantClear"
-"_PropVariantCopy"
-"_StgCreatePropSetStg"
-"_StgCreatePropStg"
-"_StgOpenPropStg"
+"_FmtIdToPropStgName@8"
+"_FreePropVariantArray@8"
+"_PropStgNameToFmtId@8"
+"_PropVariantClear@4"
+"_PropVariantCopy@8"
+"_StgCreatePropSetStg@12"
+"_StgCreatePropStg@24"
+"_StgOpenPropStg@20"
 
 ; Def built in 0.001762 seconds

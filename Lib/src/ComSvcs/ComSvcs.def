@@ -16,11 +16,11 @@ EXPORTS
 "_DllUnregisterServerWeReallyMeanIt@0" @6
 "_GetMTAThreadPoolMetrics@4"
 "_GetManagedExtensions@4"
-"_GetObjectContext"
+"GetObjectContext"
 "_GetTrkSvrObject@8"
 "_MTSCreateActivity@8"
 "_MiniDumpW@16"
-"_RecycleSurrogate"
-"_SafeRef"
+"RecycleSurrogate"
+"SafeRef"
 
 ; Def built in 0.002307 seconds

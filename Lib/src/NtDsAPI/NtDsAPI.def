@@ -69,7 +69,7 @@ EXPORTS
 "_DsListServersInSiteW@12"
 "_DsListSitesA@8"
 "_DsListSitesW@8"
-"_DsLogEntry"
+"DsLogEntry"
 "_DsMakePasswordCredentialsA@16"
 "_DsMakePasswordCredentialsW@16"
 "_DsMakeSpnA@28"

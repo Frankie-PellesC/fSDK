@@ -8,6 +8,6 @@ EXPORTS
 "_DumpCAP@0" @5
 "_StartCAP@0" @3
 "_StopCAP@0" @4
-"__penter" @2
+"_penter" @2
 
 ; Def built in 0.001419 seconds

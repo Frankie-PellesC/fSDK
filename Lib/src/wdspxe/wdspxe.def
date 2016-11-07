@@ -26,7 +26,7 @@ EXPORTS
 "_PxeProviderUnRegister@4"
 "_PxeRegisterCallback@16"
 "_PxeSendReply@16"
-"_PxeTrace"
+"PxeTrace"
 "_PxeTraceV@16"
 
 ; Def built in 0.002573 seconds

@@ -144,8 +144,8 @@ AUTHZAPI BOOL WINAPI AuthzFreeContext(AUTHZ_CLIENT_CONTEXT_HANDLE hAuthzClientCo
 #define AUTHZ_NO_FAILURE_AUDIT                   0x00000002
 #define AUTHZ_NO_ALLOC_STRINGS                   0x00000004
 #define AUTHZ_VALID_OBJECT_ACCESS_AUDIT_FLAGS    (AUTHZ_NO_SUCCESS_AUDIT | AUTHZ_NO_FAILURE_AUDIT | AUTHZ_NO_ALLOC_STRINGS)
-AUTHZAPI BOOL WINAPI AuthzInitializeObjectAccessAuditEvent(DWORD Flags, AUTHZ_AUDIT_EVENT_TYPE_HANDLE hAuditEventType, PWSTR szOperationType, PWSTR szObjectType, PWSTR szObjectName, PWSTR szAdditionalInfo, PAUTHZ_AUDIT_EVENT_HANDLE phAuditEvent, DWORD dwAdditionalParameterCount, ...);
-AUTHZAPI BOOL WINAPI AuthzInitializeObjectAccessAuditEvent2(DWORD Flags, AUTHZ_AUDIT_EVENT_TYPE_HANDLE hAuditEventType, PWSTR szOperationType, PWSTR szObjectType, PWSTR szObjectName, PWSTR szAdditionalInfo, PWSTR szAdditionalInfo2, PAUTHZ_AUDIT_EVENT_HANDLE phAuditEvent, DWORD dwAdditionalParameterCount, ...);
+AUTHZAPI BOOL /*WINAPI*/__cdecl AuthzInitializeObjectAccessAuditEvent(DWORD Flags, AUTHZ_AUDIT_EVENT_TYPE_HANDLE hAuditEventType, PWSTR szOperationType, PWSTR szObjectType, PWSTR szObjectName, PWSTR szAdditionalInfo, PAUTHZ_AUDIT_EVENT_HANDLE phAuditEvent, DWORD dwAdditionalParameterCount, ...);
+AUTHZAPI BOOL /*WINAPI*/__cdecl  AuthzInitializeObjectAccessAuditEvent2(DWORD Flags, AUTHZ_AUDIT_EVENT_TYPE_HANDLE hAuditEventType, PWSTR szOperationType, PWSTR szObjectType, PWSTR szObjectName, PWSTR szAdditionalInfo, PWSTR szAdditionalInfo2, PAUTHZ_AUDIT_EVENT_HANDLE phAuditEvent, DWORD dwAdditionalParameterCount, ...);
 typedef enum _AUTHZ_AUDIT_EVENT_INFORMATION_CLASS {
 	AuthzAuditEventInfoFlags = 1,
 	AuthzAuditEventInfoOperationType,
@@ -179,6 +179,6 @@ AUTHZAPI BOOL WINAPI AuthzUninstallSecurityEventSource(DWORD dwFlags, PCWSTR szE
 AUTHZAPI BOOL WINAPI AuthzEnumerateSecurityEventSources(DWORD dwFlags, PAUTHZ_SOURCE_SCHEMA_REGISTRATION Buffer, PDWORD pdwCount, PDWORD pdwLength);
 AUTHZAPI BOOL WINAPI AuthzRegisterSecurityEventSource(DWORD dwFlags, PCWSTR szEventSourceName, PAUTHZ_SECURITY_EVENT_PROVIDER_HANDLE phEventProvider);
 AUTHZAPI BOOL WINAPI AuthzUnregisterSecurityEventSource(DWORD dwFlags, PAUTHZ_SECURITY_EVENT_PROVIDER_HANDLE phEventProvider);
-AUTHZAPI BOOL WINAPI AuthzReportSecurityEvent(DWORD dwFlags, AUTHZ_SECURITY_EVENT_PROVIDER_HANDLE hEventProvider, DWORD dwAuditId, PSID pUserSid, DWORD dwCount, ...);
+AUTHZAPI BOOL /*WINAPI*/__cdecl  AuthzReportSecurityEvent(DWORD dwFlags, AUTHZ_SECURITY_EVENT_PROVIDER_HANDLE hEventProvider, DWORD dwAuditId, PSID pUserSid, DWORD dwCount, ...);
 AUTHZAPI BOOL WINAPI AuthzReportSecurityEventFromParams(DWORD dwFlags, AUTHZ_SECURITY_EVENT_PROVIDER_HANDLE hEventProvider, DWORD dwAuditId, PSID pUserSid, PAUDIT_PARAMS pParams);
 #endif

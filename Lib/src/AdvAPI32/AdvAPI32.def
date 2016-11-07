@@ -716,7 +716,7 @@ EXPORTS
 "_SystemFunction041@12"
 "_TraceEvent@12"
 "_TraceEventInstance@20"
-"_TraceMessage"
+"TraceMessage"
 "_TraceMessageVa@24"
 "_TraceSetInformation@20"
 "_TreeResetNamedSecurityInfoA@44"

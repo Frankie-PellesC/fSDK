@@ -1872,8 +1872,8 @@ WINSETUPAPI VOID WINAPI SetupCloseLog(VOID);
 #if _SETUPAPI_VER >= _WIN32_WINNT_LONGHORN
 WINSETUPAPI SP_LOG_TOKEN WINAPI SetupGetThreadLogToken(VOID);
 WINSETUPAPI VOID WINAPI SetupSetThreadLogToken(SP_LOG_TOKEN LogToken);
-WINSETUPAPI VOID WINAPI SetupWriteTextLog(SP_LOG_TOKEN LogToken, DWORD Category, DWORD Flags, PCSTR MessageStr /*, ... */ );
-WINSETUPAPI VOID WINAPI SetupWriteTextLogError(SP_LOG_TOKEN LogToken, DWORD Category, DWORD LogFlags, DWORD Error, PCSTR MessageStr /*, ... */ );
+WINSETUPAPI VOID /*WINAPI*/ __cdecl SetupWriteTextLog(SP_LOG_TOKEN LogToken, DWORD Category, DWORD Flags, PCSTR MessageStr, ... );
+WINSETUPAPI VOID /*WINAPI*/ __cdecl SetupWriteTextLogError(SP_LOG_TOKEN LogToken, DWORD Category, DWORD LogFlags, DWORD Error, PCSTR MessageStr, ... );
 WINSETUPAPI VOID WINAPI SetupWriteTextLogInfLine(SP_LOG_TOKEN LogToken, DWORD Flags, HINF InfHandle, PINFCONTEXT Context);
 #endif
 WINSETUPAPI BOOL WINAPI SetupGetBackupInformationA(HSPFILEQ QueueHandle, PSP_BACKUP_QUEUE_PARAMS_A BackupParams);

@@ -9,9 +9,9 @@ EXPORTS
 "?FreezeLocalTransactionManagers@@YGJKK@Z" @8
 "?GetDtcLocaleResourceHandle@@YAPAUHINSTANCE__@@XZ" @4
 "?ThawLocalTransactionManagers@@YGJXZ" @9
-"_DtcGetTransactionManagerC" @7
-"_DtcGetTransactionManagerEx"
-"_DtcGetTransactionManagerExA"
-"_DtcGetTransactionManagerExW"
+"DtcGetTransactionManagerC" @7
+"DtcGetTransactionManagerEx"
+"DtcGetTransactionManagerExA"
+"DtcGetTransactionManagerExW"
 
 ; Def built in 0.001874 seconds

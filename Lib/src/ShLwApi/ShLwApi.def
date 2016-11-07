@@ -263,8 +263,8 @@ EXPORTS
 "_SHUnicodeToAnsi@12" @217
 "_SHUnicodeToUnicode@12" @346
 "_SHUnlockShared@4" @9
-"_ShellMessageBoxA"
-"_ShellMessageBoxW" @388
+"ShellMessageBoxA"
+"ShellMessageBoxW" @388
 "_StrCSpnA@8"
 "_StrCSpnIA@8"
 "_StrCSpnIW@8"
@@ -367,8 +367,8 @@ EXPORTS
 "_UrlUnescapeA@16"
 "_UrlUnescapeW@16"
 "_WhichPlatform@0" @276
-"_wnsprintfA"
-"_wnsprintfW"
+"wnsprintfA"
+"wnsprintfW"
 "_wvnsprintfA@16"
 "_wvnsprintfW@16"
 

@@ -2,11 +2,15 @@
  \file		Winldap.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Added definition for function ldap_get_optionA and 
+            ldap_set_optionA
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
- \date		Created  on Sun Sep  4 16:08:26 2016
- \date		Modified on Sun Sep  4 16:08:26 2016
- \author	frankie
+ \date		Created  on Mon Nov  7 16:55:05 2016
+ \date		Modified on Mon Nov  7 16:55:05 2016
+ \author	
 \*//*-@@file@@----------------------------------------------------------------*/
 
 #ifndef LDAP_CLIENT_DEFINED
@@ -304,8 +308,10 @@ WINLDAPAPI LDAP *LDAPAPI cldap_open(PCHAR HostName, ULONG PortNumber);
 WINLDAPAPI ULONG LDAPAPI ldap_unbind(LDAP *ld);
 WINLDAPAPI ULONG LDAPAPI ldap_unbind_s(LDAP *ld);
 WINLDAPAPI ULONG LDAPAPI ldap_get_option(LDAP *ld, int option, void *outvalue);
+WINLDAPAPI ULONG LDAPAPI ldap_get_optionA(LDAP *ld, int option, void *outvalue);
 WINLDAPAPI ULONG LDAPAPI ldap_get_optionW(LDAP *ld, int option, void *outvalue);
 WINLDAPAPI ULONG LDAPAPI ldap_set_option(LDAP *ld, int option, const void *invalue);
+WINLDAPAPI ULONG LDAPAPI ldap_set_optionA(LDAP *ld, int option, const void *invalue);
 WINLDAPAPI ULONG LDAPAPI ldap_set_optionW(LDAP *ld, int option, const void *invalue);
 #if LDAP_UNICODE
 #define ldap_get_option ldap_get_optionW

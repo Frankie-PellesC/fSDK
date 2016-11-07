@@ -38,7 +38,7 @@ EXPORTS
 "_WdsCliGetTransferSize@8"
 "_WdsCliGetUnattendVariables@20"
 "_WdsCliInitializeLog@16"
-"_WdsCliLog"
+"WdsCliLog"
 "_WdsCliObtainDriverPackages@16"
 "_WdsCliRegisterTrace@4"
 "_WdsCliTransferFile@36"

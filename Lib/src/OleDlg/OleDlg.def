@@ -24,8 +24,8 @@ EXPORTS
 "_OleUIObjectPropertiesW@4"
 "_OleUIPasteSpecialA@4" @4
 "_OleUIPasteSpecialW@4"
-"_OleUIPromptUserA" @10
-"_OleUIPromptUserW"
+"OleUIPromptUserA" @10
+"OleUIPromptUserW"
 "_OleUIUpdateLinksA@16" @9
 "_OleUIUpdateLinksW@16"
 

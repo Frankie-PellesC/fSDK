@@ -2,10 +2,13 @@
  \file		snmp.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Fixed SnmpUtilDbgPrint definition
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Aug  7 21:16:54 2016
- \date		Modified on Sun Aug  7 21:16:54 2016
+ \date		Modified on Mon Nov  7 11:49:10 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -198,7 +201,7 @@ VOID SNMP_FUNC_TYPE SnmpSvcSetLogType(INT nLogType);
 #define SNMP_OUTPUT_TO_LOGFILE          0x2
 #define SNMP_OUTPUT_TO_EVENTLOG         0x4
 #define SNMP_OUTPUT_TO_DEBUGGER         0x8
-VOID /*SNMP_FUNC_TYPE*/ SnmpUtilDbgPrint(INT nLogLevel, LPSTR szFormat, ...);
+VOID /*SNMP_FUNC_TYPE*/ __cdecl SnmpUtilDbgPrint(INT nLogLevel, LPSTR szFormat, ...);
 #if DBG
 #define SNMPDBG(_x_)                    SnmpUtilDbgPrint _x_
 #else

@@ -1,4 +1,16 @@
 /*+@@file@@----------------------------------------------------------------*//*!
+ \file		comsvcs.h
+ \par Description 
+            - Fixed GetObjectContext macro
+ \par  Status: 
+            
+ \par Project: 
+            
+ \date		Created  on Sun Nov  6 17:17:42 2016
+ \date		Modified on Sun Nov  6 17:17:42 2016
+ \author	
+\*//*-@@file@@----------------------------------------------------------------*/
+/*+@@file@@----------------------------------------------------------------*//*!
  \file		ComSvcs.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
@@ -3248,7 +3260,7 @@ interface ICOMLBArguments
 #endif
 #endif
 #if (_WIN32_WINNT >= 0x0500)
-#define GetObjectContext(ppIOC) (CoGetObjectContext(IID_IObjectContext, (void **) (ppIOC)) == S_OK ? S_OK : CONTEXT_E_NOCONTEXT)
+#define GetObjectContext(ppIOC) (CoGetObjectContext(&IID_IObjectContext, (void **) (ppIOC)) == S_OK ? S_OK : CONTEXT_E_NOCONTEXT)
 #else
 extern HRESULT __cdecl GetObjectContext(IObjectContext **ppInstanceContext);
 #endif

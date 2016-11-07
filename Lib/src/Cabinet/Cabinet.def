@@ -8,16 +8,16 @@ EXPORTS
 "_DeleteExtractedFiles@4" @4
 "_DllGetVersion@4" @2
 "_Extract@8" @3
-"_FCIAddFile" @11
-"_FCICreate" @10
-"_FCIDestroy" @14
-"_FCIFlushCabinet" @13
-"_FCIFlushFolder" @12
-"_FDICopy" @22
-"_FDICreate" @20
-"_FDIDestroy" @23
-"_FDIIsCabinet" @21
-"_FDITruncateCabinet" @24
+"FCIAddFile" @11
+"FCICreate" @10
+"FCIDestroy" @14
+"FCIFlushCabinet" @13
+"FCIFlushFolder" @12
+"FDICopy" @22
+"FDICreate" @20
+"FDIDestroy" @23
+"FDIIsCabinet" @21
+"FDITruncateCabinet" @24
 "_GetDllVersion@0" @1
 
 ; Def built in 0.002142 seconds

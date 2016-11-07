@@ -559,8 +559,8 @@ EXPORTS
 "_SetupUninstallOEMInfW@12"
 "_SetupVerifyInfFileA@12"
 "_SetupVerifyInfFileW@12"
-"_SetupWriteTextLog"
-"_SetupWriteTextLogError"
+"SetupWriteTextLog"
+"SetupWriteTextLogError"
 "_SetupWriteTextLogInfLine@20"
 "_pSetupDiCrimsonLogDeviceInstall@24"
 
