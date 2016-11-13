@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __bits2_5_h__
 #define __bits2_5_h__
@@ -41,9 +41,9 @@ typedef struct BackgroundCopyManager2_5 BackgroundCopyManager2_5;
 #define __IBackgroundCopyJobHttpOptions_FWD_DEFINED__
 typedef interface IBackgroundCopyJobHttpOptions IBackgroundCopyJobHttpOptions;
 #endif
-#include "bits.h"
-#include "bits1_5.h"
-#include "bits2_0.h"
+#include <bits.h>
+#include <bits1_5.h>
+#include <bits2_0.h>
 #ifndef __IBackgroundCopyJobHttpOptions_INTERFACE_DEFINED__
 #define __IBackgroundCopyJobHttpOptions_INTERFACE_DEFINED__
 typedef enum __MIDL_IBackgroundCopyJobHttpOptions_0001
@@ -107,7 +107,7 @@ extern const CLSID CLSID_BackgroundCopyManager2_5;
 #define   BG_HTTP_REDIRECT_POLICY_ALLOW_REPORT  0x0100
 #define   BG_HTTP_REDIRECT_POLICY_DISALLOW      0x0200
 #define   BG_HTTP_REDIRECT_POLICY_ALLOW_HTTPS_TO_HTTP  0x0800
-#include "bits3_0.h"
+#include <bits3_0.h>
 extern RPC_IF_HANDLE __MIDL_itf_bits2_5_0000_0001_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_bits2_5_0000_0001_v0_0_s_ifspec;
 #endif

@@ -1,0 +1,26 @@
+; Def File for lib <d3dcompiler.dll> created with fTools
+; Created on Sun Nov 13 12:18:10 2016
+
+LIBRARY d3dcompiler.dll
+EXPORTS
+; Log File for lib <d3dcompiler.dll> created with fTools
+
+"?D3DAssemble@@YAJPEBX_KPEBDPEBU_D3D_SHADER_MACRO@@PEAUID3DInclude@@IPEAPEAUID3D10Blob@@5@Z"
+"?DebugSetMute@@YAXH@Z"
+"D3DCompile"
+"D3DCompressShaders"
+"D3DCreateBlob"
+"D3DDecompressShaders"
+"D3DDisassemble"
+"D3DDisassemble10Effect"
+"D3DGetBlobPart"
+"D3DGetDebugInfo"
+"D3DGetInputAndOutputSignatureBlob"
+"D3DGetInputSignatureBlob"
+"D3DGetOutputSignatureBlob"
+"D3DPreprocess"
+"D3DReflect"
+"D3DReturnFailure1"
+"D3DStripShader"
+
+; Def built in 0.001419 seconds

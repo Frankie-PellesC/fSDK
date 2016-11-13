@@ -1,11 +1,14 @@
 /*+@@file@@----------------------------------------------------------------*//*!
- \file		Shlwapi.h
+ \file		shlwapi.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Fixed <static cast> definition
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Sep  4 00:17:55 2016
- \date		Modified on Sun Sep  4 00:17:55 2016
+ \date		Modified on Sun Nov 13 21:12:13 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -1504,11 +1507,8 @@ typedef const QITAB *LPCQITAB;
 STDAPI QISearch(void* that, LPCQITAB pqit, REFIID riid, void **ppv);
 #endif
 #ifndef STATIC_CAST
-#define STATIC_CAST(typ)   static_cast<typ>
-#ifndef _X86_
     #undef  STATIC_CAST
     #define STATIC_CAST(typ)   (typ)
-#endif
 #endif
 #ifndef OFFSETOFCLASS
 #define OFFSETOFCLASS(base, derived) \

@@ -6079,7 +6079,7 @@ int WINAPI DrawShadowText(HDC hdc, LPCWSTR pszText, UINT cch, RECT* prc, DWORD d
 #endif
 #if !defined(RC_INVOKED)
 #if defined(ISOLATION_AWARE_ENABLED) && (ISOLATION_AWARE_ENABLED != 0)
-#include "commctrl.inl"
+#include <commctrl.inl>
 #endif
 #endif
 #endif

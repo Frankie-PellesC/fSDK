@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "exposeenums2managed.h"
+#include <exposeenums2managed.h>
 ENUM SmartCardStatusType
 {
     CardInserted = 0,
@@ -72,5 +72,5 @@ ENUM BDA_DrmPairingError
     BDA_DrmPairing_Aborted,
     BDA_DrmPairing_NeedSDKUpdate
 }BDA_DrmPairingError;
-#include "unexposeenums2managed.h"
+#include <unexposeenums2managed.h>
 #endif

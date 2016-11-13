@@ -13,7 +13,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "d3d10.h"
+#include <d3d10.h>
 typedef enum _D3D10_DEVICE_STATE_TYPES
 {
     D3D10_DST_SO_BUFFERS=1,

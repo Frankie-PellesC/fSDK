@@ -24,11 +24,11 @@
 #define FPO_ON 1
 #define CORHLPR_TURNED_FPO_ON 1
 #endif
-#include "cor.h"
-#include "corhdr.h"
-#include "corerror.h"
+#include <cor.h>
+#include <corhdr.h>
+#include <corerror.h>
 #ifdef _BLD_CLR
-#include "new.hpp"
+#include <new.hpp>
 #define NEW_NOTHROW(_bytes) new (nothrow) BYTE[_bytes]
 #define NEW_THROWS(_bytes) new BYTE[_bytes]
 void DECLSPEC_NORETURN ThrowOutOfMemory();

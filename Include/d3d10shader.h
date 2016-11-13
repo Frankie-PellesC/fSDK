@@ -14,7 +14,7 @@
 #pragma once
 #endif
 
-#include "d3d10.h"
+#include <d3d10.h>
 
 #define D3D10_TX_VERSION(_Major,_Minor) (('T' << 24) | ('X' << 16) | ((_Major) << 8) | (_Minor))
 #define D3D10_SHADER_DEBUG                          (1 << 0)

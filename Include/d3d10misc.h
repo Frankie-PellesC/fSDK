@@ -13,7 +13,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "d3d10.h"
+#include <d3d10.h>
 typedef interface ID3D10Blob ID3D10Blob;
 typedef interface ID3D10Blob *LPD3D10BLOB;
 DEFINE_GUID(IID_ID3D10Blob, 0x8ba5fb08, 0x5195, 0x40e2, 0xac, 0x58, 0xd, 0x98, 0x9c, 0x3a, 0x1, 0x2);

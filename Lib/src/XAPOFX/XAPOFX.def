@@ -1,0 +1,10 @@
+; Def File for lib <XAPOFX.dll> created with fTools
+; Created on Sun Nov 13 12:18:09 2016
+
+LIBRARY XAPOFX.dll
+EXPORTS
+; Log File for lib <XAPOFX.dll> created with fTools
+
+"CreateFX"
+
+; Def built in 0.001486 seconds

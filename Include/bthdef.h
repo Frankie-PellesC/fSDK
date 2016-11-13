@@ -24,7 +24,7 @@
 #if (NTDDI_VERSION >= NTDDI_WINXPSP2)
 #ifndef GUID_DEFS_ONLY
   #ifndef NO_BTHSDPDEF_INC
-    #include "bthsdpdef.h"
+#include <bthsdpdef.h>
   #endif
 #endif
 #ifndef NO_GUID_DEFS

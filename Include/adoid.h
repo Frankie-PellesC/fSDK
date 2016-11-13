@@ -14,6 +14,6 @@
 #endif
 #ifndef _ADOID_H_
 #define _ADOID_H_
-#include "adodef.h"
-#include "ADOGuids.h"
+#include <adodef.h>
+#include <ADOGuids.h>
 #endif

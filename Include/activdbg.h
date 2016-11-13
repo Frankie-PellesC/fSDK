@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __activdbg_h__
 #define __activdbg_h__
@@ -525,9 +525,9 @@ typedef struct MachineDebugManager_DEBUG MachineDebugManager_DEBUG;
 #define __DefaultDebugSessionProvider_FWD_DEFINED__
 typedef struct DefaultDebugSessionProvider DefaultDebugSessionProvider;
 #endif
-#include "ocidl.h"
-#include "activscp.h"
-#include "dbgprop.h"
+#include <ocidl.h>
+#include <activscp.h>
+#include <dbgprop.h>
 #pragma comment(lib,"uuid.lib")
 #ifndef __ActivDbg_h
 #define __ActivDbg_h

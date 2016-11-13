@@ -2,10 +2,13 @@
  \file		mfapi.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Added translation for inline helper functions
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Aug  7 20:37:54 2016
- \date		Modified on Sun Aug  7 20:37:54 2016
+ \date		Modified on Sun Nov 13 18:31:13 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -483,6 +486,100 @@ STDAPI MFConvertColorInfoFromDXVA(MFVIDEOFORMAT *pToFormat, DWORD dwFromDXVA);
 STDAPI MFCopyImage(BYTE *pDest, LONG lDestStride, const BYTE *pSrc, LONG lSrcStride, DWORD dwWidthInBytes, DWORD dwLines);
 STDAPI MFConvertFromFP16Array(float *pDest, const WORD *pSrc, DWORD dwCount);
 STDAPI MFConvertToFP16Array(WORD *pDest, const float *pSrc, DWORD dwCount);
+__inline UINT32 HI32(UINT64 unPacked)
+{
+	return (UINT32) (unPacked >> 32);
+}
+__inline UINT32 LO32(UINT64 unPacked)
+{
+	return (UINT32)unPacked;
+}
+__inline UINT64 Pack2UINT32AsUINT64(UINT32 unHigh, UINT32 unLow)
+{
+	return ((UINT64)unHigh << 32) | unLow;
+}
+__inline void Unpack2UINT32AsUINT64(UINT64 unPacked, UINT32 *punHigh, UINT32 *punLow)
+{
+	*punHigh = HI32(unPacked);
+	*punLow = LO32(unPacked);
+}
+__inline UINT64 PackSize(UINT32 unWidth, UINT32 unHeight)
+{
+	return Pack2UINT32AsUINT64(unWidth, unHeight);
+}
+__inline void UnpackSize(UINT64 unPacked, UINT32 *punWidth, UINT32 *punHeight)
+{
+	Unpack2UINT32AsUINT64(unPacked, punWidth, punHeight);
+}
+__inline UINT64 PackRatio(INT32 nNumerator, UINT32 unDenominator)
+{
+	return Pack2UINT32AsUINT64((UINT32)nNumerator, unDenominator);
+}
+__inline void UnpackRatio(UINT64 unPacked, INT32 *pnNumerator, UINT32 *punDenominator)
+{
+	Unpack2UINT32AsUINT64(unPacked, (UINT32 *)pnNumerator, punDenominator);
+}
+__inline UINT32 MFGetAttributeUINT32(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 unDefault)
+{
+	UINT32 unRet;
+	if (FAILED(pAttributes->lpVtbl->GetUINT32(pAttributes, guidKey, &unRet)))
+	{
+		unRet = unDefault;
+	}
+	return unRet;
+}
+__inline UINT64 MFGetAttributeUINT64(IMFAttributes *pAttributes, REFGUID guidKey, UINT64 unDefault)
+{
+	UINT64 unRet;
+	if (FAILED(pAttributes->lpVtbl->GetUINT64(pAttributes, guidKey, &unRet)))
+	{
+		unRet = unDefault;
+	}
+	return unRet;
+}
+__inline double MFGetAttributeDouble(IMFAttributes *pAttributes, REFGUID guidKey, double fDefault)
+{
+	double fRet;
+	if (FAILED(pAttributes->lpVtbl->GetDouble(pAttributes, guidKey, &fRet)))
+	{
+		fRet = fDefault;
+	}
+	return fRet;
+}
+__inline HRESULT MFGetAttribute2UINT32asUINT64(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 *punHigh32, UINT32 *punLow32)
+{
+	UINT64 unPacked;
+	HRESULT hr = S_OK;
+
+	hr = pAttributes->lpVtbl->GetUINT64(pAttributes, guidKey, &unPacked);
+	if (FAILED(hr))
+	{
+		return hr;
+	}
+	Unpack2UINT32AsUINT64(unPacked, punHigh32, punLow32);
+
+	return hr;
+}
+__inline HRESULT MFSetAttribute2UINT32asUINT64(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 unHigh32, UINT32 unLow32)
+{
+	return pAttributes->lpVtbl->SetUINT64(pAttributes, guidKey, Pack2UINT32AsUINT64(unHigh32, unLow32));
+}
+__inline HRESULT MFGetAttributeRatio(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 *punNumerator, UINT32 *punDenominator)
+{
+	return MFGetAttribute2UINT32asUINT64(pAttributes, guidKey, punNumerator, punDenominator);
+}
+__inline HRESULT MFGetAttributeSize(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 *punWidth, UINT32 *punHeight)
+{
+	return MFGetAttribute2UINT32asUINT64(pAttributes, guidKey, punWidth, punHeight);
+}
+__inline HRESULT MFSetAttributeRatio(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 unNumerator, UINT32 unDenominator)
+{
+	return MFSetAttribute2UINT32asUINT64(pAttributes, guidKey, unNumerator, unDenominator);
+}
+__inline HRESULT MFSetAttributeSize(IMFAttributes *pAttributes, REFGUID guidKey, UINT32 unWidth, UINT32 unHeight)
+{
+	return MFSetAttribute2UINT32asUINT64(pAttributes, guidKey, unWidth, unHeight);
+}
 typedef enum _EAllocationType
 {
 	eAllocationTypeDynamic,

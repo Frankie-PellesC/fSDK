@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __atscpsipparser_h__
 #define __atscpsipparser_h__
@@ -69,11 +69,11 @@ typedef interface ICaptionServiceDescriptor ICaptionServiceDescriptor;
 #define __IServiceLocationDescriptor_FWD_DEFINED__
 typedef interface IServiceLocationDescriptor IServiceLocationDescriptor;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "mpeg2structs.h"
-#include "mpeg2data.h"
-#include "mpeg2psiparser.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <mpeg2structs.h>
+#include <mpeg2data.h>
+#include <mpeg2psiparser.h>
 #define ATSC_ETM_LOCATION_NOT_PRESENT        0x00
 #define ATSC_ETM_LOCATION_IN_PTC_FOR_PSIP    0x01
 #define ATSC_ETM_LOCATION_IN_PTC_FOR_EVENT   0x02

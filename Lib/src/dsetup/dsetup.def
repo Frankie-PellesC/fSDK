@@ -1,0 +1,27 @@
+; Def File for lib <dsetup.dll> created with fTools
+; Created on Sun Nov 13 12:17:06 2016
+
+LIBRARY dsetup.dll
+EXPORTS
+; Log File for lib <dsetup.dll> created with fTools
+
+"_DirectXDeviceDriverSetupA@16" @1
+"_DirectXDeviceDriverSetupW@16" @2
+"_DirectXLoadString@12" @14
+"_DirectXRegisterApplicationA@8" @3
+"_DirectXRegisterApplicationW@8" @4
+"_DirectXSetupA@12" @5
+"_DirectXSetupCallback@20" @12
+"_DirectXSetupGetEULAA@12" @17
+"_DirectXSetupGetEULAW@12" @18
+"_DirectXSetupGetFileVersion@12" @13
+"_DirectXSetupGetVersion@8" @11
+"_DirectXSetupIsEng@0" @15
+"_DirectXSetupIsJapan@0" @6
+"_DirectXSetupIsJapanNec@0" @7
+"_DirectXSetupSetCallback@4" @10
+"_DirectXSetupShowEULA@4" @16
+"_DirectXSetupW@12" @8
+"_DirectXUnRegisterApplication@8" @9
+
+; Def built in 0.001396 seconds

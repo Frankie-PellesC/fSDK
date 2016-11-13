@@ -8,7 +8,7 @@
  \date		Modified on Sun Jun 12 15:47:07 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
-#include "D3DX10.h"
+#include <D3DX10.h>
 #ifndef __D3DX9MATH_H__
 #define __D3DX9MATH_H__
 #if __POCC__ >= 500
@@ -294,5 +294,5 @@ typedef enum _D3DX_CPU_OPTIMIZATION
 	D3DX_SSE_OPTIMIZED
 } D3DX_CPU_OPTIMIZATION;
 D3DX_CPU_OPTIMIZATION WINAPI D3DXCpuOptimizations(BOOL Enable);
-#include "D3DX10math.inl.h"
+#include <D3DX10math.inl.h>
 #endif

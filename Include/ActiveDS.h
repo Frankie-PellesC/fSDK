@@ -12,10 +12,10 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "iads.h"
-#include "adshlp.h"
-#include "adserr.h"
-#include "adsiid.h"
-#include "adssts.h"
-#include "adsnms.h"
-#include "adsdb.h"
+#include <iads.h>
+#include <adshlp.h>
+#include <adserr.h>
+#include <adsiid.h>
+#include <adssts.h>
+#include <adsnms.h>
+#include <adsdb.h>

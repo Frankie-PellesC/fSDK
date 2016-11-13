@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __bdatif_h__
 #define __bdatif_h__
@@ -81,10 +81,10 @@ typedef interface IGuideDataLoader IGuideDataLoader;
 #define __TIFLoad_FWD_DEFINED__
 typedef struct TIFLoad TIFLoad;
 #endif
-#include "unknwn.h"
-#include "strmif.h"
-#include "tuner.h"
-#include "dvbsiparser.h"
+#include <unknwn.h>
+#include <strmif.h>
+#include <tuner.h>
+#include <dvbsiparser.h>
 extern RPC_IF_HANDLE __MIDL_itf_bdatif_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_bdatif_0000_0000_v0_0_s_ifspec;
 #ifndef __IBDA_TIF_REGISTRATION_INTERFACE_DEFINED__

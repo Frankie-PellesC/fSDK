@@ -8,7 +8,7 @@
  \date		Modified on Sun Jun 12 16:23:22 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
-#include "d3dx10.h"
+#include <d3dx10.h>
 #ifndef __D3DX10MESH_H__
 #define __D3DX10MESH_H__
 #if __POCC__ >= 500

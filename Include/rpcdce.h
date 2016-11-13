@@ -2,10 +2,13 @@
  \file		rpcdce.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Fixed wrong symbols (TimoVJL)
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Jun 27 01:31:46 2016
- \date		Modified on Mon Jun 27 01:31:46 2016
+ \date		Modified on Wed Nov  9 17:44:56 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -65,11 +68,11 @@ typedef struct _RPC_IF_ID {
 	unsigned short VersMinor;
 } RPC_IF_ID;
 #endif
-#define RPC_C_BINDING_INFINITE_TIME10
-#define RPC_C_BINDING_MIN_TIME0
-#define RPC_C_BINDING_DEFAULT_TIME5
-#define RPC_C_BINDING_MAX_TIME9
-#define RPC_C_CANCEL_INFINITE_TIME-1
+#define RPC_C_BINDING_INFINITE_TIMEOUT 10
+#define RPC_C_BINDING_MIN_TIMEOUT 0
+#define RPC_C_BINDING_DEFAULT_TIMEOUT 5
+#define RPC_C_BINDING_MAX_TIMEOUT 9
+#define RPC_C_CANCEL_INFINITE_TIMEOUT -1
 #define RPC_C_LISTEN_MAX_CALLS_DEFAULT 1234
 #define RPC_C_PROTSEQ_MAX_REQS_DEFAULT 10
 #define RPC_C_BIND_TO_ALL_NICS          1

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __d3d11_h__
 #define __d3d11_h__
@@ -153,10 +153,10 @@ typedef interface ID3D11DeviceContext ID3D11DeviceContext;
 #define __ID3D11Device_FWD_DEFINED__
 typedef interface ID3D11Device ID3D11Device;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "dxgi.h"
-#include "d3dcommon.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <dxgi.h>
+#include <d3dcommon.h>
 #ifndef _D3D11_CONSTANTS
 #define _D3D11_CONSTANTS
 #define	D3D11_16BIT_INDEX_STRIP_CUT_VALUE	( 0xffff )
@@ -2766,14 +2766,14 @@ typedef enum D3D11_CREATE_DEVICE_FLAG
 	D3D11_CREATE_DEVICE_BGRA_SUPPORT = 0x20
 } D3D11_CREATE_DEVICE_FLAG;
 #define	D3D11_SDK_VERSION	( 7 )
-#include "d3d10_1.h"
+#include <d3d10_1.h>
 #if !defined( D3D11_IGNORE_SDK_LAYERS )
-#include "d3d11sdklayers.h"
+#include <d3d11sdklayers.h>
 #endif
-#include "d3d10misc.h"
-#include "d3d10shader.h"
-#include "d3d10effect.h"
-#include "d3d10_1shader.h"
+#include <d3d10misc.h>
+#include <d3d10shader.h>
+#include <d3d10effect.h>
+#include <d3d10_1shader.h>
 typedef HRESULT(WINAPI *PFN_D3D11_CREATE_DEVICE) (IDXGIAdapter *, D3D_DRIVER_TYPE, HMODULE, UINT, CONST D3D_FEATURE_LEVEL *, UINT FeatureLevels, UINT, ID3D11Device **, D3D_FEATURE_LEVEL *, ID3D11DeviceContext **);
 HRESULT WINAPI D3D11CreateDevice(IDXGIAdapter *pAdapter, D3D_DRIVER_TYPE DriverType, HMODULE Software, UINT Flags, CONST D3D_FEATURE_LEVEL *pFeatureLevels, UINT FeatureLevels, UINT SDKVersion, ID3D11Device **ppDevice, D3D_FEATURE_LEVEL *pFeatureLevel, ID3D11DeviceContext **ppImmediateContext);
 typedef HRESULT(WINAPI *PFN_D3D11_CREATE_DEVICE_AND_SWAP_CHAIN) (IDXGIAdapter *, D3D_DRIVER_TYPE, HMODULE, UINT, CONST D3D_FEATURE_LEVEL *, UINT FeatureLevels, UINT, CONST DXGI_SWAP_CHAIN_DESC *, IDXGISwapChain **, ID3D11Device **, D3D_FEATURE_LEVEL *, ID3D11DeviceContext **);

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __bits3_0_h__
 #define __bits3_0_h__
@@ -69,10 +69,10 @@ typedef struct BackgroundCopyManager3_0 BackgroundCopyManager3_0;
 #define __IBackgroundCopyJob4_FWD_DEFINED__
 typedef interface IBackgroundCopyJob4 IBackgroundCopyJob4;
 #endif
-#include "bits.h"
-#include "bits1_5.h"
-#include "bits2_0.h"
-#include "bits2_5.h"
+#include <bits.h>
+#include <bits1_5.h>
+#include <bits2_0.h>
+#include <bits2_5.h>
 #ifndef __IBitsPeerCacheRecord_INTERFACE_DEFINED__
 #define __IBitsPeerCacheRecord_INTERFACE_DEFINED__
 extern const IID IID_IBitsPeerCacheRecord;
@@ -446,7 +446,7 @@ interface IBackgroundCopyCallback2
 extern const IID LIBID_BackgroundCopyManager3_0;
 extern const CLSID CLSID_BackgroundCopyManager3_0;
 #endif
-#include "bits4_0.h"
+#include <bits4_0.h>
 extern RPC_IF_HANDLE __MIDL_itf_bits3_0_0000_0008_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_bits3_0_0000_0008_v0_0_s_ifspec;
 #endif

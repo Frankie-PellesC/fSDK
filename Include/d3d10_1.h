@@ -19,14 +19,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __ID3D10BlendState1_FWD_DEFINED__
 #define __ID3D10BlendState1_FWD_DEFINED__
@@ -40,8 +40,8 @@ typedef interface ID3D10ShaderResourceView1 ID3D10ShaderResourceView1;
 #define __ID3D10Device1_FWD_DEFINED__
 typedef interface ID3D10Device1 ID3D10Device1;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 #ifndef _D3D10_1_CONSTANTS
 #define _D3D10_1_CONSTANTS
 #define	D3D10_1_DEFAULT_SAMPLE_MASK	( 0xffffffff )
@@ -66,7 +66,7 @@ typedef interface ID3D10Device1 ID3D10Device1;
 #define	D3D10_1_VS_INPUT_REGISTER_COUNT	( 32 )
 #define	D3D10_1_VS_OUTPUT_REGISTER_COUNT	( 32 )
 #endif
-#include "d3d10.h"
+#include <d3d10.h>
 typedef enum D3D10_FEATURE_LEVEL1
 {
 	D3D10_FEATURE_LEVEL_10_0 = 0xa000,
@@ -543,7 +543,7 @@ interface ID3D10Device1
 #endif
 #endif
 #define	D3D10_1_SDK_VERSION	( ( 0 + 0x20 )  )
-#include "d3d10_1shader.h"
+#include <d3d10_1shader.h>
 typedef HRESULT(WINAPI *PFN_D3D10_CREATE_DEVICE1) (IDXGIAdapter *, D3D10_DRIVER_TYPE, HMODULE, UINT, D3D10_FEATURE_LEVEL1, UINT, ID3D10Device1 **);
 HRESULT WINAPI D3D10CreateDevice1(IDXGIAdapter *pAdapter, D3D10_DRIVER_TYPE DriverType, HMODULE Software, UINT Flags, D3D10_FEATURE_LEVEL1 HardwareLevel, UINT SDKVersion, ID3D10Device1 **ppDevice);
 typedef HRESULT(WINAPI *PFN_D3D10_CREATE_DEVICE_AND_SWAP_CHAIN1) (IDXGIAdapter *, D3D10_DRIVER_TYPE, HMODULE, UINT, D3D10_FEATURE_LEVEL1, UINT, DXGI_SWAP_CHAIN_DESC *, IDXGISwapChain **, ID3D10Device1 **);

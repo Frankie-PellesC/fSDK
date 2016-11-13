@@ -434,7 +434,8 @@ __inline ULONGLONG NTAPI Int64ShllMod32(ULONGLONG Value, DWORD ShiftCount)
 		mov ecx, ShiftCount
 		mov eax, dword ptr[Value]
 		mov edx, dword ptr[Value + 4]
-		shld edx, eax, cl shl eax, cl
+		shld edx, eax, cl
+		shl eax, cl
 	}
 }
 __inline LONGLONG NTAPI Int64ShraMod32(LONGLONG Value, DWORD ShiftCount)
@@ -444,7 +445,8 @@ __inline LONGLONG NTAPI Int64ShraMod32(LONGLONG Value, DWORD ShiftCount)
 		mov ecx, ShiftCount
 		mov eax, dword ptr[Value]
 		mov edx, dword ptr[Value + 4]
-		shrd eax, edx, cl sar edx, cl
+		shrd eax, edx, cl
+		sar edx, cl
 	}
 }
 __inline ULONGLONG NTAPI Int64ShrlMod32(ULONGLONG Value, DWORD ShiftCount)
@@ -454,7 +456,8 @@ __inline ULONGLONG NTAPI Int64ShrlMod32(ULONGLONG Value, DWORD ShiftCount)
 		mov ecx, ShiftCount
 		mov eax, dword ptr[Value]
 		mov edx, dword ptr[Value + 4]
-		shrd eax, edx, cl shr edx, cl
+		shrd eax, edx, cl
+		shr edx, cl
 	}
 }
 #else

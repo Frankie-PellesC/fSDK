@@ -10,11 +10,11 @@
 \*//*-@@file@@----------------------------------------------------------------*/
 
 #if _MSC_VER < 1200
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __AgtCtlVC5_h__
 #define __AgtCtlVC5_h__
@@ -177,8 +177,8 @@ typedef interface _AgentEvents _AgentEvents;
 #define __Agent_FWD_DEFINED__
 typedef struct Agent Agent;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #define	RequestSuccess	( 0 )
@@ -1687,14 +1687,14 @@ void __RPC_USER VARIANT_UserFree(unsigned long __RPC_FAR *, VARIANT __RPC_FAR *)
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __AgentControl_h__
 #define __AgentControl_h__
@@ -1854,8 +1854,8 @@ typedef interface _AgentEvents _AgentEvents;
 #define __Agent_FWD_DEFINED__
 typedef struct Agent Agent;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #define	RequestSuccess	( 0 )

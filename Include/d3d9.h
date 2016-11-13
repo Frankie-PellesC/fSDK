@@ -2,13 +2,15 @@
  \file		d3d9.h
  \par Description 
             D3D9 Interface
+            - Fixed IDirect3D9Ex interface. MS forget to insert the function
+              RegisterSoftwareDevice() inherited from IDirect3D9.
  \par  Status: 
             
  \par Project: 
             PellesC Headers Extension
- \date		Created  on Sun Mar 15 19:07:34 2015
- \date		Modified on Sun Mar 15 19:07:34 2015
- \author	Frankie
+ \date		Created  on Sun Nov 13 00:18:49 2016
+ \date		Modified on Sun Nov 13 00:18:49 2016
+ \author	
 \*//*-@@file@@----------------------------------------------------------------*/
 #ifndef _D3D9_H_
 #define _D3D9_H_
@@ -90,8 +92,8 @@ typedef interface IDirect3DDevice9Video          IDirect3DDevice9Video;
 typedef interface IDirect3DAuthenticatedChannel9 IDirect3DAuthenticatedChannel9;
 typedef interface IDirect3DCryptoSession9        IDirect3DCryptoSession9;
 #endif
-#include "d3d9types.h"
-#include "d3d9caps.h"
+#include <d3d9types.h>
+#include <d3d9caps.h>
 IDirect3D9 * WINAPI Direct3DCreate9(UINT SDKVersion);
 int WINAPI D3DPERF_BeginEvent( D3DCOLOR col, LPCWSTR wszName );
 int WINAPI D3DPERF_EndEvent( void );
@@ -1115,6 +1117,7 @@ DECLARE_INTERFACE_(IDirect3D9Ex, IDirect3D9)
     STDMETHOD(QueryInterface)(THIS_ REFIID riid, void** ppvObj);
     STDMETHOD_(ULONG,AddRef)(THIS);
     STDMETHOD_(ULONG,Release)(THIS);
+    STDMETHOD(RegisterSoftwareDevice)(THIS_ void* pInitializeFunction);
     STDMETHOD_(UINT, GetAdapterCount)(THIS);
     STDMETHOD(GetAdapterIdentifier)(THIS_ UINT Adapter,DWORD Flags,D3DADAPTER_IDENTIFIER9* pIdentifier);
     STDMETHOD_(UINT, GetAdapterModeCount)(THIS_ UINT Adapter,D3DFORMAT Format);

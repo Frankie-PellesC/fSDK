@@ -13,7 +13,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "d3d10shader.h"
+#include <d3d10shader.h>
 typedef enum _D3D10_SHADER_DEBUG_REGTYPE
 {
 	D3D10_SHADER_DEBUG_REG_INPUT,

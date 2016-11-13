@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __activprof_h__
 #define __activprof_h__
@@ -37,7 +37,7 @@ typedef interface IActiveScriptProfilerControl IActiveScriptProfilerControl;
 #define __IActiveScriptProfilerCallback_FWD_DEFINED__
 typedef interface IActiveScriptProfilerCallback IActiveScriptProfilerCallback;
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 #pragma comment(lib,"uuid.lib")
 const HRESULT ACTIVPROF_E_PROFILER_PRESENT = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, 0x0200);
 const HRESULT ACTIVPROF_E_PROFILER_ABSENT = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, 0x0201);

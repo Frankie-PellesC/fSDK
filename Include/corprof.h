@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __corprof_h__
 #define __corprof_h__
@@ -69,7 +69,7 @@ typedef interface ICorProfilerModuleEnum ICorProfilerModuleEnum;
 #define __IMethodMalloc_FWD_DEFINED__
 typedef interface IMethodMalloc IMethodMalloc;
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 #define CorDB_CONTROL_Profiling         "Cor_Enable_Profiling"
 #define CorDB_CONTROL_ProfilingL       L"Cor_Enable_Profiling"
 #if 0

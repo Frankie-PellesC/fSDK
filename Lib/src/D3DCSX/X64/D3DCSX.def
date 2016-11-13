@@ -1,0 +1,18 @@
+; Def File for lib <D3DCSX.dll> created with fTools
+; Created on Sun Nov 13 12:18:10 2016
+
+LIBRARY D3DCSX.dll
+EXPORTS
+; Log File for lib <D3DCSX.dll> created with fTools
+
+"D3DX11CreateFFT"
+"D3DX11CreateFFT1DComplex"
+"D3DX11CreateFFT1DReal"
+"D3DX11CreateFFT2DComplex"
+"D3DX11CreateFFT2DReal"
+"D3DX11CreateFFT3DComplex"
+"D3DX11CreateFFT3DReal"
+"D3DX11CreateScan"
+"D3DX11CreateSegmentedScan"
+
+; Def built in 0.001310 seconds

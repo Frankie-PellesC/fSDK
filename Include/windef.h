@@ -2,10 +2,14 @@
  \file		windef.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Added definitions for restrict and inline keywords to make 
+              effective C11++ effective (Requested by Timo) 
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Jun 26 16:11:16 2016
- \date		Modified on Sun Jun 26 16:11:16 2016
+ \date		Modified on Fri Nov 11 09:40:40 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -93,6 +97,12 @@ typedef char *PSZ;
 #define APIENTRY    WINAPI
 #define APIPRIVATE
 #define PASCAL      pascal
+#endif
+#endif
+//The following declarations are to convert MSVC C++ keywords (Timo)
+#if !defined( __POCC__ ) && defined( _MSC_VER )
+#define restrict	__restrict
+#define inline		__inline
 #endif
 #ifdef _M_CEE_PURE
 #define WINAPI_INLINE  __clrcall

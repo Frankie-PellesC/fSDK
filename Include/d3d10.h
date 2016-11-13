@@ -19,14 +19,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif // __RPCNDR_H_VERSION__
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __ID3D10DeviceChild_FWD_DEFINED__
 #define __ID3D10DeviceChild_FWD_DEFINED__
@@ -124,9 +124,9 @@ typedef interface ID3D10Device ID3D10Device;
 #define __ID3D10Multithread_FWD_DEFINED__
 typedef interface ID3D10Multithread ID3D10Multithread;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "dxgi.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <dxgi.h>
 #ifndef _D3D10_CONSTANTS
 #define _D3D10_CONSTANTS
 #define	D3D10_16BIT_INDEX_STRIP_CUT_VALUE	( 0xffff )
@@ -2383,11 +2383,11 @@ typedef enum D3D10_CREATE_DEVICE_FLAG
 } D3D10_CREATE_DEVICE_FLAG;
 #define	D3D10_SDK_VERSION	( 29 )
 #if !defined( D3D10_IGNORE_SDK_LAYERS )
-#include "d3d10sdklayers.h"
+#include <d3d10sdklayers.h>
 #endif
-#include "d3d10misc.h"
-#include "d3d10shader.h"
-#include "d3d10effect.h"
+#include <d3d10misc.h>
+#include <d3d10shader.h>
+#include <d3d10effect.h>
 DEFINE_GUID(IID_ID3D10DeviceChild, 0x9B7E4C00, 0x342C, 0x4106, 0xA1, 0x9F, 0x4F, 0x27, 0x04, 0xF6, 0x89, 0xF0);
 DEFINE_GUID(IID_ID3D10DepthStencilState, 0x2B4B1CC8, 0xA4AD, 0x41f8, 0x83, 0x22, 0xCA, 0x86, 0xFC, 0x3E, 0xC6, 0x75);
 DEFINE_GUID(IID_ID3D10BlendState, 0xEDAD8D19, 0x8A35, 0x4d6d, 0x85, 0x66, 0x2E, 0xA2, 0x76, 0xCD, 0xE1, 0x61);

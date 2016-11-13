@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __certview_h__
 #define __certview_h__
@@ -53,8 +53,8 @@ typedef interface ICertView ICertView;
 #define __ICertView2_FWD_DEFINED__
 typedef interface ICertView2 ICertView2;
 #endif
-#include "wtypes.h"
-#include "oaidl.h"
+#include <wtypes.h>
+#include <oaidl.h>
 #define	CV_OUT_BASE64HEADER	( 0 )
 #define	CV_OUT_BASE64	( 0x1 )
 #define	CV_OUT_BINARY	( 0x2 )

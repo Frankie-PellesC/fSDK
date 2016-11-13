@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __corpub_h__
 #define __corpub_h__
@@ -57,7 +57,7 @@ typedef interface ICorPublishProcessEnum ICorPublishProcessEnum;
 #define __ICorPublishAppDomainEnum_FWD_DEFINED__
 typedef interface ICorPublishAppDomainEnum ICorPublishAppDomainEnum;
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 #if 0
 #endif
 typedef enum __MIDL___MIDL_itf_corpub_0000_0000_0001

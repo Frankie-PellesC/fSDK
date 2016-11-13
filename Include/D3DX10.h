@@ -26,12 +26,12 @@
 #else
 #define D3DX10INLINE __inline
 #endif
-#include "d3d10.h"
-#include "d3dx10.h"
-#include "d3dx10math.h"
-#include "d3dx10core.h"
-#include "d3dx10tex.h"
-#include "d3dx10mesh.h"
+#include <d3d10.h>
+#include <d3dx10.h>
+#include <d3dx10math.h>
+#include <d3dx10core.h>
+#include <d3dx10tex.h>
+#include <d3dx10mesh.h>
 #define _FACDD  0x876
 #define MAKE_DDHRESULT( code )  MAKE_HRESULT( 1, _FACDD, code )
 enum _D3DX10_ERR

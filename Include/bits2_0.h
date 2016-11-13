@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __bits2_0_h__
 #define __bits2_0_h__
@@ -49,8 +49,8 @@ typedef interface IBackgroundCopyJob3 IBackgroundCopyJob3;
 #define __IBackgroundCopyFile2_FWD_DEFINED__
 typedef interface IBackgroundCopyFile2 IBackgroundCopyFile2;
 #endif
-#include "bits.h"
-#include "bits1_5.h"
+#include <bits.h>
+#include <bits1_5.h>
 #define BG_LENGTH_TO_EOF     (UINT64)(-1)
 typedef struct _BG_FILE_RANGE
 {
@@ -209,7 +209,7 @@ interface IBackgroundCopyFile2
 extern const IID LIBID_BackgroundCopyManager2_0;
 extern const CLSID CLSID_BackgroundCopyManager2_0;
 #endif
-#include "bits2_5.h"
+#include <bits2_5.h>
 extern RPC_IF_HANDLE __MIDL_itf_bits2_0_0000_0002_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_bits2_0_0000_0002_v0_0_s_ifspec;
 #endif

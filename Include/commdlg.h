@@ -866,7 +866,7 @@ WINCOMMDLGAPI BOOL APIENTRY PageSetupDlgW( LPPAGESETUPDLGW );
 #endif
 #if !defined(RC_INVOKED)
 #if defined(ISOLATION_AWARE_ENABLED) && (ISOLATION_AWARE_ENABLED != 0)
-#include "commdlg.inl"
+#include <commdlg.inl>
 #endif
 #endif
 

@@ -103,7 +103,7 @@ typedef PCONFLICT_DETAILS_A PCONFLICT_DETAILS;
 #define CM_CDFLAGS_ROOT_OWNED  (0x00000002)
 #define CM_CDFLAGS_RESERVED    (0x00000004)
 typedef  ULONG             REGDISPOSITION;
-#include "pshpack1.h"
+#include <pshpack1.h>
 #define mMD_MemoryType              (0x1)
 #define fMD_MemoryType              mMD_MemoryType
 #define fMD_ROM                     (0x0)
@@ -446,7 +446,7 @@ typedef PHWPROFILEINFO_W  PHWPROFILEINFO;
 typedef HWPROFILEINFO_A   HWPROFILEINFO;
 typedef PHWPROFILEINFO_A  PHWPROFILEINFO;
 #endif
-#include "poppack.h"
+#include <poppack.h>
 #define ResType_All           (0x00000000)
 #define ResType_None          (0x00000000)
 #define ResType_Mem           (0x00000001)

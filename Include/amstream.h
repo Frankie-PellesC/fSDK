@@ -14,14 +14,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __amstream_h__
 #define __amstream_h__
@@ -56,9 +56,9 @@ typedef interface IAMMediaTypeStream IAMMediaTypeStream;
 #define __IAMMediaTypeSample_FWD_DEFINED__
 typedef interface IAMMediaTypeSample IAMMediaTypeSample;
 #endif
-#include "unknwn.h"
-#include "mmstream.h"
-#include "strmif.h"
+#include <unknwn.h>
+#include <mmstream.h>
+#include <strmif.h>
 #include <ddraw.h>
 #include <mmsystem.h>
 #include <mmstream.h>

@@ -1,0 +1,11 @@
+; Def File for lib <X3DAudio.dll> created with fTools
+; Created on Sun Nov 13 12:18:04 2016
+
+LIBRARY X3DAudio.dll
+EXPORTS
+; Log File for lib <X3DAudio.dll> created with fTools
+
+"X3DAudioCalculate"
+"X3DAudioInitialize"
+
+; Def built in 0.001399 seconds

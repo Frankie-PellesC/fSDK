@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __certcli_h__
 #define __certcli_h__
@@ -73,8 +73,8 @@ typedef struct CCertServerPolicy CCertServerPolicy;
 #define __CCertServerExit_FWD_DEFINED__
 typedef struct CCertServerExit CCertServerExit;
 #endif
-#include "wtypes.h"
-#include "certif.h"
+#include <wtypes.h>
+#include <certif.h>
 #ifndef __ICertGetConfig_INTERFACE_DEFINED__
 #define __ICertGetConfig_INTERFACE_DEFINED__
 extern const IID IID_ICertGetConfig;
