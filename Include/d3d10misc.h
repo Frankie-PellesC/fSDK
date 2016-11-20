@@ -14,6 +14,8 @@
 #pragma once
 #endif
 #include <d3d10.h>
+#ifndef __ID3D10Blob_INTERFACE_DEFINED__
+#define __ID3D10Blob_INTERFACE_DEFINED__
 typedef interface ID3D10Blob ID3D10Blob;
 typedef interface ID3D10Blob *LPD3D10BLOB;
 DEFINE_GUID(IID_ID3D10Blob, 0x8ba5fb08, 0x5195, 0x40e2, 0xac, 0x58, 0xd, 0x98, 0x9c, 0x3a, 0x1, 0x2);
@@ -27,7 +29,7 @@ DECLARE_INTERFACE_(ID3D10Blob, IUnknown)
 	STDMETHOD_(LPVOID, GetBufferPointer) (THIS);
 	STDMETHOD_(SIZE_T, GetBufferSize) (THIS);
 };
-
+#endif
 typedef enum D3D10_DRIVER_TYPE
 {
 	D3D10_DRIVER_TYPE_HARDWARE  = 0,

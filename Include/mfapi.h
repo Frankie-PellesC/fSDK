@@ -41,9 +41,9 @@
 #define MFSTARTUP_LITE (MFSTARTUP_NOSOCKET)
 #define MFSTARTUP_FULL 0
 STDAPI MFStartup(ULONG Version, DWORD dwFlags);
-STDAPI MFShutdown();
-STDAPI MFLockPlatform();
-STDAPI MFUnlockPlatform();
+STDAPI MFShutdown(void);
+STDAPI MFLockPlatform(void);
+STDAPI MFUnlockPlatform(void);
 typedef unsigned __int64 MFWORKITEM_KEY;
 STDAPI MFPutWorkItem(DWORD dwQueue, IMFAsyncCallback *pCallback, IUnknown *pState);
 STDAPI MFPutWorkItemEx(DWORD dwQueue, IMFAsyncResult *pResult);

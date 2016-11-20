@@ -3,14 +3,13 @@
  \par Description 
             Extension and update of headers for PellesC compiler suite.
             - Added definitions for restrict and inline keywords to make 
-              effective C11++ effective (Requested by Timo) 
- \par  Status: 
-            
+              effective C11++ effective (Requested by Timo)
+            - Fixed #if without #endif reported by John
  \par Project: 
             PellesC Headers extension
- \date		Created  on Sun Jun 26 16:11:16 2016
- \date		Modified on Fri Nov 11 09:40:40 2016
- \author	frankie
+ \date		Created  on Mon Nov 14 10:06:45 2016
+ \date		Modified on Mon Nov 14 10:06:45 2016
+ \author	Frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
 #ifndef _WINDEF_
@@ -97,7 +96,6 @@ typedef char *PSZ;
 #define APIENTRY    WINAPI
 #define APIPRIVATE
 #define PASCAL      pascal
-#endif
 #endif
 //The following declarations are to convert MSVC C++ keywords (Timo)
 #if !defined( __POCC__ ) && defined( _MSC_VER )

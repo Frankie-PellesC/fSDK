@@ -2,10 +2,13 @@
  \file		guiddef.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            - Added INSTANZIATE_GUID to force creation of a GUID
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Jun 26 16:53:55 2016
- \date		Modified on Sun Jun 26 16:53:55 2016
+ \date		Modified on Tue Nov 15 15:42:07 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -41,6 +44,9 @@ typedef struct _GUID
 #ifdef DEFINE_GUID
 #undef DEFINE_GUID
 #endif
+#define INSTANZIATE_GUID(name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8) \
+        extern const GUID DECLSPEC_SELECTANY name \
+                = { l, w1, w2, { b1, b2,  b3,  b4,  b5,  b6,  b7,  b8 } }
 #ifdef INITGUID
 #define DEFINE_GUID(name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8) \
         extern const GUID DECLSPEC_SELECTANY name \
@@ -49,6 +55,7 @@ typedef struct _GUID
 #define DEFINE_GUID(name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8) \
     extern const GUID FAR name
 #endif
+
 #define DEFINE_OLEGUID(name, l, w1, w2) DEFINE_GUID(name, l, w1, w2, 0xC0,0,0,0,0,0,0,0x46)
 #ifndef _GUIDDEF_H_
 #define _GUIDDEF_H_
