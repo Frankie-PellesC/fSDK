@@ -1,0 +1,77 @@
+#include <windows.h>
+#include "dolphinres.h"
+
+1 ICON "dx.ico"
+
+IDR_MAIN_ACCEL ACCELERATORS DISCARDABLE
+BEGIN
+    VK_ESCAPE,      IDM_EXIT,               VIRTKEY, NOINVERT
+    VK_F2,          IDM_CHANGEDEVICE,       VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_TOGGLESTART,        VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_TOGGLEFULLSCREEN,   VIRTKEY, ALT, NOINVERT
+    VK_SPACE,       IDM_SINGLESTEP,         VIRTKEY, NOINVERT
+    "X",            IDM_EXIT,               VIRTKEY, ALT, NOINVERT
+END
+
+IDD_SELECTDEVICE DIALOG DISCARDABLE  0, 0, 267, 138
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Device"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    GROUPBOX        "Rendering device",-1,5,5,200,45
+    LTEXT           "&Adapter:",-1,22,17,65,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_ADAPTER_COMBO,90,15,105,100,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Device:",-1,22,32,65,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_DEVICE_COMBO,90,30,105,100,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Rendering mode",-1,5,52,200,45
+    CONTROL         "Use desktop &window",IDC_WINDOW,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,10,62,85,15
+    CONTROL         "&Fullscreen mode:",IDC_FULLSCREEN,"Button",
+                    BS_AUTORADIOBUTTON,10,77,75,15
+    COMBOBOX        IDC_FULLSCREENMODES_COMBO,90,77,105,204,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Multisample",-1,5,101,200,28
+    LTEXT           "&Multisample Type:",-1,22,113,62,10,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_MULTISAMPLE_COMBO,90,111,105,100,CBS_DROPDOWNLIST |
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,210,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,210,30,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Go/stop\tEnter",             IDM_TOGGLESTART
+        MENUITEM "&Single step\tSpace",         IDM_SINGLESTEP
+        MENUITEM SEPARATOR
+        MENUITEM "&Change device...\tF2",       IDM_CHANGEDEVICE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tESC",                  IDM_EXIT
+    END
+END
+
+IDR_POPUP MENU DISCARDABLE
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Go/stop",                    IDM_TOGGLESTART
+        MENUITEM "&Single step",                IDM_SINGLESTEP
+        MENUITEM SEPARATOR
+        MENUITEM "&Change device...",           IDM_CHANGEDEVICE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+END
+
+
+
