@@ -13,14 +13,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __fsrm_h__
 #define __fsrm_h__
@@ -83,8 +83,8 @@ typedef interface IFsrmExportImport IFsrmExportImport;
 #define __IFsrmDerivedObjectsResult_FWD_DEFINED__
 typedef interface IFsrmDerivedObjectsResult IFsrmDerivedObjectsResult;
 #endif
-#include "oaidl.h"
-#include "fsrmenums.h"
+#include <oaidl.h>
+#include <fsrmenums.h>
 #define	FSRM_DISPID_FEATURE_MASK	( 0xf000000 )
 #define	FSRM_DISPID_INTERFACE_A_MASK	( 0xf00000 )
 #define	FSRM_DISPID_INTERFACE_B_MASK	( 0xf0000 )

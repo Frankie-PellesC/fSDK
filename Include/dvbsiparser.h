@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __dvbsiparser_h__
 #define __dvbsiparser_h__
@@ -309,11 +309,11 @@ typedef interface IPBDAEntitlementDescriptor IPBDAEntitlementDescriptor;
 #define __IPBDAAttributesDescriptor_FWD_DEFINED__
 typedef interface IPBDAAttributesDescriptor IPBDAAttributesDescriptor;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "mpeg2structs.h"
-#include "mpeg2data.h"
-#include "mpeg2psiparser.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <mpeg2structs.h>
+#include <mpeg2data.h>
+#include <mpeg2psiparser.h>
 typedef enum __MIDL___MIDL_itf_dvbsiparser_0000_0000_0001
 {
 	STRCONV_MODE_DVB	= 0,

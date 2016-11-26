@@ -9,7 +9,7 @@
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
-#include "d3dx11.h"
+#include <d3dx11.h>
 #ifndef __D3DX11TEX_H__
 #define __D3DX11TEX_H__
 #if __POCC__ >= 500

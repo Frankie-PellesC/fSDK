@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "dciddi.h"
+#include <dciddi.h>
 DECLARE_HANDLE(HWINWATCH);
 extern HDC WINAPI DCIOpenProvider(void);
 extern void WINAPI DCICloseProvider(HDC hdc);

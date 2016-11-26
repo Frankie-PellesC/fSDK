@@ -18,11 +18,11 @@
 #define COM_NO_WINDOWS_H
 #include <objbase.h>
 #include <mmsystem.h>
-#include "dls1.h"
-#include "dmerror.h"
-#include "dmdls.h"
-#include "dsound.h"
-#include "dmusbuff.h"
+#include <dls1.h>
+#include <dmerror.h>
+#include <dmdls.h>
+#include <dsound.h>
+#include <dmusbuff.h>
 #include <pshpack8.h>
 
 #if (NTDDI_VERSION >= NTDDI_WINXP)

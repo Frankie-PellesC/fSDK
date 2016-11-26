@@ -1,7 +1,7 @@
 ; Def File for lib <d3dx9d.dll> created with fTools
 ; Created on Sun Nov 13 12:18:12 2016
 
-LIBRARY d3dx9d.dll
+LIBRARY d3dx9d_43.dll
 EXPORTS
 ; Log File for lib <d3dx9d.dll> created with fTools
 

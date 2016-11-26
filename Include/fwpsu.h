@@ -15,11 +15,11 @@
 #pragma once
 #endif
 #if (NTDDI_VERSION >= NTDDI_WIN6)
-#include "fwpstypes.h"
-#include "ws2def.h"
+#include <fwpstypes.h>
+#include <ws2def.h>
 #include <ws2ipdef.h>
 #include <netioapi.h>
-#include "fwpvi.h"
+#include <fwpvi.h>
 typedef enum FWPS_BUILTIN_LAYERS_
 {
    FWPS_LAYER_INBOUND_IPPACKET_V4,

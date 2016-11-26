@@ -291,8 +291,8 @@ DEFINE_GUID(FWPM_KEYING_MODULE_IKEV2, 0x041792cc, 0x8f07, 0x419d, 0xa3, 0x94, 0x
 #ifndef GUID_DEFS_ONLY
 #ifndef FWPMX_H
 #define FWPMX_H
-#include "fwpmtypes.h"
-#include "fwpvi.h"
+#include <fwpmtypes.h>
+#include <fwpvi.h>
 #define FWPM_AUTO_WEIGHT_BITS (60)
 #define FWPM_AUTO_WEIGHT_MAX  (MAXUINT64 >> (64 - FWPM_AUTO_WEIGHT_BITS))
 #define FWPM_WEIGHT_RANGE_MAX (MAXUINT64 >> FWPM_AUTO_WEIGHT_BITS)

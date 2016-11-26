@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "BridgeDeviceService.h"
+#include <BridgeDeviceService.h>
 #define DEVSVC_SERVICEINFO_VERSION      0x00000064
 #define DEVSVCTYPE_DEFAULT              0x00000000
 #define DEVSVCTYPE_ABSTRACT             0x00000001

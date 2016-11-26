@@ -1,26 +1,38 @@
 ; Def File for lib <d3dcompiler.dll> created with fTools
-; Created on Sun Nov 13 12:17:03 2016
+; Created on Tue Nov 22 15:02:41 2016
 
-LIBRARY d3dcompiler.dll
+LIBRARY d3dcompiler_47.dll
 EXPORTS
 ; Log File for lib <d3dcompiler.dll> created with fTools
 
 "?D3DAssemble@@YGJPBXKPBDPBU_D3D_SHADER_MACRO@@PAUID3DInclude@@IPAPAUID3D10Blob@@4@Z"
 "?DebugSetMute@@YAXH@Z"
+"_D3DCompile2@56"
 "_D3DCompile@44"
+"_D3DCompileFromFile@36"
 "_D3DCompressShaders@16"
 "_D3DCreateBlob@8"
+"_D3DCreateFunctionLinkingGraph@8"
+"_D3DCreateLinker@4"
 "_D3DDecompressShaders@32"
 "_D3DDisassemble10Effect@12"
+"_D3DDisassemble11Trace@28"
 "_D3DDisassemble@20"
+"_D3DDisassembleRegion@32"
 "_D3DGetBlobPart@20"
 "_D3DGetDebugInfo@12"
 "_D3DGetInputAndOutputSignatureBlob@12"
 "_D3DGetInputSignatureBlob@12"
 "_D3DGetOutputSignatureBlob@12"
+"_D3DGetTraceInstructionOffsets@28"
+"_D3DLoadModule@12"
 "_D3DPreprocess@28"
+"_D3DReadFileToBlob@8"
 "_D3DReflect@16"
+"_D3DReflectLibrary@16"
 "_D3DReturnFailure1@12"
+"_D3DSetBlobPart@28"
 "_D3DStripShader@16"
+"_D3DWriteBlobToFile@12"
 
-; Def built in 0.001826 seconds
+; Def built in 0.002412 seconds

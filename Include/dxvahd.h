@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __dxvahd_h__
 #define __dxvahd_h__
@@ -37,7 +37,7 @@ typedef interface IDXVAHD_Device IDXVAHD_Device;
 #define __IDXVAHD_VideoProcessor_FWD_DEFINED__
 typedef interface IDXVAHD_VideoProcessor IDXVAHD_VideoProcessor;
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 #if 0
 typedef DWORD IDirect3DDevice9Ex;
 typedef DWORD IDirect3DSurface9;

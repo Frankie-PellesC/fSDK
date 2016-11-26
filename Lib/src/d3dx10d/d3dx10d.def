@@ -1,7 +1,7 @@
 ; Def File for lib <d3dx10d.dll> created with fTools
 ; Created on Sun Nov 13 12:17:04 2016
 
-LIBRARY d3dx10d.dll
+LIBRARY d3dx10d_43.dll
 EXPORTS
 ; Log File for lib <d3dx10d.dll> created with fTools
 

@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "exposeenums2managed.h"
+#include <exposeenums2managed.h>
 ENUMG(25AEE876-3D61-4486-917E-7C0CB3D9983C) ProtType
 {
     PROT_COPY_FREE = 1,
@@ -106,5 +106,5 @@ ENUMG(D5CC1CDC-EF31-48dc-95B8-AFD34C08036B) DownResEventParam
     DOWNRES_InWindowOnly    = 1,
     DOWNRES_Undefined       = 2    
 } DownResEventParam;
-#include "unexposeenums2managed.h"
+#include <unexposeenums2managed.h>
 #endif

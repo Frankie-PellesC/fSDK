@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __effectspri_h__
 #define __effectspri_h__
@@ -34,9 +34,9 @@ typedef interface IWMPEffects IWMPEffects;
 #define __IWMPEffects2_FWD_DEFINED__
 typedef interface IWMPEffects2 IWMPEffects2;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "wmp.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <wmp.h>
 #define	EFFECT_CANGOFULLSCREEN	( 0x1 )
 #define	EFFECT_HASPROPERTYPAGE	( 0x2 )
 #define	EFFECT_VARIABLEFREQSTEP	( 0x4 )

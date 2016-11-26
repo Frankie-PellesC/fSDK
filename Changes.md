@@ -1,8 +1,15 @@
-# 2016 fSDK© - Frankie's SDK for PellesC V0.01.04 (20.Nov.2016)
+# 2016 fSDK© - Frankie's SDK for PellesC V.0.1.0.5 (26.Nov.2016)
 
 ### CHANGE HISTORY
 ----------------
 
+-26/Nov/2016 - Fixed former bugs.
+  - Added more headers
+  - Added DirectX support for DX8, DX9, DX10 and DX11
+  - Added redistribuitable runtime for DirectX 8, 9, 10, 11
+  - Experimentally added support and runtime for OpenGL (FreeGlut).
+  - Modified Setup for minimal, full and custom installation
+  - Added more Directx and OpenGl samples
 - 20/Nov/2016 - Fixed some include files.
   - Added more DirectX headers and libraries
   - Added more samples

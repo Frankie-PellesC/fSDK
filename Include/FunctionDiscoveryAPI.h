@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __functiondiscoveryapi_h__
 #define __functiondiscoveryapi_h__
@@ -73,9 +73,9 @@ typedef interface IFunctionInstanceCollectionQueryCollection IFunctionInstanceCo
 #define __IFunctionDiscoveryProviderRefresh_FWD_DEFINED__
 typedef interface IFunctionDiscoveryProviderRefresh IFunctionDiscoveryProviderRefresh;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "propsys.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <propsys.h>
 #pragma once
 typedef enum tagPropertyConstraint
 {
@@ -96,11 +96,11 @@ typedef enum tagPropertyConstraint
 #ifndef FDPropertyConstraint
 #define FDPropertyConstraint
 #endif
-#include "FunctionDiscoveryCategories.h"
-#include "FunctionDiscoveryError.h"
-#include "FunctionDiscoveryKeys.h"
-#include "FunctionDiscoveryServiceIDs.h"
-#include "FunctionDiscoveryConstraints.h"
+#include <FunctionDiscoveryCategories.h>
+#include <FunctionDiscoveryError.h>
+#include <FunctionDiscoveryKeys.h>
+#include <FunctionDiscoveryServiceIDs.h>
+#include <FunctionDiscoveryConstraints.h>
 typedef DWORDLONG FDQUERYCONTEXT;
 typedef enum tagSystemVisibilityFlags
 {
@@ -331,7 +331,7 @@ interface IFunctionInstanceCollectionQuery
 #define IFunctionInstanceCollectionQuery_Execute(This,ppIFunctionInstanceCollection)( (This)->lpVtbl -> Execute(This,ppIFunctionInstanceCollection) )
 #endif
 #endif
-#include "FunctionDiscoveryNotification.h"
+#include <FunctionDiscoveryNotification.h>
 extern RPC_IF_HANDLE __MIDL_itf_functiondiscoveryapi_0000_0011_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_functiondiscoveryapi_0000_0011_v0_0_s_ifspec;
 unsigned long __RPC_USER BSTR_UserSize(unsigned long *, unsigned long, BSTR *);

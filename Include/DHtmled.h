@@ -12,8 +12,8 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __dhtmled_h__
 #define __dhtmled_h__
 #if __POCC__ >= 500
@@ -59,9 +59,9 @@ typedef struct DEInsertTableParam DEInsertTableParam;
 #define __DEGetBlockFmtNamesParam_FWD_DEFINED__
 typedef struct DEGetBlockFmtNamesParam DEGetBlockFmtNamesParam;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "docobj.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <docobj.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #define DE_E_INVALIDARG                E_INVALIDARG

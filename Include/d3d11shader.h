@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "d3dcommon.h"
+#include <d3dcommon.h>
 typedef enum D3D11_SHADER_VERSION_TYPE
 {
     D3D11_SHVER_PIXEL_SHADER    = 0,

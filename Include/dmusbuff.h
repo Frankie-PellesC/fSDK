@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "dmdls.h"
+#include <dmdls.h>
 #include <pshpack4.h> 
 typedef struct _DMUS_EVENTHEADER *LPDMUS_EVENTHEADER;
 typedef struct _DMUS_EVENTHEADER

@@ -16,14 +16,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __iaccess_h__
 #define __iaccess_h__
@@ -38,8 +38,8 @@ typedef interface IAccessControl IAccessControl;
 #define __IAuditControl_FWD_DEFINED__
 typedef interface IAuditControl IAuditControl;
 #endif
-#include "unknwn.h"
-#include "accctrl.h"
+#include <unknwn.h>
+#include <accctrl.h>
 #if ( _MSC_VER >= 1020 )
 #pragma once
 #endif

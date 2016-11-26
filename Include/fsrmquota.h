@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __fsrmquota_h__
 #define __fsrmquota_h__
@@ -65,9 +65,9 @@ typedef interface IFsrmQuotaTemplateImported IFsrmQuotaTemplateImported;
 #define __IFsrmQuotaTemplateManager_FWD_DEFINED__
 typedef interface IFsrmQuotaTemplateManager IFsrmQuotaTemplateManager;
 #endif
-#include "oaidl.h"
-#include "fsrmenums.h"
-#include "fsrm.h"
+#include <oaidl.h>
+#include <fsrmenums.h>
+#include <fsrm.h>
 #define	FSRM_DISPID_QUOTA_BASE	( ( FSRM_DISPID_FEATURE_QUOTA | 0x100000 )  )
 #define	FSRM_DISPID_QUOTA_OBJECT	( ( FSRM_DISPID_QUOTA_BASE | 0x10000 )  )
 #define	FSRM_DISPID_QUOTA	( ( FSRM_DISPID_QUOTA_OBJECT | 0x1000 )  )

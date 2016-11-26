@@ -15,7 +15,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "windows.h"
+#include <windows.h>
 #undef GetObject
 #include <wbemidl.h>
 #include <wmiutils.h>
@@ -38,13 +38,13 @@
 #endif
 #include <stllock.h>
 //extern POLARITY CCritSec g_cs;
-#include "utillib.h"
-#include "ThrdBase.h"
-#include "RefPtrCo.h"
-#include "MethodCo.h"
-#include "FRQuery.h"
-#include "wbemglue.h"
-#include "instance.h"
+#include <utillib.h>
+#include <ThrdBase.h>
+#include <RefPtrCo.h>
+#include <MethodCo.h>
+#include <FRQuery.h>
+#include <wbemglue.h>
+#include <instance.h>
 #if 0
 class CFramework_Exception
 {

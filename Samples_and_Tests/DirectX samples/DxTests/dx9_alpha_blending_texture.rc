@@ -1,0 +1,30 @@
+#include <windows.h>
+#include "resource.h"
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+IDI_DIRECTX_ICON        ICON    DISCARDABLE     "codesampler.ico"
+IDC_DIRECTX_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+IDC_DIRECTX_ACCELERATOR ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_DIRECTX_ICON,IDC_MYICON,14,9,20,20
+    LTEXT           "DirectX Sample v1.0",IDC_STATIC,49,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END

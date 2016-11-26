@@ -15,10 +15,10 @@
 #pragma once
 #endif
 #ifndef __eapauthenticatortypes_h__
-#include "EapAuthenticatorTypes.h"
+#include <EapAuthenticatorTypes.h>
 #endif
 #ifndef EAPAUTHENTICATORACTIONDEFINE_H
-#include "EapAuthenticatorActionDefine.h"
+#include <EapAuthenticatorActionDefine.h>
 #endif
 #define EAP_REGISTRY_LOCATION    TEXT("System\\CurrentControlSet\\Services\\EapHost\\Methods")
 #define EAP_AUTHENTICATOR_VALUENAME_DLL_PATH      TEXT("AuthenticatorDllPath")

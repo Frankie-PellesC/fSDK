@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __encdec_h__
 #define __encdec_h__
@@ -105,9 +105,9 @@ typedef struct XDSCodec XDSCodec;
 #define __CXDSData_FWD_DEFINED__
 typedef struct CXDSData CXDSData;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "TvRatings.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <TvRatings.h>
 #pragma once
 DEFINE_GUID(SID_DRMSecureServiceChannel, 0xC4C4C4C4, 0x0049, 0x4E2B, 0x98, 0xFB, 0x95, 0x37, 0xF6, 0xCE, 0x51, 0x6D);
 DEFINE_GUID(CLSID_ETFilterEncProperties, 0xC4C4C481, 0x0049, 0x4E2B, 0x98, 0xFB, 0x95, 0x37, 0xF6, 0xCE, 0x51, 0x6D);

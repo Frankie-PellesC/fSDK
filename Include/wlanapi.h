@@ -28,13 +28,13 @@
 #define WLAN_API_VERSION_MINOR(_v)	(((DWORD)(_v)) >> 16)
 #define WLAN_API_MAKE_VERSION(_major, _minor)	(((DWORD)(_minor)) << 16 | (_major))
 #if (_WIN32_WINNT >= _WIN32_WINNT_VISTA)
-	#define WLAN_API_VERSION		WLAN_API_VERSION_2_0
+#define WLAN_API_VERSION		WLAN_API_VERSION_2_0
 #else
-	#if (_WIN32_WINNT >= _WIN32_WINNT_WINXP)
-		#define WLAN_API_VERSION		WLAN_API_VERSION_1_0
-	#else
-		#error WLAN API is not supported on platform earlier than Windows XP.
-	#endif 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WINXP)
+#define WLAN_API_VERSION		WLAN_API_VERSION_1_0
+#else
+#error WLAN API is not supported on platform earlier than Windows XP.
+#endif 
 #endif	
 #define WLAN_MAX_NAME_LENGTH L2_PROFILE_MAX_NAME_LENGTH
 #define WLAN_PROFILE_GROUP_POLICY					0x00000001

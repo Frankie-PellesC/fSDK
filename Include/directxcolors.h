@@ -4,7 +4,7 @@
 #pragma once
 #endif
 
-//#include "DirectXMath.h"
+//#include <DirectXMath.h>
 
 #ifndef XMGLOBALCONST
 #define XMGLOBALCONST extern const

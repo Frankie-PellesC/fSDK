@@ -33,11 +33,11 @@
 #define D3DX11INLINE
 #endif
 #endif
-#include "d3d11.h"
-#include "d3dx11.h"
-#include "d3dx11core.h"
-#include "d3dx11tex.h"
-#include "d3dx11async.h"
+#include <d3d11.h>
+#include <d3dx11.h>
+#include <d3dx11core.h>
+#include <d3dx11tex.h>
+#include <d3dx11async.h>
 #define _FACDD  0x876
 #define MAKE_DDHRESULT( code )  MAKE_HRESULT( 1, _FACDD, code )
 enum _D3DX11_ERR

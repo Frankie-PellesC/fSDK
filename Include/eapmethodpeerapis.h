@@ -14,11 +14,11 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "objbase.h"
-#include "msxml6.h"
-#include "EapMethodTypes.h"
+#include <objbase.h>
+#include <msxml6.h>
+#include <EapMethodTypes.h>
 #ifndef EAPAUTHENTICATORACTIONDEFINE_H
-#include "EapAuthenticatorActionDefine.h"
+#include <EapAuthenticatorActionDefine.h>
 #endif
 #define EAP_REGISTRY_LOCATION				 TEXT("System\\CurrentControlSet\\Services\\EapHost\\Methods")
 #define EAP_PEER_VALUENAME_DLL_PATH          TEXT("PeerDllPath")

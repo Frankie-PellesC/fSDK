@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __devicetopology_h__
 #define __devicetopology_h__
@@ -189,15 +189,15 @@ typedef interface IDeviceSpecificProperty IDeviceSpecificProperty;
 #define __IKsFormatSupport_FWD_DEFINED__
 typedef interface IKsFormatSupport IKsFormatSupport;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "propidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <propidl.h>
 #define E_NOTFOUND HRESULT_FROM_WIN32(ERROR_NOT_FOUND)
 #define DEVTOPO_HARDWARE_INITIATED_EVENTCONTEXT 'draH'
 DEFINE_GUID(EVENTCONTEXT_VOLUMESLIDER, 0xE2C2E9DE, 0x09B1, 0x4B04, 0x84, 0xE5, 0x07, 0x93, 0x12, 0x25, 0xEE, 0x04);
 #define _IKsControl_
-#include "ks.h"
-#include "ksmedia.h"
+#include <ks.h>
+#include <ksmedia.h>
 #ifndef _KS_
 typedef struct __MIDL___MIDL_itf_devicetopology_0000_0000_0001
 {

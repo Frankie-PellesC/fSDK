@@ -23,7 +23,7 @@ DEFINE_GUID(CLSID_DsDisplaySpecifier, 0x1ab4a8c0, 0x6a0b, 0x11d2, 0xad, 0x49, 0x
 #define IID_IDsDisplaySpecifier CLSID_DsDisplaySpecifier
 DEFINE_GUID(CLSID_DsFolderProperties, 0x9e51e0d0, 0x6e0f, 0x11d2, 0x96, 0x1, 0x0, 0xc0, 0x4f, 0xa3, 0x1a, 0x86);
 #ifndef GUID_DEFS_ONLY
-#include "activeds.h"
+#include <activeds.h>
 #define DSOBJECT_ISCONTAINER            0x00000001
 #define DSOBJECT_READONLYPAGES          0x80000000
 #define DSPROVIDER_UNUSED_0             0x00000001

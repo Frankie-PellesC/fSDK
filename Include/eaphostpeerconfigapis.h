@@ -14,9 +14,9 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "objbase.h"
-#include "msxml6.h"
-#include "EapTypes.h"
+#include <objbase.h>
+#include <msxml6.h>
+#include <EapTypes.h>
 DWORD WINAPI EapHostPeerGetMethods(EAP_METHOD_INFO_ARRAY *pEapMethodInfoArray, EAP_ERROR **ppEapError);
 DWORD WINAPI EapHostPeerGetMethodProperties(DWORD dwVersion, DWORD dwFlags, EAP_METHOD_TYPE eapMethodType, HANDLE hUserImpersonationToken, DWORD dwEapConnDataSize, const BYTE *pbEapConnData, DWORD dwUserDataSize, const BYTE *pbUserData, EAP_METHOD_PROPERTY_ARRAY *pMethodPropertyArray, EAP_ERROR **ppEapError);
 DWORD WINAPI EapHostPeerInvokeConfigUI(HWND hwndParent, DWORD dwFlags, EAP_METHOD_TYPE eapMethodType, DWORD dwSizeOfConfigIn, const BYTE *pConfigIn, DWORD *pdwSizeOfConfigOut, BYTE **ppConfigOut, EAP_ERROR **ppEapError);

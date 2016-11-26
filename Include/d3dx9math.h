@@ -9,7 +9,7 @@
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
-#include "d3dx9.h"
+#include <d3dx9.h>
 #ifndef __D3DX9MATH_H__
 #define __D3DX9MATH_H__
 #if __POCC__ >= 500
@@ -284,7 +284,7 @@ HRESULT WINAPI D3DXSHEvalConeLight(UINT Order, CONST D3DXVECTOR3 *pDir, FLOAT Ra
 HRESULT WINAPI D3DXSHEvalHemisphereLight(UINT Order, CONST D3DXVECTOR3 *pDir, D3DXCOLOR Top, D3DXCOLOR Bottom, FLOAT *pROut, FLOAT *pGOut, FLOAT *pBOut);
 HRESULT WINAPI D3DXSHProjectCubeMap(UINT uOrder, LPDIRECT3DCUBETEXTURE9 pCubeMap, FLOAT *pROut, FLOAT *pGOut, FLOAT *pBOut);
 
-#include "d3dx9math.inl"
+#include <d3dx9math.inl>
 #if _MSC_VER >= 1200
 #pragma warning(pop)
 #else

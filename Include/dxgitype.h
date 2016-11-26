@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "dxgiformat.h"
+#include <dxgiformat.h>
 #define _FACDXGI    0x87a
 #define MAKE_DXGI_HRESULT(code) MAKE_HRESULT(1, _FACDXGI, code)
 #define MAKE_DXGI_STATUS(code)  MAKE_HRESULT(0, _FACDXGI, code)

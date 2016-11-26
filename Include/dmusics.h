@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "dmusicc.h"
+#include <dmusicc.h>
 #define REGSTR_PATH_SOFTWARESYNTHS  "Software\\Microsoft\\DirectMusic\\SoftwareSynths"
 #ifndef __IDirectMusicSynth_FWD_DEFINED__
 #define __IDirectMusicSynth_FWD_DEFINED__

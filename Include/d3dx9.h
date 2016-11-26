@@ -34,16 +34,16 @@
 #define D3DXINLINE
 #endif
 #endif
-#include "d3d9.h"
-#include "d3dx9math.h"
-#include "d3dx9core.h"
-#include "d3dx9xof.h"
-#include "d3dx9mesh.h"
-#include "d3dx9shader.h"
-#include "d3dx9effect.h"
-#include "d3dx9tex.h"
-#include "d3dx9shape.h"
-#include "d3dx9anim.h"
+#include <d3d9.h>
+#include <d3dx9math.h>
+#include <d3dx9core.h>
+#include <d3dx9xof.h>
+#include <d3dx9mesh.h>
+#include <d3dx9shader.h>
+#include <d3dx9effect.h>
+#include <d3dx9tex.h>
+#include <d3dx9shape.h>
+#include <d3dx9anim.h>
 #define _FACDD  0x876
 #define MAKE_DDHRESULT( code )  MAKE_HRESULT( 1, _FACDD, code )
 enum _D3DXERR

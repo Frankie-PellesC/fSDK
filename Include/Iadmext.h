@@ -10,17 +10,17 @@
 \*//*-@@file@@----------------------------------------------------------------*/
 
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __iadmext_h__
 #define __iadmext_h__
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "unknwn.h"
-#include "objidl.h"
-#include "ocidl.h"
+#include <unknwn.h>
+#include <objidl.h>
+#include <ocidl.h>
 DEFINE_GUID(IID_IADMEXT, 0x51dfe970, 0xf6f2, 0x11d0, 0xb9, 0xbd, 0x0, 0xa0, 0xc9, 0x22, 0xe7, 0x50);
 #define IISADMIN_EXTENSIONS_REG_KEYA			"SOFTWARE\\Microsoft\\InetStp\\Extensions"
 #define IISADMIN_EXTENSIONS_REG_KEYW			L"SOFTWARE\\Microsoft\\InetStp\\Extensions"

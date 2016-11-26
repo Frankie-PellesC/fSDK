@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __emptyvc_h__
 #define __emptyvc_h__
@@ -41,9 +41,9 @@ typedef interface IEmptyVolumeCache IEmptyVolumeCache;
 #define __IEmptyVolumeCache2_FWD_DEFINED__
 typedef interface IEmptyVolumeCache2 IEmptyVolumeCache2;
 #endif
-#include "objidl.h"
-#include "oleidl.h"
-#include "oaidl.h"
+#include <objidl.h>
+#include <oleidl.h>
+#include <oaidl.h>
 #pragma comment(lib,"uuid.lib")
 #define EVCF_HASSETTINGS             0x0001
 #define EVCF_ENABLEBYDEFAULT         0x0002

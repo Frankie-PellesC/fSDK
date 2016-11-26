@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __evr9_h__
 #define __evr9_h__
@@ -41,11 +41,11 @@ typedef interface IMFVideoProcessor IMFVideoProcessor;
 #define __IMFVideoMixerBitmap_FWD_DEFINED__
 typedef interface IMFVideoMixerBitmap IMFVideoMixerBitmap;
 #endif
-#include "unknwn.h"
-#include "mfobjects.h"
-#include "mftransform.h"
-#include "evr.h"
-#include "dxva2api.h"
+#include <unknwn.h>
+#include <mfobjects.h>
+#include <mftransform.h>
+#include <evr.h>
+#include <dxva2api.h>
 extern RPC_IF_HANDLE __MIDL_itf_evr9_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_evr9_0000_0000_v0_0_s_ifspec;
 #ifndef __IEVRVideoStreamControl_INTERFACE_DEFINED__

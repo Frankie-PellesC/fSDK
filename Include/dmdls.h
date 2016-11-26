@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "dls1.h"
+#include <dls1.h>
 typedef long PCENT;
 typedef long GCENT;
 typedef long TCENT;

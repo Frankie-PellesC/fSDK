@@ -1,0 +1,12 @@
+; Def File for lib <d3d8.dll> created with fTools
+; Created on Fri Nov 25 22:19:39 2016
+
+LIBRARY d3d8.dll
+EXPORTS
+; Log File for lib <d3d8.dll> created with fTools
+
+"?ValidatePixelShader@@YGJPBKPBU_D3DCAPS8@@KQAPAD@Z"
+"?ValidateVertexShader@@YGJPBK0PBU_D3DCAPS8@@KQAPAD@Z"
+"_Direct3DCreate8@4"
+
+; Def built in 0.001642 seconds

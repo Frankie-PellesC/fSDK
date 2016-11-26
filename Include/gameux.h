@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __gameux_h__
 #define __gameux_h__
@@ -53,9 +53,9 @@ typedef struct GameExplorer GameExplorer;
 #define __GameStatistics_FWD_DEFINED__
 typedef struct GameStatistics GameStatistics;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "shobjidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <shobjidl.h>
 #define ID_GDF_XML __GDF_XML
 #define ID_GDF_THUMBNAIL __GDF_THUMBNAIL
 #define ID_ICON_ICO __ICON_ICO
