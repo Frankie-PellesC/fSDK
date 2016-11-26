@@ -1,26 +1,35 @@
-# 2016 fSDK© - Frankie's SDK for PellesC V.0.1.0.5 (26.Nov.2016)
+# 2016 fSDK© - Frankie's SDK for PellesC
+        V.0.1.0.5 (26.Nov.2016)
 
 ### CHANGE HISTORY
 ----------------
 
--26/Nov/2016 - Fixed former bugs.
+- 26/Nov/2016
+  - Fixed former bugs.
   - Added more headers
   - Added DirectX support for DX8, DX9, DX10 and DX11
   - Added redistribuitable runtime for DirectX 8, 9, 10, 11
   - Experimentally added support and runtime for OpenGL (FreeGlut).
   - Modified Setup for minimal, full and custom installation
   - Added more Directx and OpenGl samples
-- 20/Nov/2016 - Fixed some include files.
+- 20/Nov/2016
+  - Fixed some include files.
   - Added more DirectX headers and libraries
   - Added more samples
-- 13/Nov/2016 - Fixed include files
+- 13/Nov/2016
+  - Fixed include files
   - Added extended support DX3DEx Headers and libraries
-- 07/Nov/2016 - Fixed libraries for __cdecl functions and some fixes also to headers
-- 28/Oct/2016 - Added Ribbon IID's definition
+- 07/Nov/2016
+  - Fixed libraries for __cdecl functions and some fixes also to headers
+- 28/Oct/2016
+  - Added Ribbon IID's definition
   - Fixed problems for multiple GUID's definitions in UIRibbon.h
   - Added definition <#define __uuidof(x) &IID_##x> in objbase.h
   - Fixed macro IsEqualPropertyKey in propkeydef.h
-- 14/Sep/2016 - Fixed winNt.h and winbase.h headers. Intrinsics definitions should be Ok now.
-- 10/Sep/2016 - Fixed headers, libraries rebuilt fixing problems.
-- 21/Sep/2016 - First beta release
+- 14/Sep/2016
+  - Fixed winNt.h and winbase.h headers. Intrinsics definitions should be Ok now.
+- 10/Sep/2016
+  - Fixed headers, libraries rebuilt fixing problems.
+- 21/Sep/2016
+  - First beta release
 ------------------------------------------------------------------------------------------------------------
