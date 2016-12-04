@@ -16,10 +16,10 @@ AS = poasm.exe#
 RC = porc.exe#
 LINK = polink.exe#
 SIGN = posign.exe#
-CCFLAGS = -std:C11 -Tx86-coff -Zi -Ot -Ob1 -fp:precise -W1 -Gz -Ze -DUNICODE=1 -D_UNICODE=1#
+CCFLAGS = -std:C11 -Tx86-coff -Ot -Ob1 -fp:precise -W1 -Gz -Ze -DUNICODE=1 -D_UNICODE=1#
 ASFLAGS = -AIA32 -Gz#
 RCFLAGS = -r#
-LINKFLAGS = -debug -debugtype:both -subsystem:windows -machine:x86 kernel32.lib user32.lib gdi32.lib comctl32.lib comdlg32.lib advapi32.lib D3d8.lib d3dx8d.lib D3dxof.lib dxguid8.lib dinput8.lib Ole32.lib Winmm.lib delayimp.lib#
+LINKFLAGS = -subsystem:windows -machine:x86 kernel32.lib user32.lib gdi32.lib comctl32.lib comdlg32.lib advapi32.lib D3d8.lib d3dx8d.lib D3dxof.lib dxguid8.lib dinput8.lib Ole32.lib Winmm.lib delayimp.lib#
 SIGNFLAGS = -location:CU -store:MY -timeurl:http://timestamp.verisign.com/scripts/timstamp.dll -errkill#
 INCLUDE = $(PellesCDir)\Include\Win;$(PellesCDir)\Include;Common\Include#
 LIB = $(PellesCDir)\Lib\Win;$(PellesCDir)\Lib#
@@ -156,6 +156,6 @@ output\debugger.obj: \
 	debugger.c
 	$(CC) $(CCFLAGS) "$!" -Fo"$@"
 
-.SILENT:
-
 .EXCLUDEDFILES:
+
+.SILENT:
