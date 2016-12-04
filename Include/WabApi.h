@@ -17,57 +17,19 @@
 typedef struct _WABACTIONITEM * LPWABACTIONITEM;
 #define CBIWABOBJECT sizeof(IWABOBJECT)
 #define WAB_IWABOBJECT_METHODS(IPURE)                       \
-        MAPIMETHOD(GetLastError)                            \
-            (THIS_  HRESULT hResult,                        \
-                    ULONG ulFlags,                          \
-                    LPMAPIERROR* lppMAPIError) IPURE;       \
-        MAPIMETHOD(AllocateBuffer)                          \
-            (THIS_  ULONG cbSize,                           \
-                    LPVOID* lppBuffer) IPURE;   \
-        MAPIMETHOD(AllocateMore)                            \
-            (THIS_  ULONG cbSize,                           \
-                    LPVOID lpObject,                   \
-                    LPVOID* lppBuffer) IPURE;   \
-        MAPIMETHOD(FreeBuffer)                              \
-            (THIS_  LPVOID lpBuffer) IPURE;            \
-        MAPIMETHOD(Backup)                                  \
-            (THIS_  LPSTR lpFileName) IPURE;           \
-        MAPIMETHOD(Import)                                  \
-            (THIS_  LPSTR lpWIP) IPURE;     \
-        MAPIMETHOD(Find)                                    \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    HWND hWnd) IPURE;              \
-        MAPIMETHOD(VCardDisplay)                            \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    HWND hWnd,                     \
-                    LPSTR lpszFileName) IPURE;         \
-        MAPIMETHOD(LDAPUrl)                                 \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    HWND hWnd,                     \
-                    ULONG ulFlags,                          \
-                    LPSTR lpszURL,                     \
-                    LPMAILUSER *lppMailUser) IPURE; \
-        MAPIMETHOD(VCardCreate)                             \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    ULONG ulFlags,                          \
-                    LPSTR lpszVCard,                   \
-                    LPMAILUSER lpMailUser) IPURE;      \
-        MAPIMETHOD(VCardRetrieve)                           \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    ULONG ulFlags,                          \
-                    LPSTR lpszVCard,                   \
-                    LPMAILUSER *lppMailUser) IPURE; \
-        MAPIMETHOD(GetMe)                                   \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    ULONG ulFlags,                          \
-                    DWORD* lpdwAction,                \
-                    SBinary* lpsbEID,                 \
-                    HWND hwnd) IPURE;              \
-        MAPIMETHOD(SetMe)                                   \
-            (THIS_  LPADRBOOK lpIAB,                   \
-                    ULONG ulFlags,                          \
-                    SBinary sbEID,                          \
-                    HWND hwnd) IPURE;
+MAPIMETHOD(GetLastError) (THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR * lppMAPIError); \
+MAPIMETHOD(AllocateBuffer) (THIS_ ULONG cbSize, LPVOID * lppBuffer); \
+MAPIMETHOD(AllocateMore) (THIS_ ULONG cbSize, LPVOID lpObject, LPVOID * lppBuffer); \
+MAPIMETHOD(FreeBuffer) (THIS_ LPVOID lpBuffer); \
+MAPIMETHOD(Backup) (THIS_ LPSTR lpFileName); \
+MAPIMETHOD(Import) (THIS_ LPSTR lpWIP); \
+MAPIMETHOD(Find) (THIS_ LPADRBOOK lpIAB, HWND hWnd); \
+MAPIMETHOD(VCardDisplay) (THIS_ LPADRBOOK lpIAB, HWND hWnd, LPSTR lpszFileName); \
+MAPIMETHOD(LDAPUrl) (THIS_ LPADRBOOK lpIAB, HWND hWnd, ULONG ulFlags, LPSTR lpszURL, LPMAILUSER * lppMailUser); \
+MAPIMETHOD(VCardCreate) (THIS_ LPADRBOOK lpIAB, ULONG ulFlags, LPSTR lpszVCard, LPMAILUSER lpMailUser); \
+MAPIMETHOD(VCardRetrieve) (THIS_ LPADRBOOK lpIAB, ULONG ulFlags, LPSTR lpszVCard, LPMAILUSER * lppMailUser); \
+MAPIMETHOD(GetMe) (THIS_ LPADRBOOK lpIAB, ULONG ulFlags, DWORD * lpdwAction, SBinary * lpsbEID, HWND hwnd); \
+MAPIMETHOD(SetMe) (THIS_ LPADRBOOK lpIAB, ULONG ulFlags, SBinary sbEID, HWND hwnd);
 #undef           INTERFACE
 #define          INTERFACE      IWABObject
 DECLARE_MAPI_INTERFACE_(IWABObject, IUnknown)
@@ -144,8 +106,7 @@ typedef struct _WABEXTDISPLAY
     LPTSTR lpsz;
 } WABEXTDISPLAY, FAR * LPWABEXTDISPLAY;
 #define WAB_IWABEXTINIT_METHODS(IPURE)                          \
-        MAPIMETHOD(Initialize)                                  \
-            (THIS_  LPWABEXTDISPLAY lpWABExtDisplay)    IPURE;
+        MAPIMETHOD(Initialize) (THIS_ LPWABEXTDISPLAY lpWABExtDisplay);
 #undef           INTERFACE
 #define          INTERFACE      IWABExtInit
 DECLARE_MAPI_INTERFACE_(IWABExtInit, IUnknown)

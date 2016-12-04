@@ -29,15 +29,15 @@
 DECLARE_MAPI_INTERFACE_PTR(ITableData, LPTABLEDATA);
 typedef void (STDAPICALLTYPE CALLERRELEASE) (ULONG ulCallerData, LPTABLEDATA lpTblData, LPMAPITABLE lpVue);
 #define MAPI_ITABLEDATA_METHODS(IPURE)									\
-	MAPIMETHOD(HrGetView) (THIS_ LPSSortOrderSet lpSSortOrderSet, CALLERRELEASE FAR *lpfCallerRelease, ULONG ulCallerData, LPMAPITABLE FAR *lppMAPITable) IPURE;		\
-	MAPIMETHOD(HrModifyRow) (THIS_ LPSRow) IPURE; \
-	MAPIMETHOD(HrDeleteRow) (THIS_ LPSPropValue lpSPropValue) IPURE; \
-	MAPIMETHOD(HrQueryRow) (THIS_ LPSPropValue lpsPropValue, LPSRow FAR *lppSRow, ULONG FAR *lpuliRow) IPURE; \
-	MAPIMETHOD(HrEnumRow) (THIS_ ULONG ulRowNumber, LPSRow FAR *lppSRow) IPURE; \
-	MAPIMETHOD(HrNotify) (THIS_ ULONG ulFlags, ULONG cValues, LPSPropValue lpSPropValue) IPURE; \
-	MAPIMETHOD(HrInsertRow) (THIS_ ULONG uliRow, LPSRow lpSRow) IPURE; \
-	MAPIMETHOD(HrModifyRows) (THIS_ ULONG ulFlags, LPSRowSet lpSRowSet) IPURE; \
-	MAPIMETHOD(HrDeleteRows) (THIS_ ULONG ulFlags, LPSRowSet lprowsetToDelete, ULONG FAR *cRowsDeleted) IPURE;
+	MAPIMETHOD(HrGetView) (THIS_ LPSSortOrderSet lpSSortOrderSet, CALLERRELEASE FAR *lpfCallerRelease, ULONG ulCallerData, LPMAPITABLE FAR *lppMAPITable);		\
+	MAPIMETHOD(HrModifyRow) (THIS_ LPSRow); \
+	MAPIMETHOD(HrDeleteRow) (THIS_ LPSPropValue lpSPropValue); \
+	MAPIMETHOD(HrQueryRow) (THIS_ LPSPropValue lpsPropValue, LPSRow FAR *lppSRow, ULONG FAR *lpuliRow); \
+	MAPIMETHOD(HrEnumRow) (THIS_ ULONG ulRowNumber, LPSRow FAR *lppSRow); \
+	MAPIMETHOD(HrNotify) (THIS_ ULONG ulFlags, ULONG cValues, LPSPropValue lpSPropValue); \
+	MAPIMETHOD(HrInsertRow) (THIS_ ULONG uliRow, LPSRow lpSRow); \
+	MAPIMETHOD(HrModifyRows) (THIS_ ULONG ulFlags, LPSRowSet lpSRowSet); \
+	MAPIMETHOD(HrDeleteRows) (THIS_ ULONG ulFlags, LPSRowSet lprowsetToDelete, ULONG FAR *cRowsDeleted);
 #undef  INTERFACE
 #define INTERFACE ITableData
 DECLARE_MAPI_INTERFACE_(ITableData, IUnknown)
@@ -49,10 +49,10 @@ DECLARE_MAPI_INTERFACE_(ITableData, IUnknown)
 STDAPI_(SCODE)CreateTable(LPCIID lpInterface, ALLOCATEBUFFER FAR * lpAllocateBuffer, ALLOCATEMORE FAR * lpAllocateMore, FREEBUFFER FAR * lpFreeBuffer, LPVOID lpvReserved, ULONG ulTableType, ULONG ulPropTagIndexColumn, LPSPropTagArray lpSPropTagArrayColumns, LPTABLEDATA FAR * lppTableData);
 #define	TAD_ALL_ROWS	1
 #define MAPI_IPROPDATA_METHODS(IPURE) \
-	MAPIMETHOD(HrSetObjAccess) (THIS_ ULONG ulAccess) IPURE; \
-	MAPIMETHOD(HrSetPropAccess) (THIS_ LPSPropTagArray lpPropTagArray, ULONG FAR *rgulAccess) IPURE; \
-	MAPIMETHOD(HrGetPropAccess) (THIS_ LPSPropTagArray FAR *lppPropTagArray, ULONG FAR * FAR * lprgulAccess) IPURE; \
-	MAPIMETHOD(HrAddObjProps) (THIS_ LPSPropTagArray lppPropTagArray, LPSPropProblemArray FAR *	lprgulAccess) IPURE;
+	MAPIMETHOD(HrSetObjAccess) (THIS_ ULONG ulAccess); \
+	MAPIMETHOD(HrSetPropAccess) (THIS_ LPSPropTagArray lpPropTagArray, ULONG FAR *rgulAccess); \
+	MAPIMETHOD(HrGetPropAccess) (THIS_ LPSPropTagArray FAR *lppPropTagArray, ULONG FAR * FAR * lprgulAccess); \
+	MAPIMETHOD(HrAddObjProps) (THIS_ LPSPropTagArray lppPropTagArray, LPSPropProblemArray FAR *	lprgulAccess);
 #undef  INTERFACE
 #define INTERFACE IPropData
 DECLARE_MAPI_INTERFACE_(IPropData, IMAPIProp)

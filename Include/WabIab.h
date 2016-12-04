@@ -24,94 +24,24 @@
 #define WAB_RESOLVE_UNICODE                 ((ULONG) 0x01000000)
 #ifndef MAPIX_H
 #define MAPI_IADDRBOOK_METHODS(IPURE)									\
-	MAPIMETHOD(OpenEntry)												\
-		(THIS_	ULONG						cbEntryID,					\
-				LPENTRYID					lpEntryID,					\
-				LPCIID						lpInterface,				\
-				ULONG						ulFlags,					\
-				ULONG FAR *					lpulObjType,				\
-				LPUNKNOWN FAR *				lppUnk) IPURE;          	\
-	MAPIMETHOD(CompareEntryIDs)											\
-		(THIS_	ULONG						cbEntryID1,					\
-				LPENTRYID					lpEntryID1,					\
-				ULONG						cbEntryID2,					\
-				LPENTRYID					lpEntryID2,					\
-				ULONG						ulFlags,					\
-				ULONG FAR *					lpulResult) IPURE;			\
-	MAPIMETHOD(Advise)													\
-		(THIS_	ULONG						cbEntryID,					\
-				LPENTRYID					lpEntryID,					\
-				ULONG						ulEventMask,				\
-				LPMAPIADVISESINK			lpAdviseSink,				\
-				ULONG FAR *					lpulConnection) IPURE;		\
-	MAPIMETHOD(Unadvise)												\
-		(THIS_	ULONG						ulConnection) IPURE;		\
-	MAPIMETHOD(CreateOneOff)											\
-		(THIS_	LPTSTR						lpszName,					\
-				LPTSTR						lpszAdrType,				\
-				LPTSTR						lpszAddress,				\
-				ULONG						ulFlags,					\
-				ULONG FAR *					lpcbEntryID,				\
-				LPENTRYID FAR *				lppEntryID) IPURE;			\
-	MAPIMETHOD(NewEntry)												\
-		(THIS_	ULONG						ulUIParam,					\
-				ULONG						ulFlags,					\
-				ULONG						cbEIDContainer,				\
-				LPENTRYID					lpEIDContainer,				\
-				ULONG						cbEIDNewEntryTpl,			\
-				LPENTRYID					lpEIDNewEntryTpl,			\
-				ULONG FAR *					lpcbEIDNewEntry,			\
-				LPENTRYID FAR *				lppEIDNewEntry) IPURE;		\
-	MAPIMETHOD(ResolveName)												\
-		(THIS_	ULONG_PTR					ulUIParam,					\
-				ULONG						ulFlags,					\
-				LPTSTR						lpszNewEntryTitle,			\
-				LPADRLIST					lpAdrList) IPURE;			\
-	MAPIMETHOD(Address)													\
-		(THIS_	ULONG FAR *					lpulUIParam,				\
-				LPADRPARM					lpAdrParms,					\
-				LPADRLIST FAR *				lppAdrList) IPURE;			\
-	MAPIMETHOD(Details)													\
-		(THIS_	ULONG_PTR FAR *				lpulUIParam,				\
-				LPFNDISMISS					lpfnDismiss,				\
-				LPVOID						lpvDismissContext,			\
-				ULONG						cbEntryID,					\
-				LPENTRYID					lpEntryID,					\
-				LPFNBUTTON					lpfButtonCallback,			\
-				LPVOID						lpvButtonContext,			\
-				LPTSTR						lpszButtonText,				\
-				ULONG						ulFlags) IPURE;				\
-	MAPIMETHOD(RecipOptions)											\
-		(THIS_	ULONG						ulUIParam,					\
-				ULONG						ulFlags,					\
-				LPADRENTRY					lpRecip) IPURE;				\
-	MAPIMETHOD(QueryDefaultRecipOpt)									\
-		(THIS_	LPTSTR						lpszAdrType,				\
-				ULONG						ulFlags,					\
-				ULONG FAR *					lpcValues,					\
-				LPSPropValue FAR *			lppOptions) IPURE;			\
-	MAPIMETHOD(GetPAB)													\
-		(THIS_	ULONG FAR *					lpcbEntryID,				\
-				LPENTRYID FAR *				lppEntryID) IPURE;			\
-	MAPIMETHOD(SetPAB)													\
-		(THIS_	ULONG						cbEntryID,					\
-				LPENTRYID					lpEntryID) IPURE;			\
-	MAPIMETHOD(GetDefaultDir)											\
-		(THIS_	ULONG FAR *					lpcbEntryID,				\
-				LPENTRYID FAR *				lppEntryID) IPURE;			\
-	MAPIMETHOD(SetDefaultDir)											\
-		(THIS_	ULONG						cbEntryID,					\
-				LPENTRYID					lpEntryID) IPURE;			\
-	MAPIMETHOD(GetSearchPath)											\
-		(THIS_	ULONG						ulFlags,					\
-				LPSRowSet FAR *				lppSearchPath) IPURE;		\
-	MAPIMETHOD(SetSearchPath)											\
-		(THIS_	ULONG						ulFlags,					\
-				LPSRowSet					lpSearchPath) IPURE;		\
-	MAPIMETHOD(PrepareRecips)											\
-		(THIS_	ULONG						ulFlags,					\
-				LPSPropTagArray				lpPropTagArray,				\
-				LPADRLIST					lpRecipList) IPURE;
+	MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulFlags, ULONG FAR * lpulObjType, LPUNKNOWN FAR * lppUnk);          	\
+	MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntryID1, LPENTRYID	 lpEntryID1, ULONG	 cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR * lpulResult);			\
+	MAPIMETHOD(Advise)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulEventMask, LPMAPIADVISESINK lpAdviseSink, ULONG FAR * lpulConnection);		\
+	MAPIMETHOD(Unadvise)(THIS_ ULONG ulConnection);		\
+	MAPIMETHOD(CreateOneOff)(THIS_ LPTSTR lpszName, LPTSTR lpszAdrType, LPTSTR lpszAddress, ULONG ulFlags, ULONG FAR * lpcbEntryID, LPENTRYID FAR * lppEntryID);			\
+	MAPIMETHOD(NewEntry)(THIS_ ULONG ulUIParam, ULONG ulFlags, ULONG cbEIDContainer, LPENTRYID lpEIDContainer, ULONG cbEIDNewEntryTpl, LPENTRYID lpEIDNewEntryTpl, ULONG FAR * lpcbEIDNewEntry, LPENTRYID FAR * lppEIDNewEntry);		\
+	MAPIMETHOD(ResolveName) (THIS_ ULONG_PTR ulUIParam, ULONG ulFlags, LPTSTR lpszNewEntryTitle, LPADRLIST lpAdrList);			\
+	MAPIMETHOD(Address)(THIS_ ULONG FAR * lpulUIParam, LPADRPARM lpAdrParms, LPADRLIST FAR * lppAdrList);			\
+	MAPIMETHOD(Details)(THIS_ ULONG_PTR FAR * lpulUIParam, LPFNDISMISS lpfnDismiss, LPVOID lpvDismissContext, ULONG cbEntryID, LPENTRYID lpEntryID, LPFNBUTTON lpfButtonCallback, LPVOID lpvButtonContext, LPTSTR lpszButtonText, ULONG ulFlags);				\
+	MAPIMETHOD(RecipOptions)(THIS_ ULONG ulUIParam, ULONG ulFlags, LPADRENTRY lpRecip);				\
+	MAPIMETHOD(QueryDefaultRecipOpt)(THIS_ LPTSTR lpszAdrType, ULONG ulFlags, ULONG FAR * lpcValues, LPSPropValue FAR * lppOptions);			\
+	MAPIMETHOD(GetPAB) (THIS_ ULONG FAR * lpcbEntryID, LPENTRYID FAR * lppEntryID);			\
+	MAPIMETHOD(SetPAB)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID);			\
+	MAPIMETHOD(GetDefaultDir)(THIS_ ULONG FAR * lpcbEntryID, LPENTRYID FAR * lppEntryID);			\
+	MAPIMETHOD(SetDefaultDir)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID);			\
+	MAPIMETHOD(GetSearchPath)(THIS_ ULONG ulFlags, LPSRowSet FAR *lppSearchPath);		\
+	MAPIMETHOD(SetSearchPath)(THIS_ ULONG ulFlags, LPSRowSet lpSearchPath);		\
+	MAPIMETHOD(PrepareRecips)(THIS_ ULONG ulFlags, LPSPropTagArray lpPropTagArray, LPADRLIST lpRecipList);
 #undef		 INTERFACE
 #define		 INTERFACE  IAddrBook
 DECLARE_MAPI_INTERFACE_(IAddrBook, IMAPIProp)

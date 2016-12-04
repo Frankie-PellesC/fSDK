@@ -140,17 +140,17 @@ typedef struct _DS_SELECTION_LIST
 #define INTERFACE IDsObjectPicker
 DECLARE_INTERFACE_(IDsObjectPicker, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(Initialize) (THIS_ PDSOP_INIT_INFO pInitInfo)PURE;
-	STDMETHOD(InvokeDialog) (THIS_ HWND hwndParent, IDataObject ** ppdoSelections)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(Initialize) (THIS_ PDSOP_INIT_INFO pInitInfo);
+	STDMETHOD(InvokeDialog) (THIS_ HWND hwndParent, IDataObject ** ppdoSelections);
 };
 DECLARE_INTERFACE_(IDsObjectPickerCredentials, IDsObjectPicker)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
 	STDMETHOD(SetCredentials) (THIS_ LPCWSTR szUserName, LPCWSTR szPassword);
 };
 #endif

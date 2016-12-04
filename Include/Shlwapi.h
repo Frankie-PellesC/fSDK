@@ -1172,14 +1172,14 @@ typedef enum
 #define INTERFACE IQueryAssociations
 DECLARE_INTERFACE_IID_( IQueryAssociations, IUnknown, "c46ca590-3c3f-11d2-bee6-0000f805ca57" )
 {
-    STDMETHOD (QueryInterface)(THIS_ REFIID riid, void **ppv) PURE;
-    STDMETHOD_(ULONG, AddRef) ( THIS ) PURE;
-    STDMETHOD_(ULONG, Release) ( THIS ) PURE;
-    STDMETHOD (Init)(THIS_ ASSOCF flags, LPCWSTR pszAssoc, HKEY hkProgid, HWND hwnd) PURE;
-    STDMETHOD (GetString)(THIS_ ASSOCF flags, ASSOCSTR str, LPCWSTR pszExtra, LPWSTR pszOut, DWORD *pcchOut) PURE;
-    STDMETHOD (GetKey)(THIS_ ASSOCF flags, ASSOCKEY key, LPCWSTR pszExtra, HKEY *phkeyOut) PURE;
-    STDMETHOD (GetData)(THIS_ ASSOCF flags, ASSOCDATA data, LPCWSTR pszExtra, void * pvOut, DWORD *pcbOut) PURE;
-    STDMETHOD (GetEnum)(THIS_ ASSOCF flags, ASSOCENUM assocenum, LPCWSTR pszExtra, REFIID riid, void **ppvOut) PURE;
+    STDMETHOD (QueryInterface)(THIS_ REFIID riid, void **ppv);
+    STDMETHOD_(ULONG, AddRef) ( THIS );
+    STDMETHOD_(ULONG, Release) ( THIS );
+    STDMETHOD (Init)(THIS_ ASSOCF flags, LPCWSTR pszAssoc, HKEY hkProgid, HWND hwnd);
+    STDMETHOD (GetString)(THIS_ ASSOCF flags, ASSOCSTR str, LPCWSTR pszExtra, LPWSTR pszOut, DWORD *pcchOut);
+    STDMETHOD (GetKey)(THIS_ ASSOCF flags, ASSOCKEY key, LPCWSTR pszExtra, HKEY *phkeyOut);
+    STDMETHOD (GetData)(THIS_ ASSOCF flags, ASSOCDATA data, LPCWSTR pszExtra, void * pvOut, DWORD *pcbOut);
+    STDMETHOD (GetEnum)(THIS_ ASSOCF flags, ASSOCENUM assocenum, LPCWSTR pszExtra, REFIID riid, void **ppvOut);
 };
 LWSTDAPI AssocCreate(CLSID clsid, REFIID riid, void **ppv);
 LWSTDAPI AssocQueryStringA(ASSOCF flags, ASSOCSTR str, LPCSTR pszAssoc, LPCSTR pszExtra, LPSTR pszOut, DWORD *pcchOut);

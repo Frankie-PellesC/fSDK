@@ -26,8 +26,8 @@
 #define HOOK_DELETE         ((ULONG) 0x00000001)
 #define HOOK_CANCEL         ((ULONG) 0x00000002)
 #define MAPI_ISPOOLERHOOK_METHODS(IPURE)                            \
-    MAPIMETHOD(InboundMsgHook)(THIS_  LPMESSAGE lpMessage, LPMAPIFOLDER lpFolder, LPMDB lpMDB, ULONG FAR *lpulFlags, ULONG FAR *lpcbEntryID, LPBYTE FAR *lppEntryID) IPURE; \
-    MAPIMETHOD(OutboundMsgHook)(THIS_  LPMESSAGE lpMessage, LPMAPIFOLDER lpFolder, LPMDB lpMDB, ULONG FAR *lpulFlags, ULONG FAR *lpcbEntryID,  LPBYTE FAR * lppEntryID) IPURE;
+    MAPIMETHOD(InboundMsgHook)(THIS_  LPMESSAGE lpMessage, LPMAPIFOLDER lpFolder, LPMDB lpMDB, ULONG FAR *lpulFlags, ULONG FAR *lpcbEntryID, LPBYTE FAR *lppEntryID); \
+    MAPIMETHOD(OutboundMsgHook)(THIS_  LPMESSAGE lpMessage, LPMAPIFOLDER lpFolder, LPMDB lpMDB, ULONG FAR *lpulFlags, ULONG FAR *lpcbEntryID,  LPBYTE FAR * lppEntryID);
 #undef       INTERFACE
 #define      INTERFACE  ISpoolerHook
 DECLARE_MAPI_INTERFACE_(ISpoolerHook, IUnknown)

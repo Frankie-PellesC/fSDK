@@ -51,12 +51,12 @@ struct _cqpage
 #define INTERFACE IQueryForm
 DECLARE_INTERFACE_IID_(IQueryForm, IUnknown, "8cfcee30-39bd-11d0-b8d1-00a024ab2dbb")
 {
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef)(THIS) PURE;
-    STDMETHOD_(ULONG,Release)(THIS) PURE;
-    STDMETHOD(Initialize)(THIS_ HKEY hkForm) PURE;
-    STDMETHOD(AddForms)(THIS_ LPCQADDFORMSPROC pAddFormsProc, LPARAM lParam) PURE;
-    STDMETHOD(AddPages)(THIS_ LPCQADDPAGESPROC pAddPagesProc, LPARAM lParam) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj);
+    STDMETHOD_(ULONG,AddRef)(THIS);
+    STDMETHOD_(ULONG,Release)(THIS);
+    STDMETHOD(Initialize)(THIS_ HKEY hkForm);
+    STDMETHOD(AddForms)(THIS_ LPCQADDFORMSPROC pAddFormsProc, LPARAM lParam);
+    STDMETHOD(AddPages)(THIS_ LPCQADDPAGESPROC pAddPagesProc, LPARAM lParam);
 };
 #define CQPM_INITIALIZE             0x00000001
 #define CQPM_RELEASE                0x00000002
@@ -71,17 +71,17 @@ DECLARE_INTERFACE_IID_(IQueryForm, IUnknown, "8cfcee30-39bd-11d0-b8d1-00a024ab2d
 #define INTERFACE IPersistQuery
 DECLARE_INTERFACE_IID_(IPersistQuery, IPersist, "1a3114b8-a62e-11d0-a6c5-00a0c906af45")
 {
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef)(THIS)  PURE;
-    STDMETHOD_(ULONG,Release)(THIS) PURE;
-    STDMETHOD(GetClassID)(THIS_ CLSID* pClassID) PURE;
-    STDMETHOD(WriteString)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPCWSTR pValue) PURE;
-    STDMETHOD(ReadString)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPWSTR pBuffer, INT cchBuffer) PURE;
-    STDMETHOD(WriteInt)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, INT value) PURE;
-    STDMETHOD(ReadInt)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPINT pValue) PURE;
-    STDMETHOD(WriteStruct)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPVOID pStruct, DWORD cbStruct) PURE;
-    STDMETHOD(ReadStruct)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPVOID pStruct, DWORD cbStruct) PURE;
-    STDMETHOD(Clear)(THIS) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj);
+    STDMETHOD_(ULONG,AddRef)(THIS);
+    STDMETHOD_(ULONG,Release)(THIS);
+    STDMETHOD(GetClassID)(THIS_ CLSID* pClassID);
+    STDMETHOD(WriteString)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPCWSTR pValue);
+    STDMETHOD(ReadString)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPWSTR pBuffer, INT cchBuffer);
+    STDMETHOD(WriteInt)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, INT value);
+    STDMETHOD(ReadInt)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPINT pValue);
+    STDMETHOD(WriteStruct)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPVOID pStruct, DWORD cbStruct);
+    STDMETHOD(ReadStruct)(THIS_ LPCWSTR pSection, LPCWSTR pValueName, LPVOID pStruct, DWORD cbStruct);
+    STDMETHOD(Clear)(THIS);
 };
 #define OQWF_OKCANCEL               0x00000001
 #define OQWF_DEFAULTFORM            0x00000002
@@ -113,10 +113,10 @@ typedef struct
 #define INTERFACE ICommonQuery
 DECLARE_INTERFACE_IID_(ICommonQuery, IUnknown, "ab50dec0-6f1d-11d0-a1c4-00aa00c16e65")
 {
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef)(THIS)  PURE;
-    STDMETHOD_(ULONG,Release)(THIS) PURE;
-    STDMETHOD(OpenQueryWindow)(THIS_ HWND hwndParent, LPOPENQUERYWINDOW pQueryWnd, IDataObject** ppDataObject) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj);
+    STDMETHOD_(ULONG,AddRef)(THIS);
+    STDMETHOD_(ULONG,Release)(THIS);
+    STDMETHOD(OpenQueryWindow)(THIS_ HWND hwndParent, LPOPENQUERYWINDOW pQueryWnd, IDataObject** ppDataObject);
 };
 #endif
 #endif

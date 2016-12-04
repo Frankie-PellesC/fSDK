@@ -40,10 +40,10 @@ DEFINE_GUID(CATID_MSOfficeAntiVirus, 0x56ffcc30, 0xd398, 0x11d0, 0xb2, 0xae, 0x0
 DECLARE_INTERFACE_(IOfficeAntiVirus, IUnknown)
 {
     BEGIN_INTERFACE
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
-    STDMETHOD_(ULONG, AddRef)(THIS) PURE;
-    STDMETHOD_(ULONG, Release)(THIS) PURE;
-	STDMETHOD_(HRESULT, Scan)(THIS_ MSOAVINFO *pmsoavinfo ) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID FAR* ppvObj));
+    STDMETHOD_(ULONG, AddRef)(THIS));
+    STDMETHOD_(ULONG, Release)(THIS));
+	STDMETHOD_(HRESULT, Scan)(THIS_ MSOAVINFO *pmsoavinfo ));
 };
 #ifndef AVVENDOR
 MSOAPI_(BOOL)MsoFAnyAntiVirus(HMSOINST hmsoinst);

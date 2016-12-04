@@ -106,14 +106,14 @@ DECLARE_INTERFACE_(ICDAORecordset, IDispatch)
 	STDMETHOD(GetTypeInfo)      (THIS_ UINT iTInfo, LCID lcid, ITypeInfo ** ppTInfo);
 	STDMETHOD(GetIDsOfNames)    (THIS_ REFIID riid, LPOLESTR * rgszNames, UINT cNames, LCID lcid, DISPID * rgDispId);
 	STDMETHOD(Invoke)           (THIS_ DISPID dispIdMember, REFIID riid, LCID lcid, WORD wFlags, DISPPARAMS * pDispParams, VARIANT * pVarResult, EXCEPINFO * pExcepInfo, UINT * puArgErr);
-	STDMETHOD(GetRows)          (THIS_ LONG cRowsToSkip, LONG cCol, LPDAOCOLUMNBINDING prgBndCol, ULONG cbRowLen, LPDAOFETCHROWS pFetchRows) PURE;
+	STDMETHOD(GetRows)          (THIS_ LONG cRowsToSkip, LONG cCol, LPDAOCOLUMNBINDING prgBndCol, ULONG cbRowLen, LPDAOFETCHROWS pFetchRows);
 	STDMETHOD(SetNotify)		(THIS_ REFIID riid, BOOL fNotify);
 	STDMETHOD(GetNotify)		(THIS_ REFIID riid, BOOL *fNotify);
 	STDMETHOD(OnBeforeNotify)	(THIS_ REFIID riid, DWORD cat, DWORD rsn, VARIANT v1, VARIANT v2);
 	STDMETHOD(OnAfterNotify)	(THIS_ REFIID riid, DWORD cat, DWORD rsn, VARIANT v1, VARIANT v2, HRESULT hr);
 	STDMETHOD(PutLock)			(THIS_ BOOL f);
 	STDMETHOD(GetLock)			(THIS_ BOOL *f);
-	STDMETHOD(AddGetRowsErr)    (THIS_ HRESULT hr) PURE;
+	STDMETHOD(AddGetRowsErr)    (THIS_ HRESULT hr);
 };
 #define errVtoFetchBuffTooSmall	-30028
 #define errVtoEOFDuringFetch	-30029

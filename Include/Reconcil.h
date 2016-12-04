@@ -28,20 +28,20 @@
 #define INTERFACE INotifyReplica
 DECLARE_INTERFACE_(INotifyReplica, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(YouAreAReplica) (THIS_ ULONG ulcOtherReplicas, IMoniker ** rgpmkOtherReplicas)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(YouAreAReplica) (THIS_ ULONG ulcOtherReplicas, IMoniker ** rgpmkOtherReplicas);
 };
 #undef  INTERFACE
 #define INTERFACE IReconcileInitiator
 DECLARE_INTERFACE_(IReconcileInitiator, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(SetAbortCallback) (THIS_ IUnknown * punkForAbort)PURE;
-	STDMETHOD(SetProgressFeedback) (THIS_ ULONG ulProgress, ULONG ulProgressMax)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(SetAbortCallback) (THIS_ IUnknown * punkForAbort);
+	STDMETHOD(SetProgressFeedback) (THIS_ ULONG ulProgress, ULONG ulProgressMax);
 };
 typedef enum _reconcilef
 {
@@ -65,20 +65,20 @@ RECONCILEF;
 #define INTERFACE IReconcilableObject
 DECLARE_INTERFACE_(IReconcilableObject, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(Reconcile) (THIS_ IReconcileInitiator * pInitiator, DWORD dwFlags, HWND hwndOwner, HWND hwndProgressFeedback, ULONG ulcInput, IMoniker ** rgpmkOtherInput, PLONG plOutIndex, IStorage * pstgNewResidues, PVOID pvReserved)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(Reconcile) (THIS_ IReconcileInitiator * pInitiator, DWORD dwFlags, HWND hwndOwner, HWND hwndProgressFeedback, ULONG ulcInput, IMoniker ** rgpmkOtherInput, PLONG plOutIndex, IStorage * pstgNewResidues, PVOID pvReserved);
 	STDMETHOD(GetProgressFeedbackMaxEstimate) (THIS_
-                                             PULONG pulProgressMax) PURE;
+                                             PULONG pulProgressMax);
 };
 #undef  INTERFACE
 #define INTERFACE IBriefcaseInitiator
 DECLARE_INTERFACE_(IBriefcaseInitiator, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(IsMonikerInBriefcase) (THIS_ IMoniker * pmk)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, PVOID * ppvObject);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(IsMonikerInBriefcase) (THIS_ IMoniker * pmk);
 };
 #endif

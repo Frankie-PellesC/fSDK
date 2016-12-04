@@ -1,9 +1,13 @@
 # 2016 fSDK© - Frankie's SDK for PellesC
-        V.0.1.0.5 (26.Nov.2016)
+        V.0.1.1.0 (04.Dec.2016)
 
 ### CHANGE HISTORY
 ----------------
 
+- 04/Dec/2016
+  - Added more DX8 headers and libraries
+  - Added DX8 Donuts3D demo
+  - Fixed some bugs in headers
 - 26/Nov/2016
   - Fixed former bugs.
   - Added more headers

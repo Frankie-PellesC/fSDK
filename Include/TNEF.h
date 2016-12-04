@@ -47,38 +47,13 @@ DECLARE_MAPI_INTERFACE_PTR(ITnef, LPITNEF);
 #define TNEF_COMPONENT_MESSAGE		((ULONG) 0x00001000)
 #define TNEF_COMPONENT_ATTACHMENT	((ULONG) 0x00002000)
 #define MAPI_ITNEF_METHODS(IPURE)										\
-	MAPIMETHOD(AddProps)												\
-		(THIS_	ULONG						ulFlags,					\
-				ULONG						ulElemID,					\
-				LPVOID						lpvData,					\
-				LPSPropTagArray				lpPropList) IPURE;			\
-	MAPIMETHOD(ExtractProps)											\
-		(THIS_	ULONG						ulFlags,					\
-				LPSPropTagArray				lpPropList,					\
-				LPSTnefProblemArray FAR *	lpProblems) IPURE;			\
-	MAPIMETHOD(Finish)													\
-		(THIS_	ULONG						ulFlags,					\
-				WORD FAR *					lpKey,						\
-				LPSTnefProblemArray FAR *	lpProblems) IPURE;			\
-	MAPIMETHOD(OpenTaggedBody)											\
-		(THIS_	LPMESSAGE					lpMessage,					\
-				ULONG						ulFlags,					\
-				LPSTREAM FAR *				lppStream) IPURE;			\
-	MAPIMETHOD(SetProps)												\
-		(THIS_	ULONG						ulFlags,					\
-				ULONG						ulElemID,					\
-				ULONG						cValues,					\
-				LPSPropValue				lpProps) IPURE;				\
-	MAPIMETHOD(EncodeRecips)											\
-		(THIS_	ULONG						ulFlags,					\
-				LPMAPITABLE					lpRecipientTable) IPURE;	\
-	MAPIMETHOD(FinishComponent)											\
-		(THIS_	ULONG						ulFlags,					\
-				ULONG						ulComponentID,				\
-				LPSPropTagArray				lpCustomPropList,			\
-				LPSPropValue				lpCustomProps,				\
-				LPSPropTagArray				lpPropList,					\
-				LPSTnefProblemArray FAR *	lpProblems) IPURE;
+MAPIMETHOD(AddProps) (THIS_ ULONG ulFlags, ULONG ulElemID, LPVOID lpvData, LPSPropTagArray lpPropList); \
+MAPIMETHOD(ExtractProps) (THIS_ ULONG ulFlags, LPSPropTagArray lpPropList, LPSTnefProblemArray FAR * lpProblems); \
+MAPIMETHOD(Finish) (THIS_ ULONG ulFlags, WORD FAR * lpKey, LPSTnefProblemArray FAR * lpProblems); \
+MAPIMETHOD(OpenTaggedBody) (THIS_ LPMESSAGE lpMessage, ULONG ulFlags, LPSTREAM FAR * lppStream); \
+MAPIMETHOD(SetProps) (THIS_ ULONG ulFlags, ULONG ulElemID, ULONG cValues, LPSPropValue lpProps); \
+MAPIMETHOD(EncodeRecips) (THIS_ ULONG ulFlags, LPMAPITABLE lpRecipientTable); \
+MAPIMETHOD(FinishComponent) (THIS_ ULONG ulFlags, ULONG ulComponentID, LPSPropTagArray lpCustomPropList, LPSPropValue lpCustomProps, LPSPropTagArray lpPropList, LPSTnefProblemArray FAR * lpProblems);
 #undef		 INTERFACE
 #define		 INTERFACE  ITnef
 DECLARE_MAPI_INTERFACE_(ITnef, IUnknown)

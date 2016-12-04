@@ -98,27 +98,27 @@ typedef enum _SI_PAGE_TYPE {
 #define INTERFACE   ISecurityInformation
 DECLARE_INTERFACE_IID_(ISecurityInformation, IUnknown, "965FC360-16FF-11d0-91CB-00AA00BBB723")
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetObjectInformation) (THIS_ PSI_OBJECT_INFO pObjectInfo)PURE;
-	STDMETHOD(GetSecurity) (THIS_ SECURITY_INFORMATION RequestedInformation, PSECURITY_DESCRIPTOR * ppSecurityDescriptor, BOOL fDefault)PURE;
-	STDMETHOD(SetSecurity) (THIS_ SECURITY_INFORMATION SecurityInformation, PSECURITY_DESCRIPTOR pSecurityDescriptor)PURE;
-	STDMETHOD(GetAccessRights) (THIS_ const GUID * pguidObjectType, DWORD dwFlags, PSI_ACCESS * ppAccess, ULONG * pcAccesses, ULONG * piDefaultAccess)PURE;
-	STDMETHOD(MapGeneric) (THIS_ const GUID * pguidObjectType, UCHAR * pAceFlags, ACCESS_MASK * pMask)PURE;
-	STDMETHOD(GetInheritTypes) (THIS_ PSI_INHERIT_TYPE * ppInheritTypes, ULONG * pcInheritTypes)PURE;
-	STDMETHOD(PropertySheetPageCallback) (THIS_ HWND hwnd, UINT uMsg, SI_PAGE_TYPE uPage)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetObjectInformation) (THIS_ PSI_OBJECT_INFO pObjectInfo);
+	STDMETHOD(GetSecurity) (THIS_ SECURITY_INFORMATION RequestedInformation, PSECURITY_DESCRIPTOR * ppSecurityDescriptor, BOOL fDefault);
+	STDMETHOD(SetSecurity) (THIS_ SECURITY_INFORMATION SecurityInformation, PSECURITY_DESCRIPTOR pSecurityDescriptor);
+	STDMETHOD(GetAccessRights) (THIS_ const GUID * pguidObjectType, DWORD dwFlags, PSI_ACCESS * ppAccess, ULONG * pcAccesses, ULONG * piDefaultAccess);
+	STDMETHOD(MapGeneric) (THIS_ const GUID * pguidObjectType, UCHAR * pAceFlags, ACCESS_MASK * pMask);
+	STDMETHOD(GetInheritTypes) (THIS_ PSI_INHERIT_TYPE * ppInheritTypes, ULONG * pcInheritTypes);
+	STDMETHOD(PropertySheetPageCallback) (THIS_ HWND hwnd, UINT uMsg, SI_PAGE_TYPE uPage);
 };
 typedef ISecurityInformation *LPSECURITYINFO;
 #undef INTERFACE
 #define INTERFACE   ISecurityInformation2
 DECLARE_INTERFACE_IID_(ISecurityInformation2, IUnknown, "c3ccfdb4-6f88-11d2-a3ce-00c04fb1782a")
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(BOOL, IsDaclCanonical) (THIS_ PACL pDacl)PURE;
-	STDMETHOD(LookupSids) (THIS_ ULONG cSids, PSID * rgpSids, LPDATAOBJECT * ppdo)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(BOOL, IsDaclCanonical) (THIS_ PACL pDacl);
+	STDMETHOD(LookupSids) (THIS_ ULONG cSids, PSID * rgpSids, LPDATAOBJECT * ppdo);
 };
 typedef ISecurityInformation2 *LPSECURITYINFO2;
 #define CFSTR_ACLUI_SID_INFO_LIST   TEXT("CFSTR_ACLUI_SID_INFO_LIST")
@@ -136,20 +136,20 @@ typedef struct _SID_INFO_LIST {
 #define INTERFACE   IEffectivePermission
 DECLARE_INTERFACE_IID_(IEffectivePermission, IUnknown, "3853DC76-9F35-407c-88A1-D19344365FBC")
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetEffectivePermission) (THIS_ const GUID * pguidObjectType, PSID pUserSid, LPCWSTR pszServerName, PSECURITY_DESCRIPTOR pSD, POBJECT_TYPE_LIST * ppObjectTypeList, ULONG * pcObjectTypeListLength, PACCESS_MASK * ppGrantedAccessList, ULONG * pcGrantedAccessListLength)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetEffectivePermission) (THIS_ const GUID * pguidObjectType, PSID pUserSid, LPCWSTR pszServerName, PSECURITY_DESCRIPTOR pSD, POBJECT_TYPE_LIST * ppObjectTypeList, ULONG * pcObjectTypeListLength, PACCESS_MASK * ppGrantedAccessList, ULONG * pcGrantedAccessListLength);
 };
 typedef IEffectivePermission *LPEFFECTIVEPERMISSION;
 #undef INTERFACE
 #define INTERFACE   ISecurityObjectTypeInfo
 DECLARE_INTERFACE_IID_(ISecurityObjectTypeInfo, IUnknown, "FC3066EB-79EF-444b-9111-D18A75EBF2FA")
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetInheritSource) (SECURITY_INFORMATION si, PACL pACL, PINHERITED_FROM * ppInheritArray)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetInheritSource) (SECURITY_INFORMATION si, PACL pACL, PINHERITED_FROM * ppInheritArray);
 };
 typedef ISecurityObjectTypeInfo *LPSecurityObjectTypeInfo;
 #if (NTDDI_VERSION >= NTDDI_VISTA)
@@ -157,11 +157,11 @@ typedef ISecurityObjectTypeInfo *LPSecurityObjectTypeInfo;
 #define INTERFACE   ISecurityInformation3
 DECLARE_INTERFACE_IID_(ISecurityInformation3, IUnknown, "E2CDC9CC-31BD-4f8f-8C8B-B641AF516A1A")
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetFullResourceName) (THIS_ LPWSTR * ppszResourceName)PURE;
-	STDMETHOD(OpenElevatedEditor) (THIS_ HWND hWnd, SI_PAGE_TYPE uPage)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetFullResourceName) (THIS_ LPWSTR * ppszResourceName);
+	STDMETHOD(OpenElevatedEditor) (THIS_ HWND hWnd, SI_PAGE_TYPE uPage);
 };
 typedef ISecurityInformation3 *LPSECURITYINFO3;
 #endif

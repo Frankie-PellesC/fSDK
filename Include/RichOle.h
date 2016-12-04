@@ -60,44 +60,44 @@ typedef struct _reobject
 #define INTERFACE   IRichEditOle
 DECLARE_INTERFACE_(IRichEditOle, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * lplpObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetClientSite) (THIS_ LPOLECLIENTSITE FAR * lplpolesite)PURE;
-	STDMETHOD_(LONG, GetObjectCount) (THIS)PURE;
-	STDMETHOD_(LONG, GetLinkCount) (THIS)PURE;
-	STDMETHOD(GetObject) (THIS_ LONG iob, REOBJECT FAR * lpreobject, DWORD dwFlags)PURE;
-	STDMETHOD(InsertObject) (THIS_ REOBJECT FAR * lpreobject)PURE;
-	STDMETHOD(ConvertObject) (THIS_ LONG iob, REFCLSID rclsidNew, LPCSTR lpstrUserTypeNew)PURE;
-	STDMETHOD(ActivateAs) (THIS_ REFCLSID rclsid, REFCLSID rclsidAs)PURE;
-	STDMETHOD(SetHostNames) (THIS_ LPCSTR lpstrContainerApp, LPCSTR lpstrContainerObj)PURE;
-	STDMETHOD(SetLinkAvailable) (THIS_ LONG iob, BOOL fAvailable)PURE;
-	STDMETHOD(SetDvaspect) (THIS_ LONG iob, DWORD dvaspect)PURE;
-	STDMETHOD(HandsOffStorage) (THIS_ LONG iob)PURE;
-	STDMETHOD(SaveCompleted) (THIS_ LONG iob, LPSTORAGE lpstg)PURE;
-	STDMETHOD(InPlaceDeactivate) (THIS)PURE;
-	STDMETHOD(ContextSensitiveHelp) (THIS_ BOOL fEnterMode)PURE;
-	STDMETHOD(GetClipboardData) (THIS_ CHARRANGE FAR * lpchrg, DWORD reco, LPDATAOBJECT FAR * lplpdataobj)PURE;
-	STDMETHOD(ImportDataObject) (THIS_ LPDATAOBJECT lpdataobj, CLIPFORMAT cf, HGLOBAL hMetaPict)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * lplpObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetClientSite) (THIS_ LPOLECLIENTSITE FAR * lplpolesite);
+	STDMETHOD_(LONG, GetObjectCount) (THIS);
+	STDMETHOD_(LONG, GetLinkCount) (THIS);
+	STDMETHOD(GetObject) (THIS_ LONG iob, REOBJECT FAR * lpreobject, DWORD dwFlags);
+	STDMETHOD(InsertObject) (THIS_ REOBJECT FAR * lpreobject);
+	STDMETHOD(ConvertObject) (THIS_ LONG iob, REFCLSID rclsidNew, LPCSTR lpstrUserTypeNew);
+	STDMETHOD(ActivateAs) (THIS_ REFCLSID rclsid, REFCLSID rclsidAs);
+	STDMETHOD(SetHostNames) (THIS_ LPCSTR lpstrContainerApp, LPCSTR lpstrContainerObj);
+	STDMETHOD(SetLinkAvailable) (THIS_ LONG iob, BOOL fAvailable);
+	STDMETHOD(SetDvaspect) (THIS_ LONG iob, DWORD dvaspect);
+	STDMETHOD(HandsOffStorage) (THIS_ LONG iob);
+	STDMETHOD(SaveCompleted) (THIS_ LONG iob, LPSTORAGE lpstg);
+	STDMETHOD(InPlaceDeactivate) (THIS);
+	STDMETHOD(ContextSensitiveHelp) (THIS_ BOOL fEnterMode);
+	STDMETHOD(GetClipboardData) (THIS_ CHARRANGE FAR * lpchrg, DWORD reco, LPDATAOBJECT FAR * lplpdataobj);
+	STDMETHOD(ImportDataObject) (THIS_ LPDATAOBJECT lpdataobj, CLIPFORMAT cf, HGLOBAL hMetaPict);
 };
 typedef         IRichEditOle FAR * LPRICHEDITOLE;
 #undef INTERFACE
 #define INTERFACE   IRichEditOleCallback
 DECLARE_INTERFACE_(IRichEditOleCallback, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * lplpObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetNewStorage) (THIS_ LPSTORAGE FAR * lplpstg)PURE;
-	STDMETHOD(GetInPlaceContext) (THIS_ LPOLEINPLACEFRAME FAR * lplpFrame, LPOLEINPLACEUIWINDOW FAR * lplpDoc, LPOLEINPLACEFRAMEINFO lpFrameInfo)PURE;
-	STDMETHOD(ShowContainerUI) (THIS_ BOOL fShow)PURE;
-	STDMETHOD(QueryInsertObject) (THIS_ LPCLSID lpclsid, LPSTORAGE lpstg, LONG cp)PURE;
-	STDMETHOD(DeleteObject) (THIS_ LPOLEOBJECT lpoleobj)PURE;
-	STDMETHOD(QueryAcceptData) (THIS_ LPDATAOBJECT lpdataobj, CLIPFORMAT FAR * lpcfFormat, DWORD reco, BOOL fReally, HGLOBAL hMetaPict)PURE;
-	STDMETHOD(ContextSensitiveHelp) (THIS_ BOOL fEnterMode)PURE;
-	STDMETHOD(GetClipboardData) (THIS_ CHARRANGE FAR * lpchrg, DWORD reco, LPDATAOBJECT FAR * lplpdataobj)PURE;
-	STDMETHOD(GetDragDropEffect) (THIS_ BOOL fDrag, DWORD grfKeyState, LPDWORD pdwEffect)PURE;
-	STDMETHOD(GetContextMenu) (THIS_ WORD seltype, LPOLEOBJECT lpoleobj, CHARRANGE FAR * lpchrg, HMENU FAR * lphmenu)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * lplpObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetNewStorage) (THIS_ LPSTORAGE FAR * lplpstg);
+	STDMETHOD(GetInPlaceContext) (THIS_ LPOLEINPLACEFRAME FAR * lplpFrame, LPOLEINPLACEUIWINDOW FAR * lplpDoc, LPOLEINPLACEFRAMEINFO lpFrameInfo);
+	STDMETHOD(ShowContainerUI) (THIS_ BOOL fShow);
+	STDMETHOD(QueryInsertObject) (THIS_ LPCLSID lpclsid, LPSTORAGE lpstg, LONG cp);
+	STDMETHOD(DeleteObject) (THIS_ LPOLEOBJECT lpoleobj);
+	STDMETHOD(QueryAcceptData) (THIS_ LPDATAOBJECT lpdataobj, CLIPFORMAT FAR * lpcfFormat, DWORD reco, BOOL fReally, HGLOBAL hMetaPict);
+	STDMETHOD(ContextSensitiveHelp) (THIS_ BOOL fEnterMode);
+	STDMETHOD(GetClipboardData) (THIS_ CHARRANGE FAR * lpchrg, DWORD reco, LPDATAOBJECT FAR * lplpdataobj);
+	STDMETHOD(GetDragDropEffect) (THIS_ BOOL fDrag, DWORD grfKeyState, LPDWORD pdwEffect);
+	STDMETHOD(GetContextMenu) (THIS_ WORD seltype, LPOLEOBJECT lpoleobj, CHARRANGE FAR * lpchrg, HMENU FAR * lphmenu);
 };
 typedef IRichEditOleCallback FAR *LPRICHEDITOLECALLBACK;
 DEFINE_GUID(IID_IRichEditOle,         0x00020D00, 0, 0, 0xC0,0,0,0,0,0,0,0x46);

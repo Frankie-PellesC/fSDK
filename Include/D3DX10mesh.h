@@ -67,50 +67,50 @@ typedef struct _D3DX10_INTERSECT_INFO
 #define INTERFACE ID3DX10MeshBuffer
 DECLARE_INTERFACE_(ID3DX10MeshBuffer, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(Map) (THIS_ void **ppData, SIZE_T * pSize)PURE;
-	STDMETHOD(Unmap) (THIS)PURE;
-	STDMETHOD_(SIZE_T, GetSize) (THIS)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(Map) (THIS_ void **ppData, SIZE_T * pSize);
+	STDMETHOD(Unmap) (THIS);
+	STDMETHOD_(SIZE_T, GetSize) (THIS);
 };
 #undef INTERFACE
 #define INTERFACE ID3DX10Mesh
 DECLARE_INTERFACE_(ID3DX10Mesh, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(UINT, GetFaceCount) (THIS)PURE;
-	STDMETHOD_(UINT, GetVertexCount) (THIS)PURE;
-	STDMETHOD_(UINT, GetVertexBufferCount) (THIS)PURE;
-	STDMETHOD_(UINT, GetFlags) (THIS)PURE;
-	STDMETHOD(GetVertexDescription) (THIS_ CONST D3D10_INPUT_ELEMENT_DESC ** ppDesc, UINT * pDeclCount)PURE;
-	STDMETHOD(SetVertexData) (THIS_ UINT iBuffer, CONST void *pData)PURE;
-	STDMETHOD(GetVertexBuffer) (THIS_ UINT iBuffer, ID3DX10MeshBuffer ** ppVertexBuffer)PURE;
-	STDMETHOD(SetIndexData) (THIS_ CONST void *pData, UINT cIndices)PURE;
-	STDMETHOD(GetIndexBuffer) (THIS_ ID3DX10MeshBuffer ** ppIndexBuffer)PURE;
-	STDMETHOD(SetAttributeData) (THIS_ CONST UINT * pData)PURE;
-	STDMETHOD(GetAttributeBuffer) (THIS_ ID3DX10MeshBuffer ** ppAttributeBuffer)PURE;
-	STDMETHOD(SetAttributeTable) (THIS_ CONST D3DX10_ATTRIBUTE_RANGE * pAttribTable, UINT cAttribTableSize)PURE;
-	STDMETHOD(GetAttributeTable) (THIS_ D3DX10_ATTRIBUTE_RANGE * pAttribTable, UINT * pAttribTableSize)PURE;
-	STDMETHOD(GenerateAdjacencyAndPointReps) (THIS_ FLOAT Epsilon)PURE;
-	STDMETHOD(GenerateGSAdjacency) (THIS)PURE;
-	STDMETHOD(SetAdjacencyData) (THIS_ CONST UINT * pAdjacency)PURE;
-	STDMETHOD(GetAdjacencyBuffer) (THIS_ ID3DX10MeshBuffer ** ppAdjacency)PURE;
-	STDMETHOD(SetPointRepData) (THIS_ CONST UINT * pPointReps)PURE;
-	STDMETHOD(GetPointRepBuffer) (THIS_ ID3DX10MeshBuffer ** ppPointReps)PURE;
-	STDMETHOD(Discard) (THIS_ D3DX10_MESH_DISCARD_FLAGS dwDiscard)PURE;
-	STDMETHOD(CloneMesh) (THIS_ UINT Flags, LPCSTR pPosSemantic, CONST D3D10_INPUT_ELEMENT_DESC * pDesc, UINT DeclCount, ID3DX10Mesh ** ppCloneMesh)PURE;
-	STDMETHOD(Optimize) (THIS_ UINT Flags, UINT * pFaceRemap, LPD3D10BLOB * ppVertexRemap)PURE;
-	STDMETHOD(GenerateAttributeBufferFromTable) (THIS)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(UINT, GetFaceCount) (THIS);
+	STDMETHOD_(UINT, GetVertexCount) (THIS);
+	STDMETHOD_(UINT, GetVertexBufferCount) (THIS);
+	STDMETHOD_(UINT, GetFlags) (THIS);
+	STDMETHOD(GetVertexDescription) (THIS_ CONST D3D10_INPUT_ELEMENT_DESC ** ppDesc, UINT * pDeclCount);
+	STDMETHOD(SetVertexData) (THIS_ UINT iBuffer, CONST void *pData);
+	STDMETHOD(GetVertexBuffer) (THIS_ UINT iBuffer, ID3DX10MeshBuffer ** ppVertexBuffer);
+	STDMETHOD(SetIndexData) (THIS_ CONST void *pData, UINT cIndices);
+	STDMETHOD(GetIndexBuffer) (THIS_ ID3DX10MeshBuffer ** ppIndexBuffer);
+	STDMETHOD(SetAttributeData) (THIS_ CONST UINT * pData);
+	STDMETHOD(GetAttributeBuffer) (THIS_ ID3DX10MeshBuffer ** ppAttributeBuffer);
+	STDMETHOD(SetAttributeTable) (THIS_ CONST D3DX10_ATTRIBUTE_RANGE * pAttribTable, UINT cAttribTableSize);
+	STDMETHOD(GetAttributeTable) (THIS_ D3DX10_ATTRIBUTE_RANGE * pAttribTable, UINT * pAttribTableSize);
+	STDMETHOD(GenerateAdjacencyAndPointReps) (THIS_ FLOAT Epsilon);
+	STDMETHOD(GenerateGSAdjacency) (THIS);
+	STDMETHOD(SetAdjacencyData) (THIS_ CONST UINT * pAdjacency);
+	STDMETHOD(GetAdjacencyBuffer) (THIS_ ID3DX10MeshBuffer ** ppAdjacency);
+	STDMETHOD(SetPointRepData) (THIS_ CONST UINT * pPointReps);
+	STDMETHOD(GetPointRepBuffer) (THIS_ ID3DX10MeshBuffer ** ppPointReps);
+	STDMETHOD(Discard) (THIS_ D3DX10_MESH_DISCARD_FLAGS dwDiscard);
+	STDMETHOD(CloneMesh) (THIS_ UINT Flags, LPCSTR pPosSemantic, CONST D3D10_INPUT_ELEMENT_DESC * pDesc, UINT DeclCount, ID3DX10Mesh ** ppCloneMesh);
+	STDMETHOD(Optimize) (THIS_ UINT Flags, UINT * pFaceRemap, LPD3D10BLOB * ppVertexRemap);
+	STDMETHOD(GenerateAttributeBufferFromTable) (THIS);
 	STDMETHOD(Intersect) (THIS_ D3DXVECTOR3 * pRayPos, D3DXVECTOR3 * pRayDir, UINT * pHitCount, UINT * pFaceIndex, float *pU, float *pV, float *pDist, ID3D10Blob ** ppAllHits);
 	STDMETHOD(IntersectSubset) (THIS_ UINT AttribId, D3DXVECTOR3 * pRayPos, D3DXVECTOR3 * pRayDir, UINT * pHitCount, UINT * pFaceIndex, float *pU, float *pV, float *pDist, ID3D10Blob ** ppAllHits);
-	STDMETHOD(CommitToDevice) (THIS)PURE;
-	STDMETHOD(DrawSubset) (THIS_ UINT AttribId)PURE;
-	STDMETHOD(DrawSubsetInstanced) (THIS_ UINT AttribId, UINT InstanceCount, UINT StartInstanceLocation)PURE;
-	STDMETHOD(GetDeviceVertexBuffer) (THIS_ UINT iBuffer, ID3D10Buffer ** ppVertexBuffer)PURE;
-	STDMETHOD(GetDeviceIndexBuffer) (THIS_ ID3D10Buffer ** ppIndexBuffer)PURE;
+	STDMETHOD(CommitToDevice) (THIS);
+	STDMETHOD(DrawSubset) (THIS_ UINT AttribId);
+	STDMETHOD(DrawSubsetInstanced) (THIS_ UINT AttribId, UINT InstanceCount, UINT StartInstanceLocation);
+	STDMETHOD(GetDeviceVertexBuffer) (THIS_ UINT iBuffer, ID3D10Buffer ** ppVertexBuffer);
+	STDMETHOD(GetDeviceIndexBuffer) (THIS_ ID3D10Buffer ** ppIndexBuffer);
 };
 HRESULT WINAPI D3DX10CreateMesh(ID3D10Device *pDevice, CONST D3D10_INPUT_ELEMENT_DESC *pDeclaration, UINT DeclCount, LPCSTR pPositionSemantic, UINT VertexCount, UINT FaceCount, UINT Options, ID3DX10Mesh **ppMesh);
 enum _D3DX10_MESHOPT
@@ -138,26 +138,26 @@ typedef struct _D3DX10_SKINNING_CHANNEL
 typedef struct ID3DX10SkinInfo *LPD3DX10SKININFO;
 DECLARE_INTERFACE_(ID3DX10SkinInfo, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(UINT, GetNumVertices) (THIS)PURE;
-	STDMETHOD_(UINT, GetNumBones) (THIS)PURE;
-	STDMETHOD_(UINT, GetMaxBoneInfluences) (THIS)PURE;
-	STDMETHOD(AddVertices) (THIS_ UINT Count)PURE;
-	STDMETHOD(RemapVertices) (THIS_ UINT NewVertexCount, UINT * pVertexRemap)PURE;
-	STDMETHOD(AddBones) (THIS_ UINT Count)PURE;
-	STDMETHOD(RemoveBone) (THIS_ UINT Index)PURE;
-	STDMETHOD(RemapBones) (THIS_ UINT NewBoneCount, UINT * pBoneRemap)PURE;
-	STDMETHOD(AddBoneInfluences) (THIS_ UINT BoneIndex, UINT InfluenceCount, UINT * pIndices, float *pWeights)PURE;
-	STDMETHOD(ClearBoneInfluences) (THIS_ UINT BoneIndex)PURE;
-	STDMETHOD_(UINT, GetBoneInfluenceCount) (THIS_ UINT BoneIndex)PURE;
-	STDMETHOD(GetBoneInfluences) (THIS_ UINT BoneIndex, UINT Offset, UINT Count, UINT * pDestIndices, float *pDestWeights)PURE;
-	STDMETHOD(FindBoneInfluenceIndex) (THIS_ UINT BoneIndex, UINT VertexIndex, UINT * pInfluenceIndex)PURE;
-	STDMETHOD(SetBoneInfluence) (THIS_ UINT BoneIndex, UINT InfluenceIndex, float Weight)PURE;
-	STDMETHOD(GetBoneInfluence) (THIS_ UINT BoneIndex, UINT InfluenceIndex, float *pWeight)PURE;
-	STDMETHOD(Compact) (THIS_ UINT MaxPerVertexInfluences, UINT ScaleMode, float MinWeight)PURE;
-	STDMETHOD(DoSoftwareSkinning) (UINT StartVertex, UINT VertexCount, void *pSrcVertices, UINT SrcStride, void *pDestVertices, UINT DestStride, D3DXMATRIX * pBoneMatrices, D3DXMATRIX * pInverseTransposeBoneMatrices, D3DX10_SKINNING_CHANNEL * pChannelDescs, UINT NumChannels)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(UINT, GetNumVertices) (THIS);
+	STDMETHOD_(UINT, GetNumBones) (THIS);
+	STDMETHOD_(UINT, GetMaxBoneInfluences) (THIS);
+	STDMETHOD(AddVertices) (THIS_ UINT Count);
+	STDMETHOD(RemapVertices) (THIS_ UINT NewVertexCount, UINT * pVertexRemap);
+	STDMETHOD(AddBones) (THIS_ UINT Count);
+	STDMETHOD(RemoveBone) (THIS_ UINT Index);
+	STDMETHOD(RemapBones) (THIS_ UINT NewBoneCount, UINT * pBoneRemap);
+	STDMETHOD(AddBoneInfluences) (THIS_ UINT BoneIndex, UINT InfluenceCount, UINT * pIndices, float *pWeights);
+	STDMETHOD(ClearBoneInfluences) (THIS_ UINT BoneIndex);
+	STDMETHOD_(UINT, GetBoneInfluenceCount) (THIS_ UINT BoneIndex);
+	STDMETHOD(GetBoneInfluences) (THIS_ UINT BoneIndex, UINT Offset, UINT Count, UINT * pDestIndices, float *pDestWeights);
+	STDMETHOD(FindBoneInfluenceIndex) (THIS_ UINT BoneIndex, UINT VertexIndex, UINT * pInfluenceIndex);
+	STDMETHOD(SetBoneInfluence) (THIS_ UINT BoneIndex, UINT InfluenceIndex, float Weight);
+	STDMETHOD(GetBoneInfluence) (THIS_ UINT BoneIndex, UINT InfluenceIndex, float *pWeight);
+	STDMETHOD(Compact) (THIS_ UINT MaxPerVertexInfluences, UINT ScaleMode, float MinWeight);
+	STDMETHOD(DoSoftwareSkinning) (UINT StartVertex, UINT VertexCount, void *pSrcVertices, UINT SrcStride, void *pDestVertices, UINT DestStride, D3DXMATRIX * pBoneMatrices, D3DXMATRIX * pInverseTransposeBoneMatrices, D3DX10_SKINNING_CHANNEL * pChannelDescs, UINT NumChannels);
 };
 typedef struct _D3DX10_ATTRIBUTE_WEIGHTS
 {

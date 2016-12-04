@@ -34,11 +34,11 @@ typedef struct tagDEVICEDIALOGDATA2
 } DEVICEDIALOGDATA2, *LPDEVICEDIALOGDATA2, *PDEVICEDIALOGDATA2;
 DECLARE_INTERFACE_IID_(IWiaUIExtension2, IUnknown, "305600d7-5088-46d7-9a15-b77b09cdba7a")
 {
-    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef) (THIS) PURE;
-    STDMETHOD_(ULONG,Release) (THIS) PURE;
-    STDMETHOD(DeviceDialog)(THIS_ PDEVICEDIALOGDATA2 pDeviceDialogData ) PURE;
-    STDMETHOD(GetDeviceIcon)(THIS_ BSTR bstrDeviceId, HICON *phIcon, ULONG nSize) PURE;
+    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj));
+    STDMETHOD_(ULONG,AddRef) (THIS));
+    STDMETHOD_(ULONG,Release) (THIS));
+    STDMETHOD(DeviceDialog)(THIS_ PDEVICEDIALOGDATA2 pDeviceDialogData ));
+    STDMETHOD(GetDeviceIcon)(THIS_ BSTR bstrDeviceId, HICON *phIcon, ULONG nSize));
 };
 DEFINE_GUID(IID_IWiaUIExtension2, 0x305600D7, 0x5088, 0x46D7, 0x9A, 0x15, 0xB7, 0x7B, 0x09, 0xCD, 0xBA, 0x7A);
 #endif
@@ -57,12 +57,12 @@ HRESULT WINAPI DeviceDialog(PDEVICEDIALOGDATA pDeviceDialogData);
 #define INTERFACE IWiaUIExtension
 DECLARE_INTERFACE_IID_(IWiaUIExtension, IUnknown, "da319113-50ee-4c80-b460-57d005d44a2c")
 {
-    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef) (THIS) PURE;
-    STDMETHOD_(ULONG,Release) (THIS) PURE;
-    STDMETHOD(DeviceDialog)(THIS_ PDEVICEDIALOGDATA pDeviceDialogData) PURE;
-    STDMETHOD(GetDeviceIcon)(THIS_ BSTR bstrDeviceId, HICON *phIcon, ULONG nSize) PURE;
-    STDMETHOD(GetDeviceBitmapLogo)(THIS_ BSTR bstrDeviceId, HBITMAP *phBitmap, ULONG nMaxWidth, ULONG nMaxHeight) PURE;
+    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR* ppvObj));
+    STDMETHOD_(ULONG,AddRef) (THIS));
+    STDMETHOD_(ULONG,Release) (THIS));
+    STDMETHOD(DeviceDialog)(THIS_ PDEVICEDIALOGDATA pDeviceDialogData));
+    STDMETHOD(GetDeviceIcon)(THIS_ BSTR bstrDeviceId, HICON *phIcon, ULONG nSize));
+    STDMETHOD(GetDeviceBitmapLogo)(THIS_ BSTR bstrDeviceId, HBITMAP *phBitmap, ULONG nMaxWidth, ULONG nMaxHeight));
 };
 DEFINE_GUID(IID_IWiaUIExtension, 0xDA319113, 0x50EE, 0x4C80, 0xB4, 0x60, 0x57, 0xD0, 0x05, 0xD4, 0x4A, 0x2C);
 typedef HRESULT (WINAPI *DeviceDialogFunction)(PDEVICEDIALOGDATA);

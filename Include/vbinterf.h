@@ -24,31 +24,31 @@
 #define GC_WCH_FSELECTED        0x40000000L
 DECLARE_INTERFACE_(IVBGetControl, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(EnumControls) (THIS_ DWORD dwOleContF, DWORD dwWhich, LPENUMUNKNOWN FAR * ppenumUnk)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(EnumControls) (THIS_ DWORD dwOleContF, DWORD dwWhich, LPENUMUNKNOWN FAR * ppenumUnk);
 };
 DECLARE_INTERFACE_(IGetOleObject, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetOleObject) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetOleObject) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
 };
 DECLARE_INTERFACE_(IVBFormat, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, void FAR * FAR * ppvObj)PURE;
-	STDMETHOD_(unsigned long, AddRef) (THIS) PURE;
-	STDMETHOD_(unsigned long, Release) (THIS) PURE;
-	STDMETHOD(Format) (VARIANT FAR * vData, BSTR bstrFormat, LPVOID lpBuffer, USHORT cb, LONG lcid, SHORT sFirstDayOfWeek, USHORT sFirstWeekOfYear, USHORT * rcb)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, void FAR * FAR * ppvObj);
+	STDMETHOD_(unsigned long, AddRef) (THIS);
+	STDMETHOD_(unsigned long, Release) (THIS);
+	STDMETHOD(Format) (VARIANT FAR * vData, BSTR bstrFormat, LPVOID lpBuffer, USHORT cb, LONG lcid, SHORT sFirstDayOfWeek, USHORT sFirstWeekOfYear, USHORT * rcb);
 };
 DECLARE_INTERFACE_(IGetVBAObject, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, void FAR * FAR * ppvObj)PURE;
-	STDMETHOD_(unsigned long, AddRef) (THIS) PURE;
-	STDMETHOD_(unsigned long, Release) (THIS) PURE;
-	STDMETHOD(GetObject) (THIS_ REFIID riid, void FAR * FAR * ppvObj, DWORD dwReserved)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, void FAR * FAR * ppvObj);
+	STDMETHOD_(unsigned long, AddRef) (THIS);
+	STDMETHOD_(unsigned long, Release) (THIS);
+	STDMETHOD(GetObject) (THIS_ REFIID riid, void FAR * FAR * ppvObj, DWORD dwReserved);
 };
 #include <initguid.h>
 DEFINE_GUID(IID_IVBGetControl, 0x40A050A0L, 0x3C31, 0x101B, 0xA8, 0x2E, 0x08, 0x00, 0x2B, 0x2B, 0x23, 0x37);

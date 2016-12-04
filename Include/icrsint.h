@@ -147,15 +147,15 @@ typedef struct stADO_BINDING_ENTRY
 class CADORecordBinding
 {
 public
-	STDMETHOD_(const ADO_BINDING_ENTRY*, GetADOBindingEntries) (VOID) PURE;
+	STDMETHOD_(const ADO_BINDING_ENTRY*, GetADOBindingEntries) (VOID);
 };
 struct __declspec(uuid("00000544-0000-0010-8000-00aa006d2ea4")) IADORecordBinding;
 DECLARE_INTERFACE_(IADORecordBinding, IUnknown)
 {
 public
-	STDMETHOD(BindToRecordset) (CADORecordBinding *pAdoRecordBinding) PURE;
-	STDMETHOD(AddNew) (CADORecordBinding *pAdoRecordBinding) PURE;
-	STDMETHOD(Update) (CADORecordBinding *pAdoRecordBinding) PURE;
+	STDMETHOD(BindToRecordset) (CADORecordBinding *pAdoRecordBinding);
+	STDMETHOD(AddNew) (CADORecordBinding *pAdoRecordBinding);
+	STDMETHOD(Update) (CADORecordBinding *pAdoRecordBinding);
 };
 #endif
 #endif

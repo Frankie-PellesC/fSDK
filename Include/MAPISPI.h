@@ -69,49 +69,49 @@ typedef struct
 typedef HRESULT(STDMETHODCALLTYPE PREPROCESSMESSAGE) (LPVOID lpvSession, LPMESSAGE lpMessage, LPADRBOOK lpAdrBook, LPMAPIFOLDER lpFolder, LPALLOCATEBUFFER AllocateBuffer, LPALLOCATEMORE AllocateMore, LPFREEBUFFER FreeBuffer, ULONG FAR *lpcOutbound, LPMESSAGE FAR *FAR *lpppMessage, LPADRLIST FAR *lppRecipList);
 typedef HRESULT (STDMETHODCALLTYPE REMOVEPREPROCESSINFO)(LPMESSAGE lpMessage);
 #define MAPI_IMAPISUPPORT_METHODS1(IPURE) \
-	MAPIMETHOD(GetLastError)(THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR FAR *lppMAPIError) IPURE; \
-	MAPIMETHOD(GetMemAllocRoutines)(THIS_ LPALLOCATEBUFFER FAR *lpAllocateBuffer, LPALLOCATEMORE FAR *lpAllocateMore, LPFREEBUFFER FAR *lpFreeBuffer) IPURE; \
-	MAPIMETHOD(Subscribe)(THIS_	LPNOTIFKEY lpKey, ULONG ulEventMask, ULONG ulFlags, LPMAPIADVISESINK lpAdviseSink, ULONG FAR *lpulConnection) IPURE; \
-	MAPIMETHOD(Unsubscribe)(THIS_ ULONG ulConnection) IPURE; \
-	MAPIMETHOD(Notify)(THIS_ LPNOTIFKEY lpKey, ULONG cNotification, LPNOTIFICATION lpNotifications, ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(ModifyStatusRow)(THIS_ ULONG cValues, LPSPropValue lpColumnVals, ULONG ulFlags) IPURE; \
-	MAPIMETHOD(OpenProfileSection)(THIS_ LPMAPIUID lpUid, ULONG ulFlags, LPPROFSECT FAR *lppProfileObj) IPURE; \
-	MAPIMETHOD(RegisterPreprocessor)(THIS_ LPMAPIUID lpMuid, LPTSTR lpszAdrType, LPTSTR lpszDLLName, LPSTR lpszPreprocess, LPSTR lpszRemovePreprocessInfo, ULONG ulFlags) IPURE; \
-	MAPIMETHOD(NewUID)(THIS_ LPMAPIUID lpMuid) IPURE; \
-	MAPIMETHOD(MakeInvalid)(THIS_ ULONG ulFlags, LPVOID lpObject, ULONG ulRefCount, ULONG cMethods) IPURE;
+	MAPIMETHOD(GetLastError)(THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR FAR *lppMAPIError); \
+	MAPIMETHOD(GetMemAllocRoutines)(THIS_ LPALLOCATEBUFFER FAR *lpAllocateBuffer, LPALLOCATEMORE FAR *lpAllocateMore, LPFREEBUFFER FAR *lpFreeBuffer); \
+	MAPIMETHOD(Subscribe)(THIS_	LPNOTIFKEY lpKey, ULONG ulEventMask, ULONG ulFlags, LPMAPIADVISESINK lpAdviseSink, ULONG FAR *lpulConnection); \
+	MAPIMETHOD(Unsubscribe)(THIS_ ULONG ulConnection); \
+	MAPIMETHOD(Notify)(THIS_ LPNOTIFKEY lpKey, ULONG cNotification, LPNOTIFICATION lpNotifications, ULONG FAR *lpulFlags); \
+	MAPIMETHOD(ModifyStatusRow)(THIS_ ULONG cValues, LPSPropValue lpColumnVals, ULONG ulFlags); \
+	MAPIMETHOD(OpenProfileSection)(THIS_ LPMAPIUID lpUid, ULONG ulFlags, LPPROFSECT FAR *lppProfileObj); \
+	MAPIMETHOD(RegisterPreprocessor)(THIS_ LPMAPIUID lpMuid, LPTSTR lpszAdrType, LPTSTR lpszDLLName, LPSTR lpszPreprocess, LPSTR lpszRemovePreprocessInfo, ULONG ulFlags); \
+	MAPIMETHOD(NewUID)(THIS_ LPMAPIUID lpMuid); \
+	MAPIMETHOD(MakeInvalid)(THIS_ ULONG ulFlags, LPVOID lpObject, ULONG ulRefCount, ULONG cMethods);
 #define MAPI_IMAPISUPPORT_METHODS2(IPURE) \
-	MAPIMETHOD(SpoolerYield)(THIS_ ULONG ulFlags) IPURE; \
-	MAPIMETHOD(SpoolerNotify)(THIS_ ULONG ulFlags, LPVOID lpvData) IPURE; \
-	MAPIMETHOD(CreateOneOff)(THIS_ LPTSTR lpszName, LPTSTR lpszAdrType, LPTSTR lpszAddress, ULONG ulFlags, ULONG FAR *lpcbEntryID, LPENTRYID FAR *lppEntryID) IPURE; \
-	MAPIMETHOD(SetProviderUID)(THIS_ LPMAPIUID lpProviderID, ULONG ulFlags) IPURE; \
-	MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntry1, LPENTRYID lpEntry1, ULONG cbEntry2, LPENTRYID lpEntry2, ULONG ulCompareFlags, ULONG FAR *lpulResult) IPURE; \
-	MAPIMETHOD(OpenTemplateID)(THIS_ ULONG cbTemplateID, LPENTRYID lpTemplateID, ULONG ulTemplateFlags, LPMAPIPROP lpMAPIPropData, LPCIID lpInterface, LPMAPIPROP FAR *lppMAPIPropNew, LPMAPIPROP lpMAPIPropSibling) IPURE; \
-	MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulOpenFlags, ULONG FAR *lpulObjType, LPUNKNOWN FAR *lppUnk) IPURE; \
-	MAPIMETHOD(GetOneOffTable)(THIS_ ULONG ulFlags, LPMAPITABLE FAR *lppTable) IPURE; \
-	MAPIMETHOD(Address) (THIS_ ULONG FAR *lpulUIParam, LPADRPARM lpAdrParms, LPADRLIST FAR *lppAdrList) IPURE; \
-	MAPIMETHOD(Details)(THIS_	ULONG FAR *lpulUIParam, LPFNDISMISS lpfnDismiss, LPVOID lpvDismissContext, ULONG cbEntryID, LPENTRYID lpEntryID, LPFNBUTTON lpfButtonCallback, LPVOID lpvButtonContext, LPTSTR lpszButtonText, ULONG ulFlags) IPURE; \
-	MAPIMETHOD(NewEntry)(THIS_ ULONG ulUIParam, ULONG ulFlags, ULONG cbEIDContainer, LPENTRYID lpEIDContainer, ULONG cbEIDNewEntryTpl, LPENTRYID lpEIDNewEntryTpl, ULONG FAR *lpcbEIDNewEntry, LPENTRYID FAR *lppEIDNewEntry) IPURE; \
-	MAPIMETHOD(DoConfigPropsheet)(THIS_ ULONG ulUIParam, ULONG ulFlags, LPTSTR lpszTitle, LPMAPITABLE lpDisplayTable, LPMAPIPROP lpCOnfigData, ULONG ulTopPage) IPURE; \
-	MAPIMETHOD(CopyMessages) (THIS_ LPCIID lpSrcInterface, LPVOID lpSrcFolder, LPENTRYLIST lpMsgList, LPCIID lpDestInterface, LPVOID lpDestFolder, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, ULONG ulFlags) IPURE; \
-	MAPIMETHOD(CopyFolder)(THIS_ LPCIID lpSrcInterface, LPVOID lpSrcFolder, ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpDestInterface, LPVOID lpDestFolder, LPTSTR lszNewFolderName, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, ULONG ulFlags) IPURE;
+	MAPIMETHOD(SpoolerYield)(THIS_ ULONG ulFlags); \
+	MAPIMETHOD(SpoolerNotify)(THIS_ ULONG ulFlags, LPVOID lpvData); \
+	MAPIMETHOD(CreateOneOff)(THIS_ LPTSTR lpszName, LPTSTR lpszAdrType, LPTSTR lpszAddress, ULONG ulFlags, ULONG FAR *lpcbEntryID, LPENTRYID FAR *lppEntryID); \
+	MAPIMETHOD(SetProviderUID)(THIS_ LPMAPIUID lpProviderID, ULONG ulFlags); \
+	MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntry1, LPENTRYID lpEntry1, ULONG cbEntry2, LPENTRYID lpEntry2, ULONG ulCompareFlags, ULONG FAR *lpulResult); \
+	MAPIMETHOD(OpenTemplateID)(THIS_ ULONG cbTemplateID, LPENTRYID lpTemplateID, ULONG ulTemplateFlags, LPMAPIPROP lpMAPIPropData, LPCIID lpInterface, LPMAPIPROP FAR *lppMAPIPropNew, LPMAPIPROP lpMAPIPropSibling); \
+	MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulOpenFlags, ULONG FAR *lpulObjType, LPUNKNOWN FAR *lppUnk); \
+	MAPIMETHOD(GetOneOffTable)(THIS_ ULONG ulFlags, LPMAPITABLE FAR *lppTable); \
+	MAPIMETHOD(Address) (THIS_ ULONG FAR *lpulUIParam, LPADRPARM lpAdrParms, LPADRLIST FAR *lppAdrList); \
+	MAPIMETHOD(Details)(THIS_	ULONG FAR *lpulUIParam, LPFNDISMISS lpfnDismiss, LPVOID lpvDismissContext, ULONG cbEntryID, LPENTRYID lpEntryID, LPFNBUTTON lpfButtonCallback, LPVOID lpvButtonContext, LPTSTR lpszButtonText, ULONG ulFlags); \
+	MAPIMETHOD(NewEntry)(THIS_ ULONG ulUIParam, ULONG ulFlags, ULONG cbEIDContainer, LPENTRYID lpEIDContainer, ULONG cbEIDNewEntryTpl, LPENTRYID lpEIDNewEntryTpl, ULONG FAR *lpcbEIDNewEntry, LPENTRYID FAR *lppEIDNewEntry); \
+	MAPIMETHOD(DoConfigPropsheet)(THIS_ ULONG ulUIParam, ULONG ulFlags, LPTSTR lpszTitle, LPMAPITABLE lpDisplayTable, LPMAPIPROP lpCOnfigData, ULONG ulTopPage); \
+	MAPIMETHOD(CopyMessages) (THIS_ LPCIID lpSrcInterface, LPVOID lpSrcFolder, LPENTRYLIST lpMsgList, LPCIID lpDestInterface, LPVOID lpDestFolder, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, ULONG ulFlags); \
+	MAPIMETHOD(CopyFolder)(THIS_ LPCIID lpSrcInterface, LPVOID lpSrcFolder, ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpDestInterface, LPVOID lpDestFolder, LPTSTR lszNewFolderName, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, ULONG ulFlags);
 #define MAPI_IMAPISUPPORT_METHODS3(IPURE)								\
-	MAPIMETHOD(DoCopyTo)(THIS_ LPCIID lpSrcInterface, LPVOID lpSrcObj, ULONG ciidExclude, LPCIID rgiidExclude, LPSPropTagArray lpExcludeProps, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, LPCIID lpDestInterface, LPVOID lpDestObj, ULONG ulFlags, LPSPropProblemArray FAR *lppProblems) IPURE; \
-	MAPIMETHOD(DoCopyProps)(THIS_ LPCIID lpSrcInterface, LPVOID lpSrcObj, LPSPropTagArray lpIncludeProps, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, LPCIID lpDestInterface, LPVOID lpDestObj, ULONG ulFlags, LPSPropProblemArray FAR *lppProblems) IPURE; \
-	MAPIMETHOD(DoProgressDialog)(THIS_ ULONG ulUIParam, ULONG ulFlags, LPMAPIPROGRESS FAR *lppProgress) IPURE; \
-	MAPIMETHOD(ReadReceipt)(THIS_ ULONG ulFlags, LPMESSAGE lpReadMessage, LPMESSAGE FAR *lppEmptyMessage) IPURE; \
-	MAPIMETHOD(PrepareSubmit)(THIS_ LPMESSAGE lpMessage, ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(ExpandRecips)(THIS_ LPMESSAGE lpMessage, ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(UpdatePAB)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage) IPURE; \
-	MAPIMETHOD(DoSentMail)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage) IPURE; \
-	MAPIMETHOD(OpenAddressBook)(THIS_ LPCIID lpInterface, ULONG ulFlags, LPADRBOOK FAR *lppAdrBook) IPURE; \
-	MAPIMETHOD(Preprocess)(THIS_ ULONG ulFlags, ULONG cbEntryID, LPENTRYID lpEntryID) IPURE; \
-	MAPIMETHOD(CompleteMsg)(THIS_ ULONG ulFlags, ULONG cbEntryID, LPENTRYID lpEntryID) IPURE; \
-	MAPIMETHOD(StoreLogoffTransports)(THIS_ ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(StatusRecips)(THIS_ LPMESSAGE lpMessage, LPADRLIST lpRecipList) IPURE; \
-	MAPIMETHOD(WrapStoreEntryID)(THIS_ ULONG cbOrigEntry, LPENTRYID lpOrigEntry, ULONG FAR *lpcbWrappedEntry, LPENTRYID FAR *lppWrappedEntry) IPURE; \
-	MAPIMETHOD(ModifyProfile)(THIS_ ULONG ulFlags) IPURE; \
-	MAPIMETHOD(IStorageFromStream)(THIS_ LPUNKNOWN lpUnkIn, LPCIID lpInterface, ULONG ulFlags, LPSTORAGE FAR *lppStorageOut) IPURE; \
-	MAPIMETHOD(GetSvcConfigSupportObj)(THIS_ ULONG ulFlags, LPMAPISUP FAR *lppSvcSupport) IPURE;
+	MAPIMETHOD(DoCopyTo)(THIS_ LPCIID lpSrcInterface, LPVOID lpSrcObj, ULONG ciidExclude, LPCIID rgiidExclude, LPSPropTagArray lpExcludeProps, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, LPCIID lpDestInterface, LPVOID lpDestObj, ULONG ulFlags, LPSPropProblemArray FAR *lppProblems); \
+	MAPIMETHOD(DoCopyProps)(THIS_ LPCIID lpSrcInterface, LPVOID lpSrcObj, LPSPropTagArray lpIncludeProps, ULONG ulUIParam, LPMAPIPROGRESS lpProgress, LPCIID lpDestInterface, LPVOID lpDestObj, ULONG ulFlags, LPSPropProblemArray FAR *lppProblems); \
+	MAPIMETHOD(DoProgressDialog)(THIS_ ULONG ulUIParam, ULONG ulFlags, LPMAPIPROGRESS FAR *lppProgress); \
+	MAPIMETHOD(ReadReceipt)(THIS_ ULONG ulFlags, LPMESSAGE lpReadMessage, LPMESSAGE FAR *lppEmptyMessage); \
+	MAPIMETHOD(PrepareSubmit)(THIS_ LPMESSAGE lpMessage, ULONG FAR *lpulFlags); \
+	MAPIMETHOD(ExpandRecips)(THIS_ LPMESSAGE lpMessage, ULONG FAR *lpulFlags); \
+	MAPIMETHOD(UpdatePAB)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage); \
+	MAPIMETHOD(DoSentMail)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage); \
+	MAPIMETHOD(OpenAddressBook)(THIS_ LPCIID lpInterface, ULONG ulFlags, LPADRBOOK FAR *lppAdrBook); \
+	MAPIMETHOD(Preprocess)(THIS_ ULONG ulFlags, ULONG cbEntryID, LPENTRYID lpEntryID); \
+	MAPIMETHOD(CompleteMsg)(THIS_ ULONG ulFlags, ULONG cbEntryID, LPENTRYID lpEntryID); \
+	MAPIMETHOD(StoreLogoffTransports)(THIS_ ULONG FAR *lpulFlags); \
+	MAPIMETHOD(StatusRecips)(THIS_ LPMESSAGE lpMessage, LPADRLIST lpRecipList); \
+	MAPIMETHOD(WrapStoreEntryID)(THIS_ ULONG cbOrigEntry, LPENTRYID lpOrigEntry, ULONG FAR *lpcbWrappedEntry, LPENTRYID FAR *lppWrappedEntry); \
+	MAPIMETHOD(ModifyProfile)(THIS_ ULONG ulFlags); \
+	MAPIMETHOD(IStorageFromStream)(THIS_ LPUNKNOWN lpUnkIn, LPCIID lpInterface, ULONG ulFlags, LPSTORAGE FAR *lppStorageOut); \
+	MAPIMETHOD(GetSvcConfigSupportObj)(THIS_ ULONG ulFlags, LPMAPISUP FAR *lppSvcSupport);
 #undef		 INTERFACE
 #define		 INTERFACE  IMAPISupport
 DECLARE_MAPI_INTERFACE_(IMAPISupport, IUnknown)
@@ -126,8 +126,8 @@ DECLARE_MAPI_INTERFACE_(IMAPISupport, IUnknown)
 DECLARE_MAPI_INTERFACE_PTR(IABProvider, LPABPROVIDER);
 DECLARE_MAPI_INTERFACE_PTR(IABLogon,    LPABLOGON);
 #define MAPI_IABPROVIDER_METHODS(IPURE)                                 \
-	MAPIMETHOD(Shutdown)(THIS_ ULONG FAR *lpulFlags) IPURE; \
-    MAPIMETHOD(Logon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG ulFlags, ULONG FAR *lpulpcbSecurity, LPBYTE FAR *lppbSecurity, LPMAPIERROR FAR *lppMAPIError, LPABLOGON FAR *lppABLogon) IPURE;
+	MAPIMETHOD(Shutdown)(THIS_ ULONG FAR *lpulFlags); \
+    MAPIMETHOD(Logon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG ulFlags, ULONG FAR *lpulpcbSecurity, LPBYTE FAR *lppbSecurity, LPMAPIERROR FAR *lppMAPIError, LPABLOGON FAR *lppABLogon);
 #undef       INTERFACE
 #define      INTERFACE  IABProvider
 DECLARE_MAPI_INTERFACE_(IABProvider, IUnknown)
@@ -137,16 +137,16 @@ DECLARE_MAPI_INTERFACE_(IABProvider, IUnknown)
     MAPI_IABPROVIDER_METHODS(PURE)
 };
 #define MAPI_IABLOGON_METHODS(IPURE)                                    \
-	MAPIMETHOD(GetLastError)(THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR FAR *lppMAPIError) IPURE; \
-	MAPIMETHOD(Logoff)(THIS_ ULONG ulFlags) IPURE; \
-    MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPUNKNOWN FAR *lppUnk) IPURE; \
-    MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntryID1, LPENTRYID lpEntryID1, ULONG cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR *lpulResult) IPURE; \
-    MAPIMETHOD(Advise)(THIS_  ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulEventMask, LPMAPIADVISESINK lpAdviseSink, ULONG FAR *lpulConnection) IPURE; \
-	MAPIMETHOD(Unadvise)(THIS_	ULONG ulConnection) IPURE; \
-    MAPIMETHOD(OpenStatusEntry)(THIS_ LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPMAPISTATUS FAR *lppEntry) IPURE; \
-    MAPIMETHOD(OpenTemplateID) (THIS_ ULONG cbTemplateID, LPENTRYID lpTemplateID, ULONG ulTemplateFlags, LPMAPIPROP lpMAPIPropData, LPCIID lpInterface, LPMAPIPROP FAR *lppMAPIPropNew, LPMAPIPROP lpMAPIPropSibling) IPURE; \
-    MAPIMETHOD(GetOneOffTable)(THIS_ ULONG ulFlags, LPMAPITABLE FAR *lppTable) IPURE; \
-	MAPIMETHOD(PrepareRecips)(THIS_ ULONG ulFlags, LPSPropTagArray lpPropTagArray, LPADRLIST lpRecipList) IPURE;
+	MAPIMETHOD(GetLastError)(THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR FAR *lppMAPIError); \
+	MAPIMETHOD(Logoff)(THIS_ ULONG ulFlags); \
+    MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPUNKNOWN FAR *lppUnk); \
+    MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntryID1, LPENTRYID lpEntryID1, ULONG cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR *lpulResult); \
+    MAPIMETHOD(Advise)(THIS_  ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulEventMask, LPMAPIADVISESINK lpAdviseSink, ULONG FAR *lpulConnection); \
+	MAPIMETHOD(Unadvise)(THIS_	ULONG ulConnection); \
+    MAPIMETHOD(OpenStatusEntry)(THIS_ LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPMAPISTATUS FAR *lppEntry); \
+    MAPIMETHOD(OpenTemplateID) (THIS_ ULONG cbTemplateID, LPENTRYID lpTemplateID, ULONG ulTemplateFlags, LPMAPIPROP lpMAPIPropData, LPCIID lpInterface, LPMAPIPROP FAR *lppMAPIPropNew, LPMAPIPROP lpMAPIPropSibling); \
+    MAPIMETHOD(GetOneOffTable)(THIS_ ULONG ulFlags, LPMAPITABLE FAR *lppTable); \
+	MAPIMETHOD(PrepareRecips)(THIS_ ULONG ulFlags, LPSPropTagArray lpPropTagArray, LPADRLIST lpRecipList);
 #undef       INTERFACE
 #define      INTERFACE  IABLogon
 DECLARE_MAPI_INTERFACE_(IABLogon, IUnknown)
@@ -179,8 +179,8 @@ ABPROVIDERINIT ABProviderInit;
 DECLARE_MAPI_INTERFACE_PTR(IXPProvider, LPXPPROVIDER);
 DECLARE_MAPI_INTERFACE_PTR(IXPLogon, LPXPLOGON);
 #define MAPI_IXPPROVIDER_METHODS(IPURE)									\
-	MAPIMETHOD(Shutdown)(THIS_ ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(TransportLogon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG FAR *lpulFlags, LPMAPIERROR FAR *lppMAPIError, LPXPLOGON FAR *lppXPLogon) IPURE;
+	MAPIMETHOD(Shutdown)(THIS_ ULONG FAR *lpulFlags); \
+	MAPIMETHOD(TransportLogon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG FAR *lpulFlags, LPMAPIERROR FAR *lppMAPIError, LPXPLOGON FAR *lppXPLogon);
 #undef		 INTERFACE
 #define		 INTERFACE  IXPProvider
 DECLARE_MAPI_INTERFACE_(IXPProvider, IUnknown)
@@ -221,18 +221,18 @@ typedef SCODE(STDMAPIINITCALLTYPE OPTIONCALLBACK) (HINSTANCE hInst, LPMALLOC lpM
 #define END_RESEND_LATER			((ULONG) 0x00020000)
 #define END_DONT_RESEND				((ULONG) 0x00040000)
 #define MAPI_IXPLOGON_METHODS(IPURE)									\
-	MAPIMETHOD(AddressTypes)(THIS_ ULONG FAR *lpulFlags, ULONG FAR *lpcAdrType, LPTSTR FAR * FAR *lpppAdrTypeArray, ULONG FAR *lpcMAPIUID, LPMAPIUID FAR * FAR *lpppUIDArray) IPURE; \
-	MAPIMETHOD(RegisterOptions) (THIS_ ULONG FAR *lpulFlags, ULONG FAR *lpcOptions, LPOPTIONDATA FAR *lppOptions) IPURE; \
-	MAPIMETHOD(TransportNotify)(THIS_ ULONG FAR *lpulFlags, LPVOID FAR *lppvData) IPURE; \
-	MAPIMETHOD(Idle)(THIS_ ULONG ulFlags) IPURE; \
-	MAPIMETHOD(TransportLogoff)(THIS_ ULONG ulFlags) IPURE; \
-	MAPIMETHOD(SubmitMessage)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage, ULONG FAR *lpulMsgRef, ULONG FAR *lpulReturnParm) IPURE; \
-	MAPIMETHOD(EndMessage)(THIS_ ULONG ulMsgRef, ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(Poll)(THIS_ ULONG FAR *lpulIncoming) IPURE; \
-	MAPIMETHOD(StartMessage)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage, ULONG FAR *lpulMsgRef) IPURE; \
-    MAPIMETHOD(OpenStatusEntry)(THIS_ LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPMAPISTATUS FAR *lppEntry) IPURE; \
-	MAPIMETHOD(ValidateState)(THIS_ ULONG ulUIParam, ULONG ulFlags) IPURE; \
-	MAPIMETHOD(FlushQueues)(THIS_ ULONG ulUIParam, ULONG cbTargetTransport, LPENTRYID lpTargetTransport, ULONG ulFlags) IPURE;
+	MAPIMETHOD(AddressTypes)(THIS_ ULONG FAR *lpulFlags, ULONG FAR *lpcAdrType, LPTSTR FAR * FAR *lpppAdrTypeArray, ULONG FAR *lpcMAPIUID, LPMAPIUID FAR * FAR *lpppUIDArray); \
+	MAPIMETHOD(RegisterOptions) (THIS_ ULONG FAR *lpulFlags, ULONG FAR *lpcOptions, LPOPTIONDATA FAR *lppOptions); \
+	MAPIMETHOD(TransportNotify)(THIS_ ULONG FAR *lpulFlags, LPVOID FAR *lppvData); \
+	MAPIMETHOD(Idle)(THIS_ ULONG ulFlags); \
+	MAPIMETHOD(TransportLogoff)(THIS_ ULONG ulFlags); \
+	MAPIMETHOD(SubmitMessage)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage, ULONG FAR *lpulMsgRef, ULONG FAR *lpulReturnParm); \
+	MAPIMETHOD(EndMessage)(THIS_ ULONG ulMsgRef, ULONG FAR *lpulFlags); \
+	MAPIMETHOD(Poll)(THIS_ ULONG FAR *lpulIncoming); \
+	MAPIMETHOD(StartMessage)(THIS_ ULONG ulFlags, LPMESSAGE lpMessage, ULONG FAR *lpulMsgRef); \
+    MAPIMETHOD(OpenStatusEntry)(THIS_ LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPMAPISTATUS FAR *lppEntry); \
+	MAPIMETHOD(ValidateState)(THIS_ ULONG ulUIParam, ULONG ulFlags); \
+	MAPIMETHOD(FlushQueues)(THIS_ ULONG ulUIParam, ULONG cbTargetTransport, LPENTRYID lpTargetTransport, ULONG ulFlags);
 #undef       INTERFACE
 #define      INTERFACE  IXPLogon
 DECLARE_MAPI_INTERFACE_(IXPLogon, IUnknown)
@@ -263,10 +263,10 @@ XPPROVIDERINIT XPProviderInit;
 DECLARE_MAPI_INTERFACE_PTR(IMSLogon, LPMSLOGON);
 DECLARE_MAPI_INTERFACE_PTR(IMSProvider, LPMSPROVIDER);
 #define MAPI_IMSPROVIDER_METHODS(IPURE)									\
-	MAPIMETHOD(Shutdown) (THIS_ ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(Logon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG cbEntryID, LPENTRYID 	lpEntryID, ULONG ulFlags, LPCIID lpInterface, ULONG FAR *lpcbSpoolSecurity, LPBYTE FAR *lppbSpoolSecurity, LPMAPIERROR FAR *lppMAPIError, LPMSLOGON FAR *lppMSLogon, LPMDB FAR *lppMDB) IPURE; \
-	MAPIMETHOD(SpoolerLogon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulFlags, LPCIID lpInterface, ULONG cbSpoolSecurity, LPBYTE lpbSpoolSecurity, LPMAPIERROR FAR *lppMAPIError, LPMSLOGON FAR *lppMSLogon, LPMDB FAR *lppMDB) IPURE; \
-	MAPIMETHOD(CompareStoreIDs)(THIS_ ULONG cbEntryID1, LPENTRYID lpEntryID1, ULONG cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR * lpulResult) IPURE;
+	MAPIMETHOD(Shutdown) (THIS_ ULONG FAR *lpulFlags); \
+	MAPIMETHOD(Logon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG cbEntryID, LPENTRYID 	lpEntryID, ULONG ulFlags, LPCIID lpInterface, ULONG FAR *lpcbSpoolSecurity, LPBYTE FAR *lppbSpoolSecurity, LPMAPIERROR FAR *lppMAPIError, LPMSLOGON FAR *lppMSLogon, LPMDB FAR *lppMDB); \
+	MAPIMETHOD(SpoolerLogon)(THIS_ LPMAPISUP lpMAPISup, ULONG ulUIParam, LPTSTR lpszProfileName, ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulFlags, LPCIID lpInterface, ULONG cbSpoolSecurity, LPBYTE lpbSpoolSecurity, LPMAPIERROR FAR *lppMAPIError, LPMSLOGON FAR *lppMSLogon, LPMDB FAR *lppMDB); \
+	MAPIMETHOD(CompareStoreIDs)(THIS_ ULONG cbEntryID1, LPENTRYID lpEntryID1, ULONG cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR * lpulResult);
 #undef		 INTERFACE
 #define		 INTERFACE  IMSProvider
 DECLARE_MAPI_INTERFACE_(IMSProvider, IUnknown)
@@ -276,13 +276,13 @@ DECLARE_MAPI_INTERFACE_(IMSProvider, IUnknown)
 	MAPI_IMSPROVIDER_METHODS(PURE)
 };
 #define MAPI_IMSLOGON_METHODS(IPURE)									\
-	MAPIMETHOD(GetLastError)(THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR FAR *lppMAPIError) IPURE; \
-	MAPIMETHOD(Logoff)(THIS_ ULONG FAR *lpulFlags) IPURE; \
-	MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPUNKNOWN FAR *lppUnk) IPURE; \
-	MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntryID1, LPENTRYID lpEntryID1, ULONG cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR *lpulResult) IPURE; \
-	MAPIMETHOD(Advise)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulEventMask, LPMAPIADVISESINK lpAdviseSink, ULONG FAR *lpulConnection) IPURE; \
-	MAPIMETHOD(Unadvise)(THIS_ ULONG ulConnection) IPURE; \
-	MAPIMETHOD(OpenStatusEntry)(THIS_ LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPVOID FAR *lppEntry) IPURE;
+	MAPIMETHOD(GetLastError)(THIS_ HRESULT hResult, ULONG ulFlags, LPMAPIERROR FAR *lppMAPIError); \
+	MAPIMETHOD(Logoff)(THIS_ ULONG FAR *lpulFlags); \
+	MAPIMETHOD(OpenEntry)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPUNKNOWN FAR *lppUnk); \
+	MAPIMETHOD(CompareEntryIDs)(THIS_ ULONG cbEntryID1, LPENTRYID lpEntryID1, ULONG cbEntryID2, LPENTRYID lpEntryID2, ULONG ulFlags, ULONG FAR *lpulResult); \
+	MAPIMETHOD(Advise)(THIS_ ULONG cbEntryID, LPENTRYID lpEntryID, ULONG ulEventMask, LPMAPIADVISESINK lpAdviseSink, ULONG FAR *lpulConnection); \
+	MAPIMETHOD(Unadvise)(THIS_ ULONG ulConnection); \
+	MAPIMETHOD(OpenStatusEntry)(THIS_ LPCIID lpInterface, ULONG ulFlags, ULONG FAR *lpulObjType, LPVOID FAR *lppEntry);
 #undef		 INTERFACE
 #define		 INTERFACE  IMSLogon
 DECLARE_MAPI_INTERFACE_(IMSLogon, IUnknown)

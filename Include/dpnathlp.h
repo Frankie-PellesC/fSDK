@@ -61,19 +61,19 @@ typedef HRESULT (WINAPI * PFN_DIRECTPLAYNATHELPCREATE)(const GUID * pIID, void *
 #define INTERFACE IDirectPlayNATHelp
 DECLARE_INTERFACE_(IDirectPlayNATHelp, IUnknown)
 {
-	STDMETHOD(QueryInterface)				(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
-	STDMETHOD_(ULONG,AddRef)				(THIS) PURE;
-	STDMETHOD_(ULONG,Release)				(THIS) PURE;
-	STDMETHOD(Initialize)					(THIS_ const DWORD dwFlags) PURE;
-	STDMETHOD(Close)						(THIS_ const DWORD dwFlags) PURE;
-	STDMETHOD(GetCaps)						(THIS_ DPNHCAPS * const dpnhcaps, const DWORD dwFlags) PURE;
-	STDMETHOD(RegisterPorts)				(THIS_ const SOCKADDR * const aLocalAddresses, const DWORD dwAddressesSize, const DWORD dwNumAddresses, const DWORD dwLeaseTime, DPNHHANDLE * const phRegisteredPorts, const DWORD dwFlags) PURE;
-	STDMETHOD(GetRegisteredAddresses)		(THIS_ const DPNHHANDLE hRegisteredPorts, SOCKADDR * const paPublicAddresses, DWORD * const pdwPublicAddressesSize, DWORD * const pdwAddressTypeFlags, DWORD * const pdwLeaseTimeRemaining, const DWORD dwFlags) PURE;
-	STDMETHOD(DeregisterPorts)				(THIS_ const DPNHHANDLE hRegisteredPorts, const DWORD dwFlags) PURE;
-	STDMETHOD(QueryAddress)					(THIS_ const SOCKADDR * const pSourceAddress, const SOCKADDR * const pQueryAddress, SOCKADDR * const pResponseAddress, const int iAddressesSize, const DWORD dwFlags) PURE;
-	STDMETHOD(SetAlertEvent)				(THIS_ const HANDLE hEvent, const DWORD dwFlags) PURE;
-	STDMETHOD(SetAlertIOCompletionPort)		(THIS_ const HANDLE hIOCompletionPort, const DWORD dwCompletionKey, const DWORD dwNumConcurrentThreads, const DWORD dwFlags) PURE;
-	STDMETHOD(ExtendRegisteredPortsLease)	(THIS_ const DPNHHANDLE hRegisteredPorts, const DWORD dwLeaseTime, const DWORD dwFlags) PURE;
+	STDMETHOD(QueryInterface)				(THIS_ REFIID riid, LPVOID * ppvObj);
+	STDMETHOD_(ULONG,AddRef)				(THIS);
+	STDMETHOD_(ULONG,Release)				(THIS);
+	STDMETHOD(Initialize)					(THIS_ const DWORD dwFlags);
+	STDMETHOD(Close)						(THIS_ const DWORD dwFlags);
+	STDMETHOD(GetCaps)						(THIS_ DPNHCAPS * const dpnhcaps, const DWORD dwFlags);
+	STDMETHOD(RegisterPorts)				(THIS_ const SOCKADDR * const aLocalAddresses, const DWORD dwAddressesSize, const DWORD dwNumAddresses, const DWORD dwLeaseTime, DPNHHANDLE * const phRegisteredPorts, const DWORD dwFlags);
+	STDMETHOD(GetRegisteredAddresses)		(THIS_ const DPNHHANDLE hRegisteredPorts, SOCKADDR * const paPublicAddresses, DWORD * const pdwPublicAddressesSize, DWORD * const pdwAddressTypeFlags, DWORD * const pdwLeaseTimeRemaining, const DWORD dwFlags);
+	STDMETHOD(DeregisterPorts)				(THIS_ const DPNHHANDLE hRegisteredPorts, const DWORD dwFlags);
+	STDMETHOD(QueryAddress)					(THIS_ const SOCKADDR * const pSourceAddress, const SOCKADDR * const pQueryAddress, SOCKADDR * const pResponseAddress, const int iAddressesSize, const DWORD dwFlags);
+	STDMETHOD(SetAlertEvent)				(THIS_ const HANDLE hEvent, const DWORD dwFlags);
+	STDMETHOD(SetAlertIOCompletionPort)		(THIS_ const HANDLE hIOCompletionPort, const DWORD dwCompletionKey, const DWORD dwNumConcurrentThreads, const DWORD dwFlags);
+	STDMETHOD(ExtendRegisteredPortsLease)	(THIS_ const DPNHHANDLE hRegisteredPorts, const DWORD dwLeaseTime, const DWORD dwFlags);
 };
 #define	IDirectPlayNATHelp_QueryInterface(p,a,b)					(p)->QueryInterface(a,b)
 #define	IDirectPlayNATHelp_AddRef(p)								(p)->AddRef()

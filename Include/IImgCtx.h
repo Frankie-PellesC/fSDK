@@ -44,19 +44,19 @@ typedef void (CALLBACK *PFNIMGCTXCALLBACK)(void *, void *);
 DEFINE_GUID(IID_IImgCtx, 0x3050f3d7, 0x98b5, 0x11cf, 0xbb, 0x82, 0x00, 0xaa, 0x00, 0xbd, 0xce, 0x0b);
 DECLARE_INTERFACE_(IImgCtx, IUnknown)
 {
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID FAR* ppvObj) PURE;
-    STDMETHOD_(ULONG, AddRef)(THIS) PURE;
-    STDMETHOD_(ULONG, Release)(THIS) PURE;
-    STDMETHOD(Load)(THIS_ LPCWSTR pszUrl, DWORD dwFlags) PURE;
-    STDMETHOD(SelectChanges)(THIS_ ULONG ulChgOn, ULONG ulChgOff, BOOL fSignal) PURE;
-    STDMETHOD(SetCallback)(THIS_ PFNIMGCTXCALLBACK pfn, void * pvPrivateData) PURE;
-    STDMETHOD(Disconnect)(THIS) PURE;
-    STDMETHOD(GetUpdateRects)(THIS_ struct tagRECT FAR* prc, struct tagRECT FAR* prcImg, long FAR* pcrc) PURE;
-    STDMETHOD(GetStateInfo)(THIS_ ULONG FAR* pulState, struct tagSIZE FAR* psize, BOOL fClearChanges) PURE;
-    STDMETHOD(GetPalette)(THIS_ HPALETTE FAR* phpal) PURE;
-    STDMETHOD(Draw)(THIS_ HDC hdc, struct tagRECT FAR* prcBounds) PURE;
-    STDMETHOD(Tile)(THIS_ HDC hdc, struct tagPOINT FAR* pptBackOrg, struct tagRECT FAR* prcClip, struct tagSIZE FAR* psize) PURE;
-    STDMETHOD(StretchBlt)(THIS_ HDC hdc, int dstX, int dstY, int dstXE, int dstYE, int srcX, int srcY, int srcXE, int srcYE, DWORD dwROP) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID FAR* ppvObj);
+    STDMETHOD_(ULONG, AddRef)(THIS);
+    STDMETHOD_(ULONG, Release)(THIS);
+    STDMETHOD(Load)(THIS_ LPCWSTR pszUrl, DWORD dwFlags);
+    STDMETHOD(SelectChanges)(THIS_ ULONG ulChgOn, ULONG ulChgOff, BOOL fSignal);
+    STDMETHOD(SetCallback)(THIS_ PFNIMGCTXCALLBACK pfn, void * pvPrivateData);
+    STDMETHOD(Disconnect)(THIS);
+    STDMETHOD(GetUpdateRects)(THIS_ struct tagRECT FAR* prc, struct tagRECT FAR* prcImg, long FAR* pcrc);
+    STDMETHOD(GetStateInfo)(THIS_ ULONG FAR* pulState, struct tagSIZE FAR* psize, BOOL fClearChanges);
+    STDMETHOD(GetPalette)(THIS_ HPALETTE FAR* phpal);
+    STDMETHOD(Draw)(THIS_ HDC hdc, struct tagRECT FAR* prcBounds);
+    STDMETHOD(Tile)(THIS_ HDC hdc, struct tagPOINT FAR* pptBackOrg, struct tagRECT FAR* prcClip, struct tagSIZE FAR* psize);
+    STDMETHOD(StretchBlt)(THIS_ HDC hdc, int dstX, int dstY, int dstXE, int dstYE, int srcX, int srcY, int srcXE, int srcYE, DWORD dwROP);
 };
 #ifdef COBJMACROS
 #define IImgCtx_QueryInterface(This,riid,ppvObject)     (This)->lpVtbl -> QueryInterface(This,riid,ppvObject)

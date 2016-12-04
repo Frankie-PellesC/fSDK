@@ -653,23 +653,23 @@ WINCOMMDLGAPI BOOL APIENTRY PrintDlgW(LPPRINTDLGW pPD);
 #define INTERFACE   IPrintDialogCallback
 DECLARE_INTERFACE_IID_(IPrintDialogCallback, IUnknown, "5852A2C3-6530-11D1-B6A3-0000F8757BF9")
 {
-    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID *ppvObj) PURE;
-    STDMETHOD_(ULONG, AddRef) (THIS) PURE;
-    STDMETHOD_(ULONG, Release) (THIS) PURE;
-    STDMETHOD(InitDone) (THIS) PURE;
-    STDMETHOD(SelectionChange) (THIS) PURE;
-    STDMETHOD(HandleMessage) (THIS_ HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT *pResult) PURE;
+    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID *ppvObj);
+    STDMETHOD_(ULONG, AddRef) (THIS);
+    STDMETHOD_(ULONG, Release) (THIS);
+    STDMETHOD(InitDone) (THIS);
+    STDMETHOD(SelectionChange) (THIS);
+    STDMETHOD(HandleMessage) (THIS_ HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam, LRESULT *pResult);
 };
 #undef  INTERFACE
 #define INTERFACE   IPrintDialogServices
 DECLARE_INTERFACE_IID_(IPrintDialogServices, IUnknown, "509AAEDA-5639-11D1-B6A1-0000F8757BF9")
 {
-    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID *ppvObj) PURE;
-    STDMETHOD_(ULONG, AddRef) (THIS) PURE;
-    STDMETHOD_(ULONG, Release) (THIS) PURE;
-    STDMETHOD(GetCurrentDevMode) (THIS_ LPDEVMODE pDevMode, UINT *pcbSize) PURE;
-    STDMETHOD(GetCurrentPrinterName) (THIS_ LPWSTR pPrinterName, UINT *pcchSize) PURE;
-    STDMETHOD(GetCurrentPortName) (THIS_ LPWSTR pPortName, UINT *pcchSize) PURE;
+    STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID *ppvObj);
+    STDMETHOD_(ULONG, AddRef) (THIS);
+    STDMETHOD_(ULONG, Release) (THIS);
+    STDMETHOD(GetCurrentDevMode) (THIS_ LPDEVMODE pDevMode, UINT *pcbSize);
+    STDMETHOD(GetCurrentPrinterName) (THIS_ LPWSTR pPrinterName, UINT *pcchSize);
+    STDMETHOD(GetCurrentPortName) (THIS_ LPWSTR pPortName, UINT *pcchSize);
 };
 typedef struct tagPRINTPAGERANGE {
    DWORD  nFromPage;

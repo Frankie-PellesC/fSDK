@@ -31,32 +31,32 @@ HRESULT WINAPI D3DX11CheckVersion(UINT D3DSdkVersion, UINT D3DX11SdkVersion);
 #define INTERFACE ID3DX11DataLoader
 DECLARE_INTERFACE(ID3DX11DataLoader)
 {
-	STDMETHOD(Load) (THIS)PURE;
-	STDMETHOD(Decompress) (THIS_ void **ppData, SIZE_T * pcBytes)PURE;
-	STDMETHOD(Destroy) (THIS)PURE;
+	STDMETHOD(Load) (THIS);
+	STDMETHOD(Decompress) (THIS_ void **ppData, SIZE_T * pcBytes);
+	STDMETHOD(Destroy) (THIS);
 };
 #undef INTERFACE
 #define INTERFACE ID3DX11DataProcessor
 DECLARE_INTERFACE(ID3DX11DataProcessor)
 {
-	STDMETHOD(Process) (THIS_ void *pData, SIZE_T cBytes)PURE;
-	STDMETHOD(CreateDeviceObject) (THIS_ void **ppDataObject)PURE;
-	STDMETHOD(Destroy) (THIS)PURE;
+	STDMETHOD(Process) (THIS_ void *pData, SIZE_T cBytes);
+	STDMETHOD(CreateDeviceObject) (THIS_ void **ppDataObject);
+	STDMETHOD(Destroy) (THIS);
 };
 DEFINE_GUID(IID_ID3DX11ThreadPump, 0xc93fecfa, 0x6967, 0x478a, 0xab, 0xbc, 0x40, 0x2d, 0x90, 0x62, 0x1f, 0xcb);
 #undef INTERFACE
 #define INTERFACE ID3DX11ThreadPump
 DECLARE_INTERFACE_(ID3DX11ThreadPump, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(AddWorkItem) (THIS_ ID3DX11DataLoader * pDataLoader, ID3DX11DataProcessor * pDataProcessor, HRESULT * pHResult, void **ppDeviceObject)PURE;
-	STDMETHOD_(UINT, GetWorkItemCount) (THIS)PURE;
-	STDMETHOD(WaitForAllItems) (THIS)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(AddWorkItem) (THIS_ ID3DX11DataLoader * pDataLoader, ID3DX11DataProcessor * pDataProcessor, HRESULT * pHResult, void **ppDeviceObject);
+	STDMETHOD_(UINT, GetWorkItemCount) (THIS);
+	STDMETHOD(WaitForAllItems) (THIS);
 	STDMETHOD(ProcessDeviceWorkItems) (THIS_ UINT iWorkItemCount);
-	STDMETHOD(PurgeAllItems) (THIS)PURE;
-	STDMETHOD(GetQueueStatus) (THIS_ UINT * pIoQueue, UINT * pProcessQueue, UINT * pDeviceQueue)PURE;
+	STDMETHOD(PurgeAllItems) (THIS);
+	STDMETHOD(GetQueueStatus) (THIS_ UINT * pIoQueue, UINT * pProcessQueue, UINT * pDeviceQueue);
 };
 HRESULT WINAPI D3DX11CreateThreadPump(UINT cIoThreads, UINT cProcThreads, ID3DX11ThreadPump **ppThreadPump);
 HRESULT WINAPI D3DX11UnsetAllDeviceObjects(ID3D11DeviceContext *pContext);

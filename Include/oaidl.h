@@ -2,10 +2,12 @@
  \file		oaidl.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            01.12.2016 - Removed _VARIANT_BOOL declaration.
+ \par  Status: 
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Jun 27 14:17:04 2016
- \date		Modified on Mon Jun 27 14:17:04 2016
+ \date		Modified on Thu Dec  1 16:25:14 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -250,7 +252,7 @@ struct tagVARIANT
 				FLOAT fltVal;
 				DOUBLE dblVal;
 				VARIANT_BOOL boolVal;
-				_VARIANT_BOOL bool;
+				//_VARIANT_BOOL bool;			//Frankie unusefull MS messing declaration
 				SCODE scode;
 				CY cyVal;
 				DATE date;
@@ -265,7 +267,7 @@ struct tagVARIANT
 				FLOAT *pfltVal;
 				DOUBLE *pdblVal;
 				VARIANT_BOOL *pboolVal;
-				_VARIANT_BOOL *pbool;
+				//_VARIANT_BOOL *pbool;		//Frankie unusefull MS messing declaration
 				SCODE *pscode;
 				CY *pcyVal;
 				DATE *pdate;

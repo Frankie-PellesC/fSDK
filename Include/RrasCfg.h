@@ -79,7 +79,9 @@ void __RPC_STUB IRouterProtocolConfig_AddProtocol_Stub(IRpcStubBuffer *This, IRp
 HRESULT STDMETHODCALLTYPE IRouterProtocolConfig_RemoveProtocol_Proxy(IRouterProtocolConfig __RPC_FAR *This, LPCOLESTR pszMachineName, DWORD dwTransportId, DWORD dwProtocolId, HWND hWnd, DWORD dwFlags, IUnknown __RPC_FAR *pRouter, ULONG_PTR uReserved1);
 void __RPC_STUB IRouterProtocolConfig_RemoveProtocol_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
 #endif
-#define DeclareIRouterProtocolConfigMembers(IPURE) STDMETHOD(AddProtocol)(THIS_ LPCOLESTR pszMachineName, DWORD dwTransportId, DWORD dwProtocolId, HWND hWnd, DWORD dwFlags, IUnknown *pRouter, ULONG_PTR uReserved1) IPURE; STDMETHOD(RemoveProtocol)(THIS_ LPCOLESTR pszMachineName, DWORD dwTransportId, DWORD dwProtocolId, HWND hWnd, DWORD dwFlags, IUnknown *pRouter, ULONG_PTR uReserved2) IPURE;
+#define DeclareIRouterProtocolConfigMembers(IPURE) \
+STDMETHOD(AddProtocol)(THIS_ LPCOLESTR pszMachineName, DWORD dwTransportId, DWORD dwProtocolId, HWND hWnd, DWORD dwFlags, IUnknown *pRouter, ULONG_PTR uReserved1); \
+STDMETHOD(RemoveProtocol)(THIS_ LPCOLESTR pszMachineName, DWORD dwTransportId, DWORD dwProtocolId, HWND hWnd, DWORD dwFlags, IUnknown *pRouter, ULONG_PTR uReserved2);
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0011_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0011_v0_0_s_ifspec;
 #ifndef __IAuthenticationProviderConfig_INTERFACE_DEFINED__
@@ -123,7 +125,12 @@ void __RPC_STUB IAuthenticationProviderConfig_Activate_Stub(IRpcStubBuffer *This
 HRESULT STDMETHODCALLTYPE IAuthenticationProviderConfig_Deactivate_Proxy(IAuthenticationProviderConfig __RPC_FAR *This, ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2);
 void __RPC_STUB IAuthenticationProviderConfig_Deactivate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
 #endif
-#define DeclareIAuthenticationProviderConfigMembers(IPURE) STDMETHOD(Initialize)(THIS_ LPCOLESTR pszMachineName, ULONG_PTR *puConnectionParam) IPURE; STDMETHOD(Uninitialize)(THIS_ ULONG_PTR uConnectionParam) IPURE;  STDMETHOD(Configure)(THIS_ ULONG_PTR uConnectionParam, HWND hWnd, DWORD dwFlags, ULONG_PTR uReserved1, ULONG_PTR uReserved2) IPURE;  STDMETHOD(Activate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2) IPURE;  STDMETHOD(Deactivate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2) IPURE;
+#define DeclareIAuthenticationProviderConfigMembers(IPURE) \
+STDMETHOD(Initialize)(THIS_ LPCOLESTR pszMachineName, ULONG_PTR *puConnectionParam); \
+STDMETHOD(Uninitialize)(THIS_ ULONG_PTR uConnectionParam); \
+STDMETHOD(Configure)(THIS_ ULONG_PTR uConnectionParam, HWND hWnd, DWORD dwFlags, ULONG_PTR uReserved1, ULONG_PTR uReserved2); \
+STDMETHOD(Activate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2); \
+STDMETHOD(Deactivate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2);
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0013_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0013_v0_0_s_ifspec;
 #ifndef __IAccountingProviderConfig_INTERFACE_DEFINED__
@@ -167,7 +174,12 @@ void __RPC_STUB IAccountingProviderConfig_Activate_Stub(IRpcStubBuffer *This, IR
 HRESULT STDMETHODCALLTYPE IAccountingProviderConfig_Deactivate_Proxy(IAccountingProviderConfig __RPC_FAR *This, ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2);
 void __RPC_STUB IAccountingProviderConfig_Deactivate_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
 #endif
-#define DeclareIAccountingProviderConfigMembers(IPURE) STDMETHOD(Initialize)(THIS_ LPCOLESTR pszMachineName, ULONG_PTR *puConnectionParam) IPURE; STDMETHOD(Uninitialize)(THIS_ ULONG_PTR uConnectionParam) IPURE; STDMETHOD(Configure)(THIS_ ULONG_PTR uConnectionParam, HWND hWnd, DWORD dwFlags, ULONG_PTR uReserved1, ULONG_PTR uReserved2) IPURE;  STDMETHOD(Activate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2) IPURE;  STDMETHOD(Deactivate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2) IPURE;
+#define DeclareIAccountingProviderConfigMembers(IPURE) \
+STDMETHOD(Initialize)(THIS_ LPCOLESTR pszMachineName, ULONG_PTR *puConnectionParam); \
+STDMETHOD(Uninitialize)(THIS_ ULONG_PTR uConnectionParam); \
+STDMETHOD(Configure)(THIS_ ULONG_PTR uConnectionParam, HWND hWnd, DWORD dwFlags, ULONG_PTR uReserved1, ULONG_PTR uReserved2); \
+STDMETHOD(Activate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2); \
+STDMETHOD(Deactivate)(THIS_ ULONG_PTR uConnectionParam, ULONG_PTR uReserved1, ULONG_PTR uReserved2);
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0015_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0015_v0_0_s_ifspec;
 #ifndef __IEAPProviderConfig_INTERFACE_DEFINED__
@@ -211,7 +223,12 @@ void __RPC_STUB IEAPProviderConfig_RouterInvokeConfigUI_Stub(IRpcStubBuffer *Thi
 HRESULT STDMETHODCALLTYPE IEAPProviderConfig_RouterInvokeCredentialsUI_Proxy(IEAPProviderConfig __RPC_FAR *This, DWORD dwEapTypeId, ULONG_PTR uConnectionParam, HWND hwndParent, DWORD dwFlags, BYTE __RPC_FAR *pConnectionDataIn, DWORD dwSizeOfConnectionDataIn, BYTE __RPC_FAR *pUserDataIn, DWORD dwSizeOfUserDataIn, BYTE __RPC_FAR *__RPC_FAR *ppUserDataOut, DWORD __RPC_FAR *pdwSizeOfUserDataOut);
 void __RPC_STUB IEAPProviderConfig_RouterInvokeCredentialsUI_Stub(IRpcStubBuffer *This, IRpcChannelBuffer *_pRpcChannelBuffer, PRPC_MESSAGE _pRpcMessage, DWORD *_pdwStubPhase);
 #endif
-#define DeclareIEAPProviderConfigMembers(IPURE) STDMETHOD(Initialize)(THIS_ LPCOLESTR 	pszMachineName, DWORD       dwEapTypeId, ULONG_PTR*	puConnectionParam) IPURE; STDMETHOD(Uninitialize)(THIS_ DWORD       dwEapTypeId, ULONG_PTR 	uConnectionParam) IPURE; STDMETHOD(ServerInvokeConfigUI)(THIS_ DWORD       dwEapTypeId, ULONG_PTR 	uConnectionParam, HWND 		hWnd, ULONG_PTR 	dwRes1, ULONG_PTR 	dwRes2) IPURE; STDMETHOD(RouterInvokeConfigUI)(THIS_ DWORD       dwEapTypeId, ULONG_PTR 	uConnectionParam, HWND        hwndParent, DWORD       dwFlags, BYTE* 		pConnectionDataIn, DWORD		dwSizeOfConnectionDataIn, BYTE**		ppConnectionDataOut, DWORD*		pdwSizeOfConnectionDataOut) IPURE; STDMETHOD(RouterInvokeCredentialsUI)(THIS_ DWORD   	dwEapTypeId, ULONG_PTR 	uConnectionParam, HWND    	hwndParent, DWORD   	dwFlags, BYTE*   	pConnectionDataIn, DWORD   	dwSizeOfConnectionDataIn, BYTE*   	pUserDataIn, DWORD   	dwSizeOfUserDataIn, BYTE**  	ppUserDataOut, DWORD*  	pdwSizeOfUserDataOut) IPURE;
+#define DeclareIEAPProviderConfigMembers(IPURE) \
+STDMETHOD(Initialize)(THIS_LPCOLESTR pszMachineName, DWORD dwEapTypeId, ULONG_PTR* puConnectionParam); \
+STDMETHOD(Uninitialize)(THIS_ DWORD dwEapTypeId, ULONG_PTR uConnectionParam); \
+STDMETHOD(ServerInvokeConfigUI)(THIS_ DWORD dwEapTypeId, ULONG_PTR uConnectionParam, HWND hWnd, ULONG_PTR dwRes1, ULONG_PTR dwRes2); \
+STDMETHOD(RouterInvokeConfigUI)(THIS_ DWORD dwEapTypeId, ULONG_PTR uConnectionParam, HWND hwndParent, DWORD dwFlags, BYTE* pConnectionDataIn, DWORD dwSizeOfConnectionDataIn, BYTE** ppConnectionDataOut, DWORD* pdwSizeOfConnectionDataOut); \
+STDMETHOD(RouterInvokeCredentialsUI)(THIS_ DWORD dwEapTypeId, ULONG_PTR uConnectionParam, HWND hwndParent, DWORD dwFlags, BYTE* pConnectionDataIn, DWORD dwSizeOfConnectionDataIn, BYTE* pUserDataIn, DWORD dwSizeOfUserDataIn, BYTE** ppUserDataOut, DWORD* pdwSizeOfUserDataOut);
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0017_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_rrascfg_0017_v0_0_s_ifspec;
 #endif

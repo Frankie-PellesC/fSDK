@@ -45,50 +45,50 @@ DEFINE_GUID(IID_ID3DX10Sprite, 0xba0b762d, 0x8d28, 0x43ec, 0xb9, 0xdc, 0x2f, 0x8
 #define INTERFACE ID3DX10Sprite
 DECLARE_INTERFACE_(ID3DX10Sprite, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(Begin) (THIS_ UINT flags)PURE;
-	STDMETHOD(DrawSpritesBuffered) (THIS_ D3DX10_SPRITE * pSprites, UINT cSprites)PURE;
-	STDMETHOD(Flush) (THIS)PURE;
-	STDMETHOD(DrawSpritesImmediate) (THIS_ D3DX10_SPRITE * pSprites, UINT cSprites, UINT cbSprite, UINT flags)PURE;
-	STDMETHOD(End) (THIS)PURE;
-	STDMETHOD(GetViewTransform) (THIS_ D3DXMATRIX * pViewTransform)PURE;
-	STDMETHOD(SetViewTransform) (THIS_ D3DXMATRIX * pViewTransform)PURE;
-	STDMETHOD(GetProjectionTransform) (THIS_ D3DXMATRIX * pProjectionTransform)PURE;
-	STDMETHOD(SetProjectionTransform) (THIS_ D3DXMATRIX * pProjectionTransform)PURE;
-	STDMETHOD(GetDevice) (THIS_ ID3D10Device ** ppDevice)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(Begin) (THIS_ UINT flags);
+	STDMETHOD(DrawSpritesBuffered) (THIS_ D3DX10_SPRITE * pSprites, UINT cSprites);
+	STDMETHOD(Flush) (THIS);
+	STDMETHOD(DrawSpritesImmediate) (THIS_ D3DX10_SPRITE * pSprites, UINT cSprites, UINT cbSprite, UINT flags);
+	STDMETHOD(End) (THIS);
+	STDMETHOD(GetViewTransform) (THIS_ D3DXMATRIX * pViewTransform);
+	STDMETHOD(SetViewTransform) (THIS_ D3DXMATRIX * pViewTransform);
+	STDMETHOD(GetProjectionTransform) (THIS_ D3DXMATRIX * pProjectionTransform);
+	STDMETHOD(SetProjectionTransform) (THIS_ D3DXMATRIX * pProjectionTransform);
+	STDMETHOD(GetDevice) (THIS_ ID3D10Device ** ppDevice);
 };
 #undef INTERFACE
 #define INTERFACE ID3DX10DataLoader
 DECLARE_INTERFACE(ID3DX10DataLoader)
 {
-	STDMETHOD(Load) (THIS)PURE;
-	STDMETHOD(Decompress) (THIS_ void **ppData, SIZE_T * pcBytes)PURE;
-	STDMETHOD(Destroy) (THIS)PURE;
+	STDMETHOD(Load) (THIS);
+	STDMETHOD(Decompress) (THIS_ void **ppData, SIZE_T * pcBytes);
+	STDMETHOD(Destroy) (THIS);
 };
 #undef INTERFACE
 #define INTERFACE ID3DX10DataProcessor
 DECLARE_INTERFACE(ID3DX10DataProcessor)
 {
-	STDMETHOD(Process) (THIS_ void *pData, SIZE_T cBytes)PURE;
-	STDMETHOD(CreateDeviceObject) (THIS_ void **ppDataObject)PURE;
-	STDMETHOD(Destroy) (THIS)PURE;
+	STDMETHOD(Process) (THIS_ void *pData, SIZE_T cBytes);
+	STDMETHOD(CreateDeviceObject) (THIS_ void **ppDataObject);
+	STDMETHOD(Destroy) (THIS);
 };
 DEFINE_GUID(IID_ID3DX10ThreadPump, 0xc93fecfa, 0x6967, 0x478a, 0xab, 0xbc, 0x40, 0x2d, 0x90, 0x62, 0x1f, 0xcb);
 #undef INTERFACE
 #define INTERFACE ID3DX10ThreadPump
 DECLARE_INTERFACE_(ID3DX10ThreadPump, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(AddWorkItem) (THIS_ ID3DX10DataLoader * pDataLoader, ID3DX10DataProcessor * pDataProcessor, HRESULT * pHResult, void **ppDeviceObject)PURE;
-	STDMETHOD_(UINT, GetWorkItemCount) (THIS)PURE;
-	STDMETHOD(WaitForAllItems) (THIS)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(AddWorkItem) (THIS_ ID3DX10DataLoader * pDataLoader, ID3DX10DataProcessor * pDataProcessor, HRESULT * pHResult, void **ppDeviceObject);
+	STDMETHOD_(UINT, GetWorkItemCount) (THIS);
+	STDMETHOD(WaitForAllItems) (THIS);
 	STDMETHOD(ProcessDeviceWorkItems) (THIS_ UINT iWorkItemCount);
-	STDMETHOD(PurgeAllItems) (THIS)PURE;
-	STDMETHOD(GetQueueStatus) (THIS_ UINT * pIoQueue, UINT * pProcessQueue, UINT * pDeviceQueue)PURE;
+	STDMETHOD(PurgeAllItems) (THIS);
+	STDMETHOD(GetQueueStatus) (THIS_ UINT * pIoQueue, UINT * pProcessQueue, UINT * pDeviceQueue);
 };
 HRESULT WINAPI D3DX10CreateThreadPump(UINT cIoThreads, UINT cProcThreads, ID3DX10ThreadPump **ppThreadPump);
 typedef struct _D3DX10_FONT_DESCA
@@ -131,22 +131,22 @@ DEFINE_GUID(IID_ID3DX10Font, 0xd79dbb70, 0x5f21, 0x4d36, 0xbb, 0xc2, 0xff, 0x52,
 #define INTERFACE ID3DX10Font
 DECLARE_INTERFACE_(ID3DX10Font, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetDevice) (THIS_ ID3D10Device ** ppDevice)PURE;
-	STDMETHOD(GetDescA) (THIS_ D3DX10_FONT_DESCA * pDesc)PURE;
-	STDMETHOD(GetDescW) (THIS_ D3DX10_FONT_DESCW * pDesc)PURE;
-	STDMETHOD_(BOOL, GetTextMetricsA) (THIS_ TEXTMETRICA * pTextMetrics)PURE;
-	STDMETHOD_(BOOL, GetTextMetricsW) (THIS_ TEXTMETRICW * pTextMetrics)PURE;
-	STDMETHOD_(HDC, GetDC) (THIS)PURE;
-	STDMETHOD(GetGlyphData) (THIS_ UINT Glyph, ID3D10ShaderResourceView ** ppTexture, RECT * pBlackBox, POINT * pCellInc)PURE;
-	STDMETHOD(PreloadCharacters) (THIS_ UINT First, UINT Last)PURE;
-	STDMETHOD(PreloadGlyphs) (THIS_ UINT First, UINT Last)PURE;
-	STDMETHOD(PreloadTextA) (THIS_ LPCSTR pString, INT Count)PURE;
-	STDMETHOD(PreloadTextW) (THIS_ LPCWSTR pString, INT Count)PURE;
-	STDMETHOD_(INT, DrawTextA) (THIS_ LPD3DX10SPRITE pSprite, LPCSTR pString, INT Count, LPRECT pRect, UINT Format, D3DXCOLOR Color)PURE;
-	STDMETHOD_(INT, DrawTextW) (THIS_ LPD3DX10SPRITE pSprite, LPCWSTR pString, INT Count, LPRECT pRect, UINT Format, D3DXCOLOR Color)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetDevice) (THIS_ ID3D10Device ** ppDevice);
+	STDMETHOD(GetDescA) (THIS_ D3DX10_FONT_DESCA * pDesc);
+	STDMETHOD(GetDescW) (THIS_ D3DX10_FONT_DESCW * pDesc);
+	STDMETHOD_(BOOL, GetTextMetricsA) (THIS_ TEXTMETRICA * pTextMetrics);
+	STDMETHOD_(BOOL, GetTextMetricsW) (THIS_ TEXTMETRICW * pTextMetrics);
+	STDMETHOD_(HDC, GetDC) (THIS);
+	STDMETHOD(GetGlyphData) (THIS_ UINT Glyph, ID3D10ShaderResourceView ** ppTexture, RECT * pBlackBox, POINT * pCellInc);
+	STDMETHOD(PreloadCharacters) (THIS_ UINT First, UINT Last);
+	STDMETHOD(PreloadGlyphs) (THIS_ UINT First, UINT Last);
+	STDMETHOD(PreloadTextA) (THIS_ LPCSTR pString, INT Count);
+	STDMETHOD(PreloadTextW) (THIS_ LPCWSTR pString, INT Count);
+	STDMETHOD_(INT, DrawTextA) (THIS_ LPD3DX10SPRITE pSprite, LPCSTR pString, INT Count, LPRECT pRect, UINT Format, D3DXCOLOR Color);
+	STDMETHOD_(INT, DrawTextW) (THIS_ LPD3DX10SPRITE pSprite, LPCWSTR pString, INT Count, LPRECT pRect, UINT Format, D3DXCOLOR Color);
 };
 #ifndef GetTextMetrics
 #ifdef UNICODE

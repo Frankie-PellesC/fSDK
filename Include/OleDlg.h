@@ -430,34 +430,34 @@ STDAPI_(UINT) OleUIPasteSpecialA(LPOLEUIPASTESPECIALA);
 #define INTERFACE   IOleUILinkContainerW
 DECLARE_INTERFACE_(IOleUILinkContainerW, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt)PURE;
-	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt)PURE;
-	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPWSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource)PURE;
-	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPWSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPWSTR FAR * lplpszFullLinkType, LPWSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected)PURE;
-	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved)PURE;
-	STDMETHOD(CancelLink) (THIS_ DWORD dwLink)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink);
+	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt);
+	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt);
+	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPWSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource);
+	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPWSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPWSTR FAR * lplpszFullLinkType, LPWSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected);
+	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink);
+	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved);
+	STDMETHOD(CancelLink) (THIS_ DWORD dwLink);
 };
 typedef IOleUILinkContainerW FAR* LPOLEUILINKCONTAINERW;
 #undef  INTERFACE
 #define INTERFACE   IOleUILinkContainerA
 DECLARE_INTERFACE_(IOleUILinkContainerA, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt)PURE;
-	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt)PURE;
-	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource)PURE;
-	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPSTR FAR * lplpszFullLinkType, LPSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected)PURE;
-	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved)PURE;
-	STDMETHOD(CancelLink) (THIS_ DWORD dwLink)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink);
+	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt);
+	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt);
+	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource);
+	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPSTR FAR * lplpszFullLinkType, LPSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected);
+	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink);
+	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved);
+	STDMETHOD(CancelLink) (THIS_ DWORD dwLink);
 };
 typedef IOleUILinkContainerA FAR* LPOLEUILINKCONTAINERA;
 #ifdef UNICODE
@@ -778,28 +778,28 @@ STDAPI_(UINT) OleUIChangeSourceA(LPOLEUICHANGESOURCEA);
 #define INTERFACE   IOleUIObjInfoW
 DECLARE_INTERFACE_(IOleUIObjInfoW, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetObjectInfo) (THIS_ DWORD dwObject, DWORD FAR * lpdwObjSize, LPWSTR FAR * lplpszLabel, LPWSTR FAR * lplpszType, LPWSTR FAR * lplpszShortType, LPWSTR FAR * lplpszLocation)PURE;
-	STDMETHOD(GetConvertInfo) (THIS_ DWORD dwObject, CLSID FAR * lpClassID, WORD FAR * lpwFormat, CLSID FAR * lpConvertDefaultClassID, LPCLSID FAR * lplpClsidExclude, UINT FAR * lpcClsidExclude)PURE;
-	STDMETHOD(ConvertObject) (THIS_ DWORD dwObject, REFCLSID clsidNew)PURE;
-	STDMETHOD(GetViewInfo) (THIS_ DWORD dwObject, HGLOBAL FAR * phMetaPict, DWORD * pdvAspect, int *pnCurrentScale)PURE;
-	STDMETHOD(SetViewInfo) (THIS_ DWORD dwObject, HGLOBAL hMetaPict, DWORD dvAspect, int nCurrentScale, BOOL bRelativeToOrig)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetObjectInfo) (THIS_ DWORD dwObject, DWORD FAR * lpdwObjSize, LPWSTR FAR * lplpszLabel, LPWSTR FAR * lplpszType, LPWSTR FAR * lplpszShortType, LPWSTR FAR * lplpszLocation);
+	STDMETHOD(GetConvertInfo) (THIS_ DWORD dwObject, CLSID FAR * lpClassID, WORD FAR * lpwFormat, CLSID FAR * lpConvertDefaultClassID, LPCLSID FAR * lplpClsidExclude, UINT FAR * lpcClsidExclude);
+	STDMETHOD(ConvertObject) (THIS_ DWORD dwObject, REFCLSID clsidNew);
+	STDMETHOD(GetViewInfo) (THIS_ DWORD dwObject, HGLOBAL FAR * phMetaPict, DWORD * pdvAspect, int *pnCurrentScale);
+	STDMETHOD(SetViewInfo) (THIS_ DWORD dwObject, HGLOBAL hMetaPict, DWORD dvAspect, int nCurrentScale, BOOL bRelativeToOrig);
 };
 typedef IOleUIObjInfoW FAR* LPOLEUIOBJINFOW;
 #undef  INTERFACE
 #define INTERFACE   IOleUIObjInfoA
 DECLARE_INTERFACE_(IOleUIObjInfoA, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetObjectInfo) (THIS_ DWORD dwObject, DWORD FAR * lpdwObjSize, LPSTR FAR * lplpszLabel, LPSTR FAR * lplpszType, LPSTR FAR * lplpszShortType, LPSTR FAR * lplpszLocation)PURE;
-	STDMETHOD(GetConvertInfo) (THIS_ DWORD dwObject, CLSID FAR * lpClassID, WORD FAR * lpwFormat, CLSID FAR * lpConvertDefaultClassID, LPCLSID FAR * lplpClsidExclude, UINT FAR * lpcClsidExclude)PURE;
-	STDMETHOD(ConvertObject) (THIS_ DWORD dwObject, REFCLSID clsidNew)PURE;
-	STDMETHOD(GetViewInfo) (THIS_ DWORD dwObject, HGLOBAL FAR * phMetaPict, DWORD * pdvAspect, int *pnCurrentScale)PURE;
-	STDMETHOD(SetViewInfo) (THIS_ DWORD dwObject, HGLOBAL hMetaPict, DWORD dvAspect, int nCurrentScale, BOOL bRelativeToOrig)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetObjectInfo) (THIS_ DWORD dwObject, DWORD FAR * lpdwObjSize, LPSTR FAR * lplpszLabel, LPSTR FAR * lplpszType, LPSTR FAR * lplpszShortType, LPSTR FAR * lplpszLocation);
+	STDMETHOD(GetConvertInfo) (THIS_ DWORD dwObject, CLSID FAR * lpClassID, WORD FAR * lpwFormat, CLSID FAR * lpConvertDefaultClassID, LPCLSID FAR * lplpClsidExclude, UINT FAR * lpcClsidExclude);
+	STDMETHOD(ConvertObject) (THIS_ DWORD dwObject, REFCLSID clsidNew);
+	STDMETHOD(GetViewInfo) (THIS_ DWORD dwObject, HGLOBAL FAR * phMetaPict, DWORD * pdvAspect, int *pnCurrentScale);
+	STDMETHOD(SetViewInfo) (THIS_ DWORD dwObject, HGLOBAL hMetaPict, DWORD dvAspect, int nCurrentScale, BOOL bRelativeToOrig);
 };
 typedef IOleUIObjInfoA FAR* LPOLEUIOBJINFOA;
 #ifdef UNICODE
@@ -815,36 +815,36 @@ typedef IOleUIObjInfoA FAR* LPOLEUIOBJINFOA;
 #define INTERFACE   IOleUILinkInfoW
 DECLARE_INTERFACE_(IOleUILinkInfoW, IOleUILinkContainerW)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt)PURE;
-	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt)PURE;
-	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPWSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource)PURE;
-	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPWSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPWSTR FAR * lplpszFullLinkType, LPWSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected)PURE;
-	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved)PURE;
-	STDMETHOD(CancelLink) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(GetLastUpdate) (THIS_ DWORD dwLink, FILETIME FAR * lpLastUpdate)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink);
+	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt);
+	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt);
+	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPWSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource);
+	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPWSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPWSTR FAR * lplpszFullLinkType, LPWSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected);
+	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink);
+	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved);
+	STDMETHOD(CancelLink) (THIS_ DWORD dwLink);
+	STDMETHOD(GetLastUpdate) (THIS_ DWORD dwLink, FILETIME FAR * lpLastUpdate);
 };
 typedef IOleUILinkInfoW FAR* LPOLEUILINKINFOW;
 #undef  INTERFACE
 #define INTERFACE   IOleUILinkInfoA
 DECLARE_INTERFACE_(IOleUILinkInfoA, IOleUILinkContainerA)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt)PURE;
-	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt)PURE;
-	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource)PURE;
-	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPSTR FAR * lplpszFullLinkType, LPSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected)PURE;
-	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved)PURE;
-	STDMETHOD(CancelLink) (THIS_ DWORD dwLink)PURE;
-	STDMETHOD(GetLastUpdate) (THIS_ DWORD dwLink, FILETIME FAR * lpLastUpdate)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID riid, LPVOID FAR * ppvObj);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD_(DWORD, GetNextLink) (THIS_ DWORD dwLink);
+	STDMETHOD(SetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD dwUpdateOpt);
+	STDMETHOD(GetLinkUpdateOptions) (THIS_ DWORD dwLink, DWORD FAR * lpdwUpdateOpt);
+	STDMETHOD(SetLinkSource) (THIS_ DWORD dwLink, LPSTR lpszDisplayName, ULONG lenFileName, ULONG FAR * pchEaten, BOOL fValidateSource);
+	STDMETHOD(GetLinkSource) (THIS_ DWORD dwLink, LPSTR FAR * lplpszDisplayName, ULONG FAR * lplenFileName, LPSTR FAR * lplpszFullLinkType, LPSTR FAR * lplpszShortLinkType, BOOL FAR * lpfSourceAvailable, BOOL FAR * lpfIsSelected);
+	STDMETHOD(OpenLinkSource) (THIS_ DWORD dwLink);
+	STDMETHOD(UpdateLink) (THIS_ DWORD dwLink, BOOL fErrorMessage, BOOL fReserved);
+	STDMETHOD(CancelLink) (THIS_ DWORD dwLink);
+	STDMETHOD(GetLastUpdate) (THIS_ DWORD dwLink, FILETIME FAR * lpLastUpdate);
 };
 typedef IOleUILinkInfoA FAR* LPOLEUILINKINFOA;
 #ifdef UNICODE

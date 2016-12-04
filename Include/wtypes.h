@@ -2,10 +2,12 @@
  \file		wtypes.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            01.12.2016 - Removed _VARIANT_BOOL declaration.
+ \par  Status: 
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Jun 27 11:35:34 2016
- \date		Modified on Mon Jun 27 11:35:34 2016
+ \date		Modified on Thu Dec  1 16:20:29 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -809,11 +811,11 @@ typedef FLAGGED_WORD_BLOB *wireBSTR;
 typedef OLECHAR *BSTR;
 typedef BSTR *LPBSTR;
 typedef short VARIANT_BOOL;
-#if !__STDC__ && (__POCC__ <= 270)
-typedef VARIANT_BOOL _VARIANT_BOOL;
-#else
-#define _VARIANT_BOOL    /##/
-#endif
+//#if !__STDC__ && (__POCC__ <= 270)	//Frankie unusefull MS messing declaration
+//typedef VARIANT_BOOL _VARIANT_BOOL;
+//#else
+//#define _VARIANT_BOOL    /##/
+//#endif
 typedef boolean BOOLEAN;
 #ifndef _tagBSTRBLOB_DEFINED
 #define _tagBSTRBLOB_DEFINED

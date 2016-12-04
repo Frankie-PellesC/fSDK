@@ -139,62 +139,62 @@ DEFINE_GUID(IID_ID3D11ShaderReflectionType, 0x6e6ffa6a, 0x9bae, 0x4613, 0xa5, 0x
 #define INTERFACE ID3D11ShaderReflectionType
 DECLARE_INTERFACE(ID3D11ShaderReflectionType)
 {
-    STDMETHOD(GetDesc)(THIS_ D3D11_SHADER_TYPE_DESC *pDesc) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionType*, GetMemberTypeByIndex)(THIS_ UINT Index) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionType*, GetMemberTypeByName)(THIS_ LPCSTR Name) PURE;
-    STDMETHOD_(LPCSTR, GetMemberTypeName)(THIS_ UINT Index) PURE;
-    STDMETHOD(IsEqual)(THIS_ ID3D11ShaderReflectionType* pType) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionType*, GetSubType)(THIS) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionType*, GetBaseClass)(THIS) PURE;
-    STDMETHOD_(UINT, GetNumInterfaces)(THIS) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionType*, GetInterfaceByIndex)(THIS_ UINT uIndex) PURE;
-    STDMETHOD(IsOfType)(THIS_ ID3D11ShaderReflectionType* pType) PURE;
-    STDMETHOD(ImplementsInterface)(THIS_ ID3D11ShaderReflectionType* pBase) PURE;
+    STDMETHOD(GetDesc)(THIS_ D3D11_SHADER_TYPE_DESC *pDesc);
+    STDMETHOD_(ID3D11ShaderReflectionType*, GetMemberTypeByIndex)(THIS_ UINT Index);
+    STDMETHOD_(ID3D11ShaderReflectionType*, GetMemberTypeByName)(THIS_ LPCSTR Name);
+    STDMETHOD_(LPCSTR, GetMemberTypeName)(THIS_ UINT Index);
+    STDMETHOD(IsEqual)(THIS_ ID3D11ShaderReflectionType* pType);
+    STDMETHOD_(ID3D11ShaderReflectionType*, GetSubType)(THIS);
+    STDMETHOD_(ID3D11ShaderReflectionType*, GetBaseClass)(THIS);
+    STDMETHOD_(UINT, GetNumInterfaces)(THIS);
+    STDMETHOD_(ID3D11ShaderReflectionType*, GetInterfaceByIndex)(THIS_ UINT uIndex);
+    STDMETHOD(IsOfType)(THIS_ ID3D11ShaderReflectionType* pType);
+    STDMETHOD(ImplementsInterface)(THIS_ ID3D11ShaderReflectionType* pBase);
 };
 DEFINE_GUID(IID_ID3D11ShaderReflectionVariable, 0x51f23923, 0xf3e5, 0x4bd1, 0x91, 0xcb, 0x60, 0x61, 0x77, 0xd8, 0xdb, 0x4c);
 #undef INTERFACE
 #define INTERFACE ID3D11ShaderReflectionVariable
 DECLARE_INTERFACE(ID3D11ShaderReflectionVariable)
 {
-    STDMETHOD(GetDesc)(THIS_ D3D11_SHADER_VARIABLE_DESC *pDesc) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionType*, GetType)(THIS) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionConstantBuffer*, GetBuffer)(THIS) PURE;
-    STDMETHOD_(UINT, GetInterfaceSlot)(THIS_ UINT uArrayIndex) PURE;
+    STDMETHOD(GetDesc)(THIS_ D3D11_SHADER_VARIABLE_DESC *pDesc);
+    STDMETHOD_(ID3D11ShaderReflectionType*, GetType)(THIS);
+    STDMETHOD_(ID3D11ShaderReflectionConstantBuffer*, GetBuffer)(THIS);
+    STDMETHOD_(UINT, GetInterfaceSlot)(THIS_ UINT uArrayIndex);
 };
 DEFINE_GUID(IID_ID3D11ShaderReflectionConstantBuffer, 0xeb62d63d, 0x93dd, 0x4318, 0x8a, 0xe8, 0xc6, 0xf8, 0x3a, 0xd3, 0x71, 0xb8);
 #undef INTERFACE
 #define INTERFACE ID3D11ShaderReflectionConstantBuffer
 DECLARE_INTERFACE(ID3D11ShaderReflectionConstantBuffer)
 {
-    STDMETHOD(GetDesc)(THIS_ D3D11_SHADER_BUFFER_DESC *pDesc) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionVariable*, GetVariableByIndex)(THIS_ UINT Index) PURE;
-    STDMETHOD_(ID3D11ShaderReflectionVariable*, GetVariableByName)(THIS_ LPCSTR Name) PURE;
+    STDMETHOD(GetDesc)(THIS_ D3D11_SHADER_BUFFER_DESC *pDesc);
+    STDMETHOD_(ID3D11ShaderReflectionVariable*, GetVariableByIndex)(THIS_ UINT Index);
+    STDMETHOD_(ID3D11ShaderReflectionVariable*, GetVariableByName)(THIS_ LPCSTR Name);
 };
 DEFINE_GUID(IID_ID3D11ShaderReflection, 0x0a233719, 0x3960, 0x4578, 0x9d, 0x7c, 0x20, 0x3b, 0x8b, 0x1d, 0x9c, 0xc1);
 #undef INTERFACE
 #define INTERFACE ID3D11ShaderReflection
 DECLARE_INTERFACE_(ID3D11ShaderReflection, IUnknown)
 {
-	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv)PURE;
-	STDMETHOD_(ULONG, AddRef) (THIS)PURE;
-	STDMETHOD_(ULONG, Release) (THIS)PURE;
-	STDMETHOD(GetDesc) (THIS_ D3D11_SHADER_DESC * pDesc)PURE;
-	STDMETHOD_(ID3D11ShaderReflectionConstantBuffer *, GetConstantBufferByIndex) (THIS_ UINT Index)PURE;
-	STDMETHOD_(ID3D11ShaderReflectionConstantBuffer *, GetConstantBufferByName) (THIS_ LPCSTR Name)PURE;
-	STDMETHOD(GetResourceBindingDesc) (THIS_ UINT ResourceIndex, D3D11_SHADER_INPUT_BIND_DESC * pDesc)PURE;
-	STDMETHOD(GetInputParameterDesc) (THIS_ UINT ParameterIndex, D3D11_SIGNATURE_PARAMETER_DESC * pDesc)PURE;
-	STDMETHOD(GetOutputParameterDesc) (THIS_ UINT ParameterIndex, D3D11_SIGNATURE_PARAMETER_DESC * pDesc)PURE;
-	STDMETHOD(GetPatchConstantParameterDesc) (THIS_ UINT ParameterIndex, D3D11_SIGNATURE_PARAMETER_DESC * pDesc)PURE;
-	STDMETHOD_(ID3D11ShaderReflectionVariable *, GetVariableByName) (THIS_ LPCSTR Name)PURE;
-	STDMETHOD(GetResourceBindingDescByName) (THIS_ LPCSTR Name, D3D11_SHADER_INPUT_BIND_DESC * pDesc)PURE;
-	STDMETHOD_(UINT, GetMovInstructionCount) (THIS)PURE;
-	STDMETHOD_(UINT, GetMovcInstructionCount) (THIS)PURE;
-	STDMETHOD_(UINT, GetConversionInstructionCount) (THIS)PURE;
-	STDMETHOD_(UINT, GetBitwiseInstructionCount) (THIS)PURE;
-	STDMETHOD_(D3D_PRIMITIVE, GetGSInputPrimitive) (THIS)PURE;
-	STDMETHOD_(BOOL, IsSampleFrequencyShader) (THIS)PURE;
-	STDMETHOD_(UINT, GetNumInterfaceSlots) (THIS)PURE;
-	STDMETHOD(GetMinFeatureLevel) (THIS_ enum D3D_FEATURE_LEVEL * pLevel)PURE;
-	STDMETHOD_(UINT, GetThreadGroupSize) (THIS_ UINT * pSizeX, UINT * pSizeY, UINT * pSizeZ)PURE;
+	STDMETHOD(QueryInterface) (THIS_ REFIID iid, LPVOID * ppv);
+	STDMETHOD_(ULONG, AddRef) (THIS);
+	STDMETHOD_(ULONG, Release) (THIS);
+	STDMETHOD(GetDesc) (THIS_ D3D11_SHADER_DESC * pDesc);
+	STDMETHOD_(ID3D11ShaderReflectionConstantBuffer *, GetConstantBufferByIndex) (THIS_ UINT Index);
+	STDMETHOD_(ID3D11ShaderReflectionConstantBuffer *, GetConstantBufferByName) (THIS_ LPCSTR Name);
+	STDMETHOD(GetResourceBindingDesc) (THIS_ UINT ResourceIndex, D3D11_SHADER_INPUT_BIND_DESC * pDesc);
+	STDMETHOD(GetInputParameterDesc) (THIS_ UINT ParameterIndex, D3D11_SIGNATURE_PARAMETER_DESC * pDesc);
+	STDMETHOD(GetOutputParameterDesc) (THIS_ UINT ParameterIndex, D3D11_SIGNATURE_PARAMETER_DESC * pDesc);
+	STDMETHOD(GetPatchConstantParameterDesc) (THIS_ UINT ParameterIndex, D3D11_SIGNATURE_PARAMETER_DESC * pDesc);
+	STDMETHOD_(ID3D11ShaderReflectionVariable *, GetVariableByName) (THIS_ LPCSTR Name);
+	STDMETHOD(GetResourceBindingDescByName) (THIS_ LPCSTR Name, D3D11_SHADER_INPUT_BIND_DESC * pDesc);
+	STDMETHOD_(UINT, GetMovInstructionCount) (THIS);
+	STDMETHOD_(UINT, GetMovcInstructionCount) (THIS);
+	STDMETHOD_(UINT, GetConversionInstructionCount) (THIS);
+	STDMETHOD_(UINT, GetBitwiseInstructionCount) (THIS);
+	STDMETHOD_(D3D_PRIMITIVE, GetGSInputPrimitive) (THIS);
+	STDMETHOD_(BOOL, IsSampleFrequencyShader) (THIS);
+	STDMETHOD_(UINT, GetNumInterfaceSlots) (THIS);
+	STDMETHOD(GetMinFeatureLevel) (THIS_ enum D3D_FEATURE_LEVEL * pLevel);
+	STDMETHOD_(UINT, GetThreadGroupSize) (THIS_ UINT * pSizeX, UINT * pSizeY, UINT * pSizeZ);
 };
 #endif

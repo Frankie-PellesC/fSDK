@@ -97,14 +97,14 @@ typedef struct
 #define INTERFACE  IDsBrowseDomainTree
 DECLARE_INTERFACE_IID_(IDsBrowseDomainTree, IUnknown, "7cabcf1e-78f5-11d2-960c-00c04fa31a86")
 {
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef)(THIS)  PURE;
-    STDMETHOD_(ULONG,Release)(THIS) PURE;
-    STDMETHOD(BrowseTo)(THIS_ HWND hwndParent, LPWSTR *ppszTargetPath, DWORD dwFlags) PURE;
-    STDMETHOD(GetDomains)(THIS_ PDOMAIN_TREE *ppDomainTree, DWORD dwFlags) PURE;
-    STDMETHOD(FreeDomains)(THIS_ PDOMAIN_TREE *ppDomainTree) PURE;
-    STDMETHOD(FlushCachedDomains)(THIS) PURE;
-    STDMETHOD(SetComputer)(THIS_ LPCWSTR pszComputerName, LPCWSTR pszUserName, LPCWSTR pszPassword) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj);
+    STDMETHOD_(ULONG,AddRef)(THIS);
+    STDMETHOD_(ULONG,Release)(THIS);
+    STDMETHOD(BrowseTo)(THIS_ HWND hwndParent, LPWSTR *ppszTargetPath, DWORD dwFlags);
+    STDMETHOD(GetDomains)(THIS_ PDOMAIN_TREE *ppDomainTree, DWORD dwFlags);
+    STDMETHOD(FreeDomains)(THIS_ PDOMAIN_TREE *ppDomainTree);
+    STDMETHOD(FlushCachedDomains)(THIS);
+    STDMETHOD(SetComputer)(THIS_ LPCWSTR pszComputerName, LPCWSTR pszUserName, LPCWSTR pszPassword);
 };
 #define DSSSF_SIMPLEAUTHENTICATE        0x00000001
 #define DSSSF_DONTSIGNSEAL              0x00000002
@@ -132,20 +132,20 @@ typedef struct
 #define INTERFACE IDsDisplaySpecifier
 DECLARE_INTERFACE_IID_(IDsDisplaySpecifier, IUnknown, "1ab4a8c0-6a0b-11d2-ad49-00c04fa31a86")
 {
-    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj) PURE;
-    STDMETHOD_(ULONG,AddRef)(THIS)  PURE;
-    STDMETHOD_(ULONG,Release)(THIS) PURE;
-    STDMETHOD(SetServer)(THIS_ LPCWSTR pszServer, LPCWSTR pszUserName, LPCWSTR pszPassword, DWORD dwFlags) PURE;
-    STDMETHOD(SetLanguageID)(THIS_ LANGID langid) PURE;
-    STDMETHOD(GetDisplaySpecifier)(THIS_ LPCWSTR pszObjectClass, REFIID riid, void **ppv) PURE;
-    STDMETHOD(GetIconLocation)(THIS_ LPCWSTR pszObjectClass, DWORD dwFlags, LPWSTR pszBuffer, INT cchBuffer, INT *presid) PURE;
-    STDMETHOD_(HICON, GetIcon)(THIS_ LPCWSTR pszObjectClass, DWORD dwFlags, INT cxIcon, INT cyIcon) PURE;
-    STDMETHOD(GetFriendlyClassName)(THIS_ LPCWSTR pszObjectClass, LPWSTR pszBuffer, INT cchBuffer) PURE;
-    STDMETHOD(GetFriendlyAttributeName)(THIS_ LPCWSTR pszObjectClass, LPCWSTR pszAttributeName, LPWSTR pszBuffer, UINT cchBuffer) PURE;
-    STDMETHOD_(BOOL, IsClassContainer)(THIS_ LPCWSTR pszObjectClass, LPCWSTR pszADsPath, DWORD dwFlags) PURE;
-    STDMETHOD(GetClassCreationInfo)(THIS_ LPCWSTR pszObjectClass, LPDSCLASSCREATIONINFO* ppdscci) PURE;
-    STDMETHOD(EnumClassAttributes)(THIS_ LPCWSTR pszObjectClass, LPDSENUMATTRIBUTES pcbEnum, LPARAM lParam) PURE;
-    STDMETHOD_(ADSTYPE, GetAttributeADsType)(THIS_ LPCWSTR pszAttributeName) PURE;
+    STDMETHOD(QueryInterface)(THIS_ REFIID riid, LPVOID * ppvObj);
+    STDMETHOD_(ULONG,AddRef)(THIS);
+    STDMETHOD_(ULONG,Release)(THIS);
+    STDMETHOD(SetServer)(THIS_ LPCWSTR pszServer, LPCWSTR pszUserName, LPCWSTR pszPassword, DWORD dwFlags);
+    STDMETHOD(SetLanguageID)(THIS_ LANGID langid);
+    STDMETHOD(GetDisplaySpecifier)(THIS_ LPCWSTR pszObjectClass, REFIID riid, void **ppv);
+    STDMETHOD(GetIconLocation)(THIS_ LPCWSTR pszObjectClass, DWORD dwFlags, LPWSTR pszBuffer, INT cchBuffer, INT *presid);
+    STDMETHOD_(HICON, GetIcon)(THIS_ LPCWSTR pszObjectClass, DWORD dwFlags, INT cxIcon, INT cyIcon);
+    STDMETHOD(GetFriendlyClassName)(THIS_ LPCWSTR pszObjectClass, LPWSTR pszBuffer, INT cchBuffer);
+    STDMETHOD(GetFriendlyAttributeName)(THIS_ LPCWSTR pszObjectClass, LPCWSTR pszAttributeName, LPWSTR pszBuffer, UINT cchBuffer);
+    STDMETHOD_(BOOL, IsClassContainer)(THIS_ LPCWSTR pszObjectClass, LPCWSTR pszADsPath, DWORD dwFlags);
+    STDMETHOD(GetClassCreationInfo)(THIS_ LPCWSTR pszObjectClass, LPDSCLASSCREATIONINFO* ppdscci);
+    STDMETHOD(EnumClassAttributes)(THIS_ LPCWSTR pszObjectClass, LPDSENUMATTRIBUTES pcbEnum, LPARAM lParam);
+    STDMETHOD_(ADSTYPE, GetAttributeADsType)(THIS_ LPCWSTR pszAttributeName);
 };
 typedef struct
 {

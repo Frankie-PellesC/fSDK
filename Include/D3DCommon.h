@@ -335,8 +335,8 @@ typedef interface ID3DInclude ID3DInclude;
 #define INTERFACE ID3DInclude
 DECLARE_INTERFACE(ID3DInclude)
 {
-	STDMETHOD(Open) (THIS_ D3D_INCLUDE_TYPE IncludeType, LPCSTR pFileName, LPCVOID pParentData, LPCVOID * ppData, UINT * pBytes)PURE;
-	STDMETHOD(Close) (THIS_ LPCVOID pData)PURE;
+	STDMETHOD(Open) (THIS_ D3D_INCLUDE_TYPE IncludeType, LPCSTR pFileName, LPCVOID pParentData, LPCVOID * ppData, UINT * pBytes);
+	STDMETHOD(Close) (THIS_ LPCVOID pData);
 };
 typedef ID3DInclude *LPD3DINCLUDE;
 typedef enum _D3D_SHADER_VARIABLE_CLASS
