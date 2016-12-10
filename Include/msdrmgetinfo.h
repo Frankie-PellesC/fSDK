@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "msdrm.h"
+#include <msdrm.h>
 const PWSTR g_wszTAG_ASCII = L"ASCII Tag",
 			g_wszTAG_XRML = L"XrML Tag",
 			g_wszTAG_FILENAME = L"filename",

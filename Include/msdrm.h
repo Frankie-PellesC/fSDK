@@ -11,7 +11,7 @@
 
 #ifndef __MSDRM_H_
 #define __MSDRM_H_
-#include "msdrmdefs.h"
+#include <msdrmdefs.h>
 #if __POCC__ >= 500
 #pragma once
 #endif

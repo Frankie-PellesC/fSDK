@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "msi.h"
+#include <msi.h>
 #define MSI_NULL_INTEGER 0x80000000
 #define MSIDBOPEN_READONLY     (LPCTSTR)0
 #define MSIDBOPEN_TRANSACT     (LPCTSTR)1

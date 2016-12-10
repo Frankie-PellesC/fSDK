@@ -31,7 +31,7 @@
 #endif
 #define _UNICODE
 #endif
-#include "pshpack1.h"
+#include <pshpack1.h>
 #ifndef DRV_MAPPER_PREFERRED_INPUT_GET
 #define DRV_MAPPER_PREFERRED_INPUT_GET  (DRV_USER + 0)
 #endif
@@ -828,5 +828,5 @@ MMRESULT ACMAPI acmStreamConvert(HACMSTREAM has, LPACMSTREAMHEADER pash, DWORD f
 #define ACM_STREAMCONVERTF_END          0x00000020
 MMRESULT ACMAPI acmStreamPrepareHeader(HACMSTREAM has, LPACMSTREAMHEADER pash, DWORD fdwPrepare);
 MMRESULT ACMAPI acmStreamUnprepareHeader(HACMSTREAM has, LPACMSTREAMHEADER pash, DWORD fdwUnprepare);
-#include "poppack.h"
+#include <poppack.h>
 #endif

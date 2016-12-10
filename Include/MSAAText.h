@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __msaatext_h__
 #define __msaatext_h__
@@ -113,9 +113,9 @@ typedef struct AccClientDocMgr AccClientDocMgr;
 #define __DocWrap_FWD_DEFINED__
 typedef struct DocWrap DocWrap;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "textstor.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <textstor.h>
 DEFINE_GUID(IID_ITfMSAAControl, 0xb5f8fb3b, 0x393f, 0x4f7c, 0x84, 0xcb, 0x50, 0x49, 0x24, 0xc2, 0x70, 0x5a);
 DEFINE_GUID(IID_IInternalDocWrap, 0xE1AA6466, 0x9DB4, 0x40ba, 0xBE, 0x03, 0x77, 0xC3, 0x8E, 0x8E, 0x60, 0xB2);
 DEFINE_GUID(IID_ITextStoreACPEx, 0xA2DE3BC2, 0x3D8E, 0x11d3, 0x81, 0xA9, 0xF7, 0x53, 0xFB, 0xE6, 0x1A, 0x00);

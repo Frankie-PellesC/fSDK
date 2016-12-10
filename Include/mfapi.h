@@ -20,7 +20,7 @@
 #pragma pack(push, mfhrds)
 #include <mfobjects.h>
 #pragma pack(pop, mfhrds)
-#include "mmreg.h"
+#include <mmreg.h>
 #include <avrt.h>
 #ifndef AVRT_DATA
 #define AVRT_DATA

@@ -71,5 +71,5 @@ extern const MSDASQLDECLSPEC GUID DBPROPSET_PROVIDERCONNATTR        = {0x497c60e
 #define KAGPROPVAL_CONCUR_VALUES            0x00000002
 #define KAGPROPVAL_CONCUR_LOCK              0x00000004
 #define KAGPROPVAL_CONCUR_READ_ONLY         0x00000008
-#include "msdasql_interfaces.h"
+#include <msdasql_interfaces.h>
 #endif

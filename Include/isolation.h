@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __isolation_h__
 #define __isolation_h__
@@ -98,10 +98,10 @@ typedef interface IEnumDefinitionIdentity IEnumDefinitionIdentity;
 #define __IEnumReferenceIdentity_FWD_DEFINED__
 typedef interface IEnumReferenceIdentity IEnumReferenceIdentity;
 #endif
-#include "unknwn.h"
-#include "oaidl.h"
-#include "ocidl.h"
-#include "propidl.h"
+#include <unknwn.h>
+#include <oaidl.h>
+#include <ocidl.h>
+#include <propidl.h>
 void *__RPC_USER MIDL_user_allocate(size_t size);
 #pragma warning(suppress: 4985)
 typedef struct _IDENTITY_ATTRIBUTE

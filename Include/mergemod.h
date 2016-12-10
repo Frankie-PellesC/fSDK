@@ -9,11 +9,11 @@
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __mergemod_h__
 #define __mergemod_h__
@@ -117,7 +117,7 @@ typedef struct MsmMerge2 MsmMerge2;
 #define __MsmMerge_FWD_DEFINED__
 typedef struct MsmMerge MsmMerge;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #ifndef __FORWARD_IID_IMSMMERGETYPELIB

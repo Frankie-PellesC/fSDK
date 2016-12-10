@@ -12,8 +12,8 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -22,7 +22,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 #ifndef _MD_DEFW_
 #define _MD_DEFW_
 #include <mdmsg.h>

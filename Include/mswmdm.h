@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __mswmdm_h__
 #define __mswmdm_h__
@@ -285,9 +285,9 @@ typedef struct WMDMDeviceEnum WMDMDeviceEnum;
 #define __WMDMStorageEnum_FWD_DEFINED__
 typedef struct WMDMStorageEnum WMDMStorageEnum;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "propidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <propidl.h>
 #ifndef _DEFINE_WMDM_DEVICE_PROTOCOL_MTP
 #define _DEFINE_WMDM_DEVICE_PROTOCOL_MTP
 DEFINE_GUID(WMDM_DEVICE_PROTOCOL_MTP, 0x979e54e5, 0xafc, 0x4604, 0x8d, 0x93, 0xdc, 0x79, 0x8a, 0x4b, 0xcf, 0x45);

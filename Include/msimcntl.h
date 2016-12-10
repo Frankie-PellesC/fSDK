@@ -12,8 +12,8 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __msimcntl_h__
 #define __msimcntl_h__
 #if __POCC__ >= 500
@@ -67,9 +67,9 @@ typedef struct MSIMContactList MSIMContactList;
 #define __IMSafeContact_FWD_DEFINED__
 typedef struct IMSafeContact IMSafeContact;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "SIMPDATA.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <SIMPDATA.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #define DMSIMCONTACTVIEWEVENTS_OnReady              0xD0

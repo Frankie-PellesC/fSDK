@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __micaut_h__
 #define __micaut_h__
@@ -41,9 +41,9 @@ typedef interface _IMathInputControlEvents _IMathInputControlEvents;
 #define __MathInputControl_FWD_DEFINED__
 typedef struct MathInputControl MathInputControl;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "msinkaut.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <msinkaut.h>
 typedef DECLSPEC_UUID("D7803AF6-B018-4a42-AE48-B2D2319BCB05")
 enum __MIDL___MIDL_itf_micaut_0000_0000_0001
 {

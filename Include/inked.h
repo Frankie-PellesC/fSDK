@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -37,9 +37,9 @@ typedef interface _IInkEditEvents _IInkEditEvents;
 #define __InkEdit_FWD_DEFINED__
 typedef struct InkEdit InkEdit;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "msinkaut.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <msinkaut.h>
 #define INKEDIT_CLASSW  L"INKEDIT"
 #ifdef UNICODE
 #define INKEDIT_CLASS   INKEDIT_CLASSW

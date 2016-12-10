@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -33,8 +33,8 @@ typedef interface IJournalReader IJournalReader;
 #define __JournalReader_FWD_DEFINED__
 typedef struct JournalReader JournalReader;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 #ifndef __JournalLib_LIBRARY_DEFINED__
 #define __JournalLib_LIBRARY_DEFINED__
 #define GUID_STROKE_TIMESTAMP                    L"{04EA66C4-F33A-461B-B8FE-68070D9C7575}"

@@ -17,7 +17,7 @@
 #if defined (WIN32) && !defined (_WIN32)
 #define _WIN32
 #endif
-#include "mapinls.h"
+#include <mapinls.h>
 #ifdef	WIN16
 #define	MULDIV(x,y,z)				MulDiv32(x,y,z)
 #define IsBadReadPtr(lp,cb)			FBadReadPtr(lp,cb)

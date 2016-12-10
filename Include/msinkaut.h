@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -257,9 +257,9 @@ typedef struct Ink Ink;
 #define __SketchInk_FWD_DEFINED__
 typedef struct SketchInk SketchInk;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "tpcshrd.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <tpcshrd.h>
 #ifndef _MSINKAUT_IDL_H_
 #define _MSINKAUT_IDL_H_
 #include <TPCError.h>

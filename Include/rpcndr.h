@@ -2,10 +2,12 @@
  \file		rpcndr.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            Fixed EXTERN_GUID definition
+ \par  Status: 
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Jun 27 11:08:59 2016
- \date		Modified on Mon Jun 27 11:08:59 2016
+ \date		Modified on Sat Dec 10 17:38:34 2016
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -758,10 +760,8 @@ RPCRTAPI void RPC_ENTRY NdrOleFree(void *NodeToFree);
 
 #endif
 #define MIDL_INTERFACE(x)   struct DECLSPEC_UUID(x) DECLSPEC_NOVTABLE
-#if __POCC__ >= 1500	//Frankie SelectAny not implemented yet
-#define EXTERN_GUID(itf,l1,s1,s2,c1,c2,c3,c4,c5,c6,c7,c8)  extern const IID DECLSPEC_SELECTANY itf = {l1,s1,s2,{c1,c2,c3,c4,c5,c6,c7,c8}}
-#else
-#define EXTERN_GUID(itf,l1,s1,s2,c1,c2,c3,c4,c5,c6,c7,c8) extern const IID itf
+#ifndef EXTERN_GUID
+#define EXTERN_GUID(g,l1,s1,s2,c1,c2,c3,c4,c5,c6,c7,c8) DEFINE_GUID(g,l1,s1,s2,c1,c2,c3,c4,c5,c6,c7,c8)
 #endif
 typedef struct _NDR_USER_MARSHAL_INFO_LEVEL1 {
 	void *Buffer;

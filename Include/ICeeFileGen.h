@@ -12,7 +12,7 @@
 #ifndef _ICEEFILEGEN_H_
 #define _ICEEFILEGEN_H_
 #include <ole2.h>
-#include "cor.h"
+#include <cor.h>
 #if __POCC__ >= 500
 #pragma once
 #endif

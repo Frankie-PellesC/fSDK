@@ -59,7 +59,7 @@
 #define MAX_GUID_CHARS  38
 #if (_WIN32_MSI >= 150)
 #ifndef _MSI_NO_CRYPTO
-#include "wincrypt.h"
+#include <wincrypt.h>
 #endif
 #endif
 typedef unsigned long MSIHANDLE;

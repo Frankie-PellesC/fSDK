@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include    "mssip.h"
+#include <mssip.h>
 
 #define     szOID_CATALOG_LIST                  "1.3.6.1.4.1.311.12.1.1"
 #define     szOID_CATALOG_LIST_MEMBER           "1.3.6.1.4.1.311.12.1.2"

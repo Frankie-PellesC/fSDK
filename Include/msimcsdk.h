@@ -12,8 +12,8 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __msimcsdk_h__
 #define __msimcsdk_h__
 #if __POCC__ >= 500
@@ -79,8 +79,8 @@ typedef struct MSIMHostOption MSIMHostOption;
 #define __MSIMHostProfiles_FWD_DEFINED__
 typedef struct MSIMHostProfiles MSIMHostProfiles;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #define MSIM_DISPID_ONLOGONRESULT                        0x0E00

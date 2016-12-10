@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __msfeeds_h__
 #define __msfeeds_h__
@@ -121,7 +121,7 @@ typedef struct FeedFolderWatcher FeedFolderWatcher;
 #define __FeedWatcher_FWD_DEFINED__
 typedef struct FeedWatcher FeedWatcher;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 DEFINE_GUID(CLSID_XFeedsManager, 0xfe6b11c3, 0xc72e, 0x4061, 0x86, 0xc6, 0x9d, 0x16, 0x31, 0x21, 0xf2, 0x29);
 typedef enum FEEDS_BACKGROUNDSYNC_ACTION
 {

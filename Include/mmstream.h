@@ -16,14 +16,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif 
 #ifndef __mmstream_h__
 #define __mmstream_h__
@@ -42,7 +42,7 @@ typedef interface IMediaStream IMediaStream;
 #define __IStreamSample_FWD_DEFINED__
 typedef interface IStreamSample IStreamSample;
 #endif 	
-#include "unknwn.h"
+#include <unknwn.h>
 #define MS_ERROR_CODE(x) MAKE_HRESULT(1, FACILITY_ITF, (x) + 0x400)
 #define MS_SUCCESS_CODE(x) MAKE_HRESULT(0, FACILITY_ITF, x)
 #define MS_S_PENDING                  MS_SUCCESS_CODE(1)

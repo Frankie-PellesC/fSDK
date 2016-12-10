@@ -11,7 +11,7 @@
 
 #ifndef KERNELSPECS_H
 #define KERNELSPECS_H
-#include "DriverSpecs.h"
+#include <DriverSpecs.h>
 #if __POCC__ >= 500
 #pragma once
 #endif

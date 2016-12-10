@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __mfreadwrite_h__
 #define __mfreadwrite_h__
@@ -49,7 +49,7 @@ typedef interface IMFSinkWriter IMFSinkWriter;
 #define __IMFSinkWriterCallback_FWD_DEFINED__
 typedef interface IMFSinkWriterCallback IMFSinkWriterCallback;
 #endif
-#include "mfobjects.h"
+#include <mfobjects.h>
 #if (WINVER >= _WIN32_WINNT_WIN7)
 EXTERN_GUID(CLSID_MFReadWriteClassFactory, 0x48e2ed0f, 0x98c2, 0x4a37, 0xbe, 0xd5, 0x16, 0x63, 0x12, 0xdd, 0xd8, 0x3f);
 extern RPC_IF_HANDLE __MIDL_itf_mfreadwrite_0000_0000_v0_0_c_ifspec;

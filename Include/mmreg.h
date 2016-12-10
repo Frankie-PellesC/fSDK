@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #if !defined( RC_INVOKED ) && defined( __POCC__ )
-#include "pshpack1.h"
+#include <pshpack1.h>
 #endif
 
 #ifndef NOMMIDS
@@ -2484,5 +2484,5 @@ MJPGDHTSEG_STORAGE BYTE MJPGDHTSeg[0x1A4] =
 #define MIXERCONTROL_CONTROLTYPE_SRS_ONOFF              (MIXERCONTROL_CONTROLTYPE_BOOLEAN + 7)
 #define MIXERCONTROL_CONTROLTYPE_SRS_SYNTHSELECT        (MIXERCONTROL_CONTROLTYPE_BOOLEAN + 8)
 #endif
-#include "poppack.h"
+#include <poppack.h>
 #endif

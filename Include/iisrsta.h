@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __iisrsta_h__
 #define __iisrsta_h__
@@ -37,8 +37,8 @@ typedef interface IIisServiceControl IIisServiceControl;
 #define __IisServiceControl_FWD_DEFINED__
 typedef struct IisServiceControl IisServiceControl;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 DEFINE_GUID(IID_IIisServiceControl, 0xE8FB8620, 0x588F, 0x11d2, 0x9d, 0x61, 0x0, 0xc0, 0x4f, 0x79, 0xc5, 0xfe);
 DEFINE_GUID(CLSID_IisServiceControl, 0xE8FB8621, 0x588F, 0x11d2, 0x9d, 0x61, 0x0, 0xc0, 0x4f, 0x79, 0xc5, 0xfe);
 DEFINE_GUID(LIBID_IISRSTALib, 0xE8FB8614, 0x588F, 0x11d2, 0x9d, 0x61, 0x0, 0xc0, 0x4f, 0x79, 0xc5, 0xfe);
