@@ -99,8 +99,8 @@ typedef SCESTATUS(*PF_UpdateService) (PSCESVC_CALLBACK_INFO pSceCbInfo, PSCESVC_
 #endif
 #ifndef _UUIDS_SCE_ATTACHMENT_
 #define _UUIDS_SCE_ATTACHMENT_
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #if __RPCNDR_H_VERSION__ < 440
 #define __RPCNDR_H_VERSION__ 440
 #ifndef MIDL_INTERFACE
@@ -108,8 +108,8 @@ typedef SCESTATUS(*PF_UpdateService) (PSCESVC_CALLBACK_INFO pSceCbInfo, PSCESVC_
 #endif
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #define struuidNodetypeSceTemplateServices      "{24a7f717-1f0c-11d1-affb-00c04fb984f9}"
 #define lstruuidNodetypeSceTemplateServices      L"{24a7f717-1f0c-11d1-affb-00c04fb984f9}"

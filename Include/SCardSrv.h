@@ -12,7 +12,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "scardssp.h"
+#include <scardssp.h>
 #ifdef _DEBUG
 #pragma message("scardsrv.h is obsolete.  Use scardssp.h")
 #endif

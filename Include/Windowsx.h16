@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "pshpack.h"
+#include <pshpack.h>
 #define GetInstanceModule(hInstance) GetModuleHandle((LPCSTR)MAKELP(0, hInstance))
 #define GlobalPtrHandle(lp) ((HGLOBAL)LOWORD(GlobalHandle(SELECTOROF(lp))))
 #define GlobalLockPtr(lp) ((BOOL)SELECTOROF(GlobalLock(GlobalPtrHandle(lp))))
@@ -514,5 +514,5 @@
 #define GET_WM_VSCROLL_POS(wp, lp)      LOWORD(lp)
 #define GET_WM_VSCROLL_HWND(wp, lp)     (HWND)HIWORD(lp)
 #define GET_WM_VSCROLL_MPS(code, pos, hwnd) (WPARAM)(code), MAKELONG(pos, hwnd)
-#include "poppack.h"
+#include <poppack.h>
 #endif

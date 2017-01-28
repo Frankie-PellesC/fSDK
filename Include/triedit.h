@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __triedit_h__
 #define __triedit_h__
@@ -38,8 +38,8 @@ typedef struct TriEditDocument TriEditDocument;
 #define __IDocHostDragDropHandler_FWD_DEFINED__
 typedef interface IDocHostDragDropHandler IDocHostDragDropHandler;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #define dwFilterDefaults		0x00000000

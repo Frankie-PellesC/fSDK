@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __taskschd_h__
 #define __taskschd_h__
@@ -337,8 +337,8 @@ typedef interface ITaskHandlerStatus ITaskHandlerStatus;
 #define __ITaskHandler_FWD_DEFINED__
 typedef interface ITaskHandler ITaskHandler;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 extern RPC_IF_HANDLE __MIDL_itf_taskschd_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_taskschd_0000_0000_v0_0_s_ifspec;
 #ifndef __TaskScheduler_LIBRARY_DEFINED__

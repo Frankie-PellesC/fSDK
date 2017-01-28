@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __vss_h__
 #define __vss_h__
@@ -37,10 +37,10 @@ typedef interface IVssEnumObject IVssEnumObject;
 #define __IVssAsync_FWD_DEFINED__
 typedef interface IVssAsync IVssAsync;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 #pragma pack(push, 8)
-#include "vsserror.h"
+#include <vsserror.h>
 typedef enum _VSS_OBJECT_TYPE
 {
 	VSS_OBJECT_UNKNOWN = 0,

@@ -17,14 +17,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __ISimpleDataConverter_FWD_DEFINED__
 #define __ISimpleDataConverter_FWD_DEFINED__
 typedef interface ISimpleDataConverter ISimpleDataConverter;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #ifndef __ISimpleDataConverter_INTERFACE_DEFINED__

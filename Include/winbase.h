@@ -2,10 +2,11 @@
  \file		winbase.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+ \par  Status: 
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Jun 26 17:10:17 2016
- \date		Modified on Sun Jun 26 17:10:17 2016
+ \date		Modified on Mon Jan 23 14:22:51 2017
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -505,7 +506,7 @@ typedef struct _MEMORYSTATUS {
 #define THREAD_PRIORITY_ERROR_RETURN    (MAXLONG)
 #define THREAD_PRIORITY_TIME_CRITICAL   THREAD_BASE_PRIORITY_LOWRT
 #define THREAD_PRIORITY_IDLE            THREAD_BASE_PRIORITY_IDLE
-#define THREAD_MODE_BACKGROUND_BEG   0x00010000
+#define THREAD_MODE_BACKGROUND_BEGIN    0x00010000
 #define THREAD_MODE_BACKGROUND_END      0x00020000
 #define VOLUME_NAME_DOS  0x0
 #define VOLUME_NAME_GUID 0x1
@@ -4636,7 +4637,7 @@ WINBASEAPI DWORD APIENTRY ReadThreadProfilingData(HANDLE PerformanceDataHandle, 
 #endif
 #if !defined(RC_INVOKED)
 #if defined(ISOLATION_AWARE_ENABLED) && (ISOLATION_AWARE_ENABLED != 0)
-#include "winbase.inl"
+#include <winbase.inl>
 #endif
 #endif
 #endif

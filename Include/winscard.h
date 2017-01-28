@@ -16,9 +16,9 @@
 #endif
 #include <wtypes.h>
 #include <winioctl.h>
-#include "winsmcrd.h"
+#include <winsmcrd.h>
 #ifndef SCARD_S_SUCCESS
-#include "SCardErr.h"
+#include <SCardErr.h>
 #endif
 
 #ifndef _LPCBYTE_DEFINED

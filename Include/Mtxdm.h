@@ -14,6 +14,6 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "comsvcs.h"
+#include <comsvcs.h>
 __declspec(dllimport) HRESULT __cdecl GetDispenserManager(IDispenserManager**);
 #endif

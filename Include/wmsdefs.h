@@ -14,8 +14,8 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "WMSContextNames.h"
-#include "WMSCatID.h"
+#include <WMSContextNames.h>
+#include <WMSCatID.h>
 #define WMS_VER_MAJOR   9
 #define WMS_VER_MINOR   0
 EXTERN_GUID( LIBID_WMSServerLib, 0xD71E02C2,0x41EF,0x11D2,0xBF,0x23,0x00,0x80,0x5F,0xBE,0x84,0xA6  );

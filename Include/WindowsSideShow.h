@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #if (_WIN32_WINNT >= 0x0600)
-#include "propkeydef.h"
+#include <propkeydef.h>
 const CONTENT_ID CONTENT_ID_GLANCE = 0;
 const DWORD SIDESHOW_EVENTID_APPLICATION_ENTER = 0xFFFF0000;
 const DWORD SIDESHOW_EVENTID_APPLICATION_EXIT = 0xFFFF0001;

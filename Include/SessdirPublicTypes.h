@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -25,7 +25,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 #define SINGLE_SESSION 0x1
 #define FORCE_REJOIN 0x2
 #define FORCE_REJOIN_IN_CLUSTERMODE 0x3

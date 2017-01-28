@@ -13,13 +13,13 @@
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
 #include <rpc.h>
-#include "rpcndr.h"
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __iwamreg_h__
 #define __iwamreg_h__
@@ -42,8 +42,8 @@ typedef interface IIISApplicationAdmin IIISApplicationAdmin;
 #define __WamAdmin_FWD_DEFINED__
 typedef struct WamAdmin WamAdmin;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 #ifndef __WAMREG_IADM__IID
 #define __WAMREG_IADM__IID
 DEFINE_GUID(IID_IWamAdmin, 0x29822AB7, 0xF302, 0x11D0, 0x99, 0x53, 0x00, 0xC0, 0x4F, 0xD9, 0x19, 0xC1);

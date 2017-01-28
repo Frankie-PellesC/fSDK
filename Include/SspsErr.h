@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #ifndef SCARD_S_SUCCESS
-#include "scarderr.h"
+#include <scarderr.h>
 #endif
 #ifdef _DEBUG
 #pragma message("sspserr.h is obsolete.")

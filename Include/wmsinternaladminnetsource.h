@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmsinternaladminnetsource_h__
 #define __wmsinternaladminnetsource_h__
@@ -38,8 +38,8 @@ typedef interface IWMSInternalAdminNetSource2 IWMSInternalAdminNetSource2;
 #define __IWMSInternalAdminNetSource3_FWD_DEFINED__
 typedef interface IWMSInternalAdminNetSource3 IWMSInternalAdminNetSource3;
 #endif
-#include "oaidl.h"
-#include "wmnetsourcecreator.h"
+#include <oaidl.h>
+#include <wmnetsourcecreator.h>
 void *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void *);
 EXTERN_GUID(IID_IWMSInternalAdminNetSource, 0x8BB23E5F, 0xD127, 0x4afb, 0x8D, 0x02, 0xAE, 0x5B, 0x66, 0xD5, 0x4C, 0x78);

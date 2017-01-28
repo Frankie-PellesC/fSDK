@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmspacket_h__
 #define __wmspacket_h__
@@ -49,9 +49,9 @@ typedef interface IWMSPacketParser IWMSPacketParser;
 #define __IWMSStreamSignalHandler_FWD_DEFINED__
 typedef interface IWMSStreamSignalHandler IWMSStreamSignalHandler;
 #endif
-#include "objidl.h"
-#include "WMSBuffer.h"
-#include "WMSContext.h"
+#include <objidl.h>
+#include <WMSBuffer.h>
+#include <WMSContext.h>
 EXTERN_GUID(IID_IWMSPacket, 0x3309C901, 0x10A4, 0x11d2, 0x9E, 0xEE, 0x00, 0x60, 0x97, 0xD2, 0xD7, 0xCF);
 EXTERN_GUID(IID_IWMSPacketList, 0x3309C902, 0x10A4, 0x11d2, 0x9E, 0xEE, 0x00, 0x60, 0x97, 0xD2, 0xD7, 0xCF);
 EXTERN_GUID(IID_IWMSPacketParser, 0x8b59f7e1, 0x5411, 0x11d2, 0x9e, 0xff, 0x0, 0x60, 0x97, 0xd2, 0xd7, 0xcf);

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmsplaylistparser_h__
 #define __wmsplaylistparser_h__
@@ -45,11 +45,11 @@ typedef interface IWMSPlaylistParserPlugin IWMSPlaylistParserPlugin;
 #define __IWMSPlaylistParserPluginCallback_FWD_DEFINED__
 typedef interface IWMSPlaylistParserPluginCallback IWMSPlaylistParserPluginCallback;
 #endif
-#include "oaidl.h"
-#include "xmldom.h"
-#include "nsscore.h"
-#include "wmsbuffer.h"
-#include "dataContainer.h"
+#include <oaidl.h>
+#include <xmldom.h>
+#include <nsscore.h>
+#include <wmsbuffer.h>
+#include <dataContainer.h>
 EXTERN_GUID(IID_IWMSPlaylistParser, 0xee1f2ec, 0x48ef, 0x11d2, 0x9e, 0xff, 0x0, 0x60, 0x97, 0xd2, 0xd7, 0xcf);
 EXTERN_GUID(IID_IWMSPlaylistParserCallback, 0xee1f2ed, 0x48ef, 0x11d2, 0x9e, 0xff, 0x0, 0x60, 0x97, 0xd2, 0xd7, 0xcf);
 EXTERN_GUID(IID_IWMSPlaylistParserPlugin, 0xfa8764c1, 0x90a2, 0x11d2, 0x9f, 0x22, 0x0, 0x60, 0x97, 0xd2, 0xd7, 0xcf);

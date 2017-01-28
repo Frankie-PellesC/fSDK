@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __xenroll_h__
 #define __xenroll_h__
@@ -65,9 +65,9 @@ typedef struct CEnroll2 CEnroll2;
 #define __CEnroll_FWD_DEFINED__
 typedef struct CEnroll CEnroll;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "wincrypt.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <wincrypt.h>
 #ifndef __ICEnroll_INTERFACE_DEFINED__
 #define __ICEnroll_INTERFACE_DEFINED__
 extern const IID IID_ICEnroll;

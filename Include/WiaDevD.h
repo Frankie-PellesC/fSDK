@@ -15,7 +15,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "wia.h"
+#include <wia.h>
 #include <pshpack8.h>
 #if (_WIN32_WINNT >= 0x0600)
 #undef  INTERFACE

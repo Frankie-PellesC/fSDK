@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #include <windows.h>
-#include "wptypes.h"
+#include <wptypes.h>
 #if defined(IN_WPPDLL)
 #define WPPFUNC	__declspec( dllexport )
 #else

@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "pnrpdef.h"
+#include <pnrpdef.h>
 #ifndef NS_PNRPNAME
 #define NS_PNRPNAME     (38) 
 #endif

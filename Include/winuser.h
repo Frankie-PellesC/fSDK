@@ -6587,7 +6587,7 @@ WINUSERAPI BOOL WINAPI ShutdownBlockReasonQuery(HWND hWnd, LPWSTR pwszBuff, DWOR
 WINUSERAPI BOOL WINAPI ShutdownBlockReasonDestroy(HWND hWnd);
 #if !defined(RC_INVOKED)
 #if defined(ISOLATION_AWARE_ENABLED) && (ISOLATION_AWARE_ENABLED != 0)
-#include "winuser.inl"
+#include <winuser.inl>
 #endif
 #endif
 //Frankie: From PellesC Extensions.

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __streamcache_h__
 #define __streamcache_h__
@@ -53,11 +53,11 @@ typedef interface IWMSCacheItemDescriptor IWMSCacheItemDescriptor;
 #define __IWMSCacheItemCollection_FWD_DEFINED__
 typedef interface IWMSCacheItemCollection IWMSCacheItemCollection;
 #endif
-#include "objidl.h"
-#include "nsscore.h"
-#include "DataContainerVersion.h"
-#include "event.h"
-#include "WMSProxy.h"
+#include <objidl.h>
+#include <nsscore.h>
+#include <DataContainerVersion.h>
+#include <event.h>
+#include <WMSProxy.h>
 EXTERN_GUID(IID_IWMSCacheProxy, 0x2E34AB83, 0x0D3D, 0x11d2, 0x9E, 0xEE, 0x00, 0x60, 0x97, 0xD2, 0xD7, 0xCF);
 EXTERN_GUID(IID_IWMSCacheProxyCallback, 0x2E34AB84, 0x0D3D, 0x11d2, 0x9E, 0xEE, 0x00, 0x60, 0x97, 0xD2, 0xD7, 0xCF);
 EXTERN_GUID(IID_IWMSCacheProxyServer, 0x68F2A550, 0xD815, 0x11D2, 0xBE, 0xF6, 0x00, 0xA0, 0xC9, 0x5E, 0xC3, 0x43);

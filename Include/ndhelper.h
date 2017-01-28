@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __ndhelper_h__
 #define __ndhelper_h__
@@ -49,8 +49,8 @@ typedef interface INetDiagHelperInfo INetDiagHelperInfo;
 #define __INetDiagExtensibleHelper_FWD_DEFINED__
 typedef interface INetDiagExtensibleHelper INetDiagExtensibleHelper;
 #endif
-#include "oaidl.h"
-#include "ndattrib.h"
+#include <oaidl.h>
+#include <ndattrib.h>
 typedef enum tagDIAGNOSIS_STATUS
 {
 	DS_NOT_IMPLEMENTED = 0,

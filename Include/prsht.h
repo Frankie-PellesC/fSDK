@@ -652,7 +652,7 @@ typedef struct _PSHNOTIFY
 #define PROP_LG_CYDLG           218
 #if !defined(RC_INVOKED)
 #if defined(ISOLATION_AWARE_ENABLED) && (ISOLATION_AWARE_ENABLED != 0)
-#include "prsht.inl"
+#include <prsht.inl>
 #endif
 #endif
 #include <poppack.h>

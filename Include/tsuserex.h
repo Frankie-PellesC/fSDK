@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -37,9 +37,9 @@ typedef interface IADsTSUserEx IADsTSUserEx;
 #define __ADsTSUserEx_FWD_DEFINED__
 typedef struct ADsTSUserEx ADsTSUserEx;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "mmc.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <mmc.h>
 #ifndef __TSUSEREXLib_LIBRARY_DEFINED__
 #define __TSUSEREXLib_LIBRARY_DEFINED__
 extern const IID LIBID_TSUSEREXLib;

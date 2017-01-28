@@ -18,7 +18,7 @@
 #define ODBCVER 0x0380
 #endif
 #ifndef __SQLTYPES
-#include "sqltypes.h"
+#include <sqltypes.h>
 #endif
 #define SQL_NULL_DATA             (-1)
 #define SQL_DATA_AT_EXEC          (-2)

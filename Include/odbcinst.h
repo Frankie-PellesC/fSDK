@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #ifndef __SQL
-#include "sql.h"
+#include <sql.h>
 #endif
 #ifndef ODBCVER
 #define ODBCVER 0x0380

@@ -20,14 +20,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __IWICPalette_FWD_DEFINED__
 #define __IWICPalette_FWD_DEFINED__
@@ -161,9 +161,9 @@ typedef interface IWICDevelopRawNotificationCallback IWICDevelopRawNotificationC
 #define __IWICDevelopRaw_FWD_DEFINED__
 typedef interface IWICDevelopRaw IWICDevelopRaw;
 #endif
-#include "wtypes.h"
-#include "propidl.h"
-#include "ocidl.h"
+#include <wtypes.h>
+#include <propidl.h>
+#include <ocidl.h>
 //#include <intsafe.h>
 #define WINCODEC_SDK_VERSION 0x0236
 DEFINE_GUID(CLSID_WICImagingFactory, 0xcacaf262, 0x9370, 0x4615, 0xa1, 0x3b, 0x9f, 0x55, 0x39, 0xda, 0x4c, 0xa);

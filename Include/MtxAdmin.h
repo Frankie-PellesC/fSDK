@@ -9,11 +9,11 @@
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __mtxadmin_h__
 #define __mtxadmin_h__
@@ -76,8 +76,8 @@ typedef struct RemoteComponentUtil RemoteComponentUtil;
 #define __RoleAssociationUtil_FWD_DEFINED__
 typedef struct RoleAssociationUtil RoleAssociationUtil;
 #endif
-#include "unknwn.h"
-#include "oaidl.h"
+#include <unknwn.h>
+#include <oaidl.h>
 #include <objbase.h>
 #ifndef DECLSPEC_UUID
 #if _MSC_VER >= 1100

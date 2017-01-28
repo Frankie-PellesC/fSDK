@@ -1796,8 +1796,8 @@ XMFINLINE XMVECTOR XMVectorInsert(FXMVECTOR VD, FXMVECTOR VS, UINT VSLeftRotateE
     return XMVectorSelect( VD, XMVectorRotateLeft(VS, VSLeftRotateElements), Control );
 }
 #endif
-#include "xnamathconvert.inl"
-#include "xnamathvector.inl"
-#include "xnamathmatrix.inl"
-#include "xnamathmisc.inl"
+#include <xnamathconvert.inl>
+#include <xnamathvector.inl>
+#include <xnamathmatrix.inl>
+#include <xnamathmisc.inl>
 #endif

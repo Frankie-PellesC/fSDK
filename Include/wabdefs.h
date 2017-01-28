@@ -30,7 +30,7 @@
 #ifndef _INC_STDDEF
 #include <stddef.h>
 #endif
-#include "limits.h"
+#include <limits.h>
 #ifndef MAPI_DIM
 #define MAPI_DIM    1
 #endif

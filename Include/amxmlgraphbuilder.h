@@ -42,9 +42,9 @@ typedef struct IXMLGraphBuilderVtbl
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IXMLGraphBuilder * This, REFIID riid, void **ppvObject);
 	ULONG(STDMETHODCALLTYPE * AddRef) (IXMLGraphBuilder * This);
 	ULONG(STDMETHODCALLTYPE * Release) (IXMLGraphBuilder * This);
-    STDMETHOD(BuildFromXML) (IXMLGraphBuilder *This, IGraphBuilder *pGraph, IXMLElement *pxml);
-    STDMETHOD(SaveToXML) (IXMLGraphBuilder *This, IGraphBuilder *pGraph, BSTR *pbstrxml);
-    STDMETHOD(BuildFromXMLFile) (IXMLGraphBuilder *This, IGraphBuilder *pGraph, LPCWSTR wszFileName, LPCWSTR wszBaseURL);
+	STDMETHOD(BuildFromXML) (IXMLGraphBuilder *This, IGraphBuilder *pGraph, IXMLElement *pxml);
+	STDMETHOD(SaveToXML) (IXMLGraphBuilder *This, IGraphBuilder *pGraph, BSTR *pbstrxml);
+	STDMETHOD(BuildFromXMLFile) (IXMLGraphBuilder *This, IGraphBuilder *pGraph, LPCWSTR wszFileName, LPCWSTR wszBaseURL);
 };
 interface IXMLGraphBuilder
 {

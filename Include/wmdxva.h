@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmdxva_h__
 #define __wmdxva_h__
@@ -38,8 +38,8 @@ typedef interface IWMCodecAMVideoAccelerator IWMCodecAMVideoAccelerator;
 #define __IWMCodecVideoAccelerator_FWD_DEFINED__
 typedef interface IWMCodecVideoAccelerator IWMCodecVideoAccelerator;
 #endif
-#include "mediaobj.h"
-#include "videoacc.h"
+#include <mediaobj.h>
+#include <videoacc.h>
 void *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void *);
 EXTERN_GUID(IID_IWMPlayerTimestampHook, 0x28580dda, 0xd98e, 0x48d0, 0xb7, 0xae, 0x69, 0xe4, 0x73, 0xa0, 0x28, 0x25);

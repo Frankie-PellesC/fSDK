@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmsbuffer_h__
 #define __wmsbuffer_h__
@@ -46,7 +46,7 @@ typedef interface INSSBuffer4 INSSBuffer4;
 #define __IWMSBufferAllocator_FWD_DEFINED__
 typedef interface IWMSBufferAllocator IWMSBufferAllocator;
 #endif
-#include "objidl.h"
+#include <objidl.h>
 void * __RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free( void * );
 EXTERN_GUID( IID_INSSBuffer, 0xE1CD3524,0x03D7,0x11d2,0x9E,0xED,0x00,0x60,0x97,0xD2,0xD7,0xCF );

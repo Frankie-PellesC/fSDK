@@ -14,11 +14,11 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "naptypes.h"
-#include "napmanagement.h"
-#include "napservermanagement.h"
-#include "napprotocol.h"
-#include "napenforcementclient.h"
+#include <naptypes.h>
+#include <napmanagement.h>
+#include <napservermanagement.h>
+#include <napprotocol.h>
+#include <napenforcementclient.h>
 #ifndef NAPAPI
 #define NAPAPI DECLSPEC_IMPORT
 #endif

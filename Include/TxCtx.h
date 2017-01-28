@@ -12,4 +12,4 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "comsvcs.h"
+#include <comsvcs.h>

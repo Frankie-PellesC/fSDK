@@ -19,7 +19,7 @@ typedef BYTE FOLDERTYPE;
 typedef DWORD RULEID;
 typedef DWORD MESSAGEFLAGS;
 typedef DWORDLONG FOLDERID;
-#include "syncop.h"
+#include <syncop.h>
 const DWORD FOLDER_DATABASE_VERSION_OE6     = 5;
 DEFINE_GUID(CLSID_MessageDatabase_OE6, 0x6f74fdc5, 0xe366, 0x11d1, 0x9a, 0x4e, 0x0, 0xc0, 0x4f, 0xa3, 0x9, 0xd4);
 DEFINE_GUID(CLSID_FolderDatabase_OE6, 0x6f74fdc6, 0xe366, 0x11d1, 0x9a, 0x4e, 0x0, 0xc0, 0x4f, 0xa3, 0x9, 0xd4);

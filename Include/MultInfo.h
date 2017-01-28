@@ -9,11 +9,11 @@
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __multinfo_h__
 #define __multinfo_h__
@@ -32,7 +32,7 @@ typedef interface IProvideClassInfo2 IProvideClassInfo2;
 #define __IProvideMultipleClassInfo_FWD_DEFINED__
 typedef interface IProvideMultipleClassInfo IProvideMultipleClassInfo;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #ifndef _OLECTL_H_

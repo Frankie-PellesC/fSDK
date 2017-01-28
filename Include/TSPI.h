@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #include <windows.h>
-#include "tapi.h"
+#include <tapi.h>
 #ifdef _WIN32
 #if TAPI_CURRENT_VERSION < 0x00020000
 #error Building a 32bit 1.3 or 1.4 service provider is not supported.

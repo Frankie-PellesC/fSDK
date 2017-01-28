@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #ifndef	 __oledb_h__
-#include "oledb.h"
+#include <oledb.h>
 #endif
 extern const GUID OLEDBDECLSPEC CLSID_SQLOLEDB =
 { 0xc7ff16cL, 0x38e3, 0x11d0, 0x97, 0xab, 0x0, 0xc0, 0x4f, 0xc2, 0xad, 0x98 };
@@ -216,14 +216,14 @@ struct SSVARIANT
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __sqloledb_h__
 #define __sqloledb_h__
@@ -239,7 +239,7 @@ typedef interface IRowsetFastLoad IRowsetFastLoad;
 #define __ISchemaLock_FWD_DEFINED__
 typedef interface ISchemaLock ISchemaLock;
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t size);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 typedef struct tagSSErrorInfo

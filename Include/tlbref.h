@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __tlbref_h__
 #define __tlbref_h__
@@ -33,7 +33,7 @@
 #define __ITypeLibResolver_FWD_DEFINED__
 typedef interface ITypeLibResolver ITypeLibResolver;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 EXTERN_GUID(IID_ITypeLibResolver, 0x8F026EDB, 0x785E, 0x4470, 0xA8, 0xE1, 0xB4, 0xE8, 0x4E, 0x9D, 0x17, 0x79);
 extern RPC_IF_HANDLE __MIDL_itf_tlbref_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_tlbref_0000_0000_v0_0_s_ifspec;

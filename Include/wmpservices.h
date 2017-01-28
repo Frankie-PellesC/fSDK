@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmpservices_h__
 #define __wmpservices_h__
@@ -58,8 +58,8 @@ typedef interface IWMPTranscodePolicy IWMPTranscodePolicy;
 #define __IWMPUserEventSink_FWD_DEFINED__
 typedef interface IWMPUserEventSink IWMPUserEventSink;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 typedef enum WMPServices_StreamState
 {
 	WMPServices_StreamState_Stop = 0,

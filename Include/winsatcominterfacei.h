@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __winsatcominterfacei_h__
 #define __winsatcominterfacei_h__
@@ -97,10 +97,10 @@ typedef struct CAccessiblityWinSAT CAccessiblityWinSAT;
 #define __CQueryOEMWinSATCustomization_FWD_DEFINED__
 typedef struct CQueryOEMWinSATCustomization CQueryOEMWinSATCustomization;
 #endif
-#include "oaidl.h"
-#include "msxml.h"
-#include "oleacc.h"
-#include "taskschd.h"
+#include <oaidl.h>
+#include <msxml.h>
+#include <oleacc.h>
+#include <taskschd.h>
 typedef enum __MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001
 {
 	WINSAT_OEM_DATA_VALID = 0,

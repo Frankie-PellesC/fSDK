@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wincodecsdk_h__
 #define __wincodecsdk_h__
@@ -69,8 +69,8 @@ typedef interface IWICMetadataWriterInfo IWICMetadataWriterInfo;
 #define __IWICComponentFactory_FWD_DEFINED__
 typedef interface IWICComponentFactory IWICComponentFactory;
 #endif
-#include "wtypes.h"
-#include "wincodec.h"
+#include <wtypes.h>
+#include <wincodec.h>
 DEFINE_GUID(GUID_MetadataFormatUnknown, 0xA45E592F, 0x9078, 0x4A7C, 0xAD, 0xB5, 0x4E, 0xDC, 0x4F, 0xD6, 0x1B, 0x1F);
 DEFINE_GUID(GUID_MetadataFormatIfd, 0x537396C6, 0x2D8A, 0x4BB6, 0x9B, 0xF8, 0x2F, 0x0A, 0x8E, 0x2A, 0x3A, 0xDF);
 DEFINE_GUID(GUID_MetadataFormatSubIfd, 0x58A2E128, 0x2DB9, 0x4E57, 0xBB, 0x14, 0x51, 0x77, 0x89, 0x1E, 0xD3, 0x31);

@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #include <windows.h>
-#include "wptypes.h"
+#include <wptypes.h>
 #include <pshpack4.h>
 #define WPF_NO_RECURSIVE_POST			0x00000001
 #define WPF_NO_WIZARD					0x00000002

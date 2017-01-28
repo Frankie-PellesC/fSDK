@@ -644,7 +644,7 @@ typedef struct
 } AVIPALCHANGE;
 #endif
 #ifndef RC_INVOKED
-#include "pshpack8.h"
+#include <pshpack8.h>
 #endif
 #ifndef NOMMREG
 #include <mmreg.h>
@@ -1756,6 +1756,6 @@ BOOL VFWAPI GetSaveFileNamePreviewW(LPOPENFILENAMEW lpofn);
 #endif
 #endif
 #ifndef RC_INVOKED
-#include "poppack.h"
+#include <poppack.h>
 #endif
 #endif

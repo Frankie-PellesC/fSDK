@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -25,8 +25,8 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "wtypes.h"
-#include "oaidl.h"
+#include <wtypes.h>
+#include <oaidl.h>
 #if (WINVER >= _WIN32_WINNT_WIN7)
 #if defined(VDS_MIDL_PASS)
 typedef LPWSTR PWSTR;
@@ -350,7 +350,7 @@ typedef enum _UNSURFACE_VIRTUAL_DISK_FLAG
 } UNSURFACE_VIRTUAL_DISK_FLAG;
 #pragma warning(pop)
 #else
-#include "virtdisk.h"
+#include <virtdisk.h>
 #endif
 #endif
 extern RPC_IF_HANDLE __MIDL_itf_vdssys_0000_0000_v0_0_c_ifspec;

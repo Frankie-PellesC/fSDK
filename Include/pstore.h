@@ -85,9 +85,9 @@ typedef DWORD PST_ACCESSCLAUSETYPE;
 #define MIN_PST_ERROR                   0x800C0001
 #define MAX_PST_ERROR                   0x800C0F00
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
-#include "wtypes.h"
+#include <rpc.h>
+#include <rpcndr.h>
+#include <wtypes.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 typedef DWORD PST_PROVIDERCAPABILITIES;
@@ -166,8 +166,8 @@ typedef struct _PST_BINARYCHECKDATA __RPC_FAR *LPPST_BINARYCHECKDATA;
 extern RPC_IF_HANDLE __MIDL__intf_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL__intf_0000_v0_0_s_ifspec;
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __IEnumPStoreItems_FWD_DEFINED__
 #define __IEnumPStoreItems_FWD_DEFINED__
@@ -185,7 +185,7 @@ typedef interface IPStore IPStore;
 #define __IEnumPStoreProviders_FWD_DEFINED__
 typedef interface IEnumPStoreProviders IEnumPStoreProviders;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 void __RPC_FAR *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void __RPC_FAR *);
 #ifndef __IEnumPStoreItems_INTERFACE_DEFINED__

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __qmgr_h__
 #define __qmgr_h__
@@ -57,9 +57,9 @@ typedef interface IBackgroundCopyQMgr IBackgroundCopyQMgr;
 #define __BackgroundCopyQMgr_FWD_DEFINED__
 typedef struct BackgroundCopyQMgr BackgroundCopyQMgr;
 #endif
-#include "unknwn.h"
-#include "ocidl.h"
-#include "docobj.h"
+#include <unknwn.h>
+#include <ocidl.h>
+#include <docobj.h>
 #define  QM_NOTIFY_FILE_DONE         0x00000001
 #define  QM_NOTIFY_JOB_DONE          0x00000002
 #define  QM_NOTIFY_GROUP_DONE        0x00000004

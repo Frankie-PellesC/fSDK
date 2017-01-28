@@ -12,4 +12,4 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "scardssp.h"
+#include <scardssp.h>

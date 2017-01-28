@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmsplugin_h__
 #define __wmsplugin_h__
@@ -33,8 +33,8 @@
 #define __IWMSPlugin_FWD_DEFINED__
 typedef interface IWMSPlugin IWMSPlugin;
 #endif
-#include "oaidl.h"
-#include "WMSNamedValues.h"
+#include <oaidl.h>
+#include <WMSNamedValues.h>
 typedef DECLSPEC_UUID("56209C38-39FA-432a-8068-307B7BAE01B8")
 enum WMS_PLUGIN_LOAD_TYPE
 {

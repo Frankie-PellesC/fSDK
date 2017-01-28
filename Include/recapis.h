@@ -14,8 +14,8 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "tpcshrd.h"
-#include "RecTypes.h"
+#include <tpcshrd.h>
+#include <RecTypes.h>
 #ifndef __HRECOALT__
 #define __HRECOALT__
 DECLARE_HANDLE(HRECOALT);

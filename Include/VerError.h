@@ -16,9 +16,9 @@
 #endif
 #ifndef _VER_RAW_STRUCT_FOR_IDL_
 #ifndef _JIT64_PEV_
-#include "corhdr.h"
-#include "openum.h"
-#include "corerror.h"
+#include <corhdr.h>
+#include <openum.h>
+#include <corerror.h>
 #endif
 #define VER_ERR_FATAL		0x80000000L
 #define VER_ERR_OFFSET		0x00000001L

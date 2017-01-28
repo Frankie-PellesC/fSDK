@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -237,7 +237,7 @@ typedef struct VMTask VMTask;
 #define __VMUSBDevice_FWD_DEFINED__
 typedef struct VMUSBDevice VMUSBDevice;
 #endif
-#include "unknwn.h"
+#include <unknwn.h>
 #define	VM_E_TIMED_OUT	( ( ( HRESULT  )(( ( ( ( unsigned long  )1 << 31 )  | ( ( unsigned long  )4 << 16 )  )  | ( unsigned long  )0x202 ) ) | ( HRESULT  )(( 1 << 29 ) ) )  )
 #define	VM_E_OUT_OF_RESOURCE	( ( ( HRESULT  )(( ( ( ( unsigned long  )1 << 31 )  | ( ( unsigned long  )4 << 16 )  )  | ( unsigned long  )0x203 ) ) | ( HRESULT  )(( 1 << 29 ) ) )  )
 #define	VM_E_TOO_MANY_VMS	( ( ( HRESULT  )(( ( ( ( unsigned long  )1 << 31 )  | ( ( unsigned long  )4 << 16 )  )  | ( unsigned long  )0x204 ) ) | ( HRESULT  )(( 1 << 29 ) ) )  )

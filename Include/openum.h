@@ -17,7 +17,7 @@
 typedef enum opcode_t
 {
 #define OPDEF(c,s,pop,push,args,type,l,s1,s2,ctrl) c,
-#include "opcode.def"
+#include <opcode.def>
 #undef OPDEF
   CEE_COUNT,
 } OPCODE;

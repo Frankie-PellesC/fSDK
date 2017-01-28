@@ -15,8 +15,8 @@
 #pragma once
 #endif
 #if (NTDDI_VERSION >= NTDDI_WIN7)
-#include "winbio_types.h"
-#include "winbio_err.h"
+#include <winbio_types.h>
+#include <winbio_err.h>
 HRESULT WINAPI WinBioEnumServiceProviders(WINBIO_BIOMETRIC_TYPE Factor, WINBIO_BSP_SCHEMA **BspSchemaArray, SIZE_T *BspCount);
 HRESULT WINAPI WinBioEnumBiometricUnits(WINBIO_BIOMETRIC_TYPE Factor, WINBIO_UNIT_SCHEMA **UnitSchemaArray, SIZE_T *UnitCount);
 HRESULT WINAPI WinBioEnumDatabases(WINBIO_BIOMETRIC_TYPE Factor, WINBIO_STORAGE_SCHEMA **StorageSchemaArray, SIZE_T *StorageCount);

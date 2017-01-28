@@ -17,6 +17,9 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
+#ifndef __FSDK__
+#define __FSDK__ 0x00010200		//Define FSDK for use in conditional compilations
+#endif
 #if defined(RC_INVOKED) && !defined(NOWINRES)
 #include <winresrc.h>
 #else

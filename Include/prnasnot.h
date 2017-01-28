@@ -15,11 +15,11 @@
 #pragma once
 #endif
 #if (NTDDI_VERSION >= NTDDI_VISTA)
-#include "initguid.h"
+#include <initguid.h>
 #include <objbase.h>
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 DEFINE_GUID(IID_IPrintAsyncNotifyChannel,        0x4a5031b1, 0x1f3f, 0x4db0, 0xa4, 0x62, 0x45, 0x30, 0xed, 0x8b, 0x04, 0x51);
 DEFINE_GUID(IID_IPrintAsyncNotifyCallback,       0x7def34c1, 0x9d92, 0x4c99, 0xb3, 0xb3, 0xdb, 0x94, 0xa9, 0xd4, 0x19, 0x1b);

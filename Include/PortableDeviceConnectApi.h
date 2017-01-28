@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __PortableDeviceConnectApi_h__
 #define __PortableDeviceConnectApi_h__
@@ -45,9 +45,9 @@ typedef interface IConnectionRequestCallback IConnectionRequestCallback;
 #define __EnumBthMtpConnectors_FWD_DEFINED__
 typedef struct EnumBthMtpConnectors EnumBthMtpConnectors;
 #endif
-#include "wtypes.h"
-#include "propsys.h"
-#include "PortableDeviceConnectImports.h"
+#include <wtypes.h>
+#include <propsys.h>
+#include <PortableDeviceConnectImports.h>
 DEFINE_DEVPROPKEY(DEVPKEY_MTPBTH_IsConnected, 0xea1237fa, 0x589d, 0x4472, 0x84, 0xe4, 0x0a, 0xbe, 0x36, 0xfd, 0x62, 0xef, 2);
 extern RPC_IF_HANDLE __MIDL_itf_PortableDeviceConnectApi_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_PortableDeviceConnectApi_0000_0000_v0_0_s_ifspec;

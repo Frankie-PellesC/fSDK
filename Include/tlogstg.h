@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __tlogstg_h__
 #define __tlogstg_h__
@@ -45,9 +45,9 @@ typedef interface IEnumTravelLogEntry IEnumTravelLogEntry;
 #define __ITravelLogStg_FWD_DEFINED__
 typedef interface ITravelLogStg ITravelLogStg;
 #endif
-#include "objidl.h"
-#include "oleidl.h"
-#include "shtypes.h"
+#include <objidl.h>
+#include <oleidl.h>
+#include <shtypes.h>
 #pragma comment(lib,"uuid.lib")
 #define SID_STravelLogCursor IID_ITravelLogStg
 typedef struct _WINDOWDATA

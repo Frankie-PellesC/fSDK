@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __netprov_h__
 #define __netprov_h__
@@ -41,9 +41,9 @@ typedef interface IProvisioningProfileWireless IProvisioningProfileWireless;
 #define __NetProvisioning_FWD_DEFINED__
 typedef struct NetProvisioning NetProvisioning;
 #endif
-#include "oaidl.h"
-#include "prsht.h"
-#include "msxml.h"
+#include <oaidl.h>
+#include <prsht.h>
+#include <msxml.h>
 #if ( _MSC_VER >= 800 )
 #pragma warning(disable:4201)
 #endif

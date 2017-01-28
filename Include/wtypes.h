@@ -14,8 +14,8 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 500
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -24,8 +24,8 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "basetsd.h"
-#include "guiddef.h"
+#include <basetsd.h>
+#include <guiddef.h>
 extern RPC_IF_HANDLE __MIDL_itf_wtypes_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_wtypes_0000_0000_v0_0_s_ifspec;
 #ifndef __IWinTypes_INTERFACE_DEFINED__

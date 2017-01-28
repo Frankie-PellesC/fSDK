@@ -16,11 +16,11 @@
 #endif
 #if ((NTDDI_VERSION >= NTDDI_VISTA || defined(__VSSYM32_H__)) && !defined(SCHEMA_VERIFY_VSSYM32))
 #pragma message ("TmSchema.h is obsolete. Please include vssym32.h instead.")
-#include "vssym32.h"
+#include <vssym32.h>
 #else
 #if (defined(SCHEMA_STRINGS)) || (! defined(TMSCHEMA_H))
 #define TMSCHEMA_H
-#include "SchemaDef.h"
+#include <SchemaDef.h>
 #define THEMEMGR_VERSION 1
 BEGIN_TM_SCHEMA(ThemeMgrSchema)
 BEGIN_TM_ENUM(BGTYPE)

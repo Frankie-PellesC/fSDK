@@ -84,7 +84,7 @@ typedef struct _SR_SECURITY_DESCRIPTOR
 #define _NTSAM_USER_ACCOUNT_FLAG_
 #endif
 #ifndef _NTSAM_USER_ALL_INFO_
-#include "pshpack4.h"
+#include <pshpack4.h>
 typedef struct _USER_ALL_INFORMATION
 {
     LARGE_INTEGER LastLogon;
@@ -121,7 +121,7 @@ typedef struct _USER_ALL_INFORMATION
     BOOLEAN PasswordExpired;
     BOOLEAN PrivateDataSensitive;
 } USER_ALL_INFORMATION,  *PUSER_ALL_INFORMATION;
-#include "poppack.h"
+#include <poppack.h>
 #define _NTSAM_USER_ALL_INFO_
 #endif
 #ifndef _NTSAM_SAM_USER_PARMS_                 

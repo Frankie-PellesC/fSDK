@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -33,7 +33,7 @@ typedef interface OLEDBSimpleProviderListener OLEDBSimpleProviderListener;
 #define __OLEDBSimpleProvider_FWD_DEFINED__
 typedef interface OLEDBSimpleProvider OLEDBSimpleProvider;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 #pragma comment(lib,"uuid.lib")
 #ifndef SIMPDATA_H
 #define SIMPDATA_H

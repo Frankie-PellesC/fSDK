@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmnetsourcecreator_h__
 #define __wmnetsourcecreator_h__
@@ -30,7 +30,7 @@
 #define __INSNetSourceCreator_FWD_DEFINED__
 typedef interface INSNetSourceCreator INSNetSourceCreator;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 void *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void *);
 EXTERN_GUID(CLSID_ClientNetManager, 0xCD12A3CE, 0x9C42, 0x11D2, 0xBE, 0xED, 0x00, 0x60, 0x08, 0x2F, 0x20, 0x54);

@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 440
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmdrmdeviceapp_h__
 #define __wmdrmdeviceapp_h__
@@ -38,9 +38,9 @@ typedef interface IWMDRMDeviceApp2 IWMDRMDeviceApp2;
 #define __WMDRMDeviceApp_FWD_DEFINED__
 typedef struct WMDRMDeviceApp WMDRMDeviceApp;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
-#include "wmdm.h"
+#include <oaidl.h>
+#include <ocidl.h>
+#include <wmdm.h>
 void *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void *);
 #include <mswmdm.h>

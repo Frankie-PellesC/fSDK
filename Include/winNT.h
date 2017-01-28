@@ -1961,7 +1961,7 @@ typedef struct _FLOATING_SAVE_AREA
 typedef FLOATING_SAVE_AREA *PFLOATING_SAVE_AREA;
 #define MAXIMUM_SUPPORTED_EXTENSION     512
 C_ASSERT(sizeof(XSAVE_FORMAT) == MAXIMUM_SUPPORTED_EXTENSION);
-#include "pshpack4.h"
+#include <pshpack4.h>
 typedef struct _CONTEXT
 {
 	DWORD ContextFlags;
@@ -1991,7 +1991,7 @@ typedef struct _CONTEXT
 	BYTE ExtendedRegisters[MAXIMUM_SUPPORTED_EXTENSION];
 } CONTEXT;
 typedef CONTEXT *PCONTEXT;
-#include "poppack.h"
+#include <poppack.h>
 #endif
 #ifndef _LDT_ENTRY_DEFINED
 #define _LDT_ENTRY_DEFINED
@@ -2805,7 +2805,7 @@ typedef struct _WOW64_FLOATING_SAVE_AREA
 	DWORD Cr0NpxState;
 } WOW64_FLOATING_SAVE_AREA;
 typedef WOW64_FLOATING_SAVE_AREA *PWOW64_FLOATING_SAVE_AREA;
-#include "pshpack4.h"
+#include <pshpack4.h>
 typedef struct _WOW64_CONTEXT
 {
 	DWORD ContextFlags;
@@ -2835,7 +2835,7 @@ typedef struct _WOW64_CONTEXT
 	BYTE ExtendedRegisters[WOW64_MAXIMUM_SUPPORTED_EXTENSION];
 } WOW64_CONTEXT;
 typedef WOW64_CONTEXT *PWOW64_CONTEXT;
-#include "poppack.h"
+#include <poppack.h>
 typedef struct _WOW64_LDT_ENTRY
 {
 	WORD LimitLow;
@@ -5216,13 +5216,13 @@ typedef struct
 	DWORD DefaultAlert1;
 	DWORD DefaultAlert2;
 } SYSTEM_BATTERY_STATE, *PSYSTEM_BATTERY_STATE;
-#include "pshpack4.h"
+#include <pshpack4.h>
 #define IMAGE_DOS_SIGNATURE                 0x5A4D
 #define IMAGE_OS2_SIGNATURE                 0x454E
 #define IMAGE_OS2_SIGNATURE_LE              0x454C
 #define IMAGE_VXD_SIGNATURE                 0x454C
 #define IMAGE_NT_SIGNATURE                  0x00004550
-#include "pshpack2.h"
+#include <pshpack2.h>
 typedef struct _IMAGE_DOS_HEADER
 {
 	WORD e_magic;
@@ -5332,7 +5332,7 @@ typedef struct _IMAGE_VXD_HEADER
 	WORD e32_devid;
 	WORD e32_ddkver;
 } IMAGE_VXD_HEADER, *PIMAGE_VXD_HEADER;
-#include "poppack.h"
+#include <poppack.h>
 typedef struct _IMAGE_FILE_HEADER
 {
 	WORD Machine;
@@ -5648,7 +5648,7 @@ typedef struct _IMAGE_SECTION_HEADER
 #define IMAGE_SCN_MEM_READ                   0x40000000
 #define IMAGE_SCN_MEM_WRITE                  0x80000000
 #define IMAGE_SCN_SCALE_INDEX                0x00000001
-#include "pshpack2.h"
+#include <pshpack2.h>
 typedef struct _IMAGE_SYMBOL
 {
 	union
@@ -6180,7 +6180,7 @@ typedef struct _IMAGE_LINENUMBER
 	WORD Linenumber;
 } IMAGE_LINENUMBER;
 typedef IMAGE_LINENUMBER UNALIGNED *PIMAGE_LINENUMBER;
-#include "poppack.h"
+#include <poppack.h>
 typedef struct _IMAGE_BASE_RELOCATION
 {
 	DWORD VirtualAddress;
@@ -6232,7 +6232,7 @@ typedef struct _IMAGE_IMPORT_BY_NAME
 	WORD Hint;
 	BYTE Name[1];
 } IMAGE_IMPORT_BY_NAME, *PIMAGE_IMPORT_BY_NAME;
-#include "pshpack8.h"
+#include <pshpack8.h>
 typedef struct _IMAGE_THUNK_DATA64
 {
 	union
@@ -6244,7 +6244,7 @@ typedef struct _IMAGE_THUNK_DATA64
 	} u1;
 } IMAGE_THUNK_DATA64;
 typedef IMAGE_THUNK_DATA64 *PIMAGE_THUNK_DATA64;
-#include "poppack.h"
+#include <poppack.h>
 typedef struct _IMAGE_THUNK_DATA32
 {
 	union
@@ -6594,7 +6594,7 @@ typedef struct _ImageArchitectureEntry
 	DWORD FixupInstRVA;
 	DWORD NewInst;
 } IMAGE_ARCHITECTURE_ENTRY, *PIMAGE_ARCHITECTURE_ENTRY;
-#include "poppack.h"
+#include <poppack.h>
 #define IMPORT_OBJECT_HDR_SIG2  0xffff
 typedef struct IMPORT_OBJECT_HEADER
 {

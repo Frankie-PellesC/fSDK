@@ -15,7 +15,7 @@
 #pragma once
 #endif
 #ifndef __SQL
-#include "sql.h"
+#include <sql.h>
 #endif
 #define SQL_SPEC_MAJOR     3
 #define SQL_SPEC_MINOR     80
@@ -1387,6 +1387,6 @@ typedef struct tagODBC_VS_ARGS
 VOID    SQL_API FireVSDebugEvent(PODBC_VS_ARGS);
 #endif
 #if defined(WIN32) || defined(_WIN64)
-#include "sqlucode.h"
+#include <sqlucode.h>
 #endif
 #endif

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wmsbasicplugin_h__
 #define __wmsbasicplugin_h__
@@ -33,9 +33,9 @@
 #define __IWMSBasicPlugin_FWD_DEFINED__
 typedef interface IWMSBasicPlugin IWMSBasicPlugin;
 #endif
-#include "WMSNamedValues.h"
-#include "nsscore.h"
-#include "WMSEventLog.h"
+#include <WMSNamedValues.h>
+#include <nsscore.h>
+#include <WMSEventLog.h>
 EXTERN_GUID(IID_IWMSBasicPlugin, 0x66E6CE48, 0xF8BB, 0x4bcc, 0x8F, 0xD6, 0x42, 0xA9, 0xD5, 0xD3, 0x28, 0x71);
 extern RPC_IF_HANDLE __MIDL_itf_wmsbasicplugin_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_wmsbasicplugin_0000_0000_v0_0_s_ifspec;

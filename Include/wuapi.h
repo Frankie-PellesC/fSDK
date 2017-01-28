@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __wuapi_h__
 #define __wuapi_h__
@@ -481,7 +481,7 @@ typedef struct UpdateServiceManager UpdateServiceManager;
 #define __InstallationAgent_FWD_DEFINED__
 typedef struct InstallationAgent InstallationAgent;
 #endif
-#include "oaidl.h"
+#include <oaidl.h>
 #pragma comment(lib, "wuguid.lib")
 DEFINE_GUID(LIBID_WUApiLib, 0xB596CC9F, 0x56E5, 0x419E, 0xA6, 0x22, 0xE0, 0x1B, 0xB4, 0x57, 0x43, 0x1E);
 DEFINE_GUID(IID_IUpdateLockdown, 0xa976c28d, 0x75a1, 0x42aa, 0x94, 0xae, 0x8a, 0xf8, 0xb8, 0x72, 0x08, 0x9a);

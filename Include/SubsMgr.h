@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __subsmgr_h__
 #define __subsmgr_h__
@@ -53,8 +53,8 @@ typedef interface ISubscriptionMgr2 ISubscriptionMgr2;
 #define __SubscriptionMgr_FWD_DEFINED__
 typedef struct SubscriptionMgr SubscriptionMgr;
 #endif
-#include "unknwn.h"
-#include "ocidl.h"
+#include <unknwn.h>
+#include <ocidl.h>
 #pragma comment(lib,"uuid.lib")
 typedef GUID SUBSCRIPTIONCOOKIE;
 extern RPC_IF_HANDLE __MIDL_itf_subsmgr_0000_0000_v0_0_c_ifspec;

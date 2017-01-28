@@ -15,8 +15,8 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
@@ -41,8 +41,8 @@ typedef interface IRendezvousApplication IRendezvousApplication;
 #define __RendezvousApplication_FWD_DEFINED__
 typedef struct RendezvousApplication RendezvousApplication;
 #endif
-#include "oaidl.h"
-#include "ocidl.h"
+#include <oaidl.h>
+#include <ocidl.h>
 #define	DISPID_EVENT_ON_STATE_CHANGED	( 5 )
 #define	DISPID_EVENT_ON_TERMINATION	( 6 )
 #define	DISPID_EVENT_ON_CONTEXT_DATA	( 7 )

@@ -15,14 +15,14 @@
 #ifndef __REQUIRED_RPCSAL_H_VERSION__
 #define __REQUIRED_RPCSAL_H_VERSION__ 100
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __syncmgr_h__
 #define __syncmgr_h__
@@ -165,9 +165,9 @@ typedef struct SyncResultsFolder SyncResultsFolder;
 #define __SimpleConflictPresenter_FWD_DEFINED__
 typedef struct SimpleConflictPresenter SimpleConflictPresenter;
 #endif
-#include "objidl.h"
-#include "oleidl.h"
-#include "shobjidl.h"
+#include <objidl.h>
+#include <oleidl.h>
+#include <shobjidl.h>
 #define	MAX_SYNCMGR_ID	( 64 )
 #define	MAX_SYNCMGR_PROGRESSTEXT	( 260 )
 #define	MAX_SYNCMGR_NAME	( 128 )

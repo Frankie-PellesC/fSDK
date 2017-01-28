@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "exposeenums2managed.h"
+#include <exposeenums2managed.h>
 ENUM16  EnTvRat_System
 {
     MPAA                    = 0,
@@ -139,5 +139,5 @@ FLAGS16 BfEnTvRat_Attributes_CAF_TV
     CAF_IsBlocked                       = EHRECVR_MGD_NAMESPACE(RATATTR(BfIsBlocked)),
     CAF_ValidAttrSubmask                = 1
 } BfEnTvRat_Attributes_CAF_TV;
-#include "unexposeenums2managed.h"
+#include <unexposeenums2managed.h>
 #endif

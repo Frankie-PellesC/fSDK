@@ -14,7 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#include "VSStyle.h"
+#include <VSStyle.h>
 enum BGTYPE
 {
 	BT_IMAGEFILE = 0,

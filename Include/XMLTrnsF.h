@@ -12,14 +12,14 @@
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
 #define __REQUIRED_RPCNDR_H_VERSION__ 475
 #endif
-#include "rpc.h"
-#include "rpcndr.h"
+#include <rpc.h>
+#include <rpcndr.h>
 #ifndef __RPCNDR_H_VERSION__
 #error this stub requires an updated version of <rpcndr.h>
 #endif
 #ifndef COM_NO_WINDOWS_H
-#include "windows.h"
-#include "ole2.h"
+#include <windows.h>
+#include <ole2.h>
 #endif
 #ifndef __xmltrnsf_h__
 #define __xmltrnsf_h__
@@ -42,8 +42,8 @@ typedef interface ISWbemXMLDocumentSet ISWbemXMLDocumentSet;
 #define __IWmiXMLTransformer_FWD_DEFINED__
 typedef interface IWmiXMLTransformer IWmiXMLTransformer;
 #endif
-#include "msxml.h"
-#include "wbemdisp.h"
+#include <msxml.h>
+#include <wbemdisp.h>
 void *__RPC_USER MIDL_user_allocate(size_t);
 void __RPC_USER MIDL_user_free(void *);
 #ifndef __WmiXMLTransformer_LIBRARY_DEFINED__
