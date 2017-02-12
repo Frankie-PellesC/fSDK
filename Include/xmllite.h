@@ -2,10 +2,12 @@
  \file		xmllite.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            Jan-09-2017 - Fixed compiler hangout problem.
+ \par  Status: 
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Sep 19 19:51:54 2016
- \date		Modified on Mon Sep 19 19:51:54 2016
+ \date		Modified on Thu Feb  9 17:56:44 2017
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -207,7 +209,8 @@ typedef enum XmlWriterProperty
 extern const IID LIBID_XmlLite;
 #ifndef __IXmlReader_INTERFACE_DEFINED__
 #define __IXmlReader_INTERFACE_DEFINED__
-extern const IID IID_IXmlReader;
+DEFINE_GUID(IID_IXmlReader,   0x7279fc81, 0x709d, 0x4095, 0xb6, 0x3d, 0x69, 0xfe, 0x4b, 0x0d, 0x90, 0x30);
+//extern const IID IID_IXmlReader;
 typedef struct IXmlReaderVtbl
 {
 	BEGIN_INTERFACE
@@ -274,7 +277,8 @@ interface IXmlReader
 #endif
 #ifndef __IXmlResolver_INTERFACE_DEFINED__
 #define __IXmlResolver_INTERFACE_DEFINED__
-extern const IID IID_IXmlResolver;
+DEFINE_GUID(IID_IXmlResolver, 0x7279FC82, 0x709d, 0x4095, 0xb6, 0x3d, 0x69, 0xfe, 0x4b, 0x0d, 0x90, 0x30);
+//extern const IID IID_IXmlResolver;
 typedef struct IXmlResolverVtbl
 {
 	BEGIN_INTERFACE
@@ -297,7 +301,8 @@ interface IXmlResolver
 #endif
 #ifndef __IXmlWriter_INTERFACE_DEFINED__
 #define __IXmlWriter_INTERFACE_DEFINED__
-extern const IID IID_IXmlWriter;
+DEFINE_GUID(IID_IXmlWriter,   0x7279FC88, 0x709d, 0x4095, 0xb6, 0x3d, 0x69, 0xfe, 0x4b, 0x0d, 0x90, 0x30);
+//extern const IID IID_IXmlWriter;
 typedef struct IXmlWriterVtbl
 {
 	BEGIN_INTERFACE
@@ -375,9 +380,6 @@ interface IXmlWriter
 #endif
 #endif
 #endif
-#define IID_IXmlReader   __uuidof(IXmlReader)
-#define IID_IXmlWriter   __uuidof(IXmlWriter)
-#define IID_IXmlResolver __uuidof(IXmlResolver)
 extern RPC_IF_HANDLE __MIDL_itf_xmllite_0001_0113_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_xmllite_0001_0113_v0_0_s_ifspec;
 #endif
