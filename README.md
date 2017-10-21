@@ -33,20 +33,19 @@ I'll wait your feedbacks to fix the package then move it to contributions.
       'adjusted' to fit **MS** requirements. Some of the technical problems found are:
         *  Missing `__declspec(selectany)` for **COMDAT** sections.
 
-          **MS** is used to multiply define symbols tagging them with this specifier, but unfortunately **PellesC** don't actually support **COMDAT**'s.
+           **MS** is used to multiply define symbols tagging them with this specifier, but unfortunately **PellesC** don't actually support **COMDAT**'s.
+           Note that the **PellesC** linker have the option '/FORCE:MULTIPLE' that could mimic the behavior of `__declspec(selectany)`, but, opposed to the specifier working way, it will ignore **all** multiple definitions, de facto masking also eventual errors.
 
-          Note that the **PellesC** linker have the option '/FORCE:MULTIPLE' that could mimic the behavior of `__declspec(selectany)`, but, opposed to the specifier working way, it will ignore **all** multiple definitions, de facto masking also eventual errors.
+           The solution actually used, in headers, is the conversion of all symbol instances with an equivalent `#define`.
 
-          The solution actually used, in headers, is the conversion of all symbol instances with an equivalent `#define`.
-
-          This should work well for base types (`int`, `char`, `float`, `double`, etc), but could be a problem with complex types (`struct`s, `union`s, etc).
+           This should work well for base types (`int`, `char`, `float`, `double`, etc), but could be a problem with complex types (`struct`s, `union`s, etc).
         *  **GUID**s, **PROPKEYS**s and other complex types that are tagged by `__declspec(selectany)`.
 
-          They are required for reference on each source file that includes the header. The solution used is to tie them to conditional definition. The symbols are normally defined as 'extern', and instantiated only if the preprocessor symbol 'INITGUID' is defined.
+           They are required for reference on each source file that includes the header. The solution used is to tie them to conditional definition. The symbols are normally defined as 'extern', and instantiated only if the preprocessor symbol 'INITGUID' is defined.
 
-          Defining the symbol in only one source, before the header `#include`, creates a single instance of the symbol while there are multiple `extern` references.
+           Defining the symbol in only one source, before the header `#include`, creates a single instance of the symbol while there are multiple `extern` references.
 
-          The **COMDAT** problem in libraries, where **GUID**'s are instantiated, has been solved splitting definitions in multiple source files.
+           The **COMDAT** problem in libraries, where **GUID**'s are instantiated, has been solved splitting definitions in multiple source files.
     * **ANSI C compliance**.
 
       Many native **MS** headers are write with **C++** in mind, and for this reason are not **ANSI** compliant.
