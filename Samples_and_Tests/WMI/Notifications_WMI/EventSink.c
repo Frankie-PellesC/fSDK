@@ -1,4 +1,3 @@
-// EventSink.cpp
 #include "eventsink.h"
 
 DEFINE_INTERFACE(IWbemObjectSink,				//Interface type
@@ -24,7 +23,6 @@ IWbemObjectSink STDMETHODCALLTYPE *CreateEventSink(void)
 
 void STDMETHODCALLTYPE DestroyEventSink(IWbemObjectSink *p)
 {
-	//bDone = TRUE;
 	free(p);
 }
 

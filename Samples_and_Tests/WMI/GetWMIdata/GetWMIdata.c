@@ -61,11 +61,6 @@ HRESULT PrintProperties(IWbemClassObject *pclsObj)
 			break;
 		}
 
-		//printf("pvtType=%d | ", pvtType);
-		//if (vtProp.vt == VT_BSTR)
-		//if (pvtType == VT_BSTR)
-			//printf(" %-24ls : %ls\n", bsPropName, vtProp.bstrVal ? vtProp.bstrVal : L"");
-
 		printf(" %-41ls : ", bsPropName);
 
 		switch(pvtType)
