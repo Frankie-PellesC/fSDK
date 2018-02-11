@@ -24,8 +24,8 @@
 #include <windows.h>
 #include <ole2.h>
 #endif
-#ifndef __mshtml_h__
-#define __mshtml_h__
+#ifndef __mshtmlC_h__
+#define __mshtmlC_h__
 #if __POCC__ >= 500
 #pragma once
 #endif
