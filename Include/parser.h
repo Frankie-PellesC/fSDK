@@ -2,10 +2,11 @@
  \file		parser.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sat Sep  3 19:01:59 2016
- \date		Modified on Sat Sep  3 19:01:59 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -18,7 +19,7 @@
 #if 0
 #include <stdio.h>
 #undef CLASS_IMPORT_EXPORT
-#if defined(HHCTRL) || defined(_M_CEE_PURE)
+#ifdef HHCTRL
   #define CLASS_IMPORT_EXPORT
 #else
  #ifdef HHSETUP
@@ -27,11 +28,7 @@
   #define CLASS_IMPORT_EXPORT __declspec( dllimport )
  #endif
 #endif
-#ifdef _M_CEE_PURE
-#define PARSER_API_INLINE __clrcall
-#else
 #define PARSER_API_INLINE
-#endif
 #define MAX_LINE_LEN 1024
 #define F_OK 0
 #define F_NOFILE 1

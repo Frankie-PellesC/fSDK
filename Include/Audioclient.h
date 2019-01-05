@@ -2,10 +2,13 @@
  \file		Audioclient.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Added classes IID definition
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sat Jul  2 18:38:55 2016
- \date		Modified on Sat Jul  2 18:38:55 2016
+ \date		Modified on Thu Jan  3 01:25:01 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -99,13 +102,13 @@ extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0000_v0_0_s_ifspec;
 #ifndef __IAudioClient_INTERFACE_DEFINED__
 #define __IAudioClient_INTERFACE_DEFINED__
-extern const IID IID_IAudioClient;
+DEFINE_GUID(IID_IAudioClient, 0x1cb9ad4c, 0xdbfa, 0x4c32, 0xb1, 0x78, 0xc2, 0xf5, 0x68, 0xa7, 0x03, 0xb2);
 typedef struct IAudioClientVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioClient * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioClient * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioClient * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioClient * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioClient * This);
 	HRESULT(STDMETHODCALLTYPE * Initialize) (IAudioClient * This, AUDCLNT_SHAREMODE ShareMode, DWORD StreamFlags, REFERENCE_TIME hnsBufferDuration, REFERENCE_TIME hnsPeriodicity, const WAVEFORMATEX * pFormat, LPCGUID AudioSessionGuid);
 	HRESULT(STDMETHODCALLTYPE * GetBufferSize) (IAudioClient * This, UINT32 * pNumBufferFrames);
 	HRESULT(STDMETHODCALLTYPE * GetStreamLatency) (IAudioClient * This, REFERENCE_TIME * phnsLatency);
@@ -144,13 +147,13 @@ interface IAudioClient
 #endif
 #ifndef __IAudioRenderClient_INTERFACE_DEFINED__
 #define __IAudioRenderClient_INTERFACE_DEFINED__
-extern const IID IID_IAudioRenderClient;
+DEFINE_GUID(IID_IAudioRenderClient, 0xf294acfc, 0x3146, 0x4483, 0xa7, 0xbf, 0xad, 0xdc, 0xa7, 0xc2, 0x60, 0xe2);
 typedef struct IAudioRenderClientVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioRenderClient * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioRenderClient * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioRenderClient * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioRenderClient * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioRenderClient * This);
 	HRESULT(STDMETHODCALLTYPE * GetBuffer) (IAudioRenderClient * This, UINT32 NumFramesRequested, BYTE ** ppData);
 	HRESULT(STDMETHODCALLTYPE * ReleaseBuffer) (IAudioRenderClient * This, UINT32 NumFramesWritten, DWORD dwFlags);
 	END_INTERFACE
@@ -169,13 +172,13 @@ interface IAudioRenderClient
 #endif
 #ifndef __IAudioCaptureClient_INTERFACE_DEFINED__
 #define __IAudioCaptureClient_INTERFACE_DEFINED__
-extern const IID IID_IAudioCaptureClient;
+DEFINE_GUID(IID_IAudioCaptureClient, 0xc8adbd64, 0xe71e, 0x48a0, 0xa4, 0xde, 0x18, 0x5c, 0x39, 0x5c, 0xd3, 0x17);
 typedef struct IAudioCaptureClientVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioCaptureClient * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioCaptureClient * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioCaptureClient * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioCaptureClient * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioCaptureClient * This);
 	HRESULT(STDMETHODCALLTYPE * GetBuffer) (IAudioCaptureClient * This, BYTE ** ppData, UINT32 * pNumFramesToRead, DWORD * pdwFlags, UINT64 * pu64DevicePosition, UINT64 * pu64QPCPosition);
 	HRESULT(STDMETHODCALLTYPE * ReleaseBuffer) (IAudioCaptureClient * This, UINT32 NumFramesRead);
 	HRESULT(STDMETHODCALLTYPE * GetNextPacketSize) (IAudioCaptureClient * This, UINT32 * pNumFramesInNextPacket);
@@ -199,13 +202,13 @@ extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0003_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_audioclient_0000_0003_v0_0_s_ifspec;
 #ifndef __IAudioClock_INTERFACE_DEFINED__
 #define __IAudioClock_INTERFACE_DEFINED__
-extern const IID IID_IAudioClock;
+DEFINE_GUID(IID_IAudioClock, 0xcd63314f, 0x3fba, 0x4a1b, 0x81, 0x2c, 0xef, 0x96, 0x35, 0x87, 0x28, 0xe7);
 typedef struct IAudioClockVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioClock * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioClock * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioClock * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioClock * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioClock * This);
 	HRESULT(STDMETHODCALLTYPE * GetFrequency) (IAudioClock * This, UINT64 * pu64Frequency);
 	HRESULT(STDMETHODCALLTYPE * GetPosition) (IAudioClock * This, UINT64 * pu64Position, UINT64 * pu64QPCPosition);
 	HRESULT(STDMETHODCALLTYPE * GetCharacteristics) (IAudioClock * This, DWORD * pdwCharacteristics);
@@ -226,13 +229,13 @@ interface IAudioClock
 #endif
 #ifndef __IAudioClock2_INTERFACE_DEFINED__
 #define __IAudioClock2_INTERFACE_DEFINED__
-extern const IID IID_IAudioClock2;
+DEFINE_GUID(IID_IAudioClock2, 0x6f49ff73, 0x6727, 0x49ac, 0xa0, 0x08, 0xd9, 0x8c, 0xf5, 0xe7, 0x00, 0x48);
 typedef struct IAudioClock2Vtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioClock2 * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioClock2 * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioClock2 * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioClock2 * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioClock2 * This);
 	HRESULT(STDMETHODCALLTYPE * GetDevicePosition) (IAudioClock2 * This, UINT64 * DevicePosition, UINT64 * QPCPosition);
 	END_INTERFACE
 }  IAudioClock2Vtbl;
@@ -249,13 +252,13 @@ interface IAudioClock2
 #endif
 #ifndef __IAudioClockAdjustment_INTERFACE_DEFINED__
 #define __IAudioClockAdjustment_INTERFACE_DEFINED__
-extern const IID IID_IAudioClockAdjustment;
+DEFINE_GUID(IID_IAudioClockAdjustment, 0xf6e4c0a0, 0x46d9, 0x4fb8, 0xbe, 0x21, 0x57, 0xa3, 0xef, 0x2b, 0x62, 0x6c);
 typedef struct IAudioClockAdjustmentVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioClockAdjustment * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioClockAdjustment * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioClockAdjustment * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioClockAdjustment * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioClockAdjustment * This);
 	HRESULT(STDMETHODCALLTYPE * SetSampleRate) (IAudioClockAdjustment * This, float flSampleRate);
 	END_INTERFACE
 }  IAudioClockAdjustmentVtbl;
@@ -272,13 +275,13 @@ interface IAudioClockAdjustment
 #endif
 #ifndef __ISimpleAudioVolume_INTERFACE_DEFINED__
 #define __ISimpleAudioVolume_INTERFACE_DEFINED__
-extern const IID IID_ISimpleAudioVolume;
+DEFINE_GUID(IID_ISimpleAudioVolume, 0x87ce5498, 0x68d6, 0x44e5, 0x92, 0x15, 0x6d, 0xa4, 0x7e, 0xf8, 0x83, 0xd8);
 typedef struct ISimpleAudioVolumeVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (ISimpleAudioVolume * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (ISimpleAudioVolume * This);
-	ULONG(STDMETHODCALLTYPE * Release) (ISimpleAudioVolume * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (ISimpleAudioVolume * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (ISimpleAudioVolume * This);
 	HRESULT(STDMETHODCALLTYPE * SetMasterVolume) (ISimpleAudioVolume * This, float fLevel, LPCGUID EventContext);
 	HRESULT(STDMETHODCALLTYPE * GetMasterVolume) (ISimpleAudioVolume * This, float *pfLevel);
 	HRESULT(STDMETHODCALLTYPE * SetMute) (ISimpleAudioVolume * This, const BOOL bMute, LPCGUID EventContext);
@@ -301,13 +304,13 @@ interface ISimpleAudioVolume
 #endif
 #ifndef __IAudioStreamVolume_INTERFACE_DEFINED__
 #define __IAudioStreamVolume_INTERFACE_DEFINED__
-extern const IID IID_IAudioStreamVolume;
+DEFINE_GUID(IID_IAudioStreamVolume, 0x93014887, 0x242d, 0x4068, 0x8a, 0x15, 0xcf, 0x5e, 0x93, 0xb9, 0x0f, 0xe3);
 typedef struct IAudioStreamVolumeVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IAudioStreamVolume * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IAudioStreamVolume * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IAudioStreamVolume * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IAudioStreamVolume * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IAudioStreamVolume * This);
 	HRESULT(STDMETHODCALLTYPE * GetChannelCount) (IAudioStreamVolume * This, UINT32 * pdwCount);
 	HRESULT(STDMETHODCALLTYPE * SetChannelVolume) (IAudioStreamVolume * This, UINT32 dwIndex, const float fLevel);
 	HRESULT(STDMETHODCALLTYPE * GetChannelVolume) (IAudioStreamVolume * This, UINT32 dwIndex, float *pfLevel);
@@ -332,13 +335,13 @@ interface IAudioStreamVolume
 #endif
 #ifndef __IChannelAudioVolume_INTERFACE_DEFINED__
 #define __IChannelAudioVolume_INTERFACE_DEFINED__
-extern const IID IID_IChannelAudioVolume;
+DEFINE_GUID(IID_IChannelAudioVolume, 0x1c158861, 0xb533, 0x4b30, 0xb1, 0xcf, 0xe8, 0x53, 0xe5, 0x1c, 0x59, 0xb8);
 typedef struct IChannelAudioVolumeVtbl
 {
 	BEGIN_INTERFACE
 	HRESULT(STDMETHODCALLTYPE * QueryInterface) (IChannelAudioVolume * This, REFIID riid, void **ppvObject);
-	ULONG(STDMETHODCALLTYPE * AddRef) (IChannelAudioVolume * This);
-	ULONG(STDMETHODCALLTYPE * Release) (IChannelAudioVolume * This);
+	ULONG  (STDMETHODCALLTYPE * AddRef) (IChannelAudioVolume * This);
+	ULONG  (STDMETHODCALLTYPE * Release) (IChannelAudioVolume * This);
 	HRESULT(STDMETHODCALLTYPE * GetChannelCount) (IChannelAudioVolume * This, UINT32 * pdwCount);
 	HRESULT(STDMETHODCALLTYPE * SetChannelVolume) (IChannelAudioVolume * This, UINT32 dwIndex, const float fLevel, LPCGUID EventContext);
 	HRESULT(STDMETHODCALLTYPE * GetChannelVolume) (IChannelAudioVolume * This, UINT32 dwIndex, float *pfLevel);

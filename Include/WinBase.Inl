@@ -28,11 +28,7 @@
 #endif
 #endif
 #if !ISOLATION_AWARE_USE_STATIC_LIBRARY
-#ifndef _M_CEE_PURE
 #define IsolationAwarePrivatenCv WINAPI
-#else
-#define IsolationAwarePrivatenCv __clrcall
-#endif
 #ifdef _M_IX86
 ISOLATION_AWARE_INLINE HMODULE IsolationAwarePrivatenCv IsolationAwarePrivatezlybNQyVOeNeln(PCSTR s)
 {

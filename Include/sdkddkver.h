@@ -2,10 +2,13 @@
  \file		sdkddkver.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Jun 26 16:09:01 2016
- \date		Modified on Sun Jun 26 16:09:01 2016
+ \date		Modified on Thu Jan  3 23:59:55 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -84,8 +87,7 @@
 #define NTDDI_VISTASP2                      NTDDI_WIN6SP2
 #define NTDDI_VISTASP3                      NTDDI_WIN6SP3
 #define NTDDI_VISTASP4                      NTDDI_WIN6SP4
-#define NTDDI_LONGHORN  NTDDI_VISTA
-					    
+#define NTDDI_LONGHORN  					NTDDI_VISTA
 #define NTDDI_WS08                          NTDDI_WIN6SP1
 #define NTDDI_WS08SP2                       NTDDI_WIN6SP2
 #define NTDDI_WS08SP3                       NTDDI_WIN6SP3

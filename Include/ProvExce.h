@@ -2,10 +2,11 @@
  \file		ProvExce.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Jul  3 16:29:59 2016
- \date		Modified on Sun Jul  3 16:29:59 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -14,13 +15,8 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#ifdef _M_CEE_PURE
-#define PROVIDER_EXCEPT_API_INLINE __clrcall
-#define PROVIDER_EXCEPT_SE_TRANSLATOR_FUNC_TYPE __se_translator_function_m
-#else
 #define PROVIDER_EXCEPT_API_INLINE __cdecl
 #define PROVIDER_EXCEPT_SE_TRANSLATOR_FUNC_TYPE _se_translator_function
-#endif
 #if 0
 //ONLY C++
 #include <eh.h>
@@ -51,7 +47,6 @@ public
     UINT GetSENumber () { return m_nSE ; }
 	EXCEPTION_POINTERS *GetExtendedInfo() { return m_pExp ; }
 } ;
-#ifndef _M_CEE_PURE
 class CSetStructuredExceptionHandler
 {
 private
@@ -68,6 +63,5 @@ public
 	{
 	}
 } ;
-#endif
 #endif
 #endif

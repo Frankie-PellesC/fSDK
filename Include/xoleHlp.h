@@ -14,11 +14,7 @@
 #if __POCC__ >= 500
 #pragma once
 #endif
-#ifdef _M_CEE_PURE
-#define EXPORTAPI HRESULT
-#else
 #define EXPORTAPI __declspec( dllexport ) HRESULT
-#endif
 #define OLE_TM_CONFIG_VERSION_1     ((DWORD)1)
 #define OLE_TM_CONFIG_VERSION_2     ((DWORD)2)
 typedef enum _APPLICATIONTYPE

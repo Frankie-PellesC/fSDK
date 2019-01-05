@@ -2,10 +2,11 @@
  \file		prsht.inl
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Fixed some minor issues
  \par Project: 
             PellesC Headers extension
  \date		Created  on Thu Sep  8 18:28:47 2016
- \date		Modified on Thu Sep  8 18:28:47 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -285,22 +286,12 @@ ISOLATION_AWARE_INLINE FARPROC IsolationAwarePrivatenCv PrshtIsolationAwarePriva
     static HMODULE s_module;
     BOOL fActivateActCtxSuccess = FALSE;
     ULONG_PTR ulpCookie = 0;
-#ifndef _M_CEE_PURE
     const static IsolationAwarePrivatepBAFGnAG_zBqHyr_vAsB
         c = { IsolationAwarePrivatezlybNQyVOeNelJ, L"Comctl32.dll"
 #ifdef _M_IX86
              , IsolationAwarePrivatezlybNQyVOeNeln, "Comctl32.dll"
 #endif
     };
-#else
-    static IsolationAwarePrivatepBAFGnAG_zBqHyr_vAsB c;
-    c.WinbaseIsolationAwarePrivateybNQJ = IsolationAwarePrivatezlybNQyVOeNelJ;
-    c.WinbaseIsolationAwarePrivateANZRJ = L"Comctl32.dll";
-#ifdef _M_IX86
-    c.WinbaseIsolationAwarePrivateybNQn = IsolationAwarePrivatezlybNQyVOeNeln;
-    c.WinbaseIsolationAwarePrivateANZRn = "Comctl32.dll";
-#endif
-#endif
     static IsolationAwarePrivatezHGnoyr_zBqHyr_vAsB m;
     __try
     {

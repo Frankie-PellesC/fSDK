@@ -2,10 +2,11 @@
  \file		commdlg.inl
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
  \par Project: 
             PellesC Headers extension
  \date		Created  on Thu Sep  8 18:45:39 2016
- \date		Modified on Thu Sep  8 18:45:39 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -932,21 +933,11 @@ ISOLATION_AWARE_INLINE FARPROC IsolationAwarePrivatenCv CommdlgIsolationAwarePri
 	static HMODULE s_module;
 	BOOL fActivateActCtxSuccess = FALSE;
 	ULONG_PTR ulpCookie = 0;
-#ifndef _M_CEE_PURE
 	const static IsolationAwarePrivatepBAFGnAG_zBqHyr_vAsB c = { IsolationAwarePrivatezlybNQyVOeNelJ, L"Comdlg32.dll"
 #ifdef _M_IX86
 			, IsolationAwarePrivatezlybNQyVOeNeln, "Comdlg32.dll"
 #endif
 	};
-#else
-	static IsolationAwarePrivatepBAFGnAG_zBqHyr_vAsB c;
-	c.WinbaseIsolationAwarePrivateybNQJ = IsolationAwarePrivatezlybNQyVOeNelJ;
-	c.WinbaseIsolationAwarePrivateANZRJ = L"Comdlg32.dll";
-#ifdef _M_IX86
-	c.WinbaseIsolationAwarePrivateybNQn = IsolationAwarePrivatezlybNQyVOeNeln;
-	c.WinbaseIsolationAwarePrivateANZRn = "Comdlg32.dll";
-#endif
-#endif
 	static IsolationAwarePrivatezHGnoyr_zBqHyr_vAsB m;
 	__try
 	{

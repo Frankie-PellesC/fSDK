@@ -2,11 +2,14 @@
  \file		winbase.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            30/12/2018 Updated with support for intrinsics added in POCC 
+            V.9.00
  \par  Status: 
+            Beta release
  \par Project: 
             PellesC Headers extension
- \date		Created  on Sun Jun 26 17:10:17 2016
- \date		Modified on Mon Jan 23 14:22:51 2017
+ \date		Created  on Sun Jun 26 15:58:44 2016
+ \date		Modified on Sun Dec 30 19:22:19 2018
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -143,11 +146,14 @@
 #define SECURITY_EFFECTIVE_ONLY    0x00080000
 #define SECURITY_SQOS_PRESENT      0x00100000
 #define SECURITY_VALID_SQOS_FLAGS  0x001F0000
-typedef struct _OVERLAPPED {
+typedef struct _OVERLAPPED
+{
     ULONG_PTR Internal;
     ULONG_PTR InternalHigh;
-    union {
-        struct {
+    union
+	{
+        struct
+		{
             DWORD Offset;
             DWORD OffsetHigh;
         } DUMMYSTRUCTNAME;
@@ -155,18 +161,21 @@ typedef struct _OVERLAPPED {
     } DUMMYUNIONNAME;
     HANDLE  hEvent;
 } OVERLAPPED, *LPOVERLAPPED;
-typedef struct _OVERLAPPED_ENTRY {
+typedef struct _OVERLAPPED_ENTRY
+{
     ULONG_PTR lpCompletionKey;
     LPOVERLAPPED lpOverlapped;
     ULONG_PTR Internal;
     DWORD dwNumberOfBytesTransferred;
 } OVERLAPPED_ENTRY, *LPOVERLAPPED_ENTRY;
-typedef struct _SECURITY_ATTRIBUTES {
+typedef struct _SECURITY_ATTRIBUTES
+{
     DWORD nLength;
     LPVOID lpSecurityDescriptor;
     BOOL bInheritHandle;
 } SECURITY_ATTRIBUTES, *PSECURITY_ATTRIBUTES, *LPSECURITY_ATTRIBUTES;
-typedef struct _PROCESS_INFORMATION {
+typedef struct _PROCESS_INFORMATION
+{
     HANDLE hProcess;
     HANDLE hThread;
     DWORD dwProcessId;
@@ -174,12 +183,14 @@ typedef struct _PROCESS_INFORMATION {
 } PROCESS_INFORMATION, *PPROCESS_INFORMATION, *LPPROCESS_INFORMATION;
 #ifndef _FILETIME_
 #define _FILETIME_
-typedef struct _FILETIME {
+typedef struct _FILETIME
+{
     DWORD dwLowDateTime;
     DWORD dwHighDateTime;
 } FILETIME, *PFILETIME, *LPFILETIME;
 #endif
-typedef struct _SYSTEMTIME {
+typedef struct _SYSTEMTIME
+{
     WORD wYear;
     WORD wMonth;
     WORD wDayOfWeek;
@@ -311,7 +322,8 @@ typedef LPVOID LPLDT_ENTRY;
 #define PARITY_EVEN       ((WORD)0x0400)
 #define PARITY_MARK       ((WORD)0x0800)
 #define PARITY_SPACE      ((WORD)0x1000)
-typedef struct _COMMPROP {
+typedef struct _COMMPROP
+{
     WORD wPacketLength;
     WORD wPacketVersion;
     DWORD dwServiceMask;
@@ -332,7 +344,8 @@ typedef struct _COMMPROP {
     WCHAR wcProvChar[1];
 } COMMPROP,*LPCOMMPROP;
 #define COMMPROP_INITIALIZED ((DWORD)0xE73CF52E)
-typedef struct _COMSTAT {
+typedef struct _COMSTAT
+	{
     DWORD fCtsHold : 1;
     DWORD fDsrHold : 1;
     DWORD fRlsdHold : 1;
@@ -351,7 +364,8 @@ typedef struct _COMSTAT {
 #define RTS_CONTROL_ENABLE     0x01
 #define RTS_CONTROL_HANDSHAKE  0x02
 #define RTS_CONTROL_TOGGLE     0x03
-typedef struct _DCB {
+typedef struct _DCB
+{
     DWORD DCBlength;
     DWORD BaudRate;
     DWORD fBinary: 1;
@@ -381,14 +395,16 @@ typedef struct _DCB {
     char EvtChar;
     WORD wReserved1;
 } DCB, *LPDCB;
-typedef struct _COMMTIMEOUTS {
+typedef struct _COMMTIMEOUTS
+{
     DWORD ReadIntervalTimeout;
     DWORD ReadTotalTimeoutMultiplier;
     DWORD ReadTotalTimeoutConstant;
     DWORD WriteTotalTimeoutMultiplier;
     DWORD WriteTotalTimeoutConstant;
 } COMMTIMEOUTS,*LPCOMMTIMEOUTS;
-typedef struct _COMMCONFIG {
+typedef struct _COMMCONFIG
+{
     DWORD dwSize;
     WORD wVersion;
     WORD wReserved;
@@ -398,10 +414,13 @@ typedef struct _COMMCONFIG {
     DWORD dwProviderSize;
     WCHAR wcProviderData[1];
 } COMMCONFIG,*LPCOMMCONFIG;
-typedef struct _SYSTEM_INFO {
-    union {
+typedef struct _SYSTEM_INFO
+{
+    union
+	{
         DWORD dwOemId;
-        struct {
+        struct
+		{
             WORD wProcessorArchitecture;
             WORD wReserved;
         } DUMMYSTRUCTNAME;
@@ -440,7 +459,8 @@ typedef struct _SYSTEM_INFO {
 #define GlobalDiscard( h )      GlobalReAlloc( (h), 0, GMEM_MOVEABLE )
 #define GMEM_DISCARDED      0x4000
 #define GMEM_LOCKCOUNT      0x00FF
-typedef struct _MEMORYSTATUS {
+typedef struct _MEMORYSTATUS
+{
     DWORD dwLength;
     DWORD dwMemoryLoad;
     SIZE_T dwTotalPhys;
@@ -528,12 +548,14 @@ typedef struct _EXCEPTION_DEBUG_INFO
 	EXCEPTION_RECORD ExceptionRecord;
 	DWORD dwFirstChance;
 } EXCEPTION_DEBUG_INFO, *LPEXCEPTION_DEBUG_INFO;
-typedef struct _CREATE_THREAD_DEBUG_INFO {
+typedef struct _CREATE_THREAD_DEBUG_INFO
+{
     HANDLE hThread;
     LPVOID lpThreadLocalBase;
     LPTHREAD_START_ROUTINE lpStartAddress;
 } CREATE_THREAD_DEBUG_INFO, *LPCREATE_THREAD_DEBUG_INFO;
-typedef struct _CREATE_PROCESS_DEBUG_INFO {
+typedef struct _CREATE_PROCESS_DEBUG_INFO
+{
     HANDLE hFile;
     HANDLE hProcess;
     HANDLE hThread;
@@ -545,13 +567,16 @@ typedef struct _CREATE_PROCESS_DEBUG_INFO {
     LPVOID lpImageName;
     WORD fUnicode;
 } CREATE_PROCESS_DEBUG_INFO, *LPCREATE_PROCESS_DEBUG_INFO;
-typedef struct _EXIT_THREAD_DEBUG_INFO {
+typedef struct _EXIT_THREAD_DEBUG_INFO
+{
     DWORD dwExitCode;
 } EXIT_THREAD_DEBUG_INFO, *LPEXIT_THREAD_DEBUG_INFO;
-typedef struct _EXIT_PROCESS_DEBUG_INFO {
+typedef struct _EXIT_PROCESS_DEBUG_INFO
+{
     DWORD dwExitCode;
 } EXIT_PROCESS_DEBUG_INFO, *LPEXIT_PROCESS_DEBUG_INFO;
-typedef struct _LOAD_DLL_DEBUG_INFO {
+typedef struct _LOAD_DLL_DEBUG_INFO
+{
     HANDLE hFile;
     LPVOID lpBaseOfDll;
     DWORD dwDebugInfoFileOffset;
@@ -559,23 +584,28 @@ typedef struct _LOAD_DLL_DEBUG_INFO {
     LPVOID lpImageName;
     WORD fUnicode;
 } LOAD_DLL_DEBUG_INFO, *LPLOAD_DLL_DEBUG_INFO;
-typedef struct _UNLOAD_DLL_DEBUG_INFO {
+typedef struct _UNLOAD_DLL_DEBUG_INFO
+{
     LPVOID lpBaseOfDll;
 } UNLOAD_DLL_DEBUG_INFO, *LPUNLOAD_DLL_DEBUG_INFO;
-typedef struct _OUTPUT_DEBUG_STRING_INFO {
+typedef struct _OUTPUT_DEBUG_STRING_INFO
+{
     LPSTR lpDebugStringData;
     WORD fUnicode;
     WORD nDebugStringLength;
 } OUTPUT_DEBUG_STRING_INFO, *LPOUTPUT_DEBUG_STRING_INFO;
-typedef struct _RIP_INFO {
+typedef struct _RIP_INFO
+{
     DWORD dwError;
     DWORD dwType;
 } RIP_INFO, *LPRIP_INFO;
-typedef struct _DEBUG_EVENT {
+typedef struct _DEBUG_EVENT
+{
     DWORD dwDebugEventCode;
     DWORD dwProcessId;
     DWORD dwThreadId;
-    union {
+    union
+	{
         EXCEPTION_DEBUG_INFO Exception;
         CREATE_THREAD_DEBUG_INFO CreateThread;
         CREATE_PROCESS_DEBUG_INFO CreateProcessInfo;
@@ -587,7 +617,8 @@ typedef struct _DEBUG_EVENT {
         RIP_INFO RipInfo;
     } u;
 } DEBUG_EVENT, *LPDEBUG_EVENT;
-typedef struct _JIT_DEBUG_INFO {
+typedef struct _JIT_DEBUG_INFO
+{
     DWORD dwSize;
     DWORD dwProcessorArchitecture;
     DWORD dwThreadID;
@@ -763,135 +794,60 @@ typedef struct _OFSTRUCT
     WORD Reserved2;
     CHAR szPathName[OFS_MAXPATHNAME];
 } OFSTRUCT, *LPOFSTRUCT, *POFSTRUCT;
-/********************* frankie - BEGIN: interlocks and intrin to verify ********************/
-#if 1
+/********************* frankie - BEGIN: interlocks and intrin ********************/
 #ifndef NOWINBASEINTERLOCK
 #ifndef _NTOS_
 #if defined(_M_IA64) && !defined(RC_INVOKED)
 #define InterlockedIncrement _InterlockedIncrement
-#define InterlockedIncrementAcquire _InterlockedIncrement_acq
-#define InterlockedIncrementRelease _InterlockedIncrement_rel
 #define InterlockedDecrement _InterlockedDecrement
-#define InterlockedDecrementAcquire _InterlockedDecrement_acq
-#define InterlockedDecrementRelease _InterlockedDecrement_rel
 #define InterlockedExchange _InterlockedExchange
 #define InterlockedExchangeAdd _InterlockedExchangeAdd
 #define InterlockedCompareExchange _InterlockedCompareExchange
-#define InterlockedCompareExchangeAcquire _InterlockedCompareExchange_acq
-#define InterlockedCompareExchangeRelease _InterlockedCompareExchange_rel
 #define InterlockedExchangePointer _InterlockedExchangePointer
 #define InterlockedCompareExchangePointer _InterlockedCompareExchangePointer
-#define InterlockedCompareExchangePointerRelease _InterlockedCompareExchangePointer_rel
-#define InterlockedCompareExchangePointerAcquire _InterlockedCompareExchangePointer_acq
 #define InterlockedIncrement64 _InterlockedIncrement64
 #define InterlockedDecrement64 _InterlockedDecrement64
 #define InterlockedExchange64 _InterlockedExchange64
-#define InterlockedExchangeAcquire64 _InterlockedExchange64_acq
 #define InterlockedExchangeAdd64 _InterlockedExchangeAdd64
 #define InterlockedCompareExchange64 _InterlockedCompareExchange64
-#define InterlockedCompareExchangeAcquire64 _InterlockedCompareExchange64_acq
-#define InterlockedCompareExchangeRelease64 _InterlockedCompareExchange64_rel
-#define InterlockedCompare64Exchange128     _InterlockedCompare64Exchange128
-#define InterlockedCompare64ExchangeAcquire128  _InterlockedCompare64Exchange128_acq
-#define InterlockedCompare64ExchangeRelease128  _InterlockedCompare64Exchange128_rel
+//#define InterlockedCompare64Exchange128     _InterlockedCompare64Exchange128	// Not implemented yet
 #define InterlockedOr _InterlockedOr
-#define InterlockedOrAcquire _InterlockedOr_acq
-#define InterlockedOrRelease _InterlockedOr_rel
-#define InterlockedOr8 _InterlockedOr8
-#define InterlockedOr8Acquire _InterlockedOr8_acq
-#define InterlockedOr8Release _InterlockedOr8_rel
+//#define InterlockedOr8 _InterlockedOr8			//Not implemented yet
 #define InterlockedOr16 _InterlockedOr16
-#define InterlockedOr16Acquire _InterlockedOr16_acq
-#define InterlockedOr16Release _InterlockedOr16_rel
 #define InterlockedOr64 _InterlockedOr64
-#define InterlockedOr64Acquire _InterlockedOr64_acq
-#define InterlockedOr64Release _InterlockedOr64_rel
 #define InterlockedXor _InterlockedXor
-#define InterlockedXorAcquire _InterlockedXor_acq
-#define InterlockedXorRelease _InterlockedXor_rel
-#define InterlockedXor8 _InterlockedXor8
-#define InterlockedXor8Acquire _InterlockedXor8_acq
-#define InterlockedXor8Release _InterlockedXor8_rel
+//#define InterlockedXor8 _InterlockedXor8			//Not implemented yet
 #define InterlockedXor16 _InterlockedXor16
-#define InterlockedXor16Acquire _InterlockedXor16_acq
-#define InterlockedXor16Release _InterlockedXor16_rel
 #define InterlockedXor64 _InterlockedXor64
-#define InterlockedXor64Acquire _InterlockedXor64_acq
-#define InterlockedXor64Release _InterlockedXor64_rel
 #define InterlockedAnd _InterlockedAnd
-#define InterlockedAndAcquire _InterlockedAnd_acq
-#define InterlockedAndRelease _InterlockedAnd_rel
-#define InterlockedAnd8 _InterlockedAnd8
-#define InterlockedAnd8Acquire _InterlockedAnd8_acq
-#define InterlockedAnd8Release _InterlockedAnd8_rel
+//#define InterlockedAnd8 _InterlockedAnd8			//Not implemented yet
 #define InterlockedAnd16 _InterlockedAnd16
-#define InterlockedAnd16Acquire _InterlockedAnd16_acq
-#define InterlockedAnd16Release _InterlockedAnd16_rel
 #define InterlockedAnd64 _InterlockedAnd64
-#define InterlockedAnd64Acquire _InterlockedAnd64_acq
-#define InterlockedAnd64Release _InterlockedAnd64_rel
 LONG __cdecl InterlockedOr(LONG volatile *Destination, LONG Value);
-LONG __cdecl InterlockedOrAcquire(LONG volatile *Destination, LONG Value);
-LONG __cdecl InterlockedOrRelease(LONG volatile *Destination, LONG Value);
-char __cdecl InterlockedOr8(char volatile *Destination, char Value);
-char __cdecl InterlockedOr8Acquire(char volatile *Destination, char Value);
-char __cdecl InterlockedOr8Release(char volatile *Destination, char Value);
+//char __cdecl InterlockedOr8(char volatile *Destination, char Value);
 SHORT __cdecl InterlockedOr16(SHORT volatile *Destination, SHORT Value);
-SHORT __cdecl InterlockedOr16Acquire(SHORT volatile *Destination, SHORT Value);
-SHORT __cdecl InterlockedOr16Release(SHORT volatile *Destination, SHORT Value);
 LONGLONG __cdecl InterlockedOr64(LONGLONG volatile *Destination, LONGLONG Value);
-LONGLONG __cdecl InterlockedOr64Acquire(LONGLONG volatile *Destination, LONGLONG Value);
-LONGLONG __cdecl InterlockedOr64Release(LONGLONG volatile *Destination, LONGLONG Value);
 LONG __cdecl InterlockedXor(LONG volatile *Destination, LONG Value);
-LONG __cdecl InterlockedXorAcquire(LONG volatile *Destination, LONG Value);
-LONG __cdecl InterlockedXorRelease(LONG volatile *Destination, LONG Value);
-char __cdecl InterlockedXor8(char volatile *Destination, char Value);
-char __cdecl InterlockedXor8Acquire(char volatile *Destination, char Value);
-char __cdecl InterlockedXor8Release(char volatile *Destination, char Value);
+//char __cdecl InterlockedXor8(char volatile *Destination, char Value);
 SHORT __cdecl InterlockedXor16(SHORT volatile *Destination, SHORT Value);
-SHORT __cdecl InterlockedXor16Acquire(SHORT volatile *Destination, SHORT Value);
-SHORT __cdecl InterlockedXor16Release(SHORT volatile *Destination, SHORT Value);
 LONGLONG __cdecl InterlockedXor64(LONGLONG volatile *Destination, LONGLONG Value);
-LONGLONG __cdecl InterlockedXor64Acquire(LONGLONG volatile *Destination, LONGLONG Value);
-LONGLONG __cdecl InterlockedXor64Release(LONGLONG volatile *Destination, LONGLONG Value);
 LONG __cdecl InterlockedAnd(LONG volatile *Destination, LONG Value);
-LONG __cdecl InterlockedAndAcquire(LONG volatile *Destination, LONG Value);
-LONG __cdecl InterlockedAndRelease(LONG volatile *Destination, LONG Value);
-char __cdecl InterlockedAnd8(char volatile *Destination, char Value);
-char __cdecl InterlockedAnd8Acquire(char volatile *Destination, char Value);
-char __cdecl InterlockedAnd8Release(char volatile *Destination, char Value);
+//char __cdecl InterlockedAnd8(char volatile *Destination, char Value);
 SHORT __cdecl InterlockedAnd16(SHORT volatile *Destination, SHORT Value);
-SHORT __cdecl InterlockedAnd16Acquire(SHORT volatile *Destination, SHORT Value);
-SHORT __cdecl InterlockedAnd16Release(SHORT volatile *Destination, SHORT Value);
 LONGLONG __cdecl InterlockedAnd64(LONGLONG volatile *Destination, LONGLONG Value);
-LONGLONG __cdecl InterlockedAnd64Acquire(LONGLONG volatile *Destination, LONGLONG Value);
-LONGLONG __cdecl InterlockedAnd64Release(LONGLONG volatile *Destination, LONGLONG Value);
 LONGLONG __cdecl InterlockedIncrement64(LONGLONG volatile *Addend);
 LONGLONG __cdecl InterlockedDecrement64(LONGLONG volatile *Addend);
-LONG __cdecl InterlockedIncrementAcquire(LONG volatile *Addend);
-LONG __cdecl InterlockedDecrementAcquire(LONG volatile *Addend);
-LONG __cdecl InterlockedIncrementRelease(LONG volatile *Addend);
-LONG __cdecl InterlockedDecrementRelease(LONG volatile *Addend);
 LONGLONG __cdecl InterlockedExchange64(LONGLONG volatile *Target, LONGLONG Value);
-LONGLONG __cdecl InterlockedExchangeAcquire64(LONGLONG volatile *Target, LONGLONG Value);
 LONGLONG __cdecl InterlockedExchangeAdd64(LONGLONG volatile *Addend, LONGLONG Value);
 LONGLONG __cdecl InterlockedCompareExchange64(LONGLONG volatile *Destination, LONGLONG ExChange, LONGLONG Comperand);
-LONGLONG __cdecl InterlockedCompareExchangeAcquire64(LONGLONG volatile *Destination, LONGLONG ExChange, LONGLONG Comperand);
-LONGLONG __cdecl InterlockedCompareExchangeRelease64(LONGLONG volatile *Destination, LONGLONG ExChange, LONGLONG Comperand);
-LONG64 __cdecl InterlockedCompare64Exchange128(LONG64 volatile *Destination, LONG64 ExchangeHigh, LONG64 ExchangeLow, LONG64 Comperand);
-LONG64 __cdecl InterlockedCompare64ExchangeAcquire128(LONG64 volatile *Destination, LONG64 ExchangeHigh, LONG64 ExchangeLow, LONG64 Comperand);
-LONG64 __cdecl InterlockedCompare64ExchangeRelease128(LONG64 volatile *Destination, LONG64 ExchangeHigh, LONG64 ExchangeLow, LONG64 Comperand);
+//LONG64 __cdecl InterlockedCompare64Exchange128(LONG64 volatile *Destination, LONG64 ExchangeHigh, LONG64 ExchangeLow, LONG64 Comperand);
 LONG __cdecl InterlockedIncrement(LONG volatile *lpAddend);
 LONG __cdecl InterlockedDecrement(LONG volatile *lpAddend);
 LONG __cdecl InterlockedExchange(LONG volatile *Target, LONG Value);
 LONG __cdecl InterlockedExchangeAdd(LONG volatile *Addend, LONG Value);
 LONG __cdecl InterlockedCompareExchange(LONG volatile *Destination, LONG ExChange, LONG Comperand);
-LONG __cdecl InterlockedCompareExchangeRelease(LONG volatile *Destination, LONG ExChange, LONG Comperand);
-LONG __cdecl InterlockedCompareExchangeAcquire(LONG volatile *Destination, LONG ExChange, LONG Comperand);
 PVOID __cdecl InterlockedExchangePointer(PVOID volatile *Target, PVOID Value);
 PVOID __cdecl InterlockedCompareExchangePointer(PVOID volatile *Destination, PVOID ExChange, PVOID Comperand);
-PVOID __cdecl InterlockedCompareExchangePointerAcquire(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
-PVOID __cdecl InterlockedCompareExchangePointerRelease(PVOID volatile *Destination, PVOID Exchange, PVOID Comperand);
 #if !defined (InterlockedAnd)
 #define InterlockedAnd InterlockedAnd_Inline
 FORCEINLINE LONG InterlockedAnd_Inline(LONG volatile *Target, LONG Set)
@@ -1001,64 +957,29 @@ FORCEINLINE BOOLEAN InterlockedBitTestAndComplement_Inline(LONG volatile *Base, 
 }
 #endif
 #pragma intrinsic(_InterlockedIncrement)
-#pragma intrinsic(_InterlockedIncrement_acq)
-#pragma intrinsic(_InterlockedIncrement_rel)
 #pragma intrinsic(_InterlockedDecrement)
-#pragma intrinsic(_InterlockedDecrement_acq)
-#pragma intrinsic(_InterlockedDecrement_rel)
 #pragma intrinsic(_InterlockedExchange)
 #pragma intrinsic(_InterlockedExchangeAdd)
 #pragma intrinsic(_InterlockedCompareExchange)
-#pragma intrinsic(_InterlockedCompareExchange_acq)
-#pragma intrinsic(_InterlockedCompareExchange_rel)
 #pragma intrinsic(_InterlockedExchangePointer)
 #pragma intrinsic(_InterlockedCompareExchangePointer)
-#pragma intrinsic(_InterlockedCompareExchangePointer_acq)
-#pragma intrinsic(_InterlockedCompareExchangePointer_rel)
 #pragma intrinsic(_InterlockedIncrement64)
 #pragma intrinsic(_InterlockedDecrement64)
 #pragma intrinsic(_InterlockedExchange64)
-#pragma intrinsic(_InterlockedExchange64_acq)
 #pragma intrinsic(_InterlockedCompareExchange64)
-#pragma intrinsic(_InterlockedCompareExchange64_acq)
-#pragma intrinsic(_InterlockedCompareExchange64_rel)
 #pragma intrinsic(_InterlockedExchangeAdd64)
 #pragma intrinsic (_InterlockedOr)
-#pragma intrinsic (_InterlockedOr_acq)
-#pragma intrinsic (_InterlockedOr_rel)
-#pragma intrinsic (_InterlockedOr8)
-#pragma intrinsic (_InterlockedOr8_acq)
-#pragma intrinsic (_InterlockedOr8_rel)
+//#pragma intrinsic (_InterlockedOr8)
 #pragma intrinsic (_InterlockedOr16)
-#pragma intrinsic (_InterlockedOr16_acq)
-#pragma intrinsic (_InterlockedOr16_rel)
 #pragma intrinsic (_InterlockedOr64)
-#pragma intrinsic (_InterlockedOr64_acq)
-#pragma intrinsic (_InterlockedOr64_rel)
 #pragma intrinsic (_InterlockedXor)
-#pragma intrinsic (_InterlockedXor_acq)
-#pragma intrinsic (_InterlockedXor_rel)
-#pragma intrinsic (_InterlockedXor8)
-#pragma intrinsic (_InterlockedXor8_acq)
-#pragma intrinsic (_InterlockedXor8_rel)
+//#pragma intrinsic (_InterlockedXor8)
 #pragma intrinsic (_InterlockedXor16)
-#pragma intrinsic (_InterlockedXor16_acq)
-#pragma intrinsic (_InterlockedXor16_rel)
 #pragma intrinsic (_InterlockedXor64)
-#pragma intrinsic (_InterlockedXor64_acq)
-#pragma intrinsic (_InterlockedXor64_rel)
 #pragma intrinsic (_InterlockedAnd)
-#pragma intrinsic (_InterlockedAnd_acq)
-#pragma intrinsic (_InterlockedAnd_rel)
-#pragma intrinsic (_InterlockedAnd8)
-#pragma intrinsic (_InterlockedAnd8_acq)
-#pragma intrinsic (_InterlockedAnd8_rel)
+//#pragma intrinsic (_InterlockedAnd8)
 #pragma intrinsic (_InterlockedAnd16)
-#pragma intrinsic (_InterlockedAnd16_acq)
-#pragma intrinsic (_InterlockedAnd16_rel)
 #pragma intrinsic (_InterlockedAnd64)
-#pragma intrinsic (_InterlockedAnd64_acq)
-#pragma intrinsic (_InterlockedAnd64_rel)
 #elif defined(_M_AMD64) && !defined(RC_INVOKED)
 #define InterlockedAnd _InterlockedAnd
 #define InterlockedOr _InterlockedOr
@@ -1106,9 +1027,11 @@ LONG64 __cdecl InterlockedDecrement64(LONG64 volatile *Addend);
 LONG64 __cdecl InterlockedExchange64(LONG64 volatile *Target, LONG64 Value);
 LONG64 __cdecl InterlockedExchangeAdd64(LONG64 volatile *Addend, LONG64 Value);
 LONG64 __cdecl InterlockedCompareExchange64(LONG64 volatile *Destination, LONG64 ExChange, LONG64 Comperand);
-//#pragma intrinsic(_InterlockedAnd)
-//#pragma intrinsic(_InterlockedOr)
-//#pragma intrinsic(_InterlockedXor)
+#if !defined(__POCC__) || (__POCC__>=900)
+#pragma intrinsic(_InterlockedAnd)
+#pragma intrinsic(_InterlockedOr)
+#pragma intrinsic(_InterlockedXor)
+#endif
 #pragma intrinsic(_InterlockedIncrement)
 #pragma intrinsic(_InterlockedDecrement)
 #pragma intrinsic(_InterlockedExchange)
@@ -1116,30 +1039,34 @@ LONG64 __cdecl InterlockedCompareExchange64(LONG64 volatile *Destination, LONG64
 #pragma intrinsic(_InterlockedCompareExchange)
 #pragma intrinsic(_InterlockedExchangePointer)
 #pragma intrinsic(_InterlockedCompareExchangePointer)
-//#pragma intrinsic(_InterlockedAnd64)
-//#pragma intrinsic(_InterlockedOr64)
-//#pragma intrinsic(_InterlockedXor64)
+#if !defined(__POCC__) || (__POCC__>=900)
+#pragma intrinsic(_InterlockedAnd64)
+#pragma intrinsic(_InterlockedOr64)
+#pragma intrinsic(_InterlockedXor64)
+#endif
 #pragma intrinsic(_InterlockedIncrement64)
 #pragma intrinsic(_InterlockedDecrement64)
 #pragma intrinsic(_InterlockedExchange64)
 #pragma intrinsic(_InterlockedExchangeAdd64)
 #pragma intrinsic(_InterlockedCompareExchange64)
-#if _MSC_FULL_VER >= 140041204
-#define InterlockedAnd8 _InterlockedAnd8
-#define InterlockedOr8 _InterlockedOr8
-#define InterlockedXor8 _InterlockedXor8
+
+//#if _MSC_FULL_VER >= 140041204
+#if !defined(__POCC__) || (__POCC__>=900)
+//#define InterlockedAnd8 _InterlockedAnd8
+//#define InterlockedOr8 _InterlockedOr8
+//#define InterlockedXor8 _InterlockedXor8
 #define InterlockedAnd16 _InterlockedAnd16
 #define InterlockedOr16 _InterlockedOr16
 #define InterlockedXor16 _InterlockedXor16
-char InterlockedAnd8(char volatile *Destination, char Value);
-char InterlockedOr8(char volatile *Destination, char Value);
-char InterlockedXor8(char volatile *Destination, char Value);
-SHORT InterlockedAnd16(SHORT volatile *Destination, SHORT Value);
-SHORT InterlockedOr16(SHORT volatile *Destination, SHORT Value);
-SHORT InterlockedXor16(SHORT volatile *Destination, SHORT Value);
-#pragma intrinsic (_InterlockedAnd8)
-#pragma intrinsic (_InterlockedOr8)
-#pragma intrinsic (_InterlockedXor8)
+//char InterlockedAnd8(char volatile *Destination, char Value);
+//char InterlockedOr8(char volatile *Destination, char Value);
+//char InterlockedXor8(char volatile *Destination, char Value);
+SHORT __cdecl InterlockedAnd16(SHORT volatile *Destination, SHORT Value);
+SHORT __cdecl InterlockedOr16(SHORT volatile *Destination, SHORT Value);
+SHORT __cdecl InterlockedXor16(SHORT volatile *Destination, SHORT Value);
+//#pragma intrinsic (_InterlockedAnd8)
+//#pragma intrinsic (_InterlockedOr8)
+//#pragma intrinsic (_InterlockedXor8)
 #pragma intrinsic (_InterlockedAnd16)
 #pragma intrinsic (_InterlockedOr16)
 #pragma intrinsic (_InterlockedXor16)
@@ -1245,28 +1172,15 @@ WINBASEAPI USHORT WINAPI QueryDepthSList(PSLIST_HEADER ListHead);
 #endif
 #endif
 #endif
-#endif
-/********************* frankie - END: interlocks and intrin to verify ********************/
+/********************* frankie - END: interlocks and intrin ********************/
 WINBASEAPI BOOL WINAPI FreeResource(HGLOBAL hResData);
 WINBASEAPI LPVOID WINAPI LockResource(HGLOBAL hResData);
 #define UnlockResource(hResData) ((hResData), 0)
 #define MAXINTATOM 0xC000
 #define MAKEINTATOM(i)  (LPTSTR)((ULONG_PTR)((WORD)(i)))
 #define INVALID_ATOM ((ATOM)0)
-int
-#if defined(_M_CEE_PURE)
-__clrcall
-#else
-WINAPI
-#endif
-WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd);
-int
-#if defined(_M_CEE_PURE)
-__clrcall
-#else
-WINAPI
-#endif
-wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nShowCmd);
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd);
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nShowCmd);
 WINBASEAPI BOOL WINAPI FreeLibrary(HMODULE hLibModule);
 WINBASEAPI DECLSPEC_NORETURN VOID WINAPI FreeLibraryAndExitThread(HMODULE hLibModule, DWORD dwExitCode);
 WINBASEAPI BOOL WINAPI DisableThreadLibraryCalls(HMODULE hLibModule);
@@ -1347,18 +1261,22 @@ WINBASEAPI BOOL WINAPI HeapValidate(HANDLE hHeap, DWORD dwFlags, LPCVOID lpMem);
 WINBASEAPI SIZE_T WINAPI HeapCompact(HANDLE hHeap, DWORD dwFlags);
 WINBASEAPI HANDLE WINAPI GetProcessHeap(VOID);
 WINBASEAPI DWORD WINAPI GetProcessHeaps(DWORD NumberOfHeaps, PHANDLE ProcessHeaps);
-typedef struct _PROCESS_HEAP_ENTRY {
+typedef struct _PROCESS_HEAP_ENTRY
+{
     PVOID lpData;
     DWORD cbData;
     BYTE cbOverhead;
     BYTE iRegionIndex;
     WORD wFlags;
-    union {
-        struct {
+    union
+	{
+        struct
+		{
             HANDLE hMem;
             DWORD dwReserved[ 3 ];
         } Block;
-        struct {
+        struct
+		{
             DWORD dwCommittedSize;
             DWORD dwUnCommittedSize;
             LPVOID lpFirstBlock;
@@ -1568,11 +1486,14 @@ WINBASEAPI BOOL WINAPI GetExitCodeThread(HANDLE hThread, LPDWORD lpExitCode);
 WINBASEAPI BOOL WINAPI GetThreadSelectorEntry(HANDLE hThread, DWORD dwSelector, LPLDT_ENTRY lpSelectorEntry);
 WINBASEAPI EXECUTION_STATE WINAPI SetThreadExecutionState(EXECUTION_STATE esFlags);
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN7)
-typedef struct _REASON_CONTEXT {
+typedef struct _REASON_CONTEXT
+{
 	ULONG Version;
 	DWORD Flags;
-	union {
-		struct {
+	union
+	{
+		struct
+		{
 			HMODULE LocalizedReasonModule;
 			ULONG LocalizedReasonId;
 			ULONG ReasonStringCount;
@@ -1589,11 +1510,7 @@ WINBASEAPI HANDLE WINAPI PowerCreateRequest(PREASON_CONTEXT Context);
 WINBASEAPI BOOL WINAPI PowerSetRequest(HANDLE PowerRequest, POWER_REQUEST_TYPE RequestType);
 WINBASEAPI BOOL WINAPI PowerClearRequest(HANDLE PowerRequest, POWER_REQUEST_TYPE RequestType);
 #endif
-#ifdef _M_CEE_PURE
-#define GetLastError System::Runtime::InteropServices::Marshal::GetLastWin32Error
-#else
 WINBASEAPI DWORD WINAPI GetLastError(VOID);
-#endif
 WINBASEAPI VOID WINAPI SetLastError(DWORD dwErrCode);
 #if !defined(RC_INVOKED)
 #if defined(WINBASE_DECLARE_RESTORE_LAST_ERROR)
@@ -1688,7 +1605,8 @@ WINBASEAPI BOOL WINAPI LockFileEx(HANDLE hFile, DWORD dwFlags, DWORD dwReserved,
 #define LOCKFILE_FAIL_IMMEDIATELY   0x00000001
 #define LOCKFILE_EXCLUSIVE_LOCK     0x00000002
 WINBASEAPI BOOL WINAPI UnlockFileEx(HANDLE hFile, DWORD dwReserved, DWORD nNumberOfBytesToUnlockLow, DWORD nNumberOfBytesToUnlockHigh, LPOVERLAPPED lpOverlapped);
-typedef struct _BY_HANDLE_FILE_INFORMATION {
+typedef struct _BY_HANDLE_FILE_INFORMATION
+{
 	DWORD dwFileAttributes;
 	FILETIME ftCreationTime;
 	FILETIME ftLastAccessTime;
@@ -1807,7 +1725,8 @@ BOOL WINAPI GetSystemTimes(LPFILETIME lpIdleTime, LPFILETIME lpKernelTime, LPFIL
 WINBASEAPI VOID WINAPI GetNativeSystemInfo(LPSYSTEM_INFO lpSystemInfo);
 #endif
 WINBASEAPI BOOL WINAPI IsProcessorFeaturePresent(DWORD ProcessorFeature);
-typedef struct _TIME_ZONE_INFORMATION {
+typedef struct _TIME_ZONE_INFORMATION
+{
 	LONG Bias;
 	WCHAR StandardName[32];
 	SYSTEMTIME StandardDate;
@@ -1816,7 +1735,8 @@ typedef struct _TIME_ZONE_INFORMATION {
 	SYSTEMTIME DaylightDate;
 	LONG DaylightBias;
 } TIME_ZONE_INFORMATION, *PTIME_ZONE_INFORMATION, *LPTIME_ZONE_INFORMATION;
-typedef struct _TIME_DYNAMIC_ZONE_INFORMATION {
+typedef struct _TIME_DYNAMIC_ZONE_INFORMATION
+{
 	LONG Bias;
 	WCHAR StandardName[32];
 	SYSTEMTIME StandardDate;
@@ -2009,7 +1929,7 @@ WINBASEAPI DWORD WINAPI TlsAlloc(VOID);
 WINBASEAPI LPVOID WINAPI TlsGetValue(DWORD dwTlsIndex);
 WINBASEAPI BOOL WINAPI TlsSetValue(DWORD dwTlsIndex, LPVOID lpTlsValue);
 WINBASEAPI BOOL WINAPI TlsFree(DWORD dwTlsIndex);
-	typedef VOID(WINAPI *LPOVERLAPPED_COMPLETION_ROUTINE) (DWORD dwErrorCode, DWORD dwNumberOfBytesTransfered, LPOVERLAPPED lpOverlapped);
+typedef VOID(WINAPI *LPOVERLAPPED_COMPLETION_ROUTINE) (DWORD dwErrorCode, DWORD dwNumberOfBytesTransfered, LPOVERLAPPED lpOverlapped);
 WINBASEAPI DWORD WINAPI SleepEx(DWORD dwMilliseconds, BOOL bAlertable);
 WINBASEAPI DWORD WINAPI WaitForSingleObjectEx(HANDLE hHandle, DWORD dwMilliseconds, BOOL bAlertable);
 WINBASEAPI DWORD WINAPI WaitForMultipleObjectsEx(DWORD nCount, CONST HANDLE *lpHandles, BOOL bWaitAll, DWORD dwMilliseconds, BOOL bAlertable);
@@ -2062,7 +1982,8 @@ WINBASEAPI BOOL WINAPI WriteFileGather(HANDLE hFile, FILE_SEGMENT_ELEMENT aSegme
 #define STARTF_TITLEISAPPID     0x00001000
 #define STARTF_PREVENTPINNING   0x00002000
 #endif
-typedef struct _STARTUPINFOA {
+typedef struct _STARTUPINFOA
+{
     DWORD   cb;
     LPSTR   lpReserved;
     LPSTR   lpDesktop;
@@ -2082,7 +2003,8 @@ typedef struct _STARTUPINFOA {
     HANDLE  hStdOutput;
     HANDLE  hStdError;
 } STARTUPINFOA, *LPSTARTUPINFOA;
-typedef struct _STARTUPINFOW {
+typedef struct _STARTUPINFOW
+{
     DWORD   cb;
     LPWSTR  lpReserved;
     LPWSTR  lpDesktop;
@@ -2110,11 +2032,13 @@ typedef STARTUPINFOA STARTUPINFO;
 typedef LPSTARTUPINFOA LPSTARTUPINFO;
 #endif
 #if (_WIN32_WINNT >= 0x0600)
-typedef struct _STARTUPINFOEXA {
+typedef struct _STARTUPINFOEXA
+{
     STARTUPINFOA StartupInfo;
     LPPROC_THREAD_ATTRIBUTE_LIST lpAttributeList;
 } STARTUPINFOEXA, *LPSTARTUPINFOEXA;
-typedef struct _STARTUPINFOEXW {
+typedef struct _STARTUPINFOEXW
+{
     STARTUPINFOW StartupInfo;
     LPPROC_THREAD_ATTRIBUTE_LIST lpAttributeList;
 } STARTUPINFOEXW, *LPSTARTUPINFOEXW;
@@ -2532,10 +2456,8 @@ WINBASEAPI HRSRC WINAPI FindResourceExW(HMODULE hModule, LPCWSTR lpType, LPCWSTR
 #define FindResourceEx  FindResourceExA
 #endif
 #ifdef STRICT
-typedef BOOL (CALLBACK* ENUMRESTYPEPROCA)( HMODULE hModule,  LPSTR lpType,
- LONG_PTR lParam);
-typedef BOOL (CALLBACK* ENUMRESTYPEPROCW)( HMODULE hModule,  LPWSTR lpType,
- LONG_PTR lParam);
+typedef BOOL (CALLBACK* ENUMRESTYPEPROCA)( HMODULE hModule,  LPSTR lpType, LONG_PTR lParam);
+typedef BOOL (CALLBACK* ENUMRESTYPEPROCW)( HMODULE hModule,  LPWSTR lpType, LONG_PTR lParam);
 #ifdef UNICODE
 #define ENUMRESTYPEPROC  ENUMRESTYPEPROCW
 #else

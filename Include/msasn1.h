@@ -2,10 +2,11 @@
  \file		msasn1.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Aug 14 18:09:16 2016
- \date		Modified on Sun Aug 14 18:09:16 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -30,11 +31,7 @@ typedef signed long     ASN1int32_t;
 #endif
 #define ASN1API         __stdcall
 #define ASN1CALL        __stdcall
-#ifdef _M_CEE_PURE
-#define ASN1API_INLINE  __clrcall
-#else
 #define ASN1API_INLINE  ASN1API
-#endif
 typedef ASN1uint8_t ASN1octet_t;
 typedef ASN1uint8_t ASN1bool_t;
 typedef struct tagASN1intx_t

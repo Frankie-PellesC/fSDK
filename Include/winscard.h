@@ -35,12 +35,10 @@ typedef const VOID *LPCVOID;
 #ifndef WINSCARDDATA
 #define WINSCARDDATA __declspec(dllimport)
 #endif
-#if !defined(_M_CEE_PURE)
 WINSCARDDATA extern const SCARD_IO_REQUEST g_rgSCardT0Pci, g_rgSCardT1Pci, g_rgSCardRawPci;
 #define SCARD_PCI_T0  (&g_rgSCardT0Pci)
 #define SCARD_PCI_T1  (&g_rgSCardT1Pci)
 #define SCARD_PCI_RAW (&g_rgSCardRawPci)
-#endif
 typedef ULONG_PTR SCARDCONTEXT;
 typedef SCARDCONTEXT *PSCARDCONTEXT, *LPSCARDCONTEXT;
 typedef ULONG_PTR SCARDHANDLE;

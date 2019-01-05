@@ -2,10 +2,13 @@
  \file		winerror.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Added DXGI status definitions
+ \par  Status: 
+            
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Jun 27 00:44:48 2016
- \date		Modified on Mon Jun 27 00:44:48 2016
+ \date		Modified on Thu Jan  3 01:27:02 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -4922,6 +4925,12 @@ FORCEINLINE HRESULT HRESULT_FROM_WIN32(unsigned long x) { return (HRESULT)(x) <=
 #define UI_E_TRANSITION_ECLIPSED         _HRESULT_TYPEDEF_(0x802A0108L)
 #define UI_E_TIME_BEFORE_LAST_UPDATE     _HRESULT_TYPEDEF_(0x802A0109L)
 #define UI_E_TIMER_CLIENT_ALREADY_CONNECTED _HRESULT_TYPEDEF_(0x802A010AL)
+
+#define MAKE_DXGI_STATUS(code)  MAKE_HRESULT(0, _FACDXGI, code)
+#define DXGI_STATUS_OCCLUDED                    MAKE_DXGI_STATUS(1)
+#define DXGI_STATUS_CLIPPED                     MAKE_DXGI_STATUS(2)
+#define DXGI_STATUS_NO_REDIRECTION              MAKE_DXGI_STATUS(4)
+
 #endif
 
 

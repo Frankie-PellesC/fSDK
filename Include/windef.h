@@ -5,11 +5,12 @@
             - Added definitions for restrict and inline keywords to make 
               effective C11++ effective (Requested by Timo)
             - Fixed #if without #endif reported by John
+            03.01.2019 Minor fixes
  \par  Status: 
  \par Project: 
             PellesC Headers extension
  \date		Created  on Mon Nov 14 10:06:45 2016
- \date		Modified on Thu Dec  1 12:33:43 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	Frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -49,7 +50,6 @@ typedef char *PSZ;
 #ifndef TRUE
 #define TRUE                1
 #endif
-#ifdef WANT_INOUTOPTIONAL	//Frankie in case you have headers with this unuseful decorations
 #ifndef IN
 #define IN
 #endif
@@ -58,7 +58,6 @@ typedef char *PSZ;
 #endif
 #ifndef OPTIONAL
 #define OPTIONAL
-#endif
 #endif
 #undef far
 #undef near
@@ -101,11 +100,7 @@ typedef char *PSZ;
 #define restrict	__restrict
 #define inline		__inline
 #endif
-#ifdef _M_CEE_PURE
-#define WINAPI_INLINE  __clrcall
-#else
 #define WINAPI_INLINE  WINAPI
-#endif
 #undef FAR
 #undef  NEAR
 #define FAR                 far

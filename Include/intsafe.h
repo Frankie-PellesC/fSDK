@@ -86,7 +86,7 @@ typedef long HRESULT;
 #else
 #define C_ASSERT(e)
 #endif
-#if defined(_M_CEE_PURE) || defined(_68K_) || defined(_MPPC_) || defined(_M_IA64) || defined(_M_AMD64)
+#if defined(_M_AMD64)
 #define UInt32x32To64(a, b) (((unsigned __int64)((unsigned int)(a))) * ((unsigned __int64)((unsigned int)(b))))
 #elif defined(_M_IX86)
 #define UInt32x32To64(a, b) ((unsigned __int64)(((unsigned __int64)((unsigned int)(a))) * ((unsigned int)(b))))

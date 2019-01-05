@@ -2,10 +2,11 @@
  \file		dxtmpl.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
  \par Project: 
             PellesC Headers extension
  \date		Created  on Wed Jul  6 17:34:54 2016
- \date		Modified on Wed Jul  6 17:34:54 2016
+ \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -29,11 +30,7 @@
 #endif
 #define DXASSERT_VALID( pObj )
 #ifndef PASCAL_INLINE
-#ifdef _M_CEE_PURE
-#define PASCAL_INLINE  __clrcall
-#else
 #define PASCAL_INLINE  PASCAL
-#endif
 #endif
 typedef void* DXLISTPOS;
 typedef DWORD DXLISTHANDLE;

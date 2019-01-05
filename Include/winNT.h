@@ -2,10 +2,11 @@
  \file		winnt.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            03.01.2019 Minor fixes
  \par Project: 
             PellesC Headers extension
  \date		Created  on Tue Sep  6 19:16:39 2016
- \date		Modified on Tue Sep  6 19:16:39 2016
+  \date		Modified on Thu Jan  3 16:17:18 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -415,7 +416,7 @@ typedef struct _LUID
 #define _DWORDLONG_
 typedef ULONGLONG DWORDLONG;
 typedef DWORDLONG *PDWORDLONG;
-#if defined(RC_INVOKED) || defined(_M_CEE_PURE) || defined(_68K_) || defined(_MPPC_) || defined(_M_IA64) || defined(_M_AMD64)
+#if defined(RC_INVOKED) || defined(_68K_) || defined(_MPPC_) || defined(_M_IA64) || defined(_M_AMD64)
 #define Int32x32To64(a, b)  (((__int64)((long)(a))) * ((__int64)((long)(b))))
 #define UInt32x32To64(a, b) (((unsigned __int64)((unsigned int)(a))) * ((unsigned __int64)((unsigned int)(b))))
 #define Int64ShllMod32(a, b) (((unsigned __int64)(a)) << (b))
@@ -1392,7 +1393,9 @@ SHORT InterlockedXor16(SHORT volatile *Destination, SHORT Value);
 #pragma intrinsic (_InterlockedXor16)
 #endif
 #define CacheLineFlush(Address) _mm_clflush(Address)
-VOID _mm_clflush(VOID const *Address);
+#if __POCC__ >= 900
+VOID __cdecl _mm_clflush(VOID const *Address);
+#endif
 #pragma intrinsic(_mm_clflush)
 #if __POCC__ >= 650
 #pragma intrinsic(__memory_barrier)

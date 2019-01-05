@@ -2,10 +2,14 @@
  \file		windows.h
  \par Description 
             Extension and update of headers for PellesC compiler suite.
+            30/12/2018 Updated with support for  POCC V.9.00
+            04.01.2019 Moved __FSDK__ definition to specific file.
+ \par  Status: 
+            Beta release
  \par Project: 
             PellesC Headers extension
  \date		Created  on Sun Jun 26 15:58:44 2016
- \date		Modified on Sun Jun 26 15:58:44 2016
+ \date		Modified on Fri Jan  4 16:54:15 2019
  \author	frankie
 \*//*-@@file@@----------------------------------------------------------------*/
 
@@ -16,9 +20,7 @@
 #define _INC_WINDOWS
 #if __POCC__ >= 500
 #pragma once
-#endif
-#ifndef __FSDK__
-#define __FSDK__ 0x00010200		//Define FSDK for use in conditional compilations
+#include <fsdk.h>
 #endif
 #if defined(RC_INVOKED) && !defined(NOWINRES)
 #include <winresrc.h>
@@ -49,14 +51,14 @@
 #define _AMD64_
 #endif
 #if !defined(_68K_) && !defined(_MPPC_) && !defined(_X86_) && !defined(_IA64_) && !defined(_AMD64_) && defined(_M_M68K)
-#define _68K_
+#pragma error "68K CPU not supported!")
 #endif
 #if !defined(_68K_) && !defined(_MPPC_) && !defined(_X86_) && !defined(_IA64_) && !defined(_AMD64_) && defined(_M_MPPC)
-#define _MPPC_
+#pragma error "MPPC CPU not supported!")
 #endif
 #if !defined(_68K_) && !defined(_MPPC_) && !defined(_X86_) && !defined(_M_IX86) && !defined(_AMD64_) && defined(_M_IA64)
 #if !defined(_IA64_)
-#define _IA64_
+#pragma error "IA64 CPU not supported!")
 #endif
 #endif
 #ifndef RC_INVOKED
@@ -67,11 +69,9 @@
 #include <winbase.h>
 #include <wingdi.h>
 #include <winuser.h>
-//Frankie: PllesC compatibility:
-//Include winnls.h anyway...
-//#if defined(_WIN32NLS)
+#if defined(_WIN32NLS) || defined (__POCC__)	//Frankie: PllesC compatibility, include winnls.h anyway...
 #include <winnls.h>
-//#endif
+#endif
 #include <wincon.h>
 #include <winver.h>
 #include <winreg.h>
