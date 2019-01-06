@@ -46,9 +46,9 @@ I'll wait your feedbacks to fix the package then move it to contributions.
            Defining the symbol in only one source, before the header `#include`, creates a single instance of the symbol while there are multiple `extern` references.
 
            The **COMDAT** problem in libraries, where **GUID**'s are instantiated, has been solved splitting definitions in multiple source files.
-    * **ANSI C compliance**.
+    * **ISO/IEC 9899:201x compliance**.
 
-      Many native **MS** headers are write with **C++** in mind, and for this reason are not **ANSI** compliant.
+      Many native **MS** headers are write with **C++** in mind, and for this reason are not **ISO/IEC 9899:201x** compliant.
 
       I.e. structs, unions, class, enumerations and global namespaces are all coincident in C++, but distinct in **C**.
 
@@ -89,7 +89,7 @@ I'll wait your feedbacks to fix the package then move it to contributions.
             };
             foo mystruct = {0};  //Still Fails in C
 
-      The solution used is a modified, **ANSI** compliant, declarations:
+      The solution used is a modified, **ISO/IEC 9899:201x** compliant, declarations:
       
             typedef struct foo
             {
